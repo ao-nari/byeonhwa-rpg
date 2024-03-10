@@ -1,0 +1,337 @@
+/* --- ROOT (BASE DU FORUM) --- */
+/* --- MODE PAR DEFAUT : CLAIR --- */
+:root {
+  --body: url('une url'); /* fond du forum */
+  --header: url('une url'); /* bannière du forum */
+
+  /* palette de base */
+  --neutral: #000000; /* couleur la plus claire */
+  --neutralDark: #000000; /* couleur intermédiaire */
+  --neutralDarker: #000000; /* couleur la plus foncée */
+
+  --c1: #000000; /* couleur 1 */
+  --c2: #000000; /* couleur 2 */
+  --c3: #000000; /* couleur 3 */
+
+  --contrast: #000000; /* couleur contrastante */
+  --contrastDark: #000000; /* couleur contrastante plus foncée */
+
+  --accentClr: #000000; /* couleur d'accent */
+  --accentClrDark: #000000; /* couleur d'accent plus foncée */
+
+  --textClr: #000000; /* couleur du texte */
+  --textClrAccent: #000000; /* couleur de textes mis en avant */
+  /* --- */
+
+  /* palette avec opacité */
+  --neutral-op: rgba(); 
+  --neutralDark-op: rgba(); 
+  --neutralDarker-op: rgba(); 
+
+  --c1-op: rgba(); 
+  --c2-op: rgba(); 
+  --c3-op: rgba(); 
+  /* --- */
+
+  /* --- gradients --- */
+  --g-main: linear-gradient(); 
+  --g-mainRev: linear-gradient(); /* inversé */
+  --g-main-op: linear-gradient(); /* en opacité */
+  --g-mainRev-op: linear-gradient(); /* inversé et en opacité */
+
+  /* --- borders --- */
+  --border: 1px solid var(--neutral); /* border principal */
+  --border2: 2px solid var(--neutralDark); /* border secondaire */
+  --radius: 1.5rem; /* arrondi principal | 1rem = 16px | 1.5rem = 24px */ 
+  --small-radius: 0.3rem; /* arrondi léger | 0.4rem = 4.8px */
+
+  /* --- polices --- */
+  --font1: 'nom', sans-serif; /* police principale du forum */
+  --font2: 'nom', serif; /* police de titres */
+  --font3: 'nom'; /* police spéciale */
+
+  /* --- tailles --- */
+  --smallest: 0.5rem; /* 8 px */
+  --smaller: 0.563rem; /* 9 px */
+  --small: 0.625rem; /* 10 px */
+  --small2: 0.688rem; /* 11 px */
+  --medium: 0.75rem; /* 12 px */
+  --big: 0.875rem; /* 14 px */
+  --bigger: 1rem; /* 16 px */
+  --bigger2: 1.125rem; /* 18px */
+  --bigger3: 1.25rem; /* 20 px */
+  --biggest: 1.5rem; /* 24 px */
+
+  /* --- VARIABLES MESSENGER --- */
+  --FAM-windowSize: 55rem; /* 880px */
+
+  --FAM-light: #FFF; 
+  --FAM-dark: #000; 
+
+  /* --- palette --- */
+  --FAM-pluginBackground: var(); /* fond du messenger */
+  --FAM-chatBackground: var(); /* fond de la fenêtre de chat */ 
+  --FAM-textAreaBackground: var(); /* fond de la boîte de texte */
+  --FAM-msgBackground: var(); /* fond des messages reçus */
+  --FAM-myMsgBackground: var(); /* fond des messages envoyés */
+  --FAM-quoteBackground: var(); /* fond des citations */
+  --FAM-sleepModeBackground: rgba(0, 0, 0, 0.5); /* fond du mode veille */ 
+
+  --FAM-c1: var(); /* couleur 1 */ 
+  --FAM-c2: var(); /* couleur 2 */
+  --FAM-c3: var(); /* couleur 3 */ 
+
+  --FAM-contrast: var(); 
+  --FAM-accentClr: var(); 
+  --FAM-textClr: var(); 
+  --FAM-linkClr: var(); 
+  --FAM-titleClr: var(); 
+  --FAM-button: var(); 
+  --FAM-buttonClr: var(); 
+
+  /* --- gradients --- */
+
+  /* polices et tailles */
+  --FAM-fontSize: 12px; 
+  --FAM-titleSize: 24px; 
+  --FAM-titleFont: 'nom', sans-serif; 
+
+  /* --- borders et utilitaires --- */
+  --FAM-border: /* code */; 
+  --FAM-radius: /* code */; 
+  --FAM-shadow: /* code */;  
+}
+
+/* --- MODE SOMBRE --- */ 
+:root {
+/* du code */
+}
+
+/* --- DEFAULT MODE --- */
+/* --- CETTE PARTIE PEUT ETRE SUPPRIMEE EN METTANT A JOUR LE PLUGIN EDISON (voir code-lab) --- */
+@media (prefers-color-scheme: light) {
+  [data-color-scheme=light] {
+    /* du code */
+  }
+}
+/* ------------------------------------ */
+
+/* --- généralités --- */
+*, body, div {
+  box-sizing: border-box; 
+}
+
+body {
+  margin: 0 !important; 
+}
+
+/* --- SCROLLBAR (chrome) --- */ 
+::-webkit-scrollbar {/* code */}
+::-webkit-scrollbar-track {/* code */}
+::-webkit-scrollbar-thumb {/* code */}
+
+/* réduction taille des emojis forumactif */ 
+.emojione {
+  width: 18px !important; 
+}
+
+hr {
+  /* code */
+}
+
+/* --- liens et textes --- */ 
+/* styles de texte */
+b, strong {/* code */}
+i {/* code */}
+u {/* code */}
+strike {/* code */}
+
+h1 {
+  /* généralité pour les titres principaux */
+}
+
+h1.page-title {
+  /* code spécifique du h1 de la page principale */
+}
+
+h1, h1.page-title {
+  /* code pour les titres principaux */
+}
+
+h2 {
+  /* titres secondaires */
+}
+
+h3 {
+  /* sous-titres */
+}
+
+h4, h5, h6 {
+  /* sous-titres très secondaires (du plus important au moins important) */
+}
+
+p {
+  /* paragraphes */
+}
+
+a {
+  /* liens */
+}
+
+a:hover {
+  /* liens survolés */
+}
+
+/* blocs de texte */
+blockquote div {
+  /* code */
+}
+
+/* balises code, spoiler, hide, cite */ 
+/* CODE */
+.codebox {
+  /* code */
+}
+
+.codebox dd {
+  /* code */
+}
+
+.codebox code {
+  /* code */
+}
+
+/* "copier" */
+.copycode {
+  /* code */
+}
+
+/* SPOILER */
+.hidebox.spoiler {
+  /* code */
+}
+
+/* fermé */ .spoiler_content {display: none;}
+/* ouvert */ .spoiler_content.hidden {display: block;}
+
+/* CITER "NOM" */
+blockquote cite {/* code */}
+blockquote cite a {/* code */}
+
+/* HIDE */
+.codebox.hidecode dd {/* code */}
+
+/* tag */
+.mentiontag {/* code */}
+
+/* CLASSES UTILITAIRES VARIEES */ 
+/* ici je vais mettre tout ce qui est relatif aux onglets/au js, ainsi que des éléments esthétiques qui se répètent sur l'ensemble du forum */
+
+/* --- BODY (TOUTES LES PAGES) --- */
+body {
+  /* code relatif au fond ainsi qu'à l'ensemble des pages du forum */
+}
+
+.main_forum {
+  /* code relatif à l'ensemble du forum */
+}
+/* ---------------- FIN GENERALITES -------------------- */
+
+/* --- HEADER (BANNIERE ET HAUT DE PAGE) --- */
+#header {
+  /* code */
+}
+
+/* --- NAVIGATION --- */
+.navbar {
+  /* code */
+}
+
+a.mainmenu {
+  /* liens de navigation */
+}
+
+a.mainmenu:hover {
+  /* survol des liens de navigation */
+}
+/* ------------------------------------ */
+
+/* --- SIDEBAR : css externe (voir overall_header) --- */
+/* --- SWITCHEROO : css externe (voir overall_header) --- */
+/* ------------------------------------ */
+
+/* --- TOOLBAR ET MENU D'ACCUEIL FORUMACTIF --- */
+#fa_left {display: none;} /* suppression logo fa */
+
+/* conteneur menu welcome */
+#fa_menulist {
+  /* code */
+}
+
+/* contenu menu welcome et liste des notifications */
+ul#fa_menulist, ul#notif_list {
+  /* code */
+}
+
+/* notifications */
+#fa_notif_list {
+  /* code */
+}
+
+/* popup notifications */
+#fa_toolbar #live_notif {
+  /* code */
+}
+
+#fa_toolbar #live_notif .fa_notification {
+  /* code */
+}
+/* ------------------------------------ */
+
+/* --- PA : css externe (voir overall_header) --- */
+/* ------------------------------------ */
+
+/* --- CATEGORIES (index_box) --- */
+
+/* ici, tout le code concernant les catégories et leur affichage */ 
+/* ------------------------------------ */
+
+/* --- QEEL | QUI EST EN LIGNE (index_body) --- */
+
+/* ici, tout le code concernant le qeel et son affichage */ 
+/* ------------------------------------ */
+
+/* --- FOOTER (overall_footer_end) --- */
+
+/* ici, tout le code concernant le bas de page ainsi que les petits détails de la page d'accueil */
+/* ------------------------------------ */
+
+/* ------------------------------------ */
+/* --- PAGE LISTE DES SUJETS --- */
+/* ------------------------------------ */
+
+/* --- PAGE SUJETS SURVEILLES --- */
+/* ------------------------------------ */
+
+/* --- PAGE MESSAGES --- */
+/* ------------------------------------ */
+
+/* --- PAGE POSTER UN MESSAGE | BOITE DE TEXTE --- */
+/* ------------------------------------ */
+
+/* --- PAGE MESSAGES PRIVES --- */
+/* ------------------------------------ */
+
+/* ------------------------------------ */
+/* --- PAGE DE PROFIL --- */
+/* ------------------------------------ */
+
+/* --- PAGE LISTE DES MEMBRES --- */
+/* ------------------------------------ */
+
+/* --- PAGE DES GROUPES --- */
+/* ------------------------------------ */
+
+/* ------------------------------------ */
+/* --- DIVERS --- */
+

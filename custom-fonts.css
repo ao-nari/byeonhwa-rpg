@@ -1,0 +1,8 @@
+/* --- installation polices NON google fonts --- */
+
+@font-face {
+  font-family: 'nom';
+  src: url('lien') format('otf'); /* ou ttf, woff, etc format de polices */
+  font-weight: normal;
+  font-style: normal;
+}
