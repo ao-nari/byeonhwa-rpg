@@ -1,0 +1,84 @@
+/* --- regroupe tous les styles de texte, tailles, et autres codes utilitaires utilisés sur le forum --- */
+
+/* --- TAILLES --- */
+smallest, .smallest {font-size: var(--smallest);}
+smaller, .smaller {font-size: var(--smaller);}
+small, .small {font-size: var(--small);}
+small2, .small2 {font-size: var(--small2);}
+medium, .medium {font-size: var(--medium);}
+big, .big {font-size: var(--big);}
+bigger, .bigger {font-size: var(--bigger);}
+bigger2, .bigger2 {font-size: var(--bigger2);}
+bigger3, .bigger3 {font-size: var(--bigger3);}
+biggest, .biggest {font-size: var(--biggest);}
+
+/* --- variables diverses --- */
+:root {
+  /* variables de couleurs */
+  --byeonhwa: #fff; 
+  --bom: #fff; 
+  --yeo: #fff; 
+  --gaeul: #fff; 
+  --gyeoul: #fff; 
+  --akma: #fff; 
+  --mun: #fff; 
+
+  /* variables de gradients */
+  --bhtransp: linear-gradient(to left, transparent, var(--byeonhwa)); 
+  --bhtransp_rev: linear-gradient(to right, transparent, var(--byeonhwa)); 
+  --bhtransp_mid: linear-gradient(to left, transparent, var(--byeonhwa), transparent); 
+  --bomyeo: linear-gradient(to left, var(--bom), var(--yeo)); 
+  --yeobom: linear-gradient(to right, var(--bom), var(--yeo));
+}
+
+/* --- couleurs principales --- */
+byeonhwa, .byeonhwa {}
+bom, .bom {}
+yeoreum, .yeoreum, yeo, .yeo {}
+gaeul, .gaeul {}
+gyeoul, .gyeoul {}
+akma, .akma {}
+munoehan, .munoehan, mun, .mun {}
+
+/* --- couleurs secondaires --- */
+/* --- pastels/plus claires ---*/
+byeonhwap, .byeonhwap {}
+bomp, .bomp {}
+yeop, .yeop {}
+gaeulp, .gaeulp {}
+gyeop, .gyeop {}
+akmap, .akmap {}
+munp, .munp {}
+
+/* --- plus foncées/appuyées --- */
+byeonhwaf, .byeonhwaf {}
+bomf, .bomf {}
+yeof, .yeof {}
+gaeulf, .gaeulf {}
+gyeof, .gyeof {}
+akmaf, .akmaf {}
+munf, .munf {}
+
+/* --- GRADIENTS --- */
+/* --- fonctionnement de base --- */
+bomyeo, .bomyeo, yeobom, .yeobom, bomga, .bomga, gabom, .gabom, bomgyeo, .bomgyeo, gyeobom, .gyeobom, bomak, .bomak, akbom, .akbom, bomun, .bomun, munbom, .munbom {} /* à finaliser (actuellement : seulement bom) */
+
+/* --- couleur > couleur (et plus) --- */
+bhtransp {} /* byeonhwa > transparent */
+bhtransp_rev {} /* transparent < byeonhwa */
+bhtransp_mid {} /* transparent > byeonhwa < transparent */
+
+/* --- groupe vers groupe --- */
+bomyeo, .bomyeo {background: var(--bomyeo);} /* bom > yeo */
+yeobom, .yeobom {} /* yeo > bom */
+bom
+
+/* --- évidences : evid, evid2, evid3 --- */
+evid {}
+evid2 {}
+evid3 {}
+
+/* --- AUTRES --- */
+/* --- alignements --- */
+left, .left {float: left !important;}
+right, .right {float: right !important;}

@@ -1,6 +1,7 @@
 /* --- ROOT (BASE DU FORUM) --- */
-/* --- MODE PAR DEFAUT : CLAIR --- */
+/* --- MODE CLAIR --- */
 :root {
+  font-size: 62,5%; /* default = 10px = 1rem */
   --body: url('une url'); /* fond du forum */
   --header: url('une url'); /* bannière du forum */
 
@@ -42,8 +43,8 @@
   /* --- borders --- */
   --border: 1px solid var(--neutral); /* border principal */
   --border2: 2px solid var(--neutralDark); /* border secondaire */
-  --radius: 1.5rem; /* arrondi principal | 1rem = 16px | 1.5rem = 24px */ 
-  --small-radius: 0.3rem; /* arrondi léger | 0.4rem = 4.8px */
+  --radius: 1.6rem; /* arrondi principal | 1rem = 10px | 1.6rem = 16px */ 
+  --small-radius: 0.6rem; /* arrondi léger | 0.6rem = 6px */
 
   /* --- polices --- */
   --font1: 'nom', sans-serif; /* police principale du forum */
@@ -51,19 +52,19 @@
   --font3: 'nom'; /* police spéciale */
 
   /* --- tailles --- */
-  --smallest: 0.5rem; /* 8 px */
-  --smaller: 0.563rem; /* 9 px */
-  --small: 0.625rem; /* 10 px */
-  --small2: 0.688rem; /* 11 px */
-  --medium: 0.75rem; /* 12 px */
-  --big: 0.875rem; /* 14 px */
-  --bigger: 1rem; /* 16 px */
-  --bigger2: 1.125rem; /* 18px */
-  --bigger3: 1.25rem; /* 20 px */
-  --biggest: 1.5rem; /* 24 px */
+  --smallest: 0.8rem; /* 8 px */
+  --smaller: 0.9rem; /* 9 px */
+  --small: 1rem; /* 10 px */
+  --small2: 1.1rem; /* 11 px */
+  --medium: 1.2rem; /* 12 px */
+  --big: 1.4rem; /* 14 px */
+  --bigger: 1.6rem; /* 16 px */
+  --bigger2: 1.8rem; /* 18px */
+  --bigger3: 2rem; /* 20 px */
+  --biggest: 2.4rem; /* 24 px */
 
   /* --- VARIABLES MESSENGER --- */
-  --FAM-windowSize: 55rem; /* 880px */
+  --FAM-windowSize: 88rem; /* 880px */
 
   --FAM-light: #FFF; 
   --FAM-dark: #000; 
@@ -92,8 +93,8 @@
   /* --- gradients --- */
 
   /* polices et tailles */
-  --FAM-fontSize: 12px; 
-  --FAM-titleSize: 24px; 
+  --FAM-fontSize: 1.2rem;  
+  --FAM-titleSize: 2.4rem; 
   --FAM-titleFont: 'nom', sans-serif; 
 
   /* --- borders et utilitaires --- */
@@ -233,7 +234,7 @@ body {
 }
 
 .main_forum {
-  /* code relatif à l'ensemble du forum */
+  width: 108rem; /* 1080px */
 }
 /* ---------------- FIN GENERALITES -------------------- */
 
