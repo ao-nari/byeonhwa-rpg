@@ -2,7 +2,7 @@
 /* --- MODE CLAIR --- */
 :root {
   font-size: 62,5%; /* default = 10px = 1rem */
-  --body: url('une url'); /* fond du forum */
+  --body: url('https://i.imgur.com/GfFaOVy.jpeg'); /* fond du forum */
   --header: url('une url'); /* bannière du forum */
 
   /* palette de base */
@@ -122,8 +122,16 @@
   box-sizing: border-box; 
 }
 
+/* --- BODY (TOUTES LES PAGES) --- */
 body {
   margin: 0 !important; 
+  overflow-x: hidden; 
+  background: var(--body) fixed center; 
+  background-size: cover; 
+}
+
+.main_forum {
+  width: 108rem; /* 1080px */
 }
 
 /* --- SCROLLBAR (chrome) --- */ 
@@ -227,15 +235,6 @@ blockquote cite a {/* code */}
 
 /* CLASSES UTILITAIRES VARIEES */ 
 /* ici je vais mettre tout ce qui est relatif aux onglets/au js, ainsi que des éléments esthétiques qui se répètent sur l'ensemble du forum */
-
-/* --- BODY (TOUTES LES PAGES) --- */
-body {
-  /* code relatif au fond ainsi qu'à l'ensemble des pages du forum */
-}
-
-.main_forum {
-  width: 108rem; /* 1080px */
-}
 /* ---------------- FIN GENERALITES -------------------- */
 
 /* --- HEADER (BANNIERE ET HAUT DE PAGE) --- */
