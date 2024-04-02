@@ -47,7 +47,7 @@
   --small-radius: 0.6rem; /* arrondi léger | 0.6rem = 6px */
 
   /* --- polices --- */
-  --font1: 'nom', sans-serif; /* police principale du forum */
+  --font1: 'Montserrat', sans-serif; /* police principale du forum */
   --font2: 'nom', serif; /* police de titres */
   --font3: 'nom'; /* police spéciale */
 
@@ -95,7 +95,7 @@
   /* polices et tailles */
   --FAM-fontSize: 1.2rem;  
   --FAM-titleSize: 2.4rem; 
-  --FAM-titleFont: 'nom', sans-serif; 
+  --FAM-titleFont: 'Montserrat', sans-serif; 
 
   /* --- borders et utilitaires --- */
   --FAM-border: /* code */; 
@@ -125,6 +125,7 @@
 /* --- BODY (TOUTES LES PAGES) --- */
 body {
   font-size: 1.6rem; /* 16px par défaut */
+  font-family: var(--font1); 
   margin: 0 !important; 
   overflow-x: hidden; 
   background: var(--body) fixed center; 
@@ -133,6 +134,7 @@ body {
 
 .main_forum {
   width: 108rem; /* 1080px */
+  margin: auto; 
 }
 
 /* --- SCROLLBAR (chrome) --- */ 
@@ -181,7 +183,7 @@ h4, h5, h6 {
 }
 
 p {
-  /* paragraphes */
+  margin: 0; 
 }
 
 a {
