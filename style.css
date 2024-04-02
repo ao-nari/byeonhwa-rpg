@@ -1,7 +1,6 @@
 /* --- ROOT (BASE DU FORUM) --- */
 /* --- MODE CLAIR --- */
-:root {
-  font-size: 62,5%; /* default = 10px = 1rem */
+:root { 
   --body: url('https://i.imgur.com/GfFaOVy.jpeg'); /* fond du forum */
   --header: url('une url'); /* bannière du forum */
 
@@ -118,6 +117,10 @@
 /* ------------------------------------ */
 
 /* --- généralités --- */
+html {
+  font-size: 62,5%; /* ajustement pour faciliter les calculs | 1rem = 10px */
+}
+
 *, body, div {
   box-sizing: border-box; 
 }
@@ -128,6 +131,7 @@ body {
   overflow-x: hidden; 
   background: var(--body) fixed center; 
   background-size: cover; 
+  font-size: 1.6rem; /* default text = 16px */
 }
 
 .main_forum {
