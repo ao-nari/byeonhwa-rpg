@@ -1,7 +1,7 @@
 /* --- ROOT (BASE DU FORUM) --- */
 /* --- MODE CLAIR --- */
 :root {
-  font-size: 62,5%; /* default = 10px = 1rem */
+  font-size: 62.5%; /* default = 10px = 1rem */
   --body: url('https://i.imgur.com/GfFaOVy.jpeg'); /* fond du forum */
   --header: url('une url'); /* bannière du forum */
 
