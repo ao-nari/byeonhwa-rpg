@@ -1,0 +1,153 @@
+<!-- BEGIN html_validation -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<body>
+<div>
+	<div>
+		<div>
+			<div>
+				<div>
+					<div>
+						<div>
+							<ul>
+								<li>
+<!-- END html_validation -->
+								</li>
+							</ul>
+
+						</div>
+					</div>
+                                  
+				</div>
+				{PROTECT_FOOTER}
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+	fa_endpage();
+//]]>
+</script>
+<script type="text/javascript">
+//<![CDATA[
+$(document).ready(function() {
+	$(window).scroll(function() {
+		var header_top = $('#headerbar-top');
+
+		if (header_top.hasClass('w-toolbar')) {
+			if ($(window).scrollTop() >= 42) {
+				header_top.addClass('is-sticky');
+			} else {
+				header_top.removeClass('is-sticky');
+			}
+		} else {
+			if ($(window).scrollTop() >= 1) {
+				header_top.addClass('is-sticky');
+			} else {
+				header_top.removeClass('is-sticky');
+			}
+		}
+	});
+});
+//]]>
+</script>
+
+<!--------------------------------------->
+<!-- BARRE LATERALE GAUCHE/SIDEBAR -->   
+<div id="sidebar" class="sidebar sidebar-closed">
+    <!-- bouton ouvrir/fermer sidebar -->
+    <button id="sidebar_collbtn" class="sidebar_collbtn">
+        <i class="cp cp-menu"></i>
+    </button>
+
+    <!-- switcheroo -->
+    <!-- <div class="sidebar_switcheroo">
+        <div class="addchar">
+            <evid>associer un personnage</evid>
+        </div>
+
+        <nav id="switcheroo" class="switcheroo"></nav>
+    </div> -->
+
+    <!-- navigation -->
+    <div class="sidebar_nav">
+        <!-- contenu -->
+    </div>
+
+    <!-- crédits + infos -->
+    <div class="sidebar_infos">
+        <!-- contenu -->
+    </div>
+</div>
+<!----- fin SIDEBAR GAUCHE ----->
+  
+<!-- WOMBAT plugin -->
+<script src="https://cdn.jsdelivr.net/gh/caezd/wombat/dist/wombat.min.js"></script>
+<!-- Script qui permet d'initialiser le plugin -->
+<script>
+(function() {
+	new Wombat({
+        allowGuests: true
+  });
+})();
+</script>  
+
+<!-- SWITCHEROO plugins -->
+<!-- Monomer.js et Switcheroo.js -->
+<script src="https://cdn.jsdelivr.net/gh/caezd/switcheroo@1.1-beta/monomer.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/caezd/switcheroo@1.1-beta/switcheroo.js"></script>
+
+<!-- Script qui permet d'initialiser le plugin -->
+<script>
+(function() {
+    new Switcheroo('#switcheroo', {
+        logo: '<i class="bi bi-house-door-fill"></i>', /* accepte html, permet d'afficher un logo qui retourne à l'accueil du forum */
+        enableReorder: true, /* activer le drag&drop pour l'ordre des comptes (true/false) */
+        updateAvatar: true, /* activer le clique droit pour charger un nouvel avatar (true/false) */
+        confirm: true, /* demande une confirmation avant le changement de compte */
+        confirmMsg: 'Confirmer le Switcheroo de personnage ?', /* le message affiché lors de la confirmation */
+        deleteIcon: '×', /* accepte html, icone pour supprimer un compte lié */
+        addIcon: '<i class="bi bi-plus"></i>', /* accepte html, icone qui ouvre le formulaire de connexion et d'association */
+        errorMsg: 'Une erreur est surviendue lors du Switcheroo.',
+    });
+})(); 
+</script>
+
+<!-- EDISON plugin -->
+<script>
+    (function () {
+        const html = document.documentElement;
+        const themeControls = document.querySelector("[data-theme-controls]");
+        const toggle = themeControls.querySelector(".color-scheme-toggle");
+        
+        const setToggleLabel = function () {
+            let mode = html.dataset.colorScheme;
+            toggle.setAttribute(
+                "title",
+                "Activer le mode " + (mode === "dark" ? "clair" : "sombre")
+            );
+        };
+
+        const setColorScheme = function (value) {
+            html.dataset.colorScheme = value;
+            localStorage.setItem("color-scheme", value);
+            setToggleLabel();
+        };
+
+        const init = function () {
+            setToggleLabel();
+        };
+
+        toggle.addEventListener("click", function () {
+            const scheme = html.dataset.colorScheme === "dark" ? "light" : "dark";
+            setColorScheme(scheme);
+        });
+
+        init();
+    })();
+</script>
+</body>
+</html>
+            

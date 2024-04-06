@@ -6,10 +6,10 @@ smaller, .smaller {font-size: var(--smaller);}
 small, .small {font-size: var(--small);}
 small2, .small2 {font-size: var(--small2);}
 medium, .medium {font-size: var(--medium);}
+medium2, .medium2 {font-size: var(--medium2);}
 big, .big {font-size: var(--big);}
 bigger, .bigger {font-size: var(--bigger);}
 bigger2, .bigger2 {font-size: var(--bigger2);}
-bigger3, .bigger3 {font-size: var(--bigger3);}
 biggest, .biggest {font-size: var(--biggest);}
 
 /* --- variables diverses --- */

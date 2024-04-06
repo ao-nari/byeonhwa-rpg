@@ -3,7 +3,7 @@
 :root {
   font-size: 62.5%; /* default = 10px = 1rem */
   --body: url('https://i.imgur.com/GfFaOVy.jpeg'); /* fond du forum */
-  --header: url('une url'); /* bannière du forum */
+  --header: url('https://i.imgur.com/fshYyDG.png'); /* bannière du forum */
 
   /* palette de base */
   --neutral: #000000; /* couleur la plus claire */
@@ -57,10 +57,10 @@
   --small: 1rem; /* 10 px */
   --small2: 1.1rem; /* 11 px */
   --medium: 1.2rem; /* 12 px */
-  --big: 1.4rem; /* 14 px */
-  --bigger: 1.6rem; /* 16 px */
-  --bigger2: 1.8rem; /* 18px */
-  --bigger3: 2rem; /* 20 px */
+  --medium2: 1.4rem; /* 14 px */
+  --big: 1.6rem; /* 16 px */
+  --bigger: 1.8rem; /* 18px */
+  --bigger2: 2rem; /* 20 px */
   --biggest: 2.4rem; /* 24 px */
 
   /* --- VARIABLES MESSENGER --- */
@@ -104,17 +104,10 @@
 }
 
 /* --- MODE SOMBRE --- */ 
-:root {
+[data-color-scheme="dark"] {
 /* du code */
 }
 
-/* --- DEFAULT MODE --- */
-/* --- CETTE PARTIE PEUT ETRE SUPPRIMEE EN METTANT A JOUR LE PLUGIN EDISON (voir code-lab) --- */
-@media (prefers-color-scheme: light) {
-  [data-color-scheme=light] {
-    /* du code */
-  }
-}
 /* ------------------------------------ */
 
 /* --- généralités --- */
@@ -242,7 +235,11 @@ blockquote cite a {/* code */}
 
 /* --- HEADER (BANNIERE ET HAUT DE PAGE) --- */
 #header {
-  /* code */
+  background: var(--header);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+  margin-top: 3rem; /* 30px */
 }
 
 /* --- NAVIGATION --- */
