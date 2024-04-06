@@ -240,6 +240,7 @@ blockquote cite a {/* code */}
   background-repeat: no-repeat;
   background-size: auto;
   margin-top: 3rem; /* 30px */
+  height: 60rem; /* 600px */
 }
 
 /* --- NAVIGATION --- */
