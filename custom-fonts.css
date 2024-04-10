@@ -1,8 +1,26 @@
 /* --- installation polices NON google fonts --- */
 
+/* --- SINERVA --- */
 @font-face {
-  font-family: 'nom';
-  src: url('lien') format('otf'); /* ou ttf, woff, etc format de polices */
+  font-family: 'sinervaregular';
+  src: url('sinerva-webfont.woff2') format('woff2'),
+       url('sinerva-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
+}
+
+@font-face {
+  font-family: 'sinervaregular';
+  src: url('sinerva-webfont.woff2') format('woff2'),
+       url('sinerva-webfont.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'sinervaregular';
+  src: url('sinerva-webfont.woff2') format('woff2'),
+       url('sinerva-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
 }

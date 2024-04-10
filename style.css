@@ -2,13 +2,13 @@
 /* --- MODE CLAIR --- */
 :root {
   font-size: 62.5%; /* default = 10px = 1rem */
-  --body: url('https://i.imgur.com/GfFaOVy.jpeg'); /* fond du forum */
-  --header: url('https://i.imgur.com/fshYyDG.png'); /* bannière du forum */
+  --body: url('https://tinyurl.com/4d3njsbk'); /* fond du forum */
+  --header: url('https://tinyurl.com/bdd7edkr'); /* bannière du forum */
 
   /* palette de base */
-  --neutral: #000000; /* couleur la plus claire */
-  --neutralDark: #000000; /* couleur intermédiaire */
-  --neutralDarker: #000000; /* couleur la plus foncée */
+  --neutral: #d4e2d2; /* couleur la plus claire */
+  --neutralDark: #bed5bc; /* couleur intermédiaire */
+  --neutralDarker: #a1bba1; /* couleur la plus foncée */
 
   --c1: #000000; /* couleur 1 */
   --c2: #000000; /* couleur 2 */
@@ -105,7 +105,14 @@
 
 /* --- MODE SOMBRE --- */ 
 [data-color-scheme="dark"] {
-/* du code */
+  font-size: 62.5%; /* default = 10px = 1rem */
+  --body: url('https://tinyurl.com/3jaje494'); /* fond du forum */
+  --header: url('https://tinyurl.com/5fbju7ua'); /* bannière du forum */
+
+  /* palette de base */
+  --neutral: #1b213e; /* couleur la plus claire */
+  --neutralDark: #171d2e; /* couleur intermédiaire */
+  --neutralDarker: #161a23; /* couleur la plus foncée */
 }
 
 /* ------------------------------------ */
@@ -335,4 +342,3 @@ ul#fa_menulist, ul#notif_list {
 
 /* ------------------------------------ */
 /* --- DIVERS --- */
-
