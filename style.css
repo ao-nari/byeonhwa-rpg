@@ -6,50 +6,53 @@
   --header: url('https://tinyurl.com/bdd7edkr'); /* bannière du forum */
 
   /* palette de base */
-  --neutral: #d4e2d2; /* couleur la plus claire */
-  --neutralDark: #bed5bc; /* couleur intermédiaire */
-  --neutralDarker: #a1bba1; /* couleur la plus foncée */
+  --baseClr: #F5FCF1; /* couleur 1 */
+  --baseClr-RGB: rgb(245, 252, 241); 
+  --baseClr-90: rgba(245, 252, 241, 0.9); /* 90% opacité */
+  --baseClr-70: rgba(245, 252, 241, 0.7); /* 70% opacité */
 
-  --c1: #000000; /* couleur 1 */
-  --c2: #000000; /* couleur 2 */
-  --c3: #000000; /* couleur 3 */
+  --baseClr2: #64A970; /* couleur 2 */
+  --baseClr2-RGB: rgb(100, 169, 112); 
 
-  --contrast: #000000; /* couleur contrastante */
-  --contrastDark: #000000; /* couleur contrastante plus foncée */
+  --baseClr3: #769E71; /* couleur 3 */
+  --baseClr3-RGB: rgb(118, 158, 113); 
+  --baseClr3-80: rgba(118, 158, 113, 0.8); /* 80% opacité */
+  --baseClr3-60: rgba(118, 158, 113, 0.6); /* 60% opacité */
+  --baseClr3-40: rgba(118, 158, 113, 0.4); /* 40% opacité */
+  --baseClr3-20: rgba(118, 158, 113, 0.2); /* 20% opacité */ 
 
-  --accentClr: #000000; /* couleur d'accent */
-  --accentClrDark: #000000; /* couleur d'accent plus foncée */
+  --accentClr: #B09A54; /* couleur d'accent */
+  --accentClr-RGB: rgb(176, 154, 84); 
 
-  --textClr: #000000; /* couleur du texte */
-  --textClrAccent: #000000; /* couleur de textes mis en avant */
-  /* --- */
+  --textClr: #648B5A; /* couleur de texte */
+  --textClr-RGB: rgb(100, 139, 90); 
 
-  /* palette avec opacité */
-  --neutral-op: rgba(); 
-  --neutralDark-op: rgba(); 
-  --neutralDarker-op: rgba(); 
+  /* couleurs supplémentaires diverses (gradients) */
+  --gradClr1: #937633; 
+  --gradClr1-RGB: rgb(147, 118, 51); 
+  --gradClr2: #CEBC6B; 
+  --gradClr2-RGB: rgb(206, 188, 107); 
 
-  --c1-op: rgba(); 
-  --c2-op: rgba(); 
-  --c3-op: rgba(); 
-  /* --- */
+  --gradClr3: #507446; 
+  --gradClr3-RGB: rgb(80, 116, 70); 
+  --gradClr4: #769E71; 
+  --gradClr4-RGB: rgb(118, 158, 113); 
 
-  /* --- gradients --- */
-  --g-main: linear-gradient(); 
-  --g-mainRev: linear-gradient(); /* inversé */
-  --g-main-op: linear-gradient(); /* en opacité */
-  --g-mainRev-op: linear-gradient(); /* inversé et en opacité */
+  /* gradients */
+  --bg1: linear-gradient(to bottom, rgba(100, 139, 90, 0.6), transparent); /* textClr 60% opacité > transparent (fond) */
+  --bg2: linear-gradient(to bottom, rgba(100, 169, 112, 0.3), rgba(118, 158, 113, 0.1)); /* baseClr2 30% opacité > baseClr3 10% opacité (fond) */
+
+  --grad1: linear-gradient(to right, var(--gradClr3), var(--gradClr4)); /* gradient 2 couleurs */
+  --grad2: linear-gradient(to right, var(--gradClr1), var(--gradClr2), var(--gradClr1)); /* gradient métallisé */
 
   /* --- borders --- */
-  --border: 1px solid var(--neutral); /* border principal */
-  --border2: 2px solid var(--neutralDark); /* border secondaire */
   --radius: 1.6rem; /* arrondi principal | 1rem = 10px | 1.6rem = 16px */ 
   --small-radius: 0.6rem; /* arrondi léger | 0.6rem = 6px */
 
   /* --- polices --- */
-  --font1: 'Montserrat', sans-serif; /* police principale du forum */
-  --font2: 'nom', serif; /* police de titres */
-  --font3: 'nom'; /* police spéciale */
+  --font1: 'Montserrat', 'Arial', sans-serif; /* police principale du forum */
+  --font2: 'Sinerva', 'Times new roman', serif; /* police de titres */
+  --font3: 'Playfair display', 'Palatino', serif; /* police spéciale */
 
   /* --- tailles --- */
   --smallest: 0.8rem; /* 8 px */
@@ -78,10 +81,6 @@
   --FAM-quoteBackground: var(); /* fond des citations */
   --FAM-sleepModeBackground: rgba(0, 0, 0, 0.5); /* fond du mode veille */ 
 
-  --FAM-c1: var(); /* couleur 1 */ 
-  --FAM-c2: var(); /* couleur 2 */
-  --FAM-c3: var(); /* couleur 3 */ 
-
   --FAM-contrast: var(); 
   --FAM-accentClr: var(); 
   --FAM-textClr: var(); 
@@ -95,7 +94,7 @@
   /* polices et tailles */
   --FAM-fontSize: 1.2rem;  
   --FAM-titleSize: 2.4rem; 
-  --FAM-titleFont: 'Montserrat', sans-serif; 
+  --FAM-titleFont: 'Montserrat', 'Arial', sans-serif; 
 
   /* --- borders et utilitaires --- */
   --FAM-border: /* code */; 
@@ -106,13 +105,41 @@
 /* --- MODE SOMBRE --- */ 
 [data-color-scheme="dark"] {
   font-size: 62.5%; /* default = 10px = 1rem */
-  --body: url('https://tinyurl.com/3jaje494'); /* fond du forum */
-  --header: url('https://tinyurl.com/5fbju7ua'); /* bannière du forum */
+  --body: url('https://tinyurl.com/3jaje494'); /* fond */
+  --header: url('https://tinyurl.com/5fbju7ua'); /* bannière */
 
   /* palette de base */
-  --neutral: #1b213e; /* couleur la plus claire */
-  --neutralDark: #171d2e; /* couleur intermédiaire */
-  --neutralDarker: #161a23; /* couleur la plus foncée */
+  --baseClr: #06070F; /* couleur 1 */
+  --baseClr-RGB: rgb(6, 7, 15); 
+  --baseClr-90: rgba(6, 7, 15, 0.9); /* 90% opacité */
+  --baseClr-70: rgba(6, 7, 15, 0.7); /* 90% opacité */
+
+  --baseClr2: #4B59A5; /* couleur 2 */
+  --baseClr2-RGB: rgb(75, 89, 165); 
+
+  --baseClr3: #465399; /* couleur 3 */
+  --baseClr3-RGB: rgb(70, 83, 153); 
+  --baseClr3-80: rgba(70, 83, 153, 0.8); /* 80% opacité */
+  --baseClr3-60: rgba(70, 83, 153, 0.6); /* 60% opacité */
+  --baseClr3-40: rgba(70, 83, 153, 0.4); /* 40% opacité */
+  --neutral20: rgba(70, 83, 153, 0.2); /* 20% opacité */ 
+
+  --accentClr: #B4B34F; /* couleur d'accent */
+  --accentClr-RGB: rgb(180, 179, 79); 
+
+  --textClr: #8897E9; /* couleur de texte */
+  --textClr-RGB: rgb(117, 134, 227); 
+
+  /* couleurs supplémentaires diverses (gradients) */
+  --gradClr2: #5E5B32; 
+  --gradClr2-RGB: rgb(94, 91, 50); 
+
+  /* gradients */
+  --bg1: linear-gradient(to bottom, rgba(117, 134, 227, 0.6), transparent); /* textClr 60% opacité > transparent (fond) */
+  --bg2: linear-gradient(to bottom, rgba(117, 134, 227, 0.3), rgba(70, 83, 153, 0.1)); /* textClr 30% opacité > baseClr3 10% opacité (fond) */
+
+  --grad1: linear-gradient(to right, var(--baseClr2), var(--textClr), var(--baseClr2)); /* gradient métallisé */
+  --grad2: linear-gradient(to right, var(--gradClr2), var(--accentClr)); /* gradient 2 couleurs */
 }
 
 /* ------------------------------------ */
@@ -246,13 +273,21 @@ blockquote cite a {/* code */}
   background-position: center;
   background-repeat: no-repeat;
   background-size: auto;
-  margin-top: 3rem; /* 30px */
-  height: 60rem; /* 600px */
+  margin: 10rem 0 5rem 0; 
+  height: 60rem; 
 }
 
 /* --- NAVIGATION --- */
+.navbar, .footerbar {
+  height: 4.5rem; 
+  width: 100%; 
+  background: var(--baseClr-90); 
+  position: fixed; 
+}
+
+/* --- TOP NAVBAR --- */
 .navbar {
-  /* code */
+  /* liens de navigation */
 }
 
 a.mainmenu {
@@ -262,7 +297,11 @@ a.mainmenu {
 a.mainmenu:hover {
   /* survol des liens de navigation */
 }
-/* ------------------------------------ */
+
+/* --- FOOTER BAR --- */
+.footerbar {
+  bottom: 0; 
+}
 
 /* --- SIDEBAR : css externe (voir overall_header) --- */
 /* --- SWITCHEROO : css externe (voir overall_header) --- */

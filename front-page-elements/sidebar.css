@@ -1,0 +1,21 @@
+/* --- SIDEBAR (barre latérale gauche) --- */
+.sidebar {
+    transform: translateX(-100%); 
+    position: fixed; 
+    top: 4.5rem; 
+    width: 35rem; 
+    height: calc(100vh - 9rem); 
+    transition: all 0.4s ease-in-out; 
+    background: var(--baseClr-90); 
+}
+
+/* code spécifique à la sidebar ouverte */
+.sidebar--open {
+    transform: translateX(0); 
+}
+
+/* menu pour ouvrir la sidebar (situé dans la barre de navigation) */
+.sidebar__btn {
+    all: unset; 
+    cursor: pointer; 
+}
