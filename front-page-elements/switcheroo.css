@@ -23,3 +23,29 @@
   font-weight: 600; 
   text-transform: uppercase; 
 }
+
+/* "personnage" */
+.switcheroo__icon::before {
+  content: "personnages"; 
+}
+
+/* icône > */ 
+.switcheroo__icon {
+  display: flex; 
+  align-items: center; 
+}
+
+.switcheroo__icon span {
+  height: 0.8rem; 
+  width: 0.8rem; 
+  border-top: 0.2rem solid var(--textClr); 
+  border-right: 0.2rem solid var(--textClr); 
+  transform: rotateZ(45deg); 
+  margin-left: 0.8rem; 
+  transition: var(--base-transi); 
+}
+
+.switcheroo__icon--closed span {
+  transform: rotateZ(-135deg); 
+  transition: var(--base-transi); 
+}

@@ -45,10 +45,12 @@
   --grad1: linear-gradient(to right, var(--gradClr3), var(--gradClr4)); /* gradient 2 couleurs */
   --grad2: linear-gradient(to right, var(--gradClr1), var(--gradClr2), var(--gradClr1)); /* gradient métallisé */
 
-  /* --- borders --- */
+  /* --- borders & misc --- */
   --radius: 1.6rem; /* arrondi principal | 1rem = 10px | 1.6rem = 16px */ 
   --small-radius: 0.6rem; /* arrondi léger | 0.6rem = 6px */
   --big-radius: 2.4rem; /* arrondi fort | 2.4rem = 24px */
+  --base-transi: all 0.3s ease-in-out; /* transition pour animations diverses */ 
+  --slow-transi: all 0.5s ease-in-out; /* même transition, mais plus lente */ 
 
   /* --- polices --- */
   --font1: 'Montserrat', 'Arial', sans-serif; /* police principale du forum */

@@ -5,7 +5,7 @@
     top: 4.5rem; 
     width: 35rem; 
     height: calc(100vh - 9rem); 
-    transition: all 0.4s ease-in-out; 
+    transition: var(--slow-transi);  
     background: var(--baseClr-90); 
 }
 
@@ -26,27 +26,49 @@
     text-transform: uppercase; 
 }
 
-.sidebar--open #sidebar__btn {
-    display: none;
+/* "menu" et "fermer" */
+.menu__icon::after {
+    content: "menu"; 
 }
 
-#sidebar__btn--close {
-    display: none;
+.menu__icon.menu__icon--x::after {
+    content: "fermer"; 
 }
 
+/* icônes précédent "menu" et "fermer" */
+/* icône "menu" (3 barres) */
 .menu__icon {
-    display: flex;
-    flex-direction: column;
-    gap: 0.2rem;
-    padding-right: 0.6rem;
+    display: flex; 
+    flex-wrap: nowrap; 
+    align-items: center; 
+}
+.menu__icon span {
+    display: flex; 
+    flex-direction: column; 
+    gap: 0.2rem; 
+    margin-right: 0.8rem; 
+    transform: rotateZ(0deg); 
+    transition: var(--base-transi); 
 }
 
-/* icône "menu" */
-.menu__icon i {
-    height: 0.2rem;
-    width: 1.2rem;
-    background: var(--textClr);
-    display: inline-block;
+.menu__icon span i {
+    display: inline-block; 
+    height: 0.2rem; 
+    width: 1.2rem; 
+    background: var(--textClr); 
 }
 
-/* icône "fermer" */
+/* icône "fermer (x) */
+.menu__icon--x span i:nth-child(3) {
+    display: none; 
+}
+
+.menu__icon--x span i:nth-child(2), .menu__icon--x span i:nth-child(3) {
+    position: absolute; 
+    transform: rotateZ(90deg); 
+}
+
+.menu__icon.menu__icon--x span {
+    transform: rotateZ(135deg); 
+    transition: var(--base-transi); 
+}
