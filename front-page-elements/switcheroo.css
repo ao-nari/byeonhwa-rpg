@@ -1,1 +1,25 @@
 /* --- SWITCHEROO by Monomer (barre latérale droite d'ajout de personnages) --- */
+.switcheroo {
+  transform: translateX(100%);
+  position: fixed;  
+  top: 6rem;
+  right: 0;
+  width: 8rem;
+  height: 40rem;
+  transition: all 0.4s ease-in-out;
+  background: var(--baseClr-90);
+  border-radius: var(--big-radius); 
+}
+
+.switcheroo--open {
+  transform: translateX(-20%); 
+}
+
+.switcheroo__btn {
+  all: unset; 
+  cursor: pointer; 
+  align-items: center;
+  font-size: var(--medium2); 
+  font-weight: 600; 
+  text-transform: uppercase; 
+}

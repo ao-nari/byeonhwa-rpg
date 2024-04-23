@@ -48,6 +48,7 @@
   /* --- borders --- */
   --radius: 1.6rem; /* arrondi principal | 1rem = 10px | 1.6rem = 16px */ 
   --small-radius: 0.6rem; /* arrondi léger | 0.6rem = 6px */
+  --big-radius: 2.4rem; /* arrondi fort | 2.4rem = 24px */
 
   /* --- polices --- */
   --font1: 'Montserrat', 'Arial', sans-serif; /* police principale du forum */
@@ -157,6 +158,7 @@ body {
   overflow-x: hidden; 
   background: var(--body) fixed center; 
   background-size: cover; 
+  color: var(--textClr); 
 }
 
 .main_forum {
@@ -283,11 +285,15 @@ blockquote cite a {/* code */}
   width: 100%; 
   background: var(--baseClr-90); 
   position: fixed; 
+  z-index: 999; 
 }
 
 /* --- TOP NAVBAR --- */
 .navbar {
-  /* liens de navigation */
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  padding: 0 2rem; 
 }
 
 a.mainmenu {

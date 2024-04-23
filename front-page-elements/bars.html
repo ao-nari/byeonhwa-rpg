@@ -8,18 +8,25 @@
     <link rel="stylesheet" href="../basics.css">
     <link rel="stylesheet" href="../custom-fonts.css">
     <link rel="stylesheet" href="sidebar.css">
+    <link rel="stylesheet" href="switcheroo.css">
 </head>
 <body>
     <!-- DEBUT navbar -->
     <div class="navbar">
-        <button id="sidebar__btn" class="sidebar__btn">menu</button>
-        <div class="navbar__nav"></div>
+        <button id="sidebar__btn" class="sidebar__btn"></button>
+        <div class="navbar__mainmenu"></div>
+        <div class="navbar__rightmenu">
+            <button id="switcheroo__btn" class="switcheroo__btn">personnages</button>
+        </div>
     </div>
     <!-- FIN navbar -->
 
     <!---------------------------------------->
 
     <!-- DEBUT switcheroo -->
+    <div id="switcheroo" class="switcheroo">
+        <!-- code -->
+    </div>
     <!-- FIN switcheroo -->
 
     <!---------------------------------------->
@@ -39,5 +46,6 @@
     <!-- FIN footer bar -->
 
     <script src="sidebar.js"></script>
+    <script src="switcheroo.js"></script>
 </body>
 </html>
