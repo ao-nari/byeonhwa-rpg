@@ -314,29 +314,29 @@ input:is([type="text"], [type="passeword"]){cursor: text;}
                 <div id="header"><img loading="lazy" /></div>
             </a>
 
-           <!-- Barre de navigation -->
-            <ul class="navbar">
-                <li>{GENERATED_NAV_BAR}</li>
-
-                <!-- bouton switch thème + haut et bas -->
-                <div class="sidebar_btns">
-                <div class="btnsbckg">
-                    <!-- haut --> <a href="#top" class="up"><i class="bi bi-caret-up-fill"></i></a>
-        
-                    <!-- switch thème -->
-                    <div data-theme-controls>
-                    <button class="color-scheme-toggle" title="Activer le mode sombre" aria-describedby="theme-controls-focus-text">
-                        <!-- Light theme -->
-                        <div class="icon light"><i class="ion-ios-sunny"></i></div>
-                        <!-- Dark theme -->
-                        <div class="icon dark"><i class="ion-ios-moon"></i></div>
+            <!---------------------------------------->
+            <!-- DEBUT navbar -->
+            <div class="navbar">
+                    <button id="sidebar__btn" class="sidebar__btn">
+                            <div class="menu__icon"><span><i></i><i></i><i></i></span></div>
                     </button>
+                    <ul class="navbar__mainmenu"><li>{GENERATED_NAV_BAR}</li></ul>
+                    <div class="navbar__rightmenu">
+                            <button id="switcheroo__btn" class="switcheroo__btn">
+                                    <div class="switcheroo__icon"><span></span></div>
+                            </button>
                     </div>
-        
-                    <!-- bas --> <a href="#bottom" class="down"><i class="bi bi-caret-down-fill"></i></a>
-                </div>
-            </ul>
-            <!-- Fin de la barre de nav -->
+            </div>
+            <!-- FIN navbar -->
+            <!---------------------------------------->
+                        
+            <!---------------------------------------->
+            <!-- DEBUT switcheroo -->
+            <div id="switcheroo" class="switcheroo">
+                    <!-- code -->
+            </div>
+            <!-- FIN switcheroo -->
+            <!---------------------------------------->
 
             <!-- Annonces défilantes -->
             <!-- BEGIN switch_ticker_new -->
