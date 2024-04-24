@@ -2,8 +2,8 @@
 /* --- MODE CLAIR --- */
 :root {
   font-size: 62.5%; /* default = 10px = 1rem */
-  --body: url('https://tinyurl.com/4d3njsbk'); /* fond du forum */
-  --header: url('https://tinyurl.com/bdd7edkr'); /* bannière du forum */
+  --body: url('https://images2.imgbox.com/40/be/TbgzkXat_o.png'); /* fond du forum */
+  --header: url('https://i.imgur.com/iu7Bzno.png'); /* bannière du forum */
 
   /* palette de base */
   --baseClr: #F5FCF1; /* couleur 1 */
@@ -108,8 +108,8 @@
 /* --- MODE SOMBRE --- */ 
 [data-color-scheme="dark"] {
   font-size: 62.5%; /* default = 10px = 1rem */
-  --body: url('https://tinyurl.com/3jaje494'); /* fond */
-  --header: url('https://tinyurl.com/5fbju7ua'); /* bannière */
+  --body: url('https://images2.imgbox.com/5a/b2/fSu7G9Gj_o.png'); /* fond */
+  --header: url('https://i.imgur.com/QpEBkhL.png'); /* bannière */
 
   /* palette de base */
   --baseClr: #06070F; /* couleur 1 */
@@ -288,6 +288,7 @@ blockquote cite a {/* code */}
   background: var(--baseClr-90); 
   position: fixed; 
   z-index: 999; 
+  left: 0; 
 }
 
 /* --- TOP NAVBAR --- */
@@ -297,7 +298,6 @@ blockquote cite a {/* code */}
   align-items: center; 
   padding: 0 2rem; 
   top: 0; 
-  left: 0; 
 }
 
 a.mainmenu {
