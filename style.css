@@ -227,11 +227,14 @@ p {
 }
 
 a {
-  /* liens */
+  text-decoration: none; 
+  color: var(--accentClr); 
+  transition: var(--base-transi); 
 }
 
 a:hover {
-  /* liens survolés */
+  color: var(--accentClr2); 
+  transition: var(--base-transi); 
 }
 
 /* blocs de texte */
@@ -300,7 +303,7 @@ blockquote cite a {/* code */}
   left: 0; 
 }
 
-/* --- TOP NAVBAR --- */
+/* --- NAVBAR ET FOOTERBAR --- */
 .navbar {
   display: flex; 
   justify-content: space-between; 
@@ -309,15 +312,26 @@ blockquote cite a {/* code */}
   top: 0; 
 }
 
-a.mainmenu {
-  /* liens de navigation */
+.navbar ul {
+  display: flex; 
 }
 
-a.mainmenu:hover {
-  /* survol des liens de navigation */
+/* liens inutilisés de la navbar */
+.navbar li:nth-child(2), a.mainmenu:nth-child(3), a.mainmenu:nth-child(4) {
+  display: none; 
 }
 
-/* --- FOOTER BAR --- */
+a.mainmenu, .footerbar a {
+  font-size: var(--medium2);
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--textClr); 
+}
+
+a.mainmenu:hover, .footerbar a:hover {
+  color: var(--accentClr); 
+}
+
 .footerbar {
   bottom: 0; 
 }
