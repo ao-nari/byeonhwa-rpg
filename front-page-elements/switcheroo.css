@@ -41,12 +41,12 @@
 }
 
 .switcheroo__icon span {
-  height: 0.8rem; 
-  width: 0.8rem; 
-  border-top: 0.2rem solid var(--textClr); 
-  border-right: 0.2rem solid var(--textClr); 
-  transform: rotateZ(45deg); 
-  margin-left: 0.8rem; 
+  height: 0.6rem;
+  width: 0.6rem;
+  border-top: 0.2rem solid var(--textClr);
+  border-right: 0.2rem solid var(--textClr);
+  transform: rotateZ(45deg);
+  margin-left: 0.5rem;
   transition: var(--base-transi); 
 }
 
