@@ -16,13 +16,17 @@
   transform: translateX(-20%); 
 }
 
-.switcheroo__btn {
+.switcheroo__btn, #fa_notifications {
   all: unset; 
   cursor: pointer; 
   align-items: center;
   font-size: var(--medium2); 
   font-weight: 600; 
   text-transform: uppercase; 
+}
+
+#fa_notifications {
+  padding-right: 1.5rem; 
 }
 
 /* "personnage" */

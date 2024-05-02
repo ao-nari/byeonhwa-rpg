@@ -3,7 +3,7 @@
 :root {
   font-size: 62.5%; /* default = 10px = 1rem */
   --body: url('https://images2.imgbox.com/40/be/TbgzkXat_o.png'); /* fond du forum */
-  --header: url('https://i.imgur.com/iu7Bzno.png'); /* bannière du forum */
+  --header: url('https://i.imgur.com/Z9yNw2I.png'); /* bannière du forum */
 
   /* palette de base */
   --baseClr: #F5FCF1; /* couleur 1 */
@@ -132,7 +132,7 @@
   --baseClr3-80: rgba(70, 83, 153, 0.8); /* 80% opacité */
   --baseClr3-60: rgba(70, 83, 153, 0.6); /* 60% opacité */
   --baseClr3-40: rgba(70, 83, 153, 0.4); /* 40% opacité */
-  --neutral20: rgba(70, 83, 153, 0.2); /* 20% opacité */ 
+  --baseClr3-20: rgba(70, 83, 153, 0.2); /* 20% opacité */
 
   --accentClr: #B4B34F; /* couleur d'accent */
   --accentClr-RGB: rgb(180, 179, 79); 
@@ -280,7 +280,12 @@ blockquote cite a {/* code */}
 .mentiontag {/* code */}
 
 /* CLASSES UTILITAIRES VARIEES */ 
-/* ici je vais mettre tout ce qui est relatif aux onglets/au js, ainsi que des éléments esthétiques qui se répètent sur l'ensemble du forum */
+/* fix hauteur forum (#top button) */
+#top {
+  top: -10rem;
+  position: relative;
+}
+
 /* ---------------- FIN GENERALITES -------------------- */
 
 /* --- HEADER (BANNIERE ET HAUT DE PAGE) --- */
@@ -304,6 +309,7 @@ blockquote cite a {/* code */}
 }
 
 /* --- NAVBAR ET FOOTERBAR --- */
+/* --- navbar (top) --- */
 .navbar {
   display: flex; 
   justify-content: space-between; 
@@ -317,7 +323,7 @@ blockquote cite a {/* code */}
 }
 
 /* liens inutilisés de la navbar */
-.navbar li:nth-child(2), a.mainmenu:nth-child(3), a.mainmenu:nth-child(4) {
+.navbar li:nth-child(2), .navbar li:nth-child(3), .navbar li:nth-child(4) {
   display: none; 
 }
 
@@ -332,8 +338,112 @@ a.mainmenu:hover, .footerbar a:hover {
   color: var(--accentClr); 
 }
 
+/* --- footerbar (bottom) --- */
 .footerbar {
-  bottom: 0; 
+  bottom: 0;
+  display: flex;
+  justify-content: right; 
+  align-items: center;
+}
+
+.footerbar, .footerbar a {
+  font-size: var(--smaller); 
+}
+
+#page-footer {
+  min-width: 65rem; 
+  max-width: 100rem; 
+  margin-right: 2rem; 
+  color: var(--baseClr2); 
+}
+
+/* --- BOUTONS FOOTERBAR --- */
+.footerbar_buttons {
+  display: flex;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* --- boutons switch de thème et up/down --- */
+@media (prefers-color-scheme: dark) {
+	.color-scheme-toggle .dark {
+		display: none;
+	}
+}
+@media (prefers-color-scheme: light) {
+	.color-scheme-toggle .light {
+		display: none;
+	}
+}
+.color-scheme-toggle,
+[data-color-scheme="light"] .color-scheme-toggle .dark,
+[data-color-scheme="dark"] .color-scheme-toggle .light {
+	display: block;
+	width: 100%;
+}
+
+[data-color-scheme="dark"] .color-scheme-toggle .dark,
+[data-color-scheme="light"] .color-scheme-toggle .light {
+	display: none;
+}
+
+.color-scheme-toggle, .footerbar_buttons a {
+	background-color: var(--baseClr3-20);
+	color: var(--textClr);
+  display: flex; 
+  align-items: center; 
+  transition: var(--base-transi); 
+  width: 3rem; 
+  height: 3rem; 
+}
+
+.color-scheme-toggle {
+  font-size: var(--medium2); 
+}
+
+.footerbar_buttons a {
+  margin: 0 0.1rem; 
+  display: flex; 
+  justify-content: center; 
+  font-size: var(--small); 
+}
+
+.color-scheme-toggle:hover, .footerbar_buttons a:hover {
+	color: var(--accentClr);
+  background: var(--baseClr3-40); 
+  transition: var(--base-transi);
+}
+
+.footerbar_buttons a[href="#top"] {
+  border-radius: 0.8rem 0 0 0.8rem; 
+}
+
+.footerbar_buttons a[href="#bottom"] {
+  border-radius: 0 0.8rem 0.8rem 0; 
+}
+
+/* "panneau d'administration" */
+.adminlink {
+  padding-right: 0.4rem; 
+  color: var(--accentClr); 
+}
+
+.adminlink::after {
+  content: " |"; 
+}
+
+.adminlink a {
+  color: var(--accentClr) !important;
+}
+
+.adminlink a:hover {
+  color: var(--accentClr2) !important; 
+}
+
+/* couleur des liens de bas de page */
+.right a {
+  color: var(--baseClr2); 
 }
 
 /* --- SIDEBAR : css externe (voir overall_header) --- */
