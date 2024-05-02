@@ -338,6 +338,11 @@ a.mainmenu:hover, .footerbar a:hover {
   color: var(--accentClr); 
 }
 
+.navbar .navbar__rightmenu {
+  width: 30rem;
+  text-align: right;
+}
+
 /* --- footerbar (bottom) --- */
 .footerbar {
   bottom: 0;
