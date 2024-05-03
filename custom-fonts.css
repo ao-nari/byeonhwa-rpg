@@ -4,35 +4,35 @@
 @font-face {
   font-family: 'sinervaregular';
   src: url('sinerva-webfont.woff2') format('woff2'),
-       url('sinerva-webfont.woff') format('woff');
+       url('sinerva-webfont.woff') format('woff'),
+       url('sinerva-webfont.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
-  unicode-range: U+0041-E03D; 
 }
 
 @font-face {
   font-family: 'sinervaregular';
   src: url('sinerva-webfont.woff2') format('woff2'),
-       url('sinerva-webfont.woff') format('woff');
+       url('sinerva-webfont.woff') format('woff'),
+       url('sinerva-webfont.ttf') format('truetype');
   font-weight: bold;
   font-style: normal;
-  unicode-range: U+0041-E03D; 
 }
 
 @font-face {
   font-family: 'sinervaregular';
   src: url('sinerva-webfont.woff2') format('woff2'),
-       url('sinerva-webfont.woff') format('woff');
+       url('sinerva-webfont.woff') format('woff'),
+       url('sinerva-webfont.ttf') format('truetype');
   font-weight: normal;
   font-style: italic;
-  unicode-range: U+0041-E03D;  
 }
 
 @font-face {
   font-family: 'sinervaregular';
   src: url('sinerva-webfont.woff2') format('woff2'),
-       url('sinerva-webfont.woff') format('woff');
+       url('sinerva-webfont.woff') format('woff'),
+       url('sinerva-webfont.ttf') format('truetype');
   font-weight: bold;
-  font-style: italic;
-  unicode-range: U+0041-E03D;  
+  font-style: italic; 
 }
