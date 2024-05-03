@@ -24,3 +24,28 @@
   font-weight: normal;
   font-style: italic;
 }
+
+/* --- SINERVA GLYPHS --- */
+@font-face {
+  font-family: 'sinerva';
+  src: url('sinerva-webfont.woff2') format('woff2'),
+       url('sinerva-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'sinerva';
+  src: url('sinerva-webfont.woff2') format('woff2'),
+       url('sinerva-webfont.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'sinerva';
+  src: url('sinerva-webfont.woff2') format('woff2'),
+       url('sinerva-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+}
