@@ -199,7 +199,7 @@
 .monomer-modal {
 	position: fixed;
 	z-index: 999;
-	top: 50vh;
+	top: 40vh;
   right: 33vw; 
 	opacity: 0;
   width: 33.5rem; 
