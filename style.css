@@ -58,7 +58,7 @@
 
   /* --- polices --- */
   --font1: 'Montserrat', 'Arial', sans-serif; /* police principale du forum */
-  --font2: 'Sinerva', 'Times new roman', serif; /* police de titres */
+  --font2: 'sinerva', 'sinervaregular', 'Times new roman', serif; /* police de titres */
   --font3: 'Playfair display', 'Palatino', serif; /* police spéciale */
 
   /* --- tailles --- */
