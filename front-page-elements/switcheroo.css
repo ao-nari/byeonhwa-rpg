@@ -201,9 +201,9 @@
 	position: fixed;
 	z-index: 999;
 	top: 40vh;
-  right: 33vw; 
+  left: 50%; 
 	opacity: 0;
-  width: 33.5rem; 
+  width: 34rem; 
 	transition: 0.2s opacity ease;
 	transform: translate(-50%, -50%);
 	border-radius: var(--small-radius);

@@ -2,8 +2,8 @@
 /* --- MODE CLAIR --- */
 :root {
   font-size: 62.5%; /* default = 10px = 1rem */
-  --body: url('https://images2.imgbox.com/40/be/TbgzkXat_o.png'); /* fond du forum */
-  --header: url('https://i.imgur.com/Z9yNw2I.png'); /* bannière du forum */
+  --body: url('https://tinyurl.com/59h3d5mt'); /* fond du forum */
+  --header: url('https://i.imgur.com/40jOgFC.png'); /* bannière du forum */
 
   /* palette de base */
   --baseClr: #F5FCF1; /* couleur 1 */
@@ -117,8 +117,8 @@
 /* --- MODE SOMBRE --- */ 
 [data-color-scheme="dark"] {
   font-size: 62.5%; /* default = 10px = 1rem */
-  --body: url('https://images2.imgbox.com/5a/b2/fSu7G9Gj_o.png'); /* fond */
-  --header: url('https://i.imgur.com/QpEBkhL.png'); /* bannière */
+  --body: url('https://tinyurl.com/3uamwuc8'); /* fond */
+  --header: url('https://i.imgur.com/k1eLxlG.png'); /* bannière */
 
   /* palette de base */
   --baseClr: #06070F; /* couleur 1 */
