@@ -1,10 +1,16 @@
 /* --- SWITCHEROO by Monomer (barre latérale droite d'ajout de personnages) --- */
+:root {
+	--ease: cubic-bezier(0.4, 0, 0.2, 1);
+	--ease-bounce: cubic-bezier(0.43, 0.09, 0.38, 2.56);
+}
+
+/* emplacement et fonctionnement de la barre latérale */
 .switcheroo {
   transform: translateX(100%);
   position: fixed;  
   top: 6rem;
   right: 0;
-  width: 8rem;
+  width: 7rem;
   height: 40rem;
   transition: all 0.4s ease-in-out;
   background: var(--baseClr-90);
@@ -52,5 +58,273 @@
 
 .switcheroo__icon--closed span {
   transform: rotateZ(-135deg); 
+  transition: var(--base-transi); 
+}
+
+/* --- icônes personnages et ajout de personnage --- */
+.switcheroo__squircles {
+  display: flex; 
+  flex-direction: column;  
+  align-items: center; 
+  gap: 1rem; 
+  margin: 2rem 0; 
+}
+
+.switcheroo__squircle {
+	display: grid;
+  align-items: center; 
+  justify-content: center;
+	background-color: var(--baseClr3-20);
+	width: 4rem;
+	height: 4rem;
+	border-radius: 100%;
+	cursor: pointer; 
+  position: relative; 
+}
+
+.switcheroo__squircle::after {
+  content: "";
+  position: absolute !important;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  border-radius: 100%; 
+  background-color: var(--baseClr3-20);
+  transition: var(--base-transi);
+}
+
+.switcheroo__squircle:hover::after {
+  opacity: 1; 
+}
+
+/* avatar */
+.switcheroo__avatar {
+	width: 100%;
+}
+
+.switcheroo__avatar img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+	border-radius: 100%;
+}
+
+/* avatar compte connecté */
+.switcheroo__squircle.active img { 
+	cursor: default;
+}
+
+/* ajouter un compte */
+.switcheroo__squircle--button {
+	color: var(--textClr);
+}
+
+/* icon plus */
+.switcheroo__squircle--button i {
+	font-size: var(--biggest);
+  transition: var(--base-transi); 
+}
+
+.switcheroo__squircle--button:hover {
+	color: var(--accentClr);
+  transition: var(--base-transi); 
+}
+
+.switcheroo__delete {
+	display: flex;
+  align-items: center; 
+  justify-content: center; 
+	position: absolute;
+	width: 1.4rem;
+	height: 1.4rem;
+  top: 0; 
+  right: 0; 
+	border-radius: 100%;
+	background-color: var(--accentClr);
+	transform: scale(0);
+	transition: transform 120ms var(--ease), opacity 60ms var(--ease);
+	cursor: pointer;
+	color: var(--baseClr);
+}
+
+.switcheroo__squircle:hover .switcheroo__delete {
+	opacity: 1;
+	transform: scale(1);
+}
+
+/* --- INFOBULLE DU PSEUDO --- */
+.switcheroo__popper {
+	background-color: var(--baseClr-90);
+  color: var(--textClr);
+  font-size: var(--medium); 
+  text-transform: uppercase; 
+  font-weight: 600; 
+	padding: 0.3rem 0.9rem;
+  border-radius: var(--small-radius);
+	position: absolute;
+	width: max-content;
+	opacity: 0;
+	right: 160%;
+	top: 50%;
+	transform-origin: right;
+	transform: translateY(-50%) scale(1);
+  transition: opacity 60ms var(--ease), transform 120ms var(--ease-bounce);
+}
+
+.switcheroo__squircle:hover .switcheroo__popper {
+	opacity: 1;
+	transform: translateY(-50%) scale(1);
+}
+
+.switcheroo__logo, .switcheroo__divider {
+	display: none;
+}
+
+/* --- MODAL DE CONNEXION --- */
+.monomer-overlay {
+	position: fixed;
+	z-index: 999;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	width: 100%;
+	height: 100%;
+	transition: 0.3s opacity ease-in-out;
+	background: var(--baseClr-70);
+}
+
+.monomer-modal {
+	position: fixed;
+	z-index: 999;
+	top: 50vh;
+  right: 33vw; 
+	opacity: 0;
+  width: 33.5rem; 
+	transition: 0.2s opacity ease;
+	transform: translate(-50%, -50%);
+	border-radius: var(--small-radius);
+	background: var(--baseClr);
+	padding: 2rem;
+}
+
+.monomer-modal::before {
+  content: "byeonhw"; 
+  font-family: var(--font2); 
+  text-transform: uppercase; 
+  font-size: var(--bigger2); 
+  display: flex; 
+  justify-content: center; 
+  background: var(--grad2); 
+  -webkit-text-fill-color: transparent; 
+  background-clip: text;  
+}
+
+.switcheroo__form::before {
+  content: "ajoutes un personnage à ton switcheroo."; 
+  display: flex;
+  justify-content: center; 
+  font-size: var(--medium); 
+  font-weight: 500; 
+  margin-bottom: 2rem; 
+  letter-spacing: -0.05rem; 
+}
+
+.switcheroo__form-row {
+	display: flex;
+	flex-flow: column;
+	align-items: flex-start;
+	margin-bottom: 1.5rem;
+}
+
+.switcheroo__form-label {
+	margin-bottom: 0.3rem;
+	font-size: var(--medium2);
+	text-transform: uppercase;
+	font-weight: 600;
+  background: var(--grad2); 
+  background-clip: text; 
+  -webkit-text-fill-color: transparent; 
+}
+
+.switcheroo__form-input, .switcheroo__form-input:focus {
+	padding: 0.6rem;
+	border-radius: 0.4rem;
+	width: 100%;
+	background-color: var(--baseClr3-20);
+	color: var(--accentClr); 
+	cursor: text;
+}
+
+.switcheroo__form-input:focus {
+  outline: 0.1rem solid var(--accentClr); 
+  background: var(--baseClr3-40); 
+}
+
+.switcheroo__form-button {
+  all: unset; 
+	border-radius: var(--small-radius);
+	padding: 0.4rem 1.4rem;
+	text-transform: uppercase;
+	font-size: var(--medium2);
+	align-self: center;
+	background-color: var(--baseClr3-20);
+	cursor: pointer;
+	font-weight: 600;
+	margin-top: 1rem;
+  position: relative; 
+  color: var(--textClr); 
+  transition: var(--base-transi); 
+}
+
+.switcheroo__form-button:hover {
+  color: var(--accentClr); 
+  transition: var(--base-transi); 
+}
+
+.switcheroo__form-button::after {
+  content: ""; 
+  position: absolute; 
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  background: var(--baseClr3-20); 
+  border-radius: var(--small-radius); 
+  transition: var(--base-transi); 
+}
+
+.switcheroo__form-button:hover::after {
+  opacity: 1; 
+}
+
+.monomer-modal.monomer-open,
+.monomer-overlay.monomer-open {
+	opacity: 1;
+}
+
+/* x à droite pour fermer */
+.monomer-close {
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+	font-size: var(--bigger2);
+  width: 2rem; 
+  height: 2rem; 
+	position: absolute;
+	top: 0.4rem;
+	right: 0.4rem;
+	cursor: pointer;
+	color: var(--textClr);
+	outline: none;
+  background: transparent; 
+  transition: var(--base-transi); 
+}
+
+.monomer-close:hover {
+  color: var(--accentClr); 
   transition: var(--base-transi); 
 }

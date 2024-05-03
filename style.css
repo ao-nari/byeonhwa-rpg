@@ -13,7 +13,6 @@
 
   --baseClr2: #64A970; /* couleur 2 */
   --baseClr2-RGB: rgb(100, 169, 112); 
-  --baseClr2-20: rgba(100, 169, 112, 0.2); /* 20% d'opacité */
 
   --baseClr3: #769E71; /* couleur 3 */
   --baseClr3-RGB: rgb(118, 158, 113); 
@@ -21,6 +20,7 @@
   --baseClr3-60: rgba(118, 158, 113, 0.6); /* 60% opacité */
   --baseClr3-40: rgba(118, 158, 113, 0.4); /* 40% opacité */
   --baseClr3-20: rgba(118, 158, 113, 0.2); /* 20% opacité */ 
+  --baseClr3-10: rgba(118, 158, 113, 0.1); /* 10% opacité */ 
 
   --accentClr: #85692E; /* couleur d'accent 1 */
   --accentClr-RGB: rgb(133, 105, 46);
@@ -53,6 +53,8 @@
   --big-radius: 2.4rem; /* arrondi fort | 2.4rem = 24px */
   --base-transi: all 0.3s ease-in-out; /* transition pour animations diverses */ 
   --slow-transi: all 0.5s ease-in-out; /* même transition, mais plus lente */ 
+
+  --drop-shadow: drop-shadow(0px 0px 8px var(--baseClr3-10));
 
   /* --- polices --- */
   --font1: 'Montserrat', 'Arial', sans-serif; /* police principale du forum */
@@ -133,6 +135,7 @@
   --baseClr3-60: rgba(70, 83, 153, 0.6); /* 60% opacité */
   --baseClr3-40: rgba(70, 83, 153, 0.4); /* 40% opacité */
   --baseClr3-20: rgba(70, 83, 153, 0.2); /* 20% opacité */
+  --baseClr3-10: rgba(70, 83, 153, 0.1); /* 10% opacité */
 
   --accentClr: #B4B34F; /* couleur d'accent */
   --accentClr-RGB: rgb(180, 179, 79); 
