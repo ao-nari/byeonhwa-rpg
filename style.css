@@ -170,8 +170,9 @@ body {
   font-family: var(--font1); 
   margin: 0 !important; 
   overflow-x: hidden; 
-  background: var(--body) fixed center; 
+  background: var(--body) fixed center top; 
   background-size: cover; 
+  background-repeat: no-repeat; 
   color: var(--textClr); 
 }
 
@@ -297,8 +298,58 @@ blockquote cite a {/* code */}
   background-position: center;
   background-repeat: no-repeat;
   background-size: auto;
-  margin: 10rem 0 5rem 0; 
+  margin: 12rem 0 5rem 0; 
   height: 60rem; 
+}
+
+/* barre de progression */
+.header__progressbar {
+  height: 0.1rem; 
+  width: 60rem; 
+  background: var(--baseClr); 
+  z-index: 999; 
+  opacity: 1; 
+  position: absolute; 
+  top: 45%;
+  left: 50vw; 
+  transform: translate(-50%); 
+  transition: var(--base-transi);
+  /* animation */
+}
+
+.header__progressbar::after {
+  content: ""; 
+  background: var(--grad2); 
+  height: 0.1rem; 
+  width: 60rem;
+  position: absolute; 
+  transform-origin: left; 
+  transition: var(--base-transi); 
+  animation: header__progressbar 2s ease forwards; 
+}
+
+/* animation bannière */
+/* barre de progression */
+@keyframes header__progressbar {
+  0% {
+    transform: scaleX(0); opacity(0); 
+  }
+  99% {
+    transform: scaleX(1); opacity(1);
+  }
+  100% {
+    transform: scaleX(1); opacity(0); 
+  }
+}
+
+/* animation d'apparition du header */
+@keyframes header__apparition {
+  0% {
+    clip-path: circle(0% at 50% 50%);
+  }
+  100% {
+    clip-path: circle(100% at 50% 50%);
+  }
 }
 
 /* --- NAVIGATION --- */
@@ -344,6 +395,54 @@ a.mainmenu:hover, .footerbar a:hover {
 .navbar .navbar__rightmenu {
   width: 30rem;
   text-align: right;
+}
+
+/* icônes de la navbar */
+a.mainmenu[href^="/"]::before {
+  display: inline-block;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Font Awesome 6 Free';
+  background: var(--grad2); 
+  background-clip: text; 
+  -webkit-text-fill-color: transparent; 
+  padding-left: 0.5rem; 
+  font-size: var(--medium2);  
+}
+
+/* accueil */
+a.mainmenu[href="/"]::before {
+  content: '\f015';  
+}
+
+/* rechercher */
+a.mainmenu[href="/search"]::before {
+  content: '\f002';  
+}
+
+/* membres */
+a.mainmenu[href="/memberlist"]::before {
+  content: '\f0c9';  
+}
+
+/* rechercher */
+a.mainmenu[href="/groups"]::before {
+  content: '\e533';  
+}
+
+/* profil */
+a.mainmenu[href="/profile?mode=editprofile"]::before {
+  content: "\f007"; 
+}
+
+/* messagerie */
+a.mainmenu[href="/privmsg?folder=inbox"]::before {
+  content: "\f0e0"; 
+}
+
+/* login/logout */
+a.mainmenu[href="/login?logout=1&tid=9d91b4bdd9de53024ec5af474ecbbfe9&key=15cdb4"]::before {
+  content: "\f08b"; 
 }
 
 /* --- footerbar (bottom) --- */
@@ -451,12 +550,11 @@ a.mainmenu:hover, .footerbar a:hover {
 
 /* "panneau d'administration" */
 .adminlink {
-  padding-right: 0.4rem; 
-  color: var(--accentClr); 
+  color: var(--baseClr3); 
 }
 
 .adminlink::after {
-  content: " |"; 
+  content: " | "; 
 }
 
 .adminlink a {
