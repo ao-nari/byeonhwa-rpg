@@ -332,13 +332,13 @@ blockquote cite a {/* code */}
 /* barre de progression */
 @keyframes header__progressbar {
   0% {
-    transform: scaleX(0); opacity(0); 
+    transform: scaleX(0); opacity: (0); 
   }
   99% {
-    transform: scaleX(1); opacity(1);
+    transform: scaleX(1); opacity: (1);
   }
   100% {
-    transform: scaleX(1); opacity(0); 
+    transform: scaleX(1); opacity: (0); 
   }
 }
 
