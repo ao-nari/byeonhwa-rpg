@@ -2,7 +2,7 @@
 /* --- MODE CLAIR --- */
 :root {
   font-size: 62.5%; /* default = 10px = 1rem */
-  --body: url('https://tinyurl.com/59h3d5mt'); /* fond du forum */
+  --body: url('https://i.imgur.com/3AW0kt1.png'); /* fond du forum */
   --header: url('https://i.imgur.com/40jOgFC.png'); /* bannière du forum */
 
   /* palette de base */
@@ -13,6 +13,7 @@
 
   --baseClr2: #64A970; /* couleur 2 */
   --baseClr2-RGB: rgb(100, 169, 112); 
+  --baseClr2-20:rgba(100, 169, 112, 0.2); /* 20% opacité */
 
   --baseClr3: #769E71; /* couleur 3 */
   --baseClr3-RGB: rgb(118, 158, 113); 
@@ -117,7 +118,7 @@
 /* --- MODE SOMBRE --- */ 
 [data-color-scheme="dark"] {
   font-size: 62.5%; /* default = 10px = 1rem */
-  --body: url('https://tinyurl.com/3uamwuc8'); /* fond */
+  --body: url('https://i.imgur.com/BsFKZgm.png'); /* fond */
   --header: url('https://i.imgur.com/k1eLxlG.png'); /* bannière */
 
   /* palette de base */
@@ -128,6 +129,7 @@
 
   --baseClr2: #4B59A5; /* couleur 2 */
   --baseClr2-RGB: rgb(75, 89, 165); 
+  --baseClr2-20: rgba(75, 89, 165, 0.2); /* 20% opacité */
 
   --baseClr3: #465399; /* couleur 3 */
   --baseClr3-RGB: rgb(70, 83, 153); 
@@ -302,7 +304,7 @@ blockquote cite a {/* code */}
   height: 60rem; 
 }
 
-/* barre de progression */
+/*
 .header__progressbar {
   height: 0.1rem; 
   width: 60rem; 
@@ -314,10 +316,9 @@ blockquote cite a {/* code */}
   left: 50vw; 
   transform: translate(-50%); 
   transition: var(--base-transi);
-  /* animation */
 }
 
-.header__progressbar::after {
+.header__progressbar::after { 
   content: ""; 
   background: var(--grad2); 
   height: 0.1rem; 
@@ -328,8 +329,6 @@ blockquote cite a {/* code */}
   animation: header__progressbar 2s ease forwards; 
 }
 
-/* animation bannière */
-/* barre de progression */
 @keyframes header__progressbar {
   0% {
     transform: scaleX(0); opacity: (0); 
@@ -342,7 +341,6 @@ blockquote cite a {/* code */}
   }
 }
 
-/* animation d'apparition du header */
 @keyframes header__apparition {
   0% {
     clip-path: circle(0% at 50% 50%);
@@ -351,6 +349,7 @@ blockquote cite a {/* code */}
     clip-path: circle(100% at 50% 50%);
   }
 }
+*/
 
 /* --- NAVIGATION --- */
 .navbar, .footerbar {
@@ -408,6 +407,7 @@ a.mainmenu[href^="/"]::before {
   -webkit-text-fill-color: transparent; 
   padding-left: 0.5rem; 
   font-size: var(--medium2);  
+  content: "\f08b"; 
 }
 
 /* accueil */
@@ -438,11 +438,6 @@ a.mainmenu[href="/profile?mode=editprofile"]::before {
 /* messagerie */
 a.mainmenu[href="/privmsg?folder=inbox"]::before {
   content: "\f0e0"; 
-}
-
-/* login/logout */
-a.mainmenu[href="/login?logout=1&tid=9d91b4bdd9de53024ec5af474ecbbfe9&key=15cdb4"]::before {
-  content: "\f08b"; 
 }
 
 /* --- footerbar (bottom) --- */
@@ -628,6 +623,47 @@ ul#fa_menulist, ul#notif_list {
 /* ------------------------------------ */
 
 /* --- PAGE MESSAGES --- */
+.container {
+  display: flex; 
+  flex-wrap: wrap; 
+}
+
+/* structure message */
+.post {
+  display: flex; 
+}
+
+/* encadré titre des messages (boutons, pagination, etc) */
+.container__title {
+  background: var(--baseClr-90); 
+  width: 100%; 
+  border-radius: var(--big-radius); 
+  margin-bottom: 1rem; 
+}
+
+/* messages */
+.container__post {
+  background: var(--baseClr2-20); 
+  width: 81rem; 
+  border-radius: 0 1.6rem 1.6rem 0;
+}
+
+/* intérieur message */
+.post_message.postbody.content { 
+  background: var(--baseClr-90); 
+  border-radius: var(--radius);
+  box-shadow: var(--drop-shadow); 
+  margin: 2rem;
+}
+
+/* profil message */
+.post_profile {
+  background: var(--baseClr-90);
+  width: 26.5rem; 
+  border-radius: 1.6rem 0 0 1.6rem;
+  margin-right: 0.5rem;  
+}
+
 /* ------------------------------------ */
 
 /* --- PAGE POSTER UN MESSAGE | BOITE DE TEXTE --- */
