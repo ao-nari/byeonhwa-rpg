@@ -76,8 +76,12 @@
 
   /* --- effets --- */
   --semibold-fw: 600; 
-  --base-fw: 400; 
+  --base-fw: 500; 
   --bold-fw: 700; 
+
+  /* --- espacements des caractères --- */
+  --small-lh: 1.3; 
+  --base-lh: 1.5; 
 
   /* --- VARIABLES MESSENGER --- */
   --FAM-windowSize: 88rem; /* 880px */
@@ -176,6 +180,8 @@ body {
   background-size: cover; 
   background-repeat: no-repeat; 
   color: var(--textClr); 
+  font-weight: var(--base-fw); 
+  line-height: var(--base-lh); 
 }
 
 .main_forum {
@@ -631,6 +637,7 @@ ul#fa_menulist, ul#notif_list {
 /* structure message */
 .post {
   display: flex; 
+  margin: 0.5rem 0; 
 }
 
 /* encadré titre des messages (boutons, pagination, etc) */
@@ -638,7 +645,7 @@ ul#fa_menulist, ul#notif_list {
   background: var(--baseClr-90); 
   width: 100%; 
   border-radius: var(--big-radius); 
-  margin-bottom: 1rem; 
+  margin-bottom: 0.5rem; 
 }
 
 /* messages */
@@ -652,8 +659,12 @@ ul#fa_menulist, ul#notif_list {
 .post_message.postbody.content { 
   background: var(--baseClr-90); 
   border-radius: var(--radius);
-  box-shadow: var(--drop-shadow); 
+  filter: var(--drop-shadow); 
   margin: 2rem;
+  font-size: var(--medium); 
+  line-height: var(--small-lh); 
+  padding: 2.5rem; 
+  min-height: 62rem !important; 
 }
 
 /* profil message */
