@@ -1,0 +1,17 @@
+/* --- ANNEXES --- */
+/* code général des sujets administratifs */
+
+/* --- séparation des posts administratifs et des posts classiques --- */
+.post:has(.bh_admin) {
+  /* code ici */
+  /* le sélecteur :has permet de modifier un post UNIQUEMENT s'il contient "bh_admin" */
+}
+
+.post:has(.bh_admin) .post_profile {
+  /* par exemple, on peut supprimer l'affichage du profil d'un post contenant un message d'administration */
+  display: none; 
+}
+
+.post:has(.bh_admin) .container_post {
+  width: 108rem; /* 1080px */
+}
