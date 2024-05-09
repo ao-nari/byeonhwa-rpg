@@ -215,7 +215,12 @@ h1 {
 }
 
 h1.page-title {
-  /* code spécifique du h1 de la page principale */
+  font-size: var(--biggest); 
+  font-family: var(--font2); 
+  text-transform: uppercase; 
+  background: var(--grad2); 
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent;
 }
 
 h1, h1.page-title {
@@ -646,6 +651,12 @@ ul#fa_menulist, ul#notif_list {
   width: 100%; 
   border-radius: var(--big-radius); 
   margin-bottom: 0.5rem; 
+  height: 10rem; 
+  display: flex; 
+  flex-wrap: wrap; 
+  align-items: center; 
+  justify-content: space-between; 
+  padding: 0.5rem 1.5rem; 
 }
 
 /* messages */
@@ -673,6 +684,85 @@ ul#fa_menulist, ul#notif_list {
   width: 26.5rem; 
   border-radius: 1.6rem 0 0 1.6rem;
   margin-right: 0.5rem;  
+}
+
+/* chaîne de navigation et pagination */
+.container__title .navigation_links, .container__title .pagination.right {
+  width: 50%; 
+}
+
+.container__title .navigation_chain {
+  font-size: var(--small); 
+  text-transform: uppercase; 
+  font-weight: var(--semibold-fw); 
+}
+
+.container__title .navigation_chain a {
+    color: var(--textClr);
+}
+
+.container__title .navigation_chain i {
+  font-size: var(--smallest);  
+  padding: 0 0.2rem; 
+}
+
+/* détails du post (et boutons citer, éditer, etc) */
+.post_details {
+  padding: 2rem 2.5rem 0 2.5rem; 
+}
+.post_details, .profile-icons {
+  display: flex; 
+  justify-content: space-between; 
+}
+
+/* lien du sujet et date */
+.post_date {
+  display: flex;  
+  font-size: var(--small); 
+  text-transform: uppercase;
+  font-weight: var(--semibold-fw); 
+}
+
+.post_date a { 
+  max-width: 200px; 
+  display: inline-block; 
+  overflow: hidden; 
+  white-space: nowrap; 
+  text-overflow: ellipsis; 
+  color: var(--textClr); 
+}
+
+time::before {
+  content: "|"; 
+  padding-right: 0.3rem; 
+}
+
+/* boutons citer, éditer, etc */
+.profile-icons {
+  font-size: var(--medium); 
+  font-weight: var(--semibold-fw); 
+  background: var(--grad1); 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase; 
+  letter-spacing: -0.05px; 
+}
+
+.profile-icons li {
+  padding: 0 0.3rem; 
+}
+
+/* bouton like */
+.rep-button, .rep-button:active, .rep-button:focus {
+  background: var(--accentClr); 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border: none;
+  font-size: var(--small2);  
+}
+
+button.rep-button .rep-nb {
+  padding: 0.5rem; 
 }
 
 /* ------------------------------------ */

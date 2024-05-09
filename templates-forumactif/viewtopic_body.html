@@ -137,21 +137,24 @@
                         <li>{postrow.displayed.EDIT_IMG}</li>
                         <li>{postrow.displayed.DELETE_IMG}</li>
                         <li>{postrow.displayed.IP_IMG}</li>
+
+                        <!-- Conteneur du bouton like -->
+                        <!-- BEGIN switch_likes_active -->
+                        <div class="like_button">
+
+                            <!-- Bouton "j'aime" -->
+                            <button class="rep-button {postrow.displayed.switch_likes_active.C_VOTE_LIKE}" data-href="{postrow.displayed.switch_likes_active.U_VOTE_LIKE}" data-href-rm="{postrow.displayed.switch_likes_active.U_VOTE_RM_LIKE}">
+
+                                <!-- Texte "j'aime" -->
+                                <span class="like_text">{postrow.displayed.switch_likes_active.L_LIKE}</span>
+
+                                <!-- Compte des "j'aime" -->
+                                {postrow.displayed.switch_likes_active.COUNT_VOTE_LIKE}
+                            </button>
+                        </div>
+                        <!-- END switch_likes_active -->
+                        <!-- Fin du bouton like -->
                     </ul>
-            
-                    <!-- Conteneur du bouton like -->
-                    <!-- BEGIN switch_likes_active -->
-                    <div class="like_button">
-
-                        <!-- Bouton "j'aime" -->
-                        <button class="rep-button {postrow.displayed.switch_likes_active.C_VOTE_LIKE}" data-href="{postrow.displayed.switch_likes_active.U_VOTE_LIKE}" data-href-rm="{postrow.displayed.switch_likes_active.U_VOTE_RM_LIKE}">
-
-                            <!-- Compte des "j'aime" -->
-                            {postrow.displayed.switch_likes_active.COUNT_VOTE_LIKE}
-                        </button>
-                    </div>
-                    <!-- END switch_likes_active -->
-                    <!-- Fin du bouton like -->
             </div>
             <!-- Fin détails -->
 
@@ -160,9 +163,6 @@
             <!-- Contenu du message -->
             <div class="post_message postbody content">
                 <div>{postrow.displayed.MESSAGE}</div>
-
-                <!-- Texte "j'aime" -->
-                <span class="like_text">{postrow.displayed.switch_likes_active.L_LIKE}</span>
 
                 <!-- Signature -->
                 <!-- BEGIN switch_signature -->
