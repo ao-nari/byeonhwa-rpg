@@ -11,3 +11,7 @@
   /* par exemple, on peut supprimer l'affichage du profil d'un post contenant une annexe */
   display: none; 
 }
+
+.post:has(.bh_annexe) .container_post {
+  width: 108rem; /* 1080px */
+}
