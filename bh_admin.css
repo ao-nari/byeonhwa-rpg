@@ -12,6 +12,6 @@
   display: none; 
 }
 
-.post:has(.bh_admin) .container_post {
+.post:has(.bh_admin) .container__post {
   width: 108rem; /* 1080px */
 }
