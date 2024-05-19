@@ -264,7 +264,10 @@
   background: var(--baseClr3-40) !important; 
 }
 
-input:-webkit-autofill, input:-webkit-autofill:focus {
+input:-webkit-autofill, input:-webkit-autofill:focus, input:-webkit-autofill:hover, input:-webkit-autofill:active {
+  -webkit-text-fill-color: var(--accentClr); 
+  caret-color: var(--accentClr); 
+  -webkit-box-shadow: none; 
   transition: background-color 50000s; 
 }
 
