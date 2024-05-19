@@ -187,6 +187,7 @@ body {
 .main_forum {
   width: 108rem; /* 1080px */
   margin: auto; 
+  margin-bottom: 10rem !important; 
 }
 
 /* --- SCROLLBAR (chrome) --- */ 
@@ -763,6 +764,18 @@ time::before {
 
 button.rep-button .rep-nb {
   padding: 0.5rem; 
+}
+
+/* --- BAS DE PAGE --- */
+.footer_messages, .container__footermsgs {
+  background: var(--baseClr-90); 
+  width: 100%; 
+  border-radius: var(--big-radius); 
+  padding: 0.5rem 1.5rem; 
+}
+
+.links_bar__msgslinks {
+  display: flex; 
 }
 
 /* ------------------------------------ */

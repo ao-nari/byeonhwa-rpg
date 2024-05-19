@@ -259,9 +259,9 @@
 	cursor: text;
 }
 
-.switcheroo__form-input:focus {
-  outline: 0.1rem solid var(--accentClr); 
-  background: var(--baseClr3-40); 
+.switcheroo__form-input:focus, input:-webkit-autofill {
+  outline: 0.1rem solid var(--accentClr) !important; 
+  background: var(--baseClr3-40) !important; 
 }
 
 .switcheroo__form-button {
