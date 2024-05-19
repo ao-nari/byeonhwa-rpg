@@ -250,7 +250,7 @@
   -webkit-text-fill-color: transparent; 
 }
 
-.switcheroo__form-input, .switcheroo__form-input:focus, input:-webkit-autofill {
+.switcheroo__form-input, .switcheroo__form-input:focus {
 	padding: 0.6rem;
 	border-radius: 0.4rem;
 	width: 100%;
@@ -259,9 +259,13 @@
 	cursor: text;
 }
 
-.switcheroo__form-input:focus, input:-webkit-autofill:focus {
+.switcheroo__form-input:focus {
   outline: 0.1rem solid var(--accentClr) !important; 
   background: var(--baseClr3-40) !important; 
+}
+
+input:-webkit-autofill, input:-webkit-autofill:focus {
+  transition: background-color 50000s; 
 }
 
 .switcheroo__form-button {
