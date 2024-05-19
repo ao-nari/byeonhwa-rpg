@@ -110,12 +110,14 @@
 	object-fit: cover;
 	object-position: center;
 	border-radius: 100%;
+  opacity: 0.8; 
 }
 
 /* avatar compte connecté */
 .switcheroo__squircle.active img { 
 	cursor: default;
   outline: 0.1rem solid var(--baseClr3-60);
+  opacity: 1; 
 }
 
 /* ajouter un compte */
