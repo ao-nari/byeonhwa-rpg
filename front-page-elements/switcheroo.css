@@ -250,7 +250,7 @@
   -webkit-text-fill-color: transparent; 
 }
 
-.switcheroo__form-input, .switcheroo__form-input:focus {
+.switcheroo__form-input, .switcheroo__form-input:focus, input:-webkit-autofill {
 	padding: 0.6rem;
 	border-radius: 0.4rem;
 	width: 100%;
