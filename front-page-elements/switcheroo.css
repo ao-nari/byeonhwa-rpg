@@ -259,7 +259,7 @@
 	cursor: text;
 }
 
-.switcheroo__form-input:focus, input:-webkit-autofill {
+.switcheroo__form-input:focus, input:-webkit-autofill:focus {
   outline: 0.1rem solid var(--accentClr) !important; 
   background: var(--baseClr3-40) !important; 
 }
