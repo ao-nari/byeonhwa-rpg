@@ -6,7 +6,7 @@
 
 /* emplacement et fonctionnement de la barre latérale */
 .switcheroo {
-  transform: translateX(100%);
+  transform: translateX(200%);
   position: fixed;  
   top: 6rem;
   right: 0;
@@ -180,11 +180,6 @@
 .switcheroo--open .switcheroo__squircle:hover .switcheroo__popper {
 	opacity: 1;
 	transform: translateY(-50%) scale(1);
-}
-
-.switcheroo .switcheroo__popper {
-  opacity: 0; 
-  cursor: auto; 
 }
 
 .switcheroo__logo, .switcheroo__divider {

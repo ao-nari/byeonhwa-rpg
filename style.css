@@ -222,6 +222,11 @@ h1.page-title {
   background: var(--grad2); 
   -webkit-background-clip: text; 
   -webkit-text-fill-color: transparent;
+  max-width: 50rem; 
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; 
+  position: relative; 
 }
 
 h1, h1.page-title {
