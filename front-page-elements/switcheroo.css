@@ -177,9 +177,14 @@
   transition: opacity 60ms var(--ease), transform 120ms var(--ease-bounce);
 }
 
-.switcheroo__squircle:hover .switcheroo__popper {
+.switcheroo--open .switcheroo__squircle:hover .switcheroo__popper {
 	opacity: 1;
 	transform: translateY(-50%) scale(1);
+}
+
+.switcheroo .switcheroo__popper {
+  opacity: 0; 
+  cursor: auto; 
 }
 
 .switcheroo__logo, .switcheroo__divider {
