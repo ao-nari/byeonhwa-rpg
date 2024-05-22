@@ -914,6 +914,7 @@ button.rep-button .rep-nb {
   max-height: 35rem !important;
   margin: 0 !important; 
   background: var(--baseClr3-10) !important;  
+  border-radius: var(--radius) !important; 
 }
 
 /* zone de texte SEULE */
@@ -922,6 +923,7 @@ button.rep-button .rep-nb {
   color: var(--textClr) !important; 
   font-family: var(--font1) !important; 
   line-height: var(--base-lh); 
+  border-radius: 0 0 var(--radius) var(--radius) !important; 
 }
 
 /* barre d'outils */
@@ -929,17 +931,23 @@ div.sceditor-toolbar {
   background: var(--baseClr2-20) !important; 
   border-bottom: 1px solid var(--baseClr-90) !important; 
   padding: 0.5rem !important; 
+  border-radius: var(--radius) var(--radius) 0 0 !important; 
 }
 
 div.sceditor-group {
   border-radius: 0.4rem !important; 
-    background: var(--baseClr-70) !important; 
+  background: var(--baseClr-70) !important; 
   border: none !important; 
 }
 
 a.sceditor-button {
   height: 28px !important;
   width: 28px !important;
+}
+
+/* boutons inutilisés */
+div.sceditor-grip, .sceditor-button.sceditor-button-color {
+  display: none !important; 
 }
 
 /* ------------------------------------ */
