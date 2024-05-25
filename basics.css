@@ -67,6 +67,24 @@ biggest, .biggest {font-size: var(--biggest);}
   --akgradinv: linear-gradient(to left, var(--akma), transparent, transparent);
   --byeongradinv: linear-gradient(to left, var(--byeonhwa), transparent, transparent);
 
+  /* VERS LE BAS */
+  --bomgradbottom: linear-gradient(to bottom, var(--bom), transparent, transparent);
+  --yeogradbottom: linear-gradient(to bottom, var(--yeoreum), transparent, transparent);
+  --gagradbottom: linear-gradient(to bottom, var(--gaeul), transparent, transparent);
+  --gygradbottom: linear-gradient(to bottom, var(--gyeoul), transparent, transparent);
+  --mungradbottom: linear-gradient(to bottom, var(--munoehan), transparent, transparent);
+  --akgradbottom: linear-gradient(to bottom, var(--akma), transparent, transparent);
+  --byeongradbottom: linear-gradient(to bottom, var(--byeonhwa), transparent, transparent);
+
+  /* VERS LE HAUT */
+  --bomgradtop: linear-gradient(to top, var(--bom), transparent, transparent);
+  --yeogradtop: linear-gradient(to top, var(--yeoreum), transparent, transparent);
+  --gagradtop: linear-gradient(to top, var(--gaeul), transparent, transparent);
+  --gygradtop: linear-gradient(to top, var(--gyeoul), transparent, transparent);
+  --mungradtop: linear-gradient(to top, var(--munoehan), transparent, transparent);
+  --akgradtop: linear-gradient(to top, var(--akma), transparent, transparent);
+  --byeongradtop: linear-gradient(to top, var(--byeonhwa), transparent, transparent);
+
   /* GROUPE > GROUPE */
   --bomyeo: linear-gradient(to right, var(--bom), var(--yeoreum)); /* BOM > YEOREUM */
   --yeobom: linear-gradient(to left, var(--bom), var(--yeoreum)); 
