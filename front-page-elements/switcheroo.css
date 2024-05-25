@@ -110,12 +110,8 @@
 	object-fit: cover;
 	object-position: center;
 	border-radius: 100%;
-<<<<<<< HEAD
   width: 4rem;
 	height: 4rem;
-=======
-  opacity: 0.8; 
->>>>>>> 9f5295b35f1cff874b4d64527ede143aefeba72a
 }
 
 /* avatar compte connecté */
