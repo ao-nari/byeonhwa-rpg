@@ -928,11 +928,14 @@ button.rep-button .rep-nb {
   border-radius: 0 0 var(--radius) var(--radius) !important; 
 }
 
+<<<<<<< HEAD
 /* icône pour redimensioner */
 div.sceditor-grip {
   display: none !important; 
 }
 
+=======
+>>>>>>> 9f5295b35f1cff874b4d64527ede143aefeba72a
 /* barre d'outils */
 div.sceditor-toolbar {
   background: var(--baseClr2-20) !important; 
@@ -943,7 +946,11 @@ div.sceditor-toolbar {
 
 div.sceditor-group {
   border-radius: 0.4rem !important; 
+<<<<<<< HEAD
     background: var(--baseClr-70) !important; 
+=======
+  background: var(--baseClr-70) !important; 
+>>>>>>> 9f5295b35f1cff874b4d64527ede143aefeba72a
   border: none !important; 
 }
 
@@ -952,6 +959,14 @@ a.sceditor-button {
   width: 28px !important;
 }
 
+<<<<<<< HEAD
+=======
+/* boutons inutilisés */
+div.sceditor-grip, .sceditor-button.sceditor-button-color {
+  display: none !important; 
+}
+
+>>>>>>> 9f5295b35f1cff874b4d64527ede143aefeba72a
 /* ------------------------------------ */
 
 /* --- PAGE POSTER UN MESSAGE | BOITE DE TEXTE --- */

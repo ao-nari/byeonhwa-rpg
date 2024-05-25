@@ -22,19 +22,21 @@
             {PAGINATION}
         </span>
 
-        <!-- Liste des participants du sujet -->
-        {POSTERS_LIST}
+        <div class="title_posterslist">
+            <!-- Liste des participants du sujet -->
+            {POSTERS_LIST}
 
-        <!-- Sondage (template : viewtopic_poll_ballot /// viewtopic_poll_result) -->
-        {POLL_DISPLAY}
+            <!-- Sondage (template : viewtopic_poll_ballot /// viewtopic_poll_result) -->
+            {POLL_DISPLAY}
 
-        <!-- titre du sujet -->
-        <h1 class="page-title">{TOPIC_TITLE}</h1>
+            <!-- titre du sujet -->
+            <h1 class="page-title">{TOPIC_TITLE}</h1>
+        </div>
         
         <!----------------------------------------------->
         <!-- BARRE DE GESTION -------------->
         
-        <div class="links_bar"> 
+        <div class="links_bar__buttons"> 
             <!-- Boutons : nouveau -->
             <!-- BEGIN switch_user_authpost -->
             <a class="buttons" href="{U_POST_NEW_TOPIC}" rel="nofollow"><img class="newtopic_button" src="{POST_IMG}" class="{POST_IMG_CLASS}" alt="{L_POST_NEW_TOPIC}" /></a>&nbsp;
@@ -180,13 +182,11 @@
 <!-- Fin des messages -->
 
 <!-- ------------------------------------------------------ -->
-
 <!-- BAS DE PAGE -->
-<!----------------------------------------------->
-<!-- BARRE DE GESTION -------------->
 
-<div class="links_bar">
-  
+<div class="container__footermsgs">
+    <!--- BARRE DE GESTION --->
+    <div class="links_bar__msgslinks">
         <!-- Lien "surveiller le sujet" -->
         <!-- BEGIN switch_user_logged_in -->
         <!-- BEGIN watchtopic -->
@@ -199,95 +199,85 @@
         &nbsp;<a class="specials_links" href="{U_WATCHSEARCH_JS_PLUS_MENU}">Sujets surveillés</a>
         <!-- END switch_plus_menu -->
 
-    <!-- Pagination -->
-    <!-- BEGIN topicpagination -->
-    <span class="pagination right">{PAGINATION}</span>
-    <!-- END topicpagination -->
-</div>
+        <!-- BEGIN switch_plus_menu -->
+        <span class="right">
+            <a href="{U_FAVOURITE_JS_PLUS_MENU}">Ajouter aux favoris</a>
+        </span>
+        <!-- END switch_plus_menu -->
 
-<!----------------------------------------------->
-<!-- REGLES DE LA CATEGORIE (si activé) -------------->
-
-<!-- BEGIN switch_forum_rules -->
-<div class="panel" id="forum_rules">
-
-    <!-- Titre "règlement" -->
-    <div class="h3">{L_FORUM_RULES}</div>
-
-    <!-- Règlement -->
-    <div class="postbody">
-        <!-- Image du règlement -->
-        <!-- BEGIN switch_forum_rule_image -->
-        <img class="left logo" src="{RULE_IMG_URL}" alt="" />
-        <!-- END switch_forum_rule_image -->
-
-        <!-- Contenu -->
-        {RULE_MSG}
+        <!-- Pagination -->
+        <!-- BEGIN topicpagination -->
+        <span class="pagination right">{PAGINATION}</span>
+        <!-- END topicpagination -->
     </div>
+
+    <!--- REGLES DE LA CATEGORIE (si activé) --->
+    <!-- BEGIN switch_forum_rules -->
+    <div class="panel" id="forum_rules">
+        <!-- Titre "règlement" -->
+        <div class="h3">{L_FORUM_RULES}</div>
+
+        <!-- Règlement -->
+        <div class="postbody">
+            <!-- Image du règlement -->
+            <!-- BEGIN switch_forum_rule_image -->
+            <img class="left logo" src="{RULE_IMG_URL}" alt="" />
+            <!-- END switch_forum_rule_image -->
+
+            <!-- Contenu -->
+            {RULE_MSG}
+        </div>
+    </div>
+    <!-- END switch_forum_rules -->
+
+    <!--- REPONSE RAPIDE --->
+    <div class="container quickreply" id="quickreply_content">
+        <!-- BEGIN switch_user_logged_in -->
+        {QUICK_REPLY_FORM}
+        <!-- END switch_user_logged_in -->
+    </div>
+
+    <!--- BARRE DE GESTION 2 --->
+    <div class="links_bar__buttons">
+            <!-- Bouton : nouveau -->
+            <!-- BEGIN switch_user_authpost -->
+            <a class="buttons" href="{U_POST_NEW_TOPIC}" rel="nofollow"><img class="newtopic_button" src="{POST_IMG}" class="{POST_IMG_CLASS}" alt="{L_POST_NEW_TOPIC}" /></a>&nbsp;
+            <!-- END switch_user_authpost -->
+        
+            <!-- Bouton : répondre -->
+            <!-- BEGIN switch_user_authreply -->
+            <a class="buttons" href="{U_POST_REPLY_TOPIC}"><img class="reply_button" src="{REPLY_IMG}" class="i_reply" alt="{L_POST_REPLY_TOPIC}" /></a>
+            <!-- END switch_user_authreply -->
+    </div>
+    <br/>
+
+    <!--- SAUTER VERS UN AUTRE FORUM --->
+    <form action="{S_JUMPBOX_ACTION}" method="get" onsubmit="if(document.jumpbox.f.value == -1){return false;}" class="left">
+        <fieldset class="jumpbox">
+            <label>{L_JUMP_TO}:&nbsp;</label>
+            {S_JUMPBOX_SELECT}&nbsp;
+            <input class="button2" type="submit" value="{L_GO}" />
+        </fieldset>
+    </form>
+
+    <!--- BOUTONS DE MODERATION --->
+    <!-- BEGIN viewtopic_bottom -->
+    <form method="get" action="{S_FORM_MOD_ACTION}" class="right">
+        <fieldset class="quickmod">
+            <input type="hidden" name="t" value="{TOPIC_ID}" />
+
+            <!-- <input type="hidden" name="sid" value="{S_SID}" /> -->
+            <input type="hidden" name="{SECURE_ID_NAME}" value="{SECURE_ID_VALUE}" />
+            <label>{L_MOD_TOOLS}:&nbsp;</label>
+            {S_SELECT_MOD}&nbsp;
+            <input class="button2" type="submit" value="{L_GO}" />
+        </fieldset>
+    <span class="right">{S_TOPIC_ADMIN}</span>
+    </form>
+    <!-- END viewtopic_bottom -->
+
+    <div class="clear"></div>
 </div>
-<!-- END switch_forum_rules -->
-
-<!----------------------------------------------->
-<!-- REPONSE RAPIDE -------------->
-
-<div class="container quickreply" id="quickreply_content">
-    <!-- BEGIN switch_user_logged_in -->
-    {QUICK_REPLY_FORM}
-    <!-- END switch_user_logged_in -->
-</div>
-
-<!----------------------------------------------->
-<!-- BARRE DE GESTION -------------->
-
-<div class="links_bar">
-        <!-- Bouton : nouveau -->
-        <!-- BEGIN switch_user_authpost -->
-        <a class="buttons" href="{U_POST_NEW_TOPIC}" rel="nofollow"><img class="newtopic_button" src="{POST_IMG}" class="{POST_IMG_CLASS}" alt="{L_POST_NEW_TOPIC}" /></a>&nbsp;
-        <!-- END switch_user_authpost -->
-      
-        <!-- Bouton : répondre -->
-        <!-- BEGIN switch_user_authreply -->
-        <a class="buttons" href="{U_POST_REPLY_TOPIC}"><img class="reply_button" src="{REPLY_IMG}" class="i_reply" alt="{L_POST_REPLY_TOPIC}" /></a>
-        <!-- END switch_user_authreply -->
-
-    <!-- BEGIN switch_plus_menu -->
-    <span class="right">
-        <a href="{U_FAVOURITE_JS_PLUS_MENU}">Ajouter le sujet à ses favoris</a>
-    </span>
-  <!-- END switch_plus_menu -->
-</div>
-<br/>
-
-<!----------------------------------------------->
-<!-- SAUTER VERS UN AUTRE FORUM -------------->
-
-<form action="{S_JUMPBOX_ACTION}" method="get" onsubmit="if(document.jumpbox.f.value == -1){return false;}" class="left">
-    <fieldset class="jumpbox">
-        <label>{L_JUMP_TO}:&nbsp;</label>
-        {S_JUMPBOX_SELECT}&nbsp;
-        <input class="button2" type="submit" value="{L_GO}" />
-    </fieldset>
-</form>
-
-<!----------------------------------------------->
-<!-- BOUTONS DE MODERATION -------------->
-
-<!-- BEGIN viewtopic_bottom -->
-<form method="get" action="{S_FORM_MOD_ACTION}" class="right">
-    <fieldset class="quickmod">
-        <input type="hidden" name="t" value="{TOPIC_ID}" />
-
-        <!-- <input type="hidden" name="sid" value="{S_SID}" /> -->
-        <input type="hidden" name="{SECURE_ID_NAME}" value="{SECURE_ID_VALUE}" />
-        <label>{L_MOD_TOOLS}:&nbsp;</label>
-        {S_SELECT_MOD}&nbsp;
-        <input class="button2" type="submit" value="{L_GO}" />
-    </fieldset>
-  <span class="right">{S_TOPIC_ADMIN}</span>
-</form>
-<!-- END viewtopic_bottom -->
-
-<div class="clear"></div>
 
 <!-- Script image recadré -->
 <!-- BEGIN switch_image_resize -->
@@ -307,7 +297,6 @@
 </script>
 <!-- END switch_image_resize -->
 
-
 <!-- BEGIN switch_plus_menu -->
 <script type="text/javascript">
     //<![CDATA[
@@ -316,6 +305,7 @@
 
 </script>
 <!-- END switch_plus_menu -->
+
 <script type="text/javascript">
     var hiddenMsgLabel = {
         visible: '{JS_HIDE_HIDDEN_MESSAGE}',

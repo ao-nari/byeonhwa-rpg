@@ -6,7 +6,7 @@
 
 /* emplacement et fonctionnement de la barre latérale */
 .switcheroo {
-  transform: translateX(100%);
+  transform: translateX(200%);
   position: fixed;  
   top: 6rem;
   right: 0;
@@ -110,14 +110,19 @@
 	object-fit: cover;
 	object-position: center;
 	border-radius: 100%;
+<<<<<<< HEAD
   width: 4rem;
 	height: 4rem;
+=======
+  opacity: 0.8; 
+>>>>>>> 9f5295b35f1cff874b4d64527ede143aefeba72a
 }
 
 /* avatar compte connecté */
 .switcheroo__squircle.active img { 
 	cursor: default;
   outline: 0.1rem solid var(--baseClr3-60);
+  opacity: 1; 
 }
 
 /* ajouter un compte */
@@ -177,7 +182,7 @@
   transition: opacity 60ms var(--ease), transform 120ms var(--ease-bounce);
 }
 
-.switcheroo__squircle:hover .switcheroo__popper {
+.switcheroo--open .switcheroo__squircle:hover .switcheroo__popper {
 	opacity: 1;
 	transform: translateY(-50%) scale(1);
 }
@@ -262,8 +267,15 @@
 }
 
 .switcheroo__form-input:focus {
-  outline: 0.1rem solid var(--accentClr); 
-  background: var(--baseClr3-40); 
+  outline: 0.1rem solid var(--accentClr) !important; 
+  background: var(--baseClr3-40) !important; 
+}
+
+input:-webkit-autofill, input:-webkit-autofill:focus, input:-webkit-autofill:hover, input:-webkit-autofill:active {
+  -webkit-text-fill-color: var(--accentClr); 
+  caret-color: var(--accentClr); 
+  -webkit-box-shadow: none; 
+  transition: background-color 50000s; 
 }
 
 .switcheroo__form-button {
