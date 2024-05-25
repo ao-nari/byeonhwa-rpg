@@ -172,6 +172,10 @@
   box-sizing: border-box; 
 }
 
+img {
+  max-width: 22.5rem !important; 
+}
+
 /* --- BODY (TOUTES LES PAGES) --- */
 body {
   font-size: 1.6rem; /* 16px par défaut */
@@ -189,7 +193,7 @@ body {
 .main_forum {
   width: 108rem; /* 1080px */
   margin: auto; 
-  margin-bottom: 10rem !important; 
+  margin-bottom: 5rem !important; 
 }
 
 /* --- SCROLLBAR (chrome) --- */ 
@@ -309,6 +313,71 @@ blockquote cite a {/* code */}
 #top {
   top: -10rem;
   position: relative;
+}
+
+/* boutons nouveau/répondre et autres */
+a.buttons {
+  position: relative; 
+  background: var(--baseClr2-20); 
+  padding: 0.5rem 1rem; 
+  border-radius: var(--small-radius); 
+  margin-right: 0.5rem; 
+}
+
+a.buttons span {
+  background: var(--grad1); 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: var(--medium2); 
+  text-transform: uppercase; 
+  font-weight: var(--semibold-fw); 
+  letter-spacing: -0.05rem; 
+}
+
+/* survol et animation */
+a.buttons::after {
+  content: "";
+  position: absolute !important;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  border-radius: var(--small-radius);
+  background: var(--baseClr2-20);
+  transition: var(--base-transi);
+}
+
+a.buttons:hover {
+  transition: var(--base-transi);
+}
+
+a.buttons:hover::after {
+  opacity: 1; 
+}
+
+/* select (dropdown), input (petits boutons), label (textes divers) */
+select, input {
+  all: unset; 
+  position: relative; 
+  font-family: var(--font1) !important; 
+  background-color: var(--baseClr2-20); 
+  border-radius: 0.4rem; 
+  font-size: var(--medium);  
+  padding: 0.4rem 0.8rem; 
+  transition: var(--base-transi); 
+}
+
+input:hover {
+  transition: var(--base-transi); 
+  color: var(--accentClr); 
+}
+
+label {
+  font-size: var(--medium); 
+  font-weight: var(--semibold-fw); 
+  text-transform: uppercase; 
+  letter-spacing: 0.05rem; 
 }
 
 /* ---------------- FIN GENERALITES -------------------- */
@@ -629,12 +698,6 @@ ul#fa_menulist, ul#notif_list {
 /* ici, tout le code concernant le qeel et son affichage */ 
 /* ------------------------------------ */
 
-/* --- FOOTER (overall_footer_end) --- */
-
-/* ici, tout le code concernant le bas de page ainsi que les petits détails de la page d'accueil */
-/* ------------------------------------ */
-
-/* ------------------------------------ */
 /* --- PAGE LISTE DES SUJETS --- */
 /* ------------------------------------ */
 
@@ -760,46 +823,6 @@ ul#fa_menulist, ul#notif_list {
   display: none; 
 }
 
-/* boutons nouveau/répondre (et autres éventuels) */
-a.buttons {
-  position: relative; 
-  background: var(--baseClr2-20); 
-  padding: 0.5rem 1rem; 
-  border-radius: var(--small-radius); 
-  margin-right: 0.5rem; 
-}
-
-a.buttons span {
-  background: var(--grad1); 
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-size: var(--medium2); 
-  text-transform: uppercase; 
-  font-weight: var(--semibold-fw); 
-  letter-spacing: -0.05rem; 
-}
-
-a.buttons::after {
-  content: "";
-  position: absolute !important;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  opacity: 0;
-  border-radius: var(--small-radius);
-  background: var(--baseClr2-20);
-  transition: var(--base-transi);
-}
-
-a.buttons:hover {
-  transition: var(--base-transi);
-}
-
-a.buttons:hover::after {
-  opacity: 1; 
-}
-
 /* --- container interne --- */
 /* détails du post (et boutons citer, éditer, etc) */
 .post_details {
@@ -825,6 +848,10 @@ a.buttons:hover::after {
   white-space: nowrap; 
   text-overflow: ellipsis; 
   color: var(--textClr); 
+}
+
+.post_date a:hover {
+  color: var(--accentClr);
 }
 
 time::before {
@@ -860,12 +887,35 @@ button.rep-button .rep-nb {
   padding: 0.5rem; 
 }
 
+/* ------ PROFIL MESSAGES ------ */
+.post_pseudo {
+  font-family: var(--font2); 
+  text-transform: uppercase; 
+  font-size: var(--bigger); 
+  float: right; 
+  padding: 1.5rem 1.5rem 1.6rem 1.5rem; 
+}
+
+.post_avatar {
+  display: flex; 
+  justify-content: center; 
+  padding: 1rem;
+  width: 24.5rem; 
+  height: 38rem; 
+  border-radius: var(--radius); 
+  margin: auto; 
+}  
+
+.post_avatar img {
+    border-radius: var(--radius); 
+}
+
 /* --- BAS DE PAGE --- */
-.footer_messages, .container__footermsgs {
+.container__footermsgs {
   background: var(--baseClr-90); 
-  width: 100%; 
+  width: 100%;  
   border-radius: var(--big-radius); 
-  padding: 1rem 1.5rem; 
+  padding: 1rem 1.5rem 8rem 1.5rem; 
   margin-top: 1rem;
 }
 
@@ -901,7 +951,7 @@ button.rep-button .rep-nb {
 .quickreply {
   display: flex; 
   justify-content: center; 
-  margin-top: 2rem; 
+  margin-top: 4rem; 
 }
 
 /* container réponse rapide */
@@ -911,7 +961,7 @@ button.rep-button .rep-nb {
 
 /* zone de texte et container */
 .sceditor-container, .sceditor-container textarea {
-  width: 85rem !important; 
+  width: 80rem !important; 
   min-height: 20rem !important; 
   max-height: 35rem !important;
   margin: 0 !important; 
@@ -936,25 +986,115 @@ div.sceditor-grip {
 /* barre d'outils */
 div.sceditor-toolbar {
   background: var(--baseClr2-20) !important; 
-  border-bottom: 1px solid var(--baseClr-90) !important; 
+  border-bottom: none !important; 
   padding: 0.5rem !important; 
   border-radius: var(--radius) var(--radius) 0 0 !important; 
 }
 
 div.sceditor-group {
   border-radius: 0.4rem !important; 
-  background: var(--baseClr-70) !important; 
+  background: none !important; 
   border: none !important; 
 }
 
 a.sceditor-button {
-  height: 28px !important;
-  width: 28px !important;
+  height: 26px !important;
+  width: 26px !important;
 }
 
-/* boutons inutilisés */
-div.sceditor-grip, .sceditor-button.sceditor-button-color {
+a.sceditor-button:hover, a.sceditor-button.hover {
+  box-shadow: none !important; 
+  background: var(--baseClr) !important; 
+}
+
+.sceditor-dropdown {
+  border: none !important; 
+  box-shadow: var(--drop-shadow) !important; 
+  border-radius: var(--small-radius) !important; 
+}
+
+html#sceditor_smilies body#sce_smilies_body {
+  background: none; 
+}
+
+form#smilies_categ select {
+  display: none; 
+}
+
+/* dropdown quick answer */
+div.sceditor-dropdown input {
+  border-radius: var(--small-radius) !important;  
+  color: var(--textClr) !important; 
+  box-shadow: none !important; 
+  outline: none !important; 
+  border-style: none !important; 
+}
+
+input.button {
+  background: var(--baseClr3-10) !important; 
+}
+
+.sceditor-mention-user img {
   display: none !important; 
+}
+
+.sceditor-mention-user {
+  text-align: left; 
+  padding-left: 1.5rem !important; 
+  border-radius: var(--small-radius) !important; 
+  border: none !important; 
+  transition: var(--base-transi); 
+  text-transform: uppercase; 
+  font-size: var(--medium); 
+  font-family: var(--font1); 
+  font-weight: var(--semibold-fw); 
+}
+
+.sceditor-mention-user:hover {
+  background-color: var(--baseClr2-20) !important; 
+}
+
+/* couleurs web */
+.sceditor-dropdown.sceditor-color-picker {
+  width: 20rem !important;  
+  height: 10rem !important;  
+  padding: 0.5rem !important;
+  border-radius: 0.4rem !important; 
+  display: flex; 
+}
+
+.sceditor-dropdown.sceditor-color-picker div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.color-option {
+  width: 2rem !important;  
+  height: 2rem !important;  
+  margin: 0.2rem !important;
+  cursor: pointer !important;
+}
+
+.color-option span {
+  display: block !important;
+  width: 2rem !important;  
+  height: 2rem !important;
+} 
+
+.color-option, .color-option span {
+  border-radius: 0.2rem;
+ }
+
+/* liens sous la quick answers */
+.container__footermsgs .links_bar__buttons {
+  float: right; 
+}
+
+form.left, form.right {
+  margin-top: 4rem; 
+  padding: 0 0.5rem; 
 }
 
 /* ------------------------------------ */

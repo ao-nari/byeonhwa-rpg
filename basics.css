@@ -15,33 +15,33 @@ biggest, .biggest {font-size: var(--biggest);}
 /* --- variables diverses --- */
 :root {
   /* variables de couleurs */
-  --byeonhwa: #fff; 
-  --byeonhwac: #fff; 
-  --byeonhwaf: #fff; 
+  --byeonhwa: #B4B34F; 
+  --byeonhwac: #c3c272; 
+  --byeonhwaf: #908f3f; 
 
-  --bom: #fff; 
-  --bomc: 
-  --bomf: 
+  --bom: #BC6A8C; 
+  --bomc: #c987a3; 
+  --bomf: #965470; 
 
-  --yeo: #fff; 
-  --yeoc: 
-  --yeof: 
+  --yeo: #66A465; 
+  --yeoc: #84b683; 
+  --yeof: #518350; 
 
-  --gaeul: #fff; 
-  --gaeulc: 
-  --gaeulf: 
+  --gaeul: #D36E43; 
+  --gaeulc: #db8b68; 
+  --gaeulf: #a85835; 
 
-  --gyeoul: #fff; 
-  --gyeoc:
-  --gyeof: 
+  --gyeoul: #539D9F; 
+  --gyeoc: #75b0b2; 
+  --gyeof: #427d7f; 
 
-  --akma: #fff; 
-  --akmac: 
-  --akmaf: 
+  --akma: #B84654; 
+  --akmac: #c66a76;
+  --akmaf: #933843;
 
-  --mun: #fff; 
-  --munc: 
-  --munf: 
+  --mun: #706BD0; 
+  --munc: #8c88d9;
+  --munf: #5955a6;
 
   /* variables de gradients */
   --bhtransp: linear-gradient(to left, transparent, var(--byeonhwa)); 
