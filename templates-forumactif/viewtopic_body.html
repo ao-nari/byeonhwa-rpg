@@ -134,7 +134,7 @@
                 </span>
                 
                     <!-- Boutons d'édition de message -->
-                    <ul class="profile-icons ">
+                    <ul class="profile-icons">
                         <li>{postrow.displayed.QUOTE_IMG}</li>
                         <li>{postrow.displayed.EDIT_IMG}</li>
                         <li>{postrow.displayed.DELETE_IMG}</li>
@@ -166,6 +166,13 @@
             <div class="post_message postbody content">
                 <div>{postrow.displayed.MESSAGE}</div>
 
+                <!-- liste de j'aime -->
+                <!-- BEGIN switch_likes_active -->
+                <!-- BEGIN switch_like_list -->
+                <div>{postrow.displayed.switch_likes_active.switch_like_list.D_LIKE_LIST}</div>
+                <!-- END switch_like_list -->
+                <!-- END switch_likes_active -->
+              
                 <!-- Signature -->
                 <!-- BEGIN switch_signature -->
                 <div class="signature_div" id="sig{postrow.displayed.U_POST_ID}">{postrow.displayed.SIGNATURE_NEW}</div>
@@ -235,19 +242,6 @@
         <!-- BEGIN switch_user_logged_in -->
         {QUICK_REPLY_FORM}
         <!-- END switch_user_logged_in -->
-    </div>
-
-    <!--- BARRE DE GESTION 2 --->
-    <div class="links_bar__buttons">
-            <!-- Bouton : nouveau -->
-            <!-- BEGIN switch_user_authpost -->
-            <a class="buttons" href="{U_POST_NEW_TOPIC}" rel="nofollow"><img class="newtopic_button" src="{POST_IMG}" class="{POST_IMG_CLASS}" alt="{L_POST_NEW_TOPIC}" /></a>&nbsp;
-            <!-- END switch_user_authpost -->
-        
-            <!-- Bouton : répondre -->
-            <!-- BEGIN switch_user_authreply -->
-            <a class="buttons" href="{U_POST_REPLY_TOPIC}"><img class="reply_button" src="{REPLY_IMG}" class="i_reply" alt="{L_POST_REPLY_TOPIC}" /></a>
-            <!-- END switch_user_authreply -->
     </div>
     <br/>
 
@@ -333,4 +327,31 @@
     };
 
     //]]>
+</script>
+
+<!-- récupération de la couleur de groupe pour les avatars -->
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    var postPseudoSpans = document.querySelectorAll('.post_profile .post_pseudo a[href*="/u"] span');
+    console.log(postPseudoSpans); 
+  
+    postPseudoSpans.forEach(function(span) {
+      var color = window.getComputedStyle(span).getPropertyValue("color");
+      var rgbaColor = addOpacity(color, 0.3);
+      var gradientColor = "linear-gradient(to bottom, " + rgbaColor + ", var(--baseClr3-10)"; 
+      
+      var postProfil = span.closest('.post_profile');
+      var postAvatar = postProfil.querySelector('.post_avatar');
+      
+      if (postAvatar) {
+        postAvatar.style.background = gradientColor;
+      }
+    });
+
+    function addOpacity(color, opacity) {
+        var rgbaComponents = color.match(/\d+/g);
+        rgbaComponents[3] = opacity;
+        return "rgba(" + rgbaComponents.join(", ") + ")";
+    }
+});
 </script>

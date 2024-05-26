@@ -36,11 +36,15 @@
   --gradClr1: #C7B97B; 
   --gradClr1-RGB: rgb(199, 185, 123); 
 
-  /* couleur de gradient spécifique au light theme (NE PAS LES UTILISER SEULES) */
+  /* couleur de gradient spécifique au light theme */
   --gradClr3: #507446; 
   --gradClr3-RGB: rgb(80, 116, 70); 
   --gradClr4: #769E71; 
   --gradClr4-RGB: rgb(118, 158, 113); 
+
+  /* couleur des icônes animées (lord icon) */
+  --lord-icon-primary: #85692E; 
+  --lord-icon-secondary: #C7B97B; 
 
   /* gradients */
   --bg1: linear-gradient(to bottom, rgba(100, 139, 90, 0.6), transparent); /* textClr 60% opacité > transparent (fond) */
@@ -157,6 +161,10 @@
   --gradClr1: #5E5B32; 
   --gradClr1-RGB: rgb(94, 91, 50); 
 
+  /* couleur des icônes animées (lord icon) */
+  --lord-icon-primary: #5E5B32; 
+  --lord-icon-secondary: #B4B34F;
+
   /* gradients */
   --bg1: linear-gradient(to bottom, rgba(117, 134, 227, 0.6), transparent); /* textClr 60% opacité > transparent (fond) */
   --bg2: linear-gradient(to bottom, rgba(117, 134, 227, 0.3), rgba(70, 83, 153, 0.1)); /* textClr 30% opacité > baseClr3 10% opacité (fond) */
@@ -170,10 +178,21 @@
 /* --- généralités --- */
 *, body, div {
   box-sizing: border-box; 
+  scrollbar-width: thin;
+}
+
+iframe {
+  width: 100%; 
+  height: 100%; 
 }
 
 img {
   max-width: 22.5rem !important; 
+}
+
+/* captcha google */
+.grecaptcha-badge {
+  margin-bottom: 4rem; 
 }
 
 /* --- BODY (TOUTES LES PAGES) --- */
@@ -197,7 +216,7 @@ body {
 }
 
 /* --- SCROLLBAR (chrome) --- */ 
-::-webkit-scrollbar {/* code */}
+::-webkit-scrollbar {width: 0.5rem;}
 ::-webkit-scrollbar-track {/* code */}
 ::-webkit-scrollbar-thumb {/* code */}
 
@@ -217,17 +236,11 @@ i {/* code */}
 u {/* code */}
 strike {/* code */}
 
-h1 {
+h1, .h1 {
   /* généralité pour les titres principaux */
 }
 
 h1.page-title {
-  font-size: var(--biggest); 
-  font-family: var(--font2); 
-  text-transform: uppercase; 
-  background: var(--grad2); 
-  -webkit-background-clip: text; 
-  -webkit-text-fill-color: transparent;
   max-width: 50rem; 
   white-space: nowrap;
   overflow: hidden;
@@ -235,20 +248,26 @@ h1.page-title {
   position: relative; 
 }
 
-h1, h1.page-title {
-  /* code pour les titres principaux */
+h1, .h1,  h1.page-title {
+  font-size: var(--biggest); 
+  font-family: var(--font2); 
+  text-transform: uppercase; 
+  background: var(--grad2); 
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent;
 }
 
-h2 {
+h2, .h2 {
   /* titres secondaires */
 }
 
-h3 {
-  /* sous-titres */
-}
-
-h4, h5, h6 {
-  /* sous-titres très secondaires (du plus important au moins important) */
+h3, .h3 {
+  font-size: var(--big); 
+  text-transform: uppercase; 
+  font-weight: var(--semibold-fw); 
+  background: var(--grad2); 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 p {
@@ -358,14 +377,19 @@ a.buttons:hover::after {
 
 /* select (dropdown), input (petits boutons), label (textes divers) */
 select, input {
-  all: unset; 
-  position: relative; 
-  font-family: var(--font1) !important; 
-  background-color: var(--baseClr2-20); 
-  border-radius: 0.4rem; 
-  font-size: var(--medium);  
-  padding: 0.4rem 0.8rem; 
-  transition: var(--base-transi); 
+  position: relative;
+  font-family: var(--font1) !important;
+  background-color: var(--baseClr2-20);
+  border-radius: 0.4rem;
+  font-size: var(--medium);
+  padding: 0.4rem 0.8rem;
+  transition: var(--base-transi);
+  border-style: none;
+  color: var(--textClr); 
+}
+
+input {
+  font-weight: var(--semibold-fw); 
 }
 
 input:hover {
@@ -376,8 +400,7 @@ input:hover {
 label {
   font-size: var(--medium); 
   font-weight: var(--semibold-fw); 
-  text-transform: uppercase; 
-  letter-spacing: 0.05rem; 
+  text-transform: uppercase;  
 }
 
 /* ---------------- FIN GENERALITES -------------------- */
@@ -716,13 +739,13 @@ ul#fa_menulist, ul#notif_list {
   margin: 0.5rem 0; 
 }
 
-/* encadré titre des messages (boutons, pagination, etc) */
-.container__title {
+/* encadré titre des messages (boutons, pagination, etc) et prévisualisation */
+.container__title, .container__preview, #postingbox, .postingbox__dices, .postingbox__options {
   background: var(--baseClr-90); 
   width: 100%; 
   border-radius: var(--big-radius); 
   margin-bottom: 0.5rem; 
-  height: 10rem; 
+  min-height: 10rem; 
   display: flex; 
   flex-wrap: wrap; 
   align-items: center; 
@@ -739,7 +762,7 @@ ul#fa_menulist, ul#notif_list {
 
 /* intérieur message */
 .post_message.postbody.content { 
-  background: var(--baseClr-90); 
+  background: var(--baseClr); 
   border-radius: var(--radius);
   filter: var(--drop-shadow); 
   margin: 2rem;
@@ -770,6 +793,10 @@ ul#fa_menulist, ul#notif_list {
 
 .container__title .navigation_chain a {
     color: var(--textClr);
+}
+
+.container__title .navigation_chain a:hover {
+    color: var(--accentClr);
 }
 
 .container__title .navigation_chain i {
@@ -881,10 +908,28 @@ time::before {
   -webkit-text-fill-color: transparent;
   border: none;
   font-size: var(--small2);  
+  transition: var(--base-transi); 
+}
+
+.rep-button:hover {
+  background: var(--accentClr2); 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: var(--base-transi); 
 }
 
 button.rep-button .rep-nb {
   padding: 0.5rem; 
+}
+
+/* liste des like */
+.fa_like_list {
+  background: var(--baseClr3-10); 
+  border-radius: var(--small-radius); 
+  margin-top: 2rem; 
+  padding: 0.4rem 1.2rem; 
+  text-transform: lowercase; 
+  font-size: var(--small); 
 }
 
 /* ------ PROFIL MESSAGES ------ */
@@ -915,7 +960,7 @@ button.rep-button .rep-nb {
   background: var(--baseClr-90); 
   width: 100%;  
   border-radius: var(--big-radius); 
-  padding: 1rem 1.5rem 8rem 1.5rem; 
+  padding: 1rem 1.5rem 6rem 1.5rem; 
   margin-top: 1rem;
 }
 
@@ -956,14 +1001,14 @@ button.rep-button .rep-nb {
 
 /* container réponse rapide */
 .sceditor-container {
-  border: none !important; 
+  border: none !important;  
 }
 
 /* zone de texte et container */
 .sceditor-container, .sceditor-container textarea {
   width: 80rem !important; 
   min-height: 20rem !important; 
-  max-height: 35rem !important;
+  max-height: 35rem !important; 
   margin: 0 !important; 
   background: var(--baseClr3-10) !important;  
   border-radius: var(--radius) !important; 
@@ -989,6 +1034,7 @@ div.sceditor-toolbar {
   border-bottom: none !important; 
   padding: 0.5rem !important; 
   border-radius: var(--radius) var(--radius) 0 0 !important; 
+  text-align: center !important; 
 }
 
 div.sceditor-group {
@@ -1093,13 +1139,70 @@ input.button {
 }
 
 form.left, form.right {
-  margin-top: 4rem; 
+  margin-top: 2rem; 
   padding: 0 0.5rem; 
 }
 
 /* ------------------------------------ */
 
 /* --- PAGE POSTER UN MESSAGE | BOITE DE TEXTE --- */
+.message-edition {
+  display: flex;
+}
+
+/* prévisualisation */
+.container__preview {
+  background: var(--baseClr) !important;
+  margin: 1rem 0; 
+}
+
+.container__preview hr {
+  display: none; 
+}
+
+#preview .h3 {
+  display: inline-block; 
+  padding: 1rem;  
+}
+
+.content {
+  font-size: var(--medium); 
+  text-align: justify; 
+  padding: 1rem; 
+}
+
+/* boîte poster un message */
+#message-box .sceditor-container {
+  height: 27rem !important; 
+}
+
+#postingbox {
+  margin-top: 0.5rem; 
+  margin-bottom: 1rem; 
+}
+
+#postingbox h3 {
+  display: inline-block;
+  margin: 2rem 2.5rem;
+}
+
+.postingbox__options {
+  margin: 1rem 0; 
+}
+
+#smileyContainer {
+  width: 16rem; 
+  background: white; 
+  margin: 0 1rem; 
+  border-radius: var(--radius); 
+  height: 27rem; 
+  overflow: hidden; 
+}
+
+.fields1 {
+  margin: auto; 
+}
+
 /* ------------------------------------ */
 
 /* --- PAGE MESSAGES PRIVES --- */
