@@ -8,16 +8,13 @@
 
   /* palette de base */
   --baseClr: #F5FCF1; /* couleur 1 */
-  --baseClr-RGB: rgb(245, 252, 241); 
   --baseClr-90: rgba(245, 252, 241, 0.9); /* 90% opacité */
   --baseClr-70: rgba(245, 252, 241, 0.7); /* 70% opacité */
 
   --baseClr2: #64A970; /* couleur 2 */
-  --baseClr2-RGB: rgb(100, 169, 112); 
   --baseClr2-20:rgba(100, 169, 112, 0.2); /* 20% opacité */
 
   --baseClr3: #769E71; /* couleur 3 */
-  --baseClr3-RGB: rgb(118, 158, 113); 
   --baseClr3-80: rgba(118, 158, 113, 0.8); /* 80% opacité */
   --baseClr3-60: rgba(118, 158, 113, 0.6); /* 60% opacité */
   --baseClr3-40: rgba(118, 158, 113, 0.4); /* 40% opacité */
@@ -25,22 +22,16 @@
   --baseClr3-10: rgba(118, 158, 113, 0.1); /* 10% opacité */ 
 
   --accentClr: #85692E; /* couleur d'accent 1 */
-  --accentClr-RGB: rgb(133, 105, 46);
   --accentClr2: #862631; /* couleur d'accent 2 (rare) */
-  --accentClr2-RGB: rgb(134, 38, 49); 
 
-  --textClr: #587D4F; /* couleur de texte */
-  --textClr-RGB: rgb(88, 125, 79); 
+  --textClr: #4F6F47; /* couleur de texte */
 
   /* couleurs supplémentaires diverses (gradients) */
-  --gradClr1: #C7B97B; 
-  --gradClr1-RGB: rgb(199, 185, 123); 
+  --gradClr1: #C7B97B;  
 
   /* couleur de gradient spécifique au light theme */
   --gradClr3: #507446; 
-  --gradClr3-RGB: rgb(80, 116, 70); 
   --gradClr4: #769E71; 
-  --gradClr4-RGB: rgb(118, 158, 113); 
 
   /* couleur des icônes animées (lord icon) */
   --lord-icon-primary: #85692E; 
@@ -133,16 +124,13 @@
 
   /* palette de base */
   --baseClr: #06070F; /* couleur 1 */
-  --baseClr-RGB: rgb(6, 7, 15); 
   --baseClr-90: rgba(6, 7, 15, 0.9); /* 90% opacité */
   --baseClr-70: rgba(6, 7, 15, 0.7); /* 90% opacité */
 
   --baseClr2: #4B59A5; /* couleur 2 */
-  --baseClr2-RGB: rgb(75, 89, 165); 
   --baseClr2-20: rgba(75, 89, 165, 0.2); /* 20% opacité */
 
   --baseClr3: #465399; /* couleur 3 */
-  --baseClr3-RGB: rgb(70, 83, 153); 
   --baseClr3-80: rgba(70, 83, 153, 0.8); /* 80% opacité */
   --baseClr3-60: rgba(70, 83, 153, 0.6); /* 60% opacité */
   --baseClr3-40: rgba(70, 83, 153, 0.4); /* 40% opacité */
@@ -150,16 +138,12 @@
   --baseClr3-10: rgba(70, 83, 153, 0.1); /* 10% opacité */
 
   --accentClr: #B4B34F; /* couleur d'accent */
-  --accentClr-RGB: rgb(180, 179, 79); 
   --accentClr2: #318388; /* couleur d'accent 2 (rare) */
-  --accentClr2-RGB: rgb(49, 131, 136); 
 
   --textClr: #8897E9; /* couleur de texte */
-  --textClr-RGB: rgb(117, 134, 227); 
 
   /* couleurs supplémentaires diverses (gradients) */
-  --gradClr1: #5E5B32; 
-  --gradClr1-RGB: rgb(94, 91, 50); 
+  --gradClr1: #5E5B32;  
 
   /* couleur des icônes animées (lord icon) */
   --lord-icon-primary: #5E5B32; 
@@ -739,18 +723,18 @@ ul#fa_menulist, ul#notif_list {
   margin: 0.5rem 0; 
 }
 
-/* encadré titre des messages (boutons, pagination, etc) et prévisualisation */
-.container__title, .container__preview, #postingbox, .postingbox__dices, .postingbox__options {
-  background: var(--baseClr-90); 
-  width: 100%; 
-  border-radius: var(--big-radius); 
-  margin-bottom: 0.5rem; 
-  min-height: 10rem; 
+/* containers (titres, prévi, boîte pour poster, dés et options) */
+.container__title, #preview, #postingbox, .postingbox__dices, .postingbox__options {
   display: flex; 
   flex-wrap: wrap; 
   align-items: center; 
-  justify-content: space-between; 
+  justify-content: space-between;
+  background: var(--baseClr-90); 
+  width: 100%; 
+  min-height: 10rem; 
+  margin-bottom: 0.5rem; 
   padding: 0.5rem 1.5rem; 
+  border-radius: var(--big-radius);  
 }
 
 /* messages */
@@ -772,7 +756,7 @@ ul#fa_menulist, ul#notif_list {
   min-height: 62rem !important; 
 }
 
-/* profil message */
+/* base profil message */
 .post_profile {
   background: var(--baseClr-90);
   width: 26.5rem; 
@@ -1016,11 +1000,12 @@ button.rep-button .rep-nb {
 
 /* zone de texte SEULE */
 .sceditor-container textarea {
-  padding: 1rem !important; 
+  padding: 1rem !important;  
   color: var(--textClr) !important; 
   font-family: var(--font1) !important; 
   line-height: var(--base-lh); 
-  border-radius: 0 0 var(--radius) var(--radius) !important; 
+  border-radius: 0 0 var(--radius) var(--radius) !important;
+  overflow: auto; 
 }
 
 /* icône pour redimensioner */
@@ -1150,25 +1135,22 @@ form.left, form.right {
   display: flex;
 }
 
-/* prévisualisation */
-.container__preview {
-  background: var(--baseClr) !important;
-  margin: 1rem 0; 
+/* prévi */
+#preview {
+  width: 108rem; 
 }
 
 .container__preview hr {
   display: none; 
 }
 
-#preview .h3 {
-  display: inline-block; 
-  padding: 1rem;  
-}
-
 .content {
   font-size: var(--medium); 
   text-align: justify; 
   padding: 1rem; 
+  background: var(--baseClr);
+  border-radius: var(--radius);
+  margin-bottom: 1rem;
 }
 
 /* boîte poster un message */
@@ -1177,21 +1159,32 @@ form.left, form.right {
 }
 
 #postingbox {
-  margin-top: 0.5rem; 
-  margin-bottom: 1rem; 
+  margin: 0.5rem 0 1rem 0; 
+  padding: 2rem 1rem 2rem 0; 
 }
 
+.posting-buttons {
+  margin: 1.5rem auto 0 auto; 
+}
+
+/* titres */
 #postingbox h3 {
   display: inline-block;
-  margin: 2rem 2.5rem;
+  margin: 2rem 3.5rem;
 }
 
+#preview .h3, .postingbox__options h3 {
+  margin: 2rem 2rem; 
+}
+
+/* options */
 .postingbox__options {
   margin: 1rem 0; 
 }
 
+/* smileys */
 #smileyContainer {
-  width: 16rem; 
+  width: 20rem; 
   background: white; 
   margin: 0 1rem; 
   border-radius: var(--radius); 
@@ -1199,8 +1192,36 @@ form.left, form.right {
   overflow: hidden; 
 }
 
+/* zones d'input (et autres) diverses (titre, raison, etc) */
 .fields1 {
   margin: auto; 
+}
+
+.fields1 dt {
+  margin: 0 1rem; 
+}
+
+.fields1 dl {
+  grid-template-columns: 18rem auto !important;
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  margin-bottom: 2rem; 
+}
+
+.fields1 dd input {
+  width: 80rem !important; 
+  height: 4rem;  
+  border-radius: var(--small-radius); 
+}
+
+.fields1 dd input:hover {
+  color: var(--textClr); 
+}
+
+.fields1 dd input:focus {
+  outline: 0.2rem solid var(--accentClr); 
+  background: var(--baseClr3-40); 
 }
 
 /* ------------------------------------ */
