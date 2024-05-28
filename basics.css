@@ -15,9 +15,9 @@ biggest, .biggest {font-size: var(--biggest);}
 /* --- variables diverses --- */
 :root {
   /* variables de couleurs */
-  --byeonhwa: #B4B34F; 
-  --byeonhwac: #c3c272; 
-  --byeonhwaf: #908f3f; 
+  --bh: #B4B34F; 
+  --bhc: #c3c272; 
+  --bhf: #908f3f; 
 
   --bom: #BC6A8C; 
   --bomc: #c987a3; 
@@ -44,50 +44,50 @@ biggest, .biggest {font-size: var(--biggest);}
   --munf: #5955a6;
 
   /* variables de gradients */
-  --bhtransp: linear-gradient(to left, transparent, var(--byeonhwa)); 
-  --bhtransp_rev: linear-gradient(to right, transparent, var(--byeonhwa)); 
-  --bhtransp_mid: linear-gradient(to left, transparent, var(--byeonhwa), transparent); 
+  --bhtransp: linear-gradient(to left, transparent, var(--bh)); 
+  --bhtransp_rev: linear-gradient(to right, transparent, var(--bh)); 
+  --bhtransp_mid: linear-gradient(to left, transparent, var(--bh), transparent); 
 
   /* gradients groupe > transparent */
   /* VERS LA DROITE */
   --bomgrad: linear-gradient(to right, var(--bom), transparent, transparent);
-  --yeograd: linear-gradient(to right, var(--yeoreum), transparent, transparent);
+  --yeograd: linear-gradient(to right, var(--yeo), transparent, transparent);
   --gagrad: linear-gradient(to right, var(--gaeul), transparent, transparent);
   --gygrad: linear-gradient(to right, var(--gyeoul), transparent, transparent);
-  --mungrad: linear-gradient(to right, var(--munoehan), transparent, transparent);
+  --mungrad: linear-gradient(to right, var(--mun), transparent, transparent);
   --akgrad: linear-gradient(to right, var(--akma), transparent, transparent);
-  --byeongrad: linear-gradient(to right, var(--byeonhwa), transparent, transparent);
+  --byeongrad: linear-gradient(to right, var(--bh), transparent, transparent);
   
   /* VERS LA GAUCHE */
   --bomgradinv: linear-gradient(to left, var(--bom), transparent, transparent);
-  --yeogradinv: linear-gradient(to left, var(--yeoreum), transparent, transparent);
+  --yeogradinv: linear-gradient(to left, var(--yeo), transparent, transparent);
   --gagradinv: linear-gradient(to left, var(--gaeul), transparent, transparent);
   --gygradinv: linear-gradient(to left, var(--gyeoul), transparent, transparent);
-  --mungradinv: linear-gradient(to left, var(--munoehan), transparent, transparent);
+  --mungradinv: linear-gradient(to left, var(--mun), transparent, transparent);
   --akgradinv: linear-gradient(to left, var(--akma), transparent, transparent);
-  --byeongradinv: linear-gradient(to left, var(--byeonhwa), transparent, transparent);
+  --byeongradinv: linear-gradient(to left, var(--bh), transparent, transparent);
 
   /* VERS LE BAS */
   --bomgradbottom: linear-gradient(to bottom, var(--bom), transparent, transparent);
-  --yeogradbottom: linear-gradient(to bottom, var(--yeoreum), transparent, transparent);
+  --yeogradbottom: linear-gradient(to bottom, var(--yeo), transparent, transparent);
   --gagradbottom: linear-gradient(to bottom, var(--gaeul), transparent, transparent);
   --gygradbottom: linear-gradient(to bottom, var(--gyeoul), transparent, transparent);
-  --mungradbottom: linear-gradient(to bottom, var(--munoehan), transparent, transparent);
+  --mungradbottom: linear-gradient(to bottom, var(--mun), transparent, transparent);
   --akgradbottom: linear-gradient(to bottom, var(--akma), transparent, transparent);
-  --byeongradbottom: linear-gradient(to bottom, var(--byeonhwa), transparent, transparent);
+  --byeongradbottom: linear-gradient(to bottom, var(--bh), transparent, transparent);
 
   /* VERS LE HAUT */
   --bomgradtop: linear-gradient(to top, var(--bom), transparent, transparent);
-  --yeogradtop: linear-gradient(to top, var(--yeoreum), transparent, transparent);
+  --yeogradtop: linear-gradient(to top, var(--yeo), transparent, transparent);
   --gagradtop: linear-gradient(to top, var(--gaeul), transparent, transparent);
   --gygradtop: linear-gradient(to top, var(--gyeoul), transparent, transparent);
-  --mungradtop: linear-gradient(to top, var(--munoehan), transparent, transparent);
+  --mungradtop: linear-gradient(to top, var(--mun), transparent, transparent);
   --akgradtop: linear-gradient(to top, var(--akma), transparent, transparent);
-  --byeongradtop: linear-gradient(to top, var(--byeonhwa), transparent, transparent);
+  --byeongradtop: linear-gradient(to top, var(--bh), transparent, transparent);
 
   /* GROUPE > GROUPE */
-  --bomyeo: linear-gradient(to right, var(--bom), var(--yeoreum)); /* BOM > YEOREUM */
-  --yeobom: linear-gradient(to left, var(--bom), var(--yeoreum)); 
+  --bomyeo: linear-gradient(to right, var(--bom), var(--yeo)); /* BOM > YEOREUM */
+  --yeobom: linear-gradient(to left, var(--bom), var(--yeo)); 
 
   --bomga: linear-gradient(to right, var(--bom), var(--gaeul)); /* BOM > GAEUL */
   --gabom: linear-gradient(to left, var(--bom), var(--gaeul));
@@ -98,44 +98,44 @@ biggest, .biggest {font-size: var(--biggest);}
   --akbom: linear-gradient(to right, var(--akma), var(--bom)); /* AKMA > BOM */
   --bomak: linear-gradient(to left, var(--akma), var(--bom));
 
-  --munbom: linear-gradient(to right, var(--munoehan), var(--bom)); /* MUN > BOM */
-  --bomun: linear-gradient(to left, var(--munoehan), var(--bom));
+  --munbom: linear-gradient(to right, var(--mun), var(--bom)); /* MUN > BOM */
+  --bomun: linear-gradient(to left, var(--mun), var(--bom));
 
-  --yeoga: linear-gradient(to right, var(--yeoreum), var(--gaeul)); /* YEOREUM > GAEUL */
-  --gayeo: linear-gradient(to left, var(--yeoreum), var(--gaeul));
+  --yeoga: linear-gradient(to right, var(--yeo), var(--gaeul)); /* YEOREUM > GAEUL */
+  --gayeo: linear-gradient(to left, var(--yeo), var(--gaeul));
 
-  --akyeo: linear-gradient(to right, var(--akma), var(--yeoreum)); /* AKMA > YEOREUM */
-  --yeoak: linear-gradient(to left, var(--akma), var(--yeoreum));
+  --akyeo: linear-gradient(to right, var(--akma), var(--yeo)); /* AKMA > YEOREUM */
+  --yeoak: linear-gradient(to left, var(--akma), var(--yeo));
 
-  --yeogyeo: linear-gradient(to right, var(--yeoreum), var(--gyeoul)); /* YEOREUM > GYEOUL */
-  --gyeoyeo: linear-gradient(to left, var(--yeoreum), var(--gyeoul));
+  --yeogyeo: linear-gradient(to right, var(--yeo), var(--gyeoul)); /* YEOREUM > GYEOUL */
+  --gyeoyeo: linear-gradient(to left, var(--yeo), var(--gyeoul));
 
-  --munyeo: linear-gradient(to right, var(--munoehan), var(--yeoreum)); /* MUN > YEOREUM */
-  --yeomun: linear-gradient(to left, var(--munoehan), var(--yeoreum));
+  --munyeo: linear-gradient(to right, var(--mun), var(--yeo)); /* MUN > YEOREUM */
+  --yeomun: linear-gradient(to left, var(--mun), var(--yeo));
 
   --akga: linear-gradient(to right, var(--akma), var(--gaeul)); /* AKMA > GAEUL */ 
   --gaak: linear-gradient(to left, var(--akma), var(--gaeul)); 
 
-  --munga: linear-gradient(to right, var(--munoehan), var(--gaeul)); /* MUN > GAEUL */
-  --gamun: linear-gradient(to left, var(--munoehan), var(--gaeul));
+  --munga: linear-gradient(to right, var(--mun), var(--gaeul)); /* MUN > GAEUL */
+  --gamun: linear-gradient(to left, var(--mun), var(--gaeul));
 
   --akgyeo: linear-gradient(to right, var(--akma), var(--gyeoul)); /* AKMA > GYEOUL */ 
   --gyeoak: linear-gradient(to left, var(--akma), var(--gyeoul)); 
 
-  --akmun: linear-gradient(to right, var(--akma), var(--munoehan)); /* AKMA > MUN */ 
-  --munak: linear-gradient(to left, var(--akma), var(--munoehan));
+  --akmun: linear-gradient(to right, var(--akma), var(--mun)); /* AKMA > MUN */ 
+  --munak: linear-gradient(to left, var(--akma), var(--mun));
 
   --gagyeo: linear-gradient(to right, var(--gaeul), var(--gyeoul)); /* GAEUL > GYEOUL */ 
   --gyeoga: linear-gradient(to left, var(--gaeul), var(--gyeoul));
 
-  --mungyeo: linear-gradient(to right, var(--munoehan), var(--gyeoul)); /* MUN > GYEOUL */ 
-  --gyeomun: linear-gradient(to left, var(--munoehan), var(--gyeoul));
+  --mungyeo: linear-gradient(to right, var(--mun), var(--gyeoul)); /* MUN > GYEOUL */ 
+  --gyeomun: linear-gradient(to left, var(--mun), var(--gyeoul));
 }
 
 /* --- couleurs principales --- */
-byeonhwa, .byeonhwa {color: var(--byeonhwa);}
+byeonhwa, .byeonhwa, bh, .bh {color: var(--bh);}
 bom, .bom {color: var(--bom);}
-yeoreum, .yeoreum, yeo, .yeo {color: var(--yeoreum);}
+yeoreum, .yeoreum, yeo, .yeo {color: var(--yeo);}
 gaeul, .gaeul {color: var(--gaeul);}
 gyeoul, .gyeoul {color: var(--gyeoul);}
 akma, .akma {color: var(--akma);}
@@ -143,26 +143,26 @@ munoehan, .munoehan, mun, .mun {color: var(munoehan);}
 
 /* --- couleurs secondaires --- */
 /* --- plus CLAIRES ---*/
-byeonhwac, .byeonhwac {}
-bomc, .bomc {}
-yeoc, .yeoc {}
-gaeulc, .gaeulc {}
-gyeoc, .gyeoc {}
-akmac, .akmac {}
-munc, .munc {}
+byeonhwac, .byeonhwac, bhc, .bhc {color: var(--bhc);}
+bomc, .bomc {color: var(--bomc);}
+yeoc, .yeoc {color: var(--yeoc);}
+gaeulc, .gaeulc {color: var(--gaeulc);}
+gyeoc, .gyeoc {color: var(--gyeoc);}
+akmac, .akmac {color: var(--akmac);}
+munc, .munc {color: var(--munc);}
 
 /* --- plus FONCEES --- */
-byeonhwaf, .byeonhwaf {}
-bomf, .bomf {}
-yeof, .yeof {}
-gaeulf, .gaeulf {}
-gyeof, .gyeof {}
-akmaf, .akmaf {}
-munf, .munf {}
+byeonhwaf, .byeonhwaf, bhf, .bhf {color: var(--bhf);}
+bomf, .bomf {color: var(--bomf);}
+yeof, .yeof {color: var(--yeof);}
+gaeulf, .gaeulf {color: var(--gaeulf);}
+gyeof, .gyeof {color: var(--gyeof);}
+akmaf, .akmaf {color: var(--akmaf);}
+munf, .munf {color: var(--munf);}
 
 /* --- GRADIENTS --- */
 /* --- fonctionnement de base --- */
-yeobom, gabom, gyeobom, bomak, bomun, gayeo, gyeoyeo, yeoak, yeomun, gyeoga, gaak, gamun, gyeoak, munak, gyeomun, mungyeo, akga, bomyeo, bomga, bomgyeo, akbom, munbom, yeoga, yeogyeo, munyeo, gagyeo, munga, akyeo, akgyeo, akmun,
+bhtransp, bhtransp_rev, bhtransp_mid, yeobom, gabom, gyeobom, bomak, bomun, gayeo, gyeoyeo, yeoak, yeomun, gyeoga, gaak, gamun, gyeoak, munak, gyeomun, mungyeo, akga, bomyeo, bomga, bomgyeo, akbom, munbom, yeoga, yeogyeo, munyeo, gagyeo, munga, akyeo, akgyeo, akmun,
 .yeobom, .gabom, .gyeobom, .bomak, .bomun, .gayeo, .gyeoyeo, .yeoak, .yeomun, .gyeoga, .gaak, .gamun, .gyeoak, .munak, .gyeomun, .mungyeo, .akga, .bomyeo, .bomga, .bomgyeo, .akbom, .munbom, .yeoga, .yeogyeo, .munyeo, .gagyeo, .munga, .akyeo, .akgyeo, .akmun {
 background-size: 100%; 
 -webkit-background-clip: text;
@@ -170,15 +170,23 @@ background-size: 100%;
 }
 
 /* --- couleur > couleur (et plus) --- */
-bhtransp {} /* byeonhwa > transparent */
-bhtransp_rev {} /* transparent < byeonhwa */
-bhtransp_mid {} /* transparent > byeonhwa < transparent */
+bhtransp {background: var(--bhtransp);} /* byeonhwa > transparent */
+bhtransp_rev {background: var(--bhtransp_rev);} /* transparent < byeonhwa */
+bhtransp_mid {background: var(--bhtransp_mid);} /* transparent > byeonhwa < transparent */
+
+/* --- groupe vers transparent --- */
+bomgrad, .bomgrad {background: var(--bomgrad);} /* bom > transparent */
+bomgradinv, .bomgradinv {background: var(--bomgradinv);} /* transparent > bom */
+bomgradtop, .bomgradtop {background: var(--bomgradtop);} 
+bomgradbottom, .bomgradbottom {background: var(--bomgradbottom);}
 
 /* --- groupe vers groupe --- */
 bomyeo, .bomyeo {background: var(--bomyeo);} /* bom > yeo */
 yeobom, .yeobom {background: var(--yeobeom);} /* yeo > bom */
-bomga, .bomga {}
-gabom, .gabom {}
+
+bomga, .bomga {background: var(--bomga);} /* bom > gaeul */
+gabom, .gabom {background: var(--gabom);} /* gaeul > bom */
+
 bomgyeo, .bomgyeo {}
 gyeobom, .gyeobom {}
 
@@ -189,6 +197,7 @@ evid2 {}
 evid3 {}
 
 /* --- AUTRES --- */
+
 /* --- alignements --- */
 left, .left {float: left !important;}
 right, .right {float: right !important;}
