@@ -2,56 +2,53 @@
 <!----------------------------------------------->
 <!-- MESSAGE -------------->
 
+<!-- Titre du poste -->
+<div class="container__title">
+    <!----------------------------------------------->
+    <!-- LIENS DE NAVIGATION -------------->
+    
+    <div class="navigation_links">
+        <!-- Chaîne de lien : Catégorie > Forum > Sous-fo -->
+        <span class="navigation_chain">
+            {NAV_CAT_DESC}
+        </span>
+    </div>
+
+    <!-- Pagination -->
+    <span class="pagination right">
+        {PAGINATION}
+    </span>
+
+    <div class="title_posterslist">
+        <!-- Liste des participants du sujet -->
+        {POSTERS_LIST}
+
+        <!-- Sondage (template : viewtopic_poll_ballot /// viewtopic_poll_result) -->
+        {POLL_DISPLAY}
+
+        <!-- titre du sujet -->
+        <h1 class="page-title">{TOPIC_TITLE}</h1>
+    </div>
+    
+    <!----------------------------------------------->
+    <!-- BARRE DE GESTION -------------->
+    
+    <div class="links_bar__buttons"> 
+        <!-- Boutons : nouveau -->
+        <!-- BEGIN switch_user_authpost -->
+        <a class="buttons" href="{U_POST_NEW_TOPIC}" rel="nofollow"><img class="newtopic_button" src="{POST_IMG}" class="{POST_IMG_CLASS}" alt="{L_POST_NEW_TOPIC}" /></a>&nbsp;
+        <!-- END switch_user_authpost -->
+    
+        <!-- Bouton : répondre -->
+        <!-- BEGIN switch_user_authreply -->
+        <a class="buttons" href="{U_POST_REPLY_TOPIC}"><img class="reply_button" src="{REPLY_IMG}" class="i_reply" alt="{L_POST_REPLY_TOPIC}" /></a>
+        <!-- END switch_user_authreply -->
+    </div>
+</div>
+<!-- fin titre du post -->
+
 <!-- Contenenur des messages -->
 <div class="container">
-
-    <!-- Titre du poste -->
-    <div class="container__title">
-        <!----------------------------------------------->
-        <!-- LIENS DE NAVIGATION -------------->
-        
-        <div class="navigation_links">
-            <!-- Chaîne de lien : Catégorie > Forum > Sous-fo -->
-            <span class="navigation_chain">
-                {NAV_CAT_DESC}
-            </span>
-        </div>
-
-        <!-- Pagination -->
-        <span class="pagination right">
-            {PAGINATION}
-        </span>
-
-        <div class="title_posterslist">
-            <!-- Liste des participants du sujet -->
-            {POSTERS_LIST}
-
-            <!-- Sondage (template : viewtopic_poll_ballot /// viewtopic_poll_result) -->
-            {POLL_DISPLAY}
-
-            <!-- titre du sujet -->
-            <h1 class="page-title">{TOPIC_TITLE}</h1>
-        </div>
-        
-        <!----------------------------------------------->
-        <!-- BARRE DE GESTION -------------->
-        
-        <div class="links_bar__buttons"> 
-            <!-- Boutons : nouveau -->
-            <!-- BEGIN switch_user_authpost -->
-            <a class="buttons" href="{U_POST_NEW_TOPIC}" rel="nofollow"><img class="newtopic_button" src="{POST_IMG}" class="{POST_IMG_CLASS}" alt="{L_POST_NEW_TOPIC}" /></a>&nbsp;
-            <!-- END switch_user_authpost -->
-        
-            <!-- Bouton : répondre -->
-            <!-- BEGIN switch_user_authreply -->
-            <a class="buttons" href="{U_POST_REPLY_TOPIC}"><img class="reply_button" src="{REPLY_IMG}" class="i_reply" alt="{L_POST_REPLY_TOPIC}" /></a>
-            <!-- END switch_user_authreply -->
-        </div>
-    </div>
-    <!-- fin titre du post -->
-
-    <!-- ------------------------------------------------------ -->
-
     <!-- Affichage d'un message -->
     <!-- BEGIN postrow -->
     <!-- BEGIN displayed -->

@@ -725,6 +725,7 @@ ul#fa_menulist, ul#notif_list {
 /* --- PAGE MESSAGES --- */
 .container {
   display: flex; 
+  flex-direction: column; 
   flex-wrap: wrap; 
 }
 
@@ -994,6 +995,7 @@ button.rep-button .rep-nb {
 .quickreply {
   display: flex; 
   justify-content: center; 
+  flex-direction: row !important; 
   margin-top: 4rem; 
 }
 
