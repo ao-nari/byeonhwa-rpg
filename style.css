@@ -210,7 +210,17 @@ body {
 }
 
 hr {
-  /* code */
+  height: 1px;
+  border: none; 
+  background: linear-gradient(to right, var(--gradClr1), var(--accentClr), var(--gradClr1)); 
+  opacity: 0.8; 
+}
+
+hrtransp {
+  height: 1px;
+  border: none; 
+  background: linear-gradient(to right, transparent, var(--gradClr1), var(--accentClr), var(--gradClr1), transparent); 
+  opacity: 0.8; 
 }
 
 /* --- liens et textes --- */ 
@@ -230,6 +240,7 @@ h1.page-title {
   overflow: hidden;
   text-overflow: ellipsis; 
   position: relative; 
+  margin-left: 0.5rem; 
 }
 
 h1, .h1,  h1.page-title {
@@ -723,7 +734,7 @@ ul#fa_menulist, ul#notif_list {
   margin: 0.5rem 0; 
 }
 
-/* containers (titres, prévi, boîte pour poster, dés et options) */
+/* containers divers (titres, prévisualisation, boîte pour poster, dés et options) */
 .container__title, #preview, #postingbox, .postingbox__dices, .postingbox__options {
   display: flex; 
   flex-wrap: wrap; 
@@ -746,14 +757,17 @@ ul#fa_menulist, ul#notif_list {
 
 /* intérieur message */
 .post_message.postbody.content { 
-  background: var(--baseClr); 
+background: var(--baseClr);
   border-radius: var(--radius);
-  filter: var(--drop-shadow); 
+  filter: var(--drop-shadow);
   margin: 2rem;
-  font-size: var(--medium); 
-  line-height: var(--small-lh); 
-  padding: 2.5rem; 
-  min-height: 62rem !important; 
+  font-size: var(--medium);
+  line-height: var(--small-lh);
+  padding: 2.5rem;
+  min-height: 62rem !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 /* base profil message */
@@ -1135,51 +1149,52 @@ form.left, form.right {
   display: flex;
 }
 
-/* prévi */
-#preview {
-  width: 108rem; 
-}
-
-.container__preview hr {
-  display: none; 
-}
-
-.content {
-  font-size: var(--medium); 
-  text-align: justify; 
-  padding: 1rem; 
-  background: var(--baseClr);
-  border-radius: var(--radius);
-  margin-bottom: 1rem;
-}
-
-/* boîte poster un message */
+/* poster un message */
 #message-box .sceditor-container {
   height: 27rem !important; 
 }
 
-#postingbox {
+#postingbox, #preview, .postingbox__dices, .postingbox__options {
   margin: 0.5rem 0 1rem 0; 
   padding: 2rem 1rem 2rem 0; 
+}
+
+#postingbox, #preview {
+  margin-bottom: 0.5rem !important; 
 }
 
 .posting-buttons {
   margin: 1.5rem auto 0 auto; 
 }
 
+/* boîte prévisualisation */
+#preview {
+  width: 108rem; 
+}
+
+/* cadre interne */
+#preview .content {
+  width: 105rem; 
+  font-size: var(--medium); 
+  text-align: justify; 
+  padding: 1rem; 
+  background: var(--baseClr);
+  border-radius: var(--radius);
+  margin: 0 0 0 1.5rem;
+}
+
+.container__preview hr {
+  display: none; 
+}
+
 /* titres */
-#postingbox h3 {
+#preview .h3, #postingbox h3, .postingbox__options h3 {
   display: inline-block;
   margin: 2rem 3.5rem;
 }
 
-#preview .h3, .postingbox__options h3 {
-  margin: 2rem 2rem; 
-}
-
-/* options */
-.postingbox__options {
-  margin: 1rem 0; 
+.wrapped__messages .h3 {
+  margin-left: 2rem; 
 }
 
 /* smileys */
@@ -1197,10 +1212,7 @@ form.left, form.right {
   margin: auto; 
 }
 
-.fields1 dt {
-  margin: 0 1rem; 
-}
-
+ /* dl = container d'input (dt + dd) */
 .fields1 dl {
   grid-template-columns: 18rem auto !important;
   display: flex; 
@@ -1209,21 +1221,92 @@ form.left, form.right {
   margin-bottom: 2rem; 
 }
 
+/* dt = titres */
+.fields1 dt {
+  margin: 0 1rem; 
+}
+
+/* dd = container input, input = zone interne */
 .fields1 dd input {
   width: 80rem !important; 
   height: 4rem;  
   border-radius: var(--small-radius); 
 }
 
+/* survolé */
 .fields1 dd input:hover {
   color: var(--textClr); 
 }
 
+/* sélectionné */
 .fields1 dd input:focus {
   outline: 0.2rem solid var(--accentClr); 
   background: var(--baseClr3-40); 
 }
 
+/* --- OPTIONS BOX --- */
+.postingbox__options .fields1 {
+  margin-left: 2.5rem !important; 
+}
+
+/* margin du "sauter vers" de la boîte options */
+.postingbox__options .right {
+  margin: 2rem 0 0 3.5rem; 
+}
+
+/* margin du hr de la boîte options */
+.postingbox__options hr {
+  margin: 2rem 0 3rem 3.5rem;
+}
+
+/* titre "modifier le titre du sujet" */
+.postingbox__options .fields1 dt label {
+  font-size: var(--small2); 
+}
+
+/* input "modifier le titre du sujet" */
+.postingbox__options .fields1 dd { 
+  margin-left: 1.5rem; 
+}
+
+/* options à cocher */
+.postingbox__options .fields1 input[type='checkbox'] { 
+  margin-left: 1rem; 
+}
+
+/* "sauter vers" posting box */
+.postingbox__options .right {
+  font-size: var(--medium);
+  font-weight: var(--semibold-fw);
+  text-transform: uppercase;
+}
+
+/* --- HISTORIQUE (posting_topic_review) --- */
+.wrapped__messages .panel {
+  background-color: var(--baseClr2-20); 
+  border-radius: var(--radius);
+  margin: 1rem 0;  
+  padding: 2rem 1rem; 
+}
+
+/* intérieur */
+.wrapped__messages .content {
+  font-size: var(--medium); 
+  padding: 1rem; 
+  background: var(--baseClr-90);
+  border-radius: var(--radius);
+  margin: 2rem; 
+}
+
+/* "par auteur / date / heure" */
+div.panel .postbody > span:first-of-type {
+  margin-left: 3.5rem; 
+  text-transform: uppercase; 
+  font-size: var(--medium); 
+  font-weight: var(--semibold-fw); 
+}
+
+/* div.panel:nth-child(3) > div:nth-child(1) > span:nth-child(1) */
 /* ------------------------------------ */
 
 /* --- PAGE MESSAGES PRIVES --- */
@@ -1241,3 +1324,42 @@ form.left, form.right {
 
 /* ------------------------------------ */
 /* --- DIVERS --- */
+
+
+/* ------------------------------------ */
+/* --- TOOLTIP (Z) --- */
+
+/* retirer le fond blanc par défaut */
+.tooltipster-default{
+  background:none !important;
+  box-shadow:none !important;
+}
+/* flèche */
+.tooltipster-arrow{display:none !important;}
+
+/* fond, conteneur */
+.tooltipster-content{
+  background: var(--baseClr3-10);
+  padding:5px;
+  border-radius: var(--radius);
+}
+
+/* fond, contenu */
+.main-tooltip{
+  background: var(--baseClr);
+  border-radius: var(--radius);
+  padding:5px;
+}
+
+/* contenu */
+.main-tooltip .preview_content{
+  display:flex !important;
+}
+
+/* avatar */
+.preview_avatar img{
+  width:50px;
+  height:50px;
+  border-radius: var(--radius);
+  object-fit:cover;
+}
