@@ -265,6 +265,10 @@ h3, .h3 {
   -webkit-text-fill-color: transparent;
 }
 
+h1, .h1, h2, .h2, h3, .h3 {
+  display: inline-block; 
+}
+
 p {
   margin: 0; 
 }
@@ -725,6 +729,7 @@ ul#fa_menulist, ul#notif_list {
 /* --- PAGE MESSAGES --- */
 .container {
   display: flex; 
+  flex-direction: column; 
   flex-wrap: wrap; 
 }
 
@@ -743,9 +748,31 @@ ul#fa_menulist, ul#notif_list {
   background: var(--baseClr-90); 
   width: 100%; 
   min-height: 10rem; 
-  margin-bottom: 0.5rem; 
-  padding: 0.5rem 1.5rem; 
+  margin: 0.5rem 0;
   border-radius: var(--big-radius);  
+}
+
+.container__title {margin-top: 0 !important;}
+
+.postingbox__dices, .postingbox__options {
+  margin-bottom: 1rem; 
+}
+
+.container__title {
+  padding: 0.5rem 1.5rem; 
+}
+
+/* titres h3 divers (prévisualisation, poster une réponse, options, etc) et autres éléments à aligner */
+.container__title .h3 {
+  padding: 0 2rem; 
+}
+
+#preview .h3, #postingbox h3, .postingbox__dices .h3, .postingbox__options h3, .postingbox__options .h3, #postingbox .fields1 {
+  padding: 0 3.5rem; 
+}
+
+#preview .h3 {
+  margin: 1rem 0 !important; 
 }
 
 /* messages */
@@ -994,6 +1021,7 @@ button.rep-button .rep-nb {
 .quickreply {
   display: flex; 
   justify-content: center; 
+  flex-direction: row !important; 
   margin-top: 4rem; 
 }
 
@@ -1143,73 +1171,53 @@ form.left, form.right {
 }
 
 /* ------------------------------------ */
-
 /* --- PAGE POSTER UN MESSAGE | BOITE DE TEXTE --- */
+
 .message-edition {
   display: flex;
 }
 
-/* poster un message */
 #message-box .sceditor-container {
   height: 27rem !important; 
 }
 
-#postingbox, #preview, .postingbox__dices, .postingbox__options {
-  margin: 0.5rem 0 1rem 0; 
-  padding: 2rem 1rem 2rem 0; 
-}
-
+/* posting box et prévisualisation */
 #postingbox, #preview {
   margin-bottom: 0.5rem !important; 
 }
 
+/* "prévisualiser" et "envoyer" */
 .posting-buttons {
-  margin: 1.5rem auto 0 auto; 
+  margin: 1.5rem auto; 
 }
 
-/* boîte prévisualisation */
+/* --- boîte prévisualisation --- */
 #preview {
   width: 108rem; 
 }
 
-/* cadre interne */
+/* intérieur */
 #preview .content {
   width: 105rem; 
   font-size: var(--medium); 
   text-align: justify; 
-  padding: 1rem; 
+  padding: 1rem 2rem; 
+  margin: 0 1.5rem; 
   background: var(--baseClr);
   border-radius: var(--radius);
-  margin: 0 0 0 1.5rem;
 }
 
-.container__preview hr {
-  display: none; 
-}
-
-/* titres */
-#preview .h3, #postingbox h3, .postingbox__options h3 {
-  display: inline-block;
-  margin: 2rem 3.5rem;
-}
-
-.wrapped__messages .h3 {
-  margin-left: 2rem; 
-}
+.container__preview hr {display: none;}
+.postingbox__options hr {margin: 1.5rem 0 2.5rem 0;}
 
 /* smileys */
 #smileyContainer {
   width: 20rem; 
   background: white; 
-  margin: 0 1rem; 
+  margin: 0 1rem 0 0; 
   border-radius: var(--radius); 
   height: 27rem; 
   overflow: hidden; 
-}
-
-/* zones d'input (et autres) diverses (titre, raison, etc) */
-.fields1 {
-  margin: auto; 
 }
 
  /* dl = container d'input (dt + dd) */
@@ -1219,11 +1227,6 @@ form.left, form.right {
   justify-content: space-between; 
   align-items: center; 
   margin-bottom: 2rem; 
-}
-
-/* dt = titres */
-.fields1 dt {
-  margin: 0 1rem; 
 }
 
 /* dd = container input, input = zone interne */
@@ -1245,33 +1248,9 @@ form.left, form.right {
 }
 
 /* --- OPTIONS BOX --- */
-.postingbox__options .fields1 {
-  margin-left: 2.5rem !important; 
-}
-
-/* margin du "sauter vers" de la boîte options */
-.postingbox__options .right {
-  margin: 2rem 0 0 3.5rem; 
-}
-
-/* margin du hr de la boîte options */
-.postingbox__options hr {
-  margin: 2rem 0 3rem 3.5rem;
-}
-
 /* titre "modifier le titre du sujet" */
 .postingbox__options .fields1 dt label {
   font-size: var(--small2); 
-}
-
-/* input "modifier le titre du sujet" */
-.postingbox__options .fields1 dd { 
-  margin-left: 1.5rem; 
-}
-
-/* options à cocher */
-.postingbox__options .fields1 input[type='checkbox'] { 
-  margin-left: 1rem; 
 }
 
 /* "sauter vers" posting box */
@@ -1279,9 +1258,17 @@ form.left, form.right {
   font-size: var(--medium);
   font-weight: var(--semibold-fw);
   text-transform: uppercase;
+  margin: 2rem 0 0 3.5rem;
+  padding: 2rem 0; 
 }
 
-/* --- HISTORIQUE (posting_topic_review) --- */
+/* sondages, dés, etc */
+.postingbox__options .panel {
+  width: 100%; 
+  margin: 0rem 3.5rem; 
+}
+
+/* --- HISTORIQUE DU SUJET (posting_topic_review) --- */
 .wrapped__messages .panel {
   background-color: var(--baseClr2-20); 
   border-radius: var(--radius);
@@ -1300,13 +1287,17 @@ form.left, form.right {
 
 /* "par auteur / date / heure" */
 div.panel .postbody > span:first-of-type {
-  margin-left: 3.5rem; 
+  margin-left: 4rem; 
   text-transform: uppercase; 
   font-size: var(--medium); 
   font-weight: var(--semibold-fw); 
 }
 
-/* div.panel:nth-child(3) > div:nth-child(1) > span:nth-child(1) */
+/* --- CASES A COCHER --- */
+.postingbox__options input[type='checkbox'] {
+  margin: 0 0.5rem 0 0; 
+}
+
 /* ------------------------------------ */
 
 /* --- PAGE MESSAGES PRIVES --- */
