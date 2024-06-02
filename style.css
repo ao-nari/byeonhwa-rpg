@@ -398,7 +398,7 @@ input:hover {
 
 label {
   font-size: var(--medium); 
-  font-weight: var(--semibold-fw); 
+  font-weight: var(--semibold-fw) !important; 
   text-transform: uppercase;  
 }
 
@@ -1188,7 +1188,7 @@ form.left, form.right {
 
 /* "prévisualiser" et "envoyer" */
 .posting-buttons {
-  margin: 1.5rem auto; 
+  margin: 1.5rem auto 2.5rem auto; 
 }
 
 /* --- boîte prévisualisation --- */
@@ -1229,20 +1229,28 @@ form.left, form.right {
   margin-bottom: 2rem; 
 }
 
+#postingbox dl, .postingbox__dices dl, .postingbox__options dl {
+  display: grid !important; 
+}
+
 /* dd = container input, input = zone interne */
 .fields1 dd input {
-  width: 80rem !important; 
-  height: 4rem;  
+  width: 80rem !important;   
   border-radius: var(--small-radius); 
 }
 
+/* zone de textes à remplir */
+input[type=text] {
+  height: 4rem;
+}
+
 /* survolé */
-.fields1 dd input:hover {
+input[type=text]:hover {
   color: var(--textClr); 
 }
 
 /* sélectionné */
-.fields1 dd input:focus {
+input[type=text]:focus {
   outline: 0.2rem solid var(--accentClr); 
   background: var(--baseClr3-40); 
 }
@@ -1262,10 +1270,35 @@ form.left, form.right {
   padding: 2rem 0; 
 }
 
-/* sondages, dés, etc */
+/* --- SONDAGES ET AUTRES --- */
 .postingbox__options .panel {
   width: 100%; 
-  margin: 0rem 3.5rem; 
+  margin: 0 3.5rem 3.5rem 3.5rem; 
+}
+
+/* choix de sondage */
+textarea[name="poll_option_text"] {
+  min-width: 30rem !important; 
+  max-width: 77rem !important; 
+}
+
+/* petit input ("sondage pendant") */
+.tiny {
+  margin-right: 1rem; /* espace entre l'input et le texte qui suit */
+}
+
+.inner dl {
+  grid-template-columns: 300px auto;
+  grid-gap: 2rem; 
+}
+
+/* input texte de la boîte interne des options (sondages) */
+.inner input[type=text] {
+  width: 30rem; 
+}
+
+.inner hr {
+  margin: 4rem 0; 
 }
 
 /* --- HISTORIQUE DU SUJET (posting_topic_review) --- */
