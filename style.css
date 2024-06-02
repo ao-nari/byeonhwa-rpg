@@ -1,12 +1,14 @@
+/* ---------------------------- */
 /* --- ROOT (BASE DU FORUM) --- */
+
 /* --- MODE CLAIR --- */
 :root {
   font-size: 62.5%; /* default = 10px = 1rem */
-  --body: url('https://i.imgur.com/3AW0kt1.png'); /* fond du forum */
-  --header: url('https://i.imgur.com/40jOgFC.png'); /* bannière du forum */
-  --bhavatar: url('https://i.imgur.com/29ucVBL.png'); /* avatar du compte byeonhwa */
+  --body: url('https://i.imgur.com/3AW0kt1.png'); /* fond */
+  --header: url('https://i.imgur.com/40jOgFC.png'); /* bannière */
+  --bhavatar: url('https://i.imgur.com/29ucVBL.png'); /* avatar byeonhwa */
 
-  /* palette de base */
+  /* --- palette --- */
   --baseClr: #F5FCF1; /* couleur 1 */
   --baseClr-90: rgba(245, 252, 241, 0.9); /* 90% opacité */
   --baseClr-70: rgba(245, 252, 241, 0.7); /* 70% opacité */
@@ -21,42 +23,42 @@
   --baseClr3-20: rgba(118, 158, 113, 0.2); /* 20% opacité */ 
   --baseClr3-10: rgba(118, 158, 113, 0.1); /* 10% opacité */ 
 
-  --accentClr: #85692E; /* couleur d'accent 1 */
-  --accentClr2: #862631; /* couleur d'accent 2 (rare) */
+  --accentClr: #85692E; /* accent 1 */
+  --accentClr2: #862631; /* accent 2 */
 
-  --textClr: #4F6F47; /* couleur de texte */
+  --textClr: #4F6F47; /* texte */
 
-  /* couleurs supplémentaires diverses (gradients) */
+  /* --- couleurs pour gradients --- */
   --gradClr1: #C7B97B;  
 
-  /* couleur de gradient spécifique au light theme */
-  --gradClr3: #507446; 
-  --gradClr4: #769E71; 
+  --gradClr2: #507446; 
+  --gradClr3: #769E71; 
 
-  /* couleur des icônes animées (lord icon) */
+  /* icônes animées (lord-icon) */
   --lord-icon-primary: #85692E; 
   --lord-icon-secondary: #C7B97B; 
 
-  /* gradients */
+  /* --- gradients --- */
   --bg1: linear-gradient(to bottom, rgba(100, 139, 90, 0.6), transparent); /* textClr 60% opacité > transparent (fond) */
   --bg2: linear-gradient(to bottom, rgba(100, 169, 112, 0.3), rgba(118, 158, 113, 0.1)); /* baseClr2 30% opacité > baseClr3 10% opacité (fond) */
 
-  --grad1: linear-gradient(to right, var(--gradClr3), var(--gradClr4)); /* gradient 2 couleurs */
+  --grad1: linear-gradient(to right, var(--gradClr2), var(--gradClr3)); /* gradient 2 couleurs */
   --grad2: linear-gradient(to right, var(--accentClr), var(--gradClr1), var(--accentClr)); /* gradient métallisé */
 
-  /* --- borders & misc --- */
-  --small-radius: 0.8rem; /* arrondi léger | 0.8rem = 8px */
-  --radius: 1.6rem; /* arrondi principal | 1.6rem = 16px */ 
-  --big-radius: 2.4rem; /* arrondi fort | 2.4rem = 24px */
-  --base-transi: all 0.3s ease-in-out; /* transition pour animations diverses */ 
-  --slow-transi: all 0.5s ease-in-out; /* même transition, mais plus lente */ 
+  /* --- autres --- */
+  --small-radius: 0.8rem; /* 8px */
+  --radius: 1.6rem; /* 16px */ 
+  --big-radius: 2.4rem; /* 24px */
+
+  --base-transi: all 0.3s ease-in-out; /* transition pour animations */ 
+  --slow-transi: all 0.5s ease-in-out; /* plus lente */ 
 
   --drop-shadow: drop-shadow(0px 0px 8px var(--baseClr3-10));
 
   /* --- polices --- */
-  --font1: 'Montserrat', 'Arial', sans-serif; /* police principale du forum */
-  --font2: 'sinervaregular', 'Times new roman', serif; /* police de titres */
-  --font3: 'Playfair display', 'Palatino', serif; /* police spéciale */
+  --font1: 'Montserrat', 'Arial', sans-serif; 
+  --font2: 'sinervaregular', 'Times new roman', serif; 
+  --font3: 'Playfair display', 'Palatino', serif; 
 
   /* --- tailles --- */
   --smallest: 0.8rem; /* 8 px */
@@ -120,12 +122,12 @@
   font-size: 62.5%; /* default = 10px = 1rem */
   --body: url('https://i.imgur.com/BsFKZgm.png'); /* fond */
   --header: url('https://i.imgur.com/k1eLxlG.png'); /* bannière */
-  --bhavatar: url('https://i.imgur.com/3JwTGSH.png'); /* avatar du compte byeonhwa */
+  --bhavatar: url('https://i.imgur.com/3JwTGSH.png'); /* avatar byeonhwa */
 
-  /* palette de base */
+  /* --- palette --- */
   --baseClr: #06070F; /* couleur 1 */
   --baseClr-90: rgba(6, 7, 15, 0.9); /* 90% opacité */
-  --baseClr-70: rgba(6, 7, 15, 0.7); /* 90% opacité */
+  --baseClr-70: rgba(6, 7, 15, 0.7); /* 70% opacité */
 
   --baseClr2: #4B59A5; /* couleur 2 */
   --baseClr2-20: rgba(75, 89, 165, 0.2); /* 20% opacité */
@@ -137,19 +139,19 @@
   --baseClr3-20: rgba(70, 83, 153, 0.2); /* 20% opacité */
   --baseClr3-10: rgba(70, 83, 153, 0.1); /* 10% opacité */
 
-  --accentClr: #B4B34F; /* couleur d'accent */
-  --accentClr2: #318388; /* couleur d'accent 2 (rare) */
+  --accentClr: #B4B34F; /* accent 1 */
+  --accentClr2: #318388; /* accent 2 */
 
-  --textClr: #8897E9; /* couleur de texte */
+  --textClr: #8897E9; /* texte */
 
-  /* couleurs supplémentaires diverses (gradients) */
+  /* --- couleurs pour gradients --- */
   --gradClr1: #5E5B32;  
 
-  /* couleur des icônes animées (lord icon) */
+  /* icônes animées (lord-icon) */
   --lord-icon-primary: #5E5B32; 
   --lord-icon-secondary: #B4B34F;
 
-  /* gradients */
+  /* --- gradients --- */
   --bg1: linear-gradient(to bottom, rgba(117, 134, 227, 0.6), transparent); /* textClr 60% opacité > transparent (fond) */
   --bg2: linear-gradient(to bottom, rgba(117, 134, 227, 0.3), rgba(70, 83, 153, 0.1)); /* textClr 30% opacité > baseClr3 10% opacité (fond) */
 
@@ -157,18 +159,18 @@
   --grad2: linear-gradient(to right, var(--gradClr1), var(--accentClr)); /* gradient 2 couleurs */
 }
 
-/* ------------------------------------ */
+/* ---------------------------- */
 
 /* --- généralités --- */
 *, body, div {
   box-sizing: border-box; 
-  scrollbar-width: thin;
+  scrollbar-width: thin; /* scrollbars firefox */
 }
 
-iframe {
-  width: 100%; 
-  height: 100%; 
-}
+/* --- SCROLLBARS (chrome) --- */ 
+::-webkit-scrollbar {width: 0.5rem;}
+::-webkit-scrollbar-track {/* code */}
+::-webkit-scrollbar-thumb {/* code */}
 
 img {
   max-width: 22.5rem !important; 
@@ -179,9 +181,14 @@ img {
   margin-bottom: 4rem; 
 }
 
+iframe {
+  width: 100%; 
+  height: 100%; 
+}
+
 /* --- BODY (TOUTES LES PAGES) --- */
 body {
-  font-size: 1.6rem; /* 16px par défaut */
+  font-size: 1.6rem; 
   font-family: var(--font1); 
   margin: 0 !important; 
   overflow-x: hidden; 
@@ -194,15 +201,10 @@ body {
 }
 
 .main_forum {
-  width: 108rem; /* 1080px */
+  width: 108rem; 
   margin: auto; 
   margin-bottom: 5rem !important; 
 }
-
-/* --- SCROLLBAR (chrome) --- */ 
-::-webkit-scrollbar {width: 0.5rem;}
-::-webkit-scrollbar-track {/* code */}
-::-webkit-scrollbar-thumb {/* code */}
 
 /* réduction taille des emojis forumactif */ 
 .emojione {
@@ -224,14 +226,20 @@ hrtransp {
 }
 
 /* --- liens et textes --- */ 
+
 /* styles de texte */
 b, strong {/* code */}
-i {/* code */}
+i, em {/* code */}
 u {/* code */}
 strike {/* code */}
 
-h1, .h1 {
-  /* généralité pour les titres principaux */
+h1, .h1,  h1.page-title {
+  font-size: var(--biggest); 
+  font-family: var(--font2); 
+  text-transform: uppercase; 
+  background: var(--grad2); 
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent;
 }
 
 h1.page-title {
@@ -241,15 +249,6 @@ h1.page-title {
   text-overflow: ellipsis; 
   position: relative; 
   margin-left: 0.5rem; 
-}
-
-h1, .h1,  h1.page-title {
-  font-size: var(--biggest); 
-  font-family: var(--font2); 
-  text-transform: uppercase; 
-  background: var(--grad2); 
-  -webkit-background-clip: text; 
-  -webkit-text-fill-color: transparent;
 }
 
 h2, .h2 {
@@ -273,6 +272,7 @@ p {
   margin: 0; 
 }
 
+/* liens */
 a {
   text-decoration: none; 
   color: var(--accentClr); 
@@ -289,7 +289,7 @@ blockquote div {
   /* code */
 }
 
-/* balises code, spoiler, hide, cite */ 
+/* code, spoiler, hide, cite */ 
 /* CODE */
 .codebox {
   /* code */
@@ -326,14 +326,15 @@ blockquote cite a {/* code */}
 /* tag */
 .mentiontag {/* code */}
 
-/* CLASSES UTILITAIRES VARIEES */ 
+/* --- CLASSES UTILITAIRES DIVERSES --- */ 
+
 /* fix hauteur forum (#top button) */
 #top {
   top: -10rem;
   position: relative;
 }
 
-/* boutons nouveau/répondre et autres */
+/* boutons (nouveau, répondre) */
 a.buttons {
   position: relative; 
   background: var(--baseClr2-20); 
@@ -414,7 +415,7 @@ label {
   height: 60rem; 
 }
 
-/*
+/* ANIMATION HEADER (à voir plus tard)
 .header__progressbar {
   height: 0.1rem; 
   width: 60rem; 
@@ -462,6 +463,7 @@ label {
 */
 
 /* --- NAVIGATION --- */
+/* --- NAVBAR ET FOOTERBAR --- */
 .navbar, .footerbar {
   height: 4.5rem; 
   width: 100%; 
@@ -471,7 +473,6 @@ label {
   left: 0; 
 }
 
-/* --- NAVBAR ET FOOTERBAR --- */
 /* --- navbar (top) --- */
 .navbar {
   display: flex; 
@@ -485,7 +486,7 @@ label {
   display: flex; 
 }
 
-/* liens inutilisés de la navbar */
+/* liens inutilisés */
 .navbar li:nth-child(2), .navbar li:nth-child(3), .navbar li:nth-child(4) {
   display: none; 
 }
@@ -506,7 +507,7 @@ a.mainmenu:hover, .footerbar a:hover {
   text-align: right;
 }
 
-/* icônes de la navbar */
+/* -- icônes -- */
 a.mainmenu[href^="/"]::before {
   display: inline-block;
   text-rendering: auto;
@@ -520,35 +521,12 @@ a.mainmenu[href^="/"]::before {
   content: "\f08b"; 
 }
 
-/* accueil */
-a.mainmenu[href="/"]::before {
-  content: '\f015';  
-}
-
-/* rechercher */
-a.mainmenu[href="/search"]::before {
-  content: '\f002';  
-}
-
-/* membres */
-a.mainmenu[href="/memberlist"]::before {
-  content: '\f0c9';  
-}
-
-/* rechercher */
-a.mainmenu[href="/groups"]::before {
-  content: '\e533';  
-}
-
-/* profil */
-a.mainmenu[href="/profile?mode=editprofile"]::before {
-  content: "\f007"; 
-}
-
-/* messagerie */
-a.mainmenu[href="/privmsg?folder=inbox"]::before {
-  content: "\f0e0"; 
-}
+/* accueil */ a.mainmenu[href="/"]::before {content: '\f015';}
+/* rechercher */ a.mainmenu[href="/search"]::before {content: '\f002';}
+/* membres */ a.mainmenu[href="/memberlist"]::before {content: '\f0c9';}
+/* rechercher */ a.mainmenu[href="/groups"]::before {content: '\e533';}
+/* profil */ a.mainmenu[href="/profile?mode=editprofile"]::before {content: "\f007";}
+/* messagerie */ a.mainmenu[href="/privmsg?folder=inbox"]::before {content: "\f0e0";}
 
 /* --- footerbar (bottom) --- */
 .footerbar {
@@ -670,13 +648,14 @@ a.mainmenu[href="/privmsg?folder=inbox"]::before {
   color: var(--accentClr2) !important; 
 }
 
-/* couleur des liens de bas de page */
+/* liens de bas de page */
 .right a {
   color: var(--baseClr2); 
 }
 
 /* --- SIDEBAR : css externe (voir overall_header) --- */
 /* --- SWITCHEROO : css externe (voir overall_header) --- */
+
 /* ------------------------------------ */
 
 /* --- TOOLBAR ET MENU D'ACCUEIL FORUMACTIF --- */
@@ -705,19 +684,16 @@ ul#fa_menulist, ul#notif_list {
 #fa_toolbar #live_notif .fa_notification {
   /* code */
 }
+
 /* ------------------------------------ */
 
 /* --- PA : css externe (voir overall_header) --- */
 /* ------------------------------------ */
 
 /* --- CATEGORIES (index_box) --- */
-
-/* ici, tout le code concernant les catégories et leur affichage */ 
 /* ------------------------------------ */
 
 /* --- QEEL | QUI EST EN LIGNE (index_body) --- */
-
-/* ici, tout le code concernant le qeel et son affichage */ 
 /* ------------------------------------ */
 
 /* --- PAGE LISTE DES SUJETS --- */
@@ -733,13 +709,13 @@ ul#fa_menulist, ul#notif_list {
   flex-wrap: wrap; 
 }
 
-/* structure message */
+/* structure */
 .post {
   display: flex; 
   margin: 0.5rem 0; 
 }
 
-/* containers divers (titres, prévisualisation, boîte pour poster, dés et options) */
+/* containers divers (titres, prévisualisation, postingbox, dés, options) */
 .container__title, #preview, #postingbox, .postingbox__dices, .postingbox__options {
   display: flex; 
   flex-wrap: wrap; 
@@ -754,20 +730,16 @@ ul#fa_menulist, ul#notif_list {
 
 .container__title {margin-top: 0 !important;}
 
-.postingbox__dices, .postingbox__options {
-  margin-bottom: 1rem; 
-}
-
 .container__title {
   padding: 0.5rem 1.5rem; 
 }
 
-/* titres h3 divers (prévisualisation, poster une réponse, options, etc) et autres éléments à aligner */
+/* titres h3 divers (prévisualisation, poster une réponse, options, etc) */
 .container__title .h3 {
   padding: 0 2rem; 
 }
 
-#preview .h3, #postingbox h3, .postingbox__dices .h3, .postingbox__options h3, .postingbox__options .h3, #postingbox .fields1 {
+#preview .h3, #postingbox h3, .postingbox__dices h3, .postingbox__options h3, .postingbox__options .h3, #postingbox .fields1 {
   padding: 0 3.5rem; 
 }
 
@@ -775,14 +747,14 @@ ul#fa_menulist, ul#notif_list {
   margin: 1rem 0 !important; 
 }
 
-/* messages */
+/* -- messages -- */
 .container__post {
   background: var(--baseClr2-20); 
   width: 81rem; 
   border-radius: 0 1.6rem 1.6rem 0;
 }
 
-/* intérieur message */
+/* contenu messages */
 .post_message.postbody.content { 
 background: var(--baseClr);
   border-radius: var(--radius);
@@ -795,14 +767,6 @@ background: var(--baseClr);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
-
-/* base profil message */
-.post_profile {
-  background: var(--baseClr-90);
-  width: 26.5rem; 
-  border-radius: 1.6rem 0 0 1.6rem;
-  margin-right: 0.5rem;  
 }
 
 /* chaîne de navigation et pagination */
@@ -829,7 +793,7 @@ background: var(--baseClr);
   padding: 0 0.2rem; 
 }
 
-/* participants */
+/* -- participants -- */
 .title_posterslist {
   display: flex;
   align-items: center;
@@ -876,6 +840,7 @@ background: var(--baseClr);
 }
 
 /* --- container interne --- */
+
 /* détails du post (et boutons citer, éditer, etc) */
 .post_details {
   padding: 2rem 2.5rem 0 2.5rem; 
@@ -885,7 +850,7 @@ background: var(--baseClr);
   justify-content: space-between; 
 }
 
-/* lien du sujet et date */
+/* lien du sujet, date */
 .post_date {
   display: flex;  
   font-size: var(--small); 
@@ -911,7 +876,7 @@ time::before {
   padding-right: 0.3rem; 
 }
 
-/* boutons citer, éditer, etc */
+/* citer, éditer, etc */
 .profile-icons {
   font-size: var(--medium); 
   font-weight: var(--semibold-fw); 
@@ -958,6 +923,14 @@ button.rep-button .rep-nb {
 }
 
 /* ------ PROFIL MESSAGES ------ */
+/* base profil message */
+.post_profile {
+  background: var(--baseClr-90);
+  width: 26.5rem; 
+  border-radius: 1.6rem 0 0 1.6rem;
+  margin-right: 0.5rem;  
+}
+
 .post_pseudo {
   font-family: var(--font2); 
   text-transform: uppercase; 
@@ -1013,7 +986,7 @@ button.rep-button .rep-nb {
   padding: 0 0.3rem; 
 }
 
-/* réponse rapide */
+/* --- REPONSE RAPIDE --- */
 #quickreply_content .h3 {
   display: none; 
 }
@@ -1030,7 +1003,6 @@ button.rep-button .rep-nb {
   border: none !important;  
 }
 
-/* zone de texte et container */
 .sceditor-container, .sceditor-container textarea {
   width: 80rem !important; 
   min-height: 20rem !important; 
@@ -1040,7 +1012,7 @@ button.rep-button .rep-nb {
   border-radius: var(--radius) !important; 
 }
 
-/* zone de texte SEULE */
+/* zone de texte */
 .sceditor-container textarea {
   padding: 1rem !important;  
   color: var(--textClr) !important; 
@@ -1050,7 +1022,7 @@ button.rep-button .rep-nb {
   overflow: auto; 
 }
 
-/* icône pour redimensioner */
+/* icône redimensioner */
 div.sceditor-grip {
   display: none !important; 
 }
@@ -1094,7 +1066,7 @@ form#smilies_categ select {
   display: none; 
 }
 
-/* dropdown quick answer */
+/* dropdown */
 div.sceditor-dropdown input {
   border-radius: var(--small-radius) !important;  
   color: var(--textClr) !important; 
@@ -1181,7 +1153,7 @@ form.left, form.right {
   height: 27rem !important; 
 }
 
-/* posting box et prévisualisation */
+/* posting box, prévisualisation */
 #postingbox, #preview {
   margin-bottom: 0.5rem !important; 
 }
@@ -1196,7 +1168,7 @@ form.left, form.right {
   width: 108rem; 
 }
 
-/* intérieur */
+/* contenu */
 #preview .content {
   width: 105rem; 
   font-size: var(--medium); 
@@ -1220,7 +1192,7 @@ form.left, form.right {
   overflow: hidden; 
 }
 
- /* dl = container d'input (dt + dd) */
+ /* dl = container d'input (dl > dd > input) */
 .fields1 dl {
   grid-template-columns: 18rem auto !important;
   display: flex; 
@@ -1233,14 +1205,13 @@ form.left, form.right {
   display: grid !important; 
 }
 
-/* dd = container input, input = zone interne */
 .fields1 dd input {
   width: 80rem !important;   
   border-radius: var(--small-radius); 
 }
 
-/* zone de textes à remplir */
-input[type=text] {
+/* zone de textes */
+input[type=text], .postingbox__dices select {
   height: 4rem;
 }
 
@@ -1252,16 +1223,16 @@ input[type=text]:hover {
 /* sélectionné */
 input[type=text]:focus {
   outline: 0.2rem solid var(--accentClr); 
-  background: var(--baseClr3-40); 
+  background: var(--baseClr3-40);  
 }
 
 /* --- OPTIONS BOX --- */
-/* titre "modifier le titre du sujet" */
+/* "modifier le titre du sujet" */
 .postingbox__options .fields1 dt label {
   font-size: var(--small2); 
 }
 
-/* "sauter vers" posting box */
+/* "sauter vers" postingbox */
 .postingbox__options .right {
   font-size: var(--medium);
   font-weight: var(--semibold-fw);
@@ -1270,7 +1241,29 @@ input[type=text]:focus {
   padding: 2rem 0; 
 }
 
-/* --- SONDAGES ET AUTRES --- */
+.postingbox__options, .postingbox__dices {
+  margin-bottom: 1rem; 
+}
+
+/* --- DES --- */
+.postingbox__dices {
+  padding-right: 3.5rem !important; 
+  flex-direction: column; 
+  align-items: flex-start !important; 
+}
+
+.postingbox__dices .panel {
+  padding: 0 3.5rem 1.5rem 3.5rem; 
+}
+
+.postingbox__dices #list_dice, .postingbox__dices #list_dice label {
+  font-variant-numeric: tabular-nums;
+  font-size: var(--medium) !important; 
+  text-transform: uppercase; 
+  font-weight: var(--semibold-fw); 
+}
+
+/* --- SONDAGES --- */
 .postingbox__options .panel {
   width: 100%; 
   margin: 0 3.5rem 3.5rem 3.5rem; 
@@ -1279,7 +1272,9 @@ input[type=text]:focus {
 /* choix de sondage */
 textarea[name="poll_option_text"] {
   min-width: 30rem !important; 
-  max-width: 77rem !important; 
+  max-width: 68rem !important; 
+  font-family: var(--font1); 
+  font-size: var(--medium);
 }
 
 /* petit input ("sondage pendant") */
@@ -1309,7 +1304,7 @@ textarea[name="poll_option_text"] {
   padding: 2rem 1rem; 
 }
 
-/* intérieur */
+/* contenu */
 .wrapped__messages .content {
   font-size: var(--medium); 
   padding: 1rem; 
@@ -1326,7 +1321,7 @@ div.panel .postbody > span:first-of-type {
   font-weight: var(--semibold-fw); 
 }
 
-/* --- CASES A COCHER --- */
+/* cases à cocher */
 .postingbox__options input[type='checkbox'] {
   margin: 0 0.5rem 0 0; 
 }
@@ -1348,7 +1343,6 @@ div.panel .postbody > span:first-of-type {
 
 /* ------------------------------------ */
 /* --- DIVERS --- */
-
 
 /* ------------------------------------ */
 /* --- TOOLTIP (Z) --- */
