@@ -666,14 +666,22 @@ a.mainmenu[href^="/"]::before {
   /* code */
 }
 
-/* contenu menu welcome et liste des notifications */
-ul#fa_menulist, ul#notif_list {
-  /* code */
+/* --- NOTIFICATIONS --- */
+ul#notif_list {
+  background: var(--baseClr-90); 
+  border-radius: var(--small-radius); 
+  top: 1.5rem;
+  z-index: 3;
+  position: fixed;
+  width: 30rem;
+  display: none;
+  transform: translateX(12%); 
 }
 
-/* notifications */
-#fa_notif_list {
-  /* code */
+#fa_right.notification #notif_list {
+  display: flex !important; 
+  flex-wrap: wrap; 
+  padding: 1.5rem; 
 }
 
 /* popup notifications */
