@@ -667,15 +667,19 @@ a.mainmenu[href^="/"]::before {
 }
 
 /* --- NOTIFICATIONS --- */
-ul#notif_list {
+.sidebar ul#notif_list {
   background: var(--baseClr-90); 
   border-radius: var(--small-radius); 
   top: 1.5rem;
   z-index: 3;
-  position: fixed;
+  position: absolute; 
   width: 30rem;
   display: none;
-  transform: translateX(112%); 
+  transform: translateX(88%); 
+}
+
+.sidebar--open ul#notif_list {
+    transform: translateX(-29%); 
 }
 
 #fa_right.notification #notif_list {
