@@ -675,7 +675,7 @@ ul#notif_list {
   position: fixed;
   width: 30rem;
   display: none;
-  transform: translateX(12%); 
+  transform: translateX(112%); 
 }
 
 #fa_right.notification #notif_list {
