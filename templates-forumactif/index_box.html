@@ -45,7 +45,7 @@
                     <!-- titre du forum -->
                     <a href="{catrow.forumrow.U_VIEWFORUM}" class="forumtitle">{catrow.forumrow.FORUM_NAME}</a>
                     <!-- compteur sujets et message -->
-                    <span class="forum_stats">{catrow.forumrow.POSTS}&nbsp;{L_POSTS}&nbsp; dans &nbsp;{catrow.forumrow.TOPICS}&nbsp;{L_TOPICS}</span>
+                    <span class="forum_stats"><strong>{catrow.forumrow.POSTS}</strong>&nbsp;{L_POSTS}&nbsp; dans &nbsp;<strong>{catrow.forumrow.TOPICS}</strong>&nbsp;{L_TOPICS}</span>
                     <!-- description -->
                     <div class="forum_desc">{catrow.forumrow.FORUM_DESC}</div>
                 </div>
@@ -55,10 +55,10 @@
             <div class="background__lastpost">
                 <!-- container 2 : lastpost (dernier message, dernier posteur) -->
                 <div class="container__laspost">
-                    <!-- statut du forum : ancien, nouveau, vérouillé -->
-                    <img class="forum-img" src="{catrow.forumrow.FORUM_FOLDER_IMG}" />
-    
                     <span class="lastpost">
+                        <!-- statut du forum : ancien, nouveau, vérouillé -->
+                        <img class="forum-img" src="{catrow.forumrow.FORUM_FOLDER_IMG}" />
+
                         <!-- titre du dernier message -->
                         <!-- BEGIN switch_topic_title -->
                         <a href="{catrow.forumrow.U_LATEST_TOPIC}" title="{catrow.forumrow.LATEST_TOPIC_TITLE}"
@@ -67,14 +67,14 @@
     
                         <!-- date/auteur -->
                         {catrow.forumrow.USER_LAST_POST}
-    
-                        <div class="lastpost__avatar">
-                            <!-- Avatar du dernier posteur -->
-                            <!-- BEGIN avatar -->
-                            {catrow.forumrow.avatar.LAST_POST_AVATAR}
-                            <!-- END avatar -->
-                        </div>
                     </span>
+
+                    <div class="lastpost__avatar">
+                        <!-- Avatar du dernier posteur -->
+                        <!-- BEGIN avatar -->
+                        {catrow.forumrow.avatar.LAST_POST_AVATAR}
+                        <!-- END avatar -->
+                    </div>
                 </div>
             </div>
     
@@ -84,14 +84,13 @@
                 <span class="subforums">{catrow.forumrow.L_LINKS}{catrow.forumrow.LINKS}</span>
             </div>
         </div>
+        <!-- fin forum -->
+        <!-- END forumrow -->
+
+        <!-- BEGIN tablefoot -->
     </div>
-    <!-- fin forum -->
-    <!-- END forumrow -->
-
-    <!-- BEGIN tablefoot -->
-</div>
 <!-- FIN liste des forums -->
-
+</div>
 <!-- END tablefoot -->
 <!-- END catrow -->
 <!-- Fin du conteneur de catégorie -->
