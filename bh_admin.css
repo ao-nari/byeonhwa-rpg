@@ -1,20 +1,1666 @@
-/* --- ANNEXES --- */
-/* code général des sujets administratifs */
+/* ---------------------------- */
+/* --- ROOT (BASE DU FORUM) --- */
 
-/* --- séparation des posts administratifs et des posts classiques --- */
-.post:has(.bh_admin) {
-  /* code ici */
-  /* le sélecteur :has permet de modifier un post UNIQUEMENT s'il contient "bh_admin" */
+/* --- MODE CLAIR --- */
+:root {
+  font-size: 62.5%; /* default = 10px = 1rem */
+  --body: url('https://i.imgur.com/3AW0kt1.png'); /* fond */
+  --header: url('https://i.imgur.com/40jOgFC.png'); /* bannière */
+  --bhavatar: url('https://i.imgur.com/29ucVBL.png'); /* avatar byeonhwa */
+
+  /* --- palette --- */
+  --baseClr: #F5FCF1; /* couleur 1 */
+  --baseClr-90: rgba(245, 252, 241, 0.9); /* 90% opacité */
+  --baseClr-70: rgba(245, 252, 241, 0.7); /* 70% opacité */
+
+  --baseClr2: #64A970; /* couleur 2 */
+  --baseClr2-20:rgba(100, 169, 112, 0.2); /* 20% opacité */
+
+  --baseClr3: #769E71; /* couleur 3 */
+  --baseClr3-80: rgba(118, 158, 113, 0.8); /* 80% opacité */
+  --baseClr3-60: rgba(118, 158, 113, 0.6); /* 60% opacité */
+  --baseClr3-40: rgba(118, 158, 113, 0.4); /* 40% opacité */
+  --baseClr3-20: rgba(118, 158, 113, 0.2); /* 20% opacité */ 
+  --baseClr3-10: rgba(118, 158, 113, 0.1); /* 10% opacité */ 
+
+  --accentClr: #85692E; /* accent 1 */
+  --accentClr2: #862631; /* accent 2 */
+
+  --textClr: #4F6F47; /* texte */
+
+  --scrollbar1: #e7f4e4; /* fond scrollbar */
+  --scrollbar2: #cde5cc; /* thumb scrollbar */
+
+  /* --- couleurs pour gradients --- */
+  --gradClr1: #C7B97B;  
+
+  --gradClr2: #507446; 
+  --gradClr3: #769E71; 
+
+  /* icônes animées (lord-icon) */
+  --lord-icon-primary: #85692E; 
+  --lord-icon-secondary: #C7B97B; 
+
+  /* --- gradients --- */
+  --bg1: linear-gradient(to bottom, rgba(100, 139, 90, 0.6), transparent); /* textClr 60% opacité > transparent (fond) */
+  --bg2: linear-gradient(to bottom, rgba(100, 169, 112, 0.3), rgba(118, 158, 113, 0.1)); /* baseClr2 30% opacité > baseClr3 10% opacité (fond) */
+
+  --grad1: linear-gradient(to right, var(--gradClr2), var(--gradClr3)); /* gradient 2 couleurs */
+  --grad2: linear-gradient(to right, var(--accentClr), var(--gradClr1), var(--accentClr)); /* gradient métallisé */
+
+  /* --- autres --- */
+  --small-radius: 0.8rem; /* 8px */
+  --radius: 1.6rem; /* 16px */ 
+  --big-radius: 2.4rem; /* 24px */
+
+  --base-transi: all 0.3s ease-in-out; /* transition pour animations */ 
+  --slow-transi: all 0.5s ease-in-out; /* plus lente */ 
+
+  --drop-shadow: drop-shadow(0px 0px 8px var(--baseClr3-10));
+
+  /* --- polices --- */
+  --font1: 'Montserrat', 'Arial', sans-serif; 
+  --font2: 'sinervaregular', 'Times new roman', serif; 
+  --font3: 'Playfair display', 'Palatino', serif; 
+
+  /* --- tailles --- */
+  --smallest: 0.8rem; /* 8 px */
+  --smaller: 0.9rem; /* 9 px */
+  --small: 1rem; /* 10 px */
+  --small2: 1.1rem; /* 11 px */
+  --medium: 1.2rem; /* 12 px */
+  --medium2: 1.4rem; /* 14 px */
+  --big: 1.6rem; /* 16 px */
+  --bigger: 1.8rem; /* 18px */
+  --bigger2: 2rem; /* 20 px */
+  --biggest: 2.4rem; /* 24 px */
+
+  /* --- effets --- */
+  --semibold-fw: 600; 
+  --base-fw: 500; 
+  --bold-fw: 700; 
+
+  /* --- espacements des caractères --- */
+  --small-lh: 1.3; 
+  --base-lh: 1.5; 
+
+  /* --- VARIABLES MESSENGER --- */
+  --FAM-windowSize: 88rem; /* 880px */
+
+  --FAM-light: #FFF; 
+  --FAM-dark: #000; 
+
+  /* --- palette --- */
+  --FAM-pluginBackground: var(); /* fond du messenger */
+  --FAM-chatBackground: var(); /* fond de la fenêtre de chat */ 
+  --FAM-textAreaBackground: var(); /* fond de la boîte de texte */
+  --FAM-msgBackground: var(); /* fond des messages reçus */
+  --FAM-myMsgBackground: var(); /* fond des messages envoyés */
+  --FAM-quoteBackground: var(); /* fond des citations */
+  --FAM-sleepModeBackground: rgba(0, 0, 0, 0.5); /* fond du mode veille */ 
+
+  --FAM-contrast: var(); 
+  --FAM-accentClr: var(); 
+  --FAM-textClr: var(); 
+  --FAM-linkClr: var(); 
+  --FAM-titleClr: var(); 
+  --FAM-button: var(); 
+  --FAM-buttonClr: var(); 
+
+  /* --- gradients --- */
+
+  /* polices et tailles */
+  --FAM-fontSize: 1.2rem;  
+  --FAM-titleSize: 2.4rem; 
+  --FAM-titleFont: 'Montserrat', 'Arial', sans-serif; 
+
+  /* --- borders et utilitaires --- */
+  --FAM-border: /* code */; 
+  --FAM-radius: /* code */; 
+  --FAM-shadow: /* code */;  
 }
 
-/* --- */
+/* --- MODE SOMBRE --- */ 
+[data-color-scheme="dark"] {
+  font-size: 62.5%; /* default = 10px = 1rem */
+  --body: url('https://i.imgur.com/BsFKZgm.png'); /* fond */
+  --header: url('https://i.imgur.com/k1eLxlG.png'); /* bannière */
+  --bhavatar: url('https://i.imgur.com/3JwTGSH.png'); /* avatar byeonhwa */
 
-.post:has(.bh_admin) .post_profile {
-  /* par exemple, on peut supprimer l'affichage du profil d'un post contenant un message d'administration */
+  /* --- palette --- */
+  --baseClr: #06070F; /* couleur 1 */
+  --baseClr-90: rgba(6, 7, 15, 0.9); /* 90% opacité */
+  --baseClr-70: rgba(6, 7, 15, 0.7); /* 70% opacité */
+
+  --baseClr2: #4B59A5; /* couleur 2 */
+  --baseClr2-20: rgba(75, 89, 165, 0.2); /* 20% opacité */
+
+  --baseClr3: #465399; /* couleur 3 */
+  --baseClr3-80: rgba(70, 83, 153, 0.8); /* 80% opacité */
+  --baseClr3-60: rgba(70, 83, 153, 0.6); /* 60% opacité */
+  --baseClr3-40: rgba(70, 83, 153, 0.4); /* 40% opacité */
+  --baseClr3-20: rgba(70, 83, 153, 0.2); /* 20% opacité */
+  --baseClr3-10: rgba(70, 83, 153, 0.1); /* 10% opacité */
+
+  --accentClr: #B4B34F; /* accent 1 */
+  --accentClr2: #318388; /* accent 2 */
+
+  --textClr: #8897E9; /* texte */
+
+  --scrollbar1: #0c0f1e; /* fond scrollbar */
+  --scrollbar2: #191e39; /* thumb scrollbar */
+
+  /* --- couleurs pour gradients --- */
+  --gradClr1: #5E5B32;  
+
+  /* icônes animées (lord-icon) */
+  --lord-icon-primary: #5E5B32; 
+  --lord-icon-secondary: #B4B34F;
+
+  /* --- gradients --- */
+  --bg1: linear-gradient(to bottom, rgba(117, 134, 227, 0.6), transparent); /* textClr 60% opacité > transparent (fond) */
+  --bg2: linear-gradient(to bottom, rgba(117, 134, 227, 0.3), rgba(70, 83, 153, 0.1)); /* textClr 30% opacité > baseClr3 10% opacité (fond) */
+
+  --grad1: linear-gradient(to right, var(--baseClr2), var(--textClr), var(--baseClr2)); /* gradient métallisé */
+  --grad2: linear-gradient(to right, var(--gradClr1), var(--accentClr)); /* gradient 2 couleurs */
+}
+
+/* ---------------------------- */
+
+/* --- généralités --- */
+*, body, div {
+  box-sizing: border-box; 
+  scrollbar-width: thin; /* scrollbars firefox */
+  scrollbar-color: var(--scrollbar2) var(--scrollbar1); 
+}
+
+/* --- SCROLLBARS (chrome) --- */ 
+::-webkit-scrollbar {width: 0.5rem;}
+::-webkit-scrollbar-track {color: var(--scrollbar1);}
+::-webkit-scrollbar-thumb {color: var(--scrollbar2);}
+
+img {
+  max-width: 22.5rem !important; 
+}
+
+/* captcha google */
+.grecaptcha-badge {
+  margin-bottom: 4rem; 
+}
+
+iframe {
+  width: 100%; 
+  height: 100%; 
+}
+
+/* --- BODY (TOUTES LES PAGES) --- */
+body {
+  font-size: 1.6rem; 
+  font-family: var(--font1); 
+  margin: 0 !important; 
+  overflow-x: hidden; 
+  background: var(--body) fixed center top; 
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  color: var(--textClr); 
+  font-weight: var(--base-fw); 
+  line-height: var(--base-lh); 
+}
+
+.main_forum {
+  width: 108rem; 
+  margin: auto; 
+  margin-bottom: 5rem !important; 
+}
+
+/* réduction taille des emojis forumactif */ 
+.emojione {
+  width: 18px !important; 
+}
+
+hr, .hr_transp {
+  height: 1px;
+  border: none; 
+  opacity: 0.8; 
+  margin: 1rem; 
+  display: block; 
+  width: 100%; 
+}
+
+hr {
+  background: linear-gradient(to right, var(--gradClr1), var(--accentClr), var(--gradClr1));
+}
+
+.hr_transp {
+  background: linear-gradient(to right, transparent, var(--gradClr1), var(--accentClr), var(--gradClr1), transparent); 
+}
+
+.bh_sep {
+  background: red; 
+}
+
+.bh_sep::before, .bh_sep::after {
+  
+}
+
+/* --- liens et textes --- */ 
+
+/* styles de texte */
+b, strong {
+  font-weight: 700; 
+}
+
+i, em {/* code */}
+u {/* code */}
+strike {/* code */}
+
+h1, .h1,  h1.page-title {
+  font-size: var(--biggest); 
+  font-family: var(--font2); 
+  text-transform: uppercase; 
+  background: var(--grad2); 
+  background-size: 100%; 
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent;
+}
+
+h1.page-title {
+  max-width: 50rem; 
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; 
+  position: relative; 
+  margin-left: 0.5rem; 
+}
+
+h2, .h2 {
+  /* titres secondaires */
+}
+
+h3, .h3 {
+  font-size: var(--big); 
+  text-transform: uppercase; 
+  font-weight: var(--semibold-fw); 
+  background: var(--grad2); 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h1, .h1, h2, .h2, h3, .h3 {
+  display: inline-block; 
+}
+
+p {
+  margin: 0; 
+}
+
+/* liens */
+a {
+  text-decoration: none; 
+  color: var(--accentClr); 
+  transition: var(--base-transi); 
+}
+
+a:hover {
+  color: var(--accentClr2); 
+  transition: var(--base-transi); 
+}
+
+/* blocs de texte */
+blockquote div {
+  /* code */
+}
+
+/* code, spoiler, hide, cite */ 
+/* CODE */
+.codebox {
+  /* code */
+}
+
+.codebox dd {
+  /* code */
+}
+
+.codebox code {
+  /* code */
+}
+
+/* "copier" */
+.copycode {
+  /* code */
+}
+
+/* SPOILER */
+.hidebox.spoiler {
+  /* code */
+}
+
+/* fermé */ .spoiler_content {display: none;}
+/* ouvert */ .spoiler_content.hidden {display: block;}
+
+/* CITER "NOM" */
+blockquote cite {/* code */}
+blockquote cite a {/* code */}
+
+/* HIDE */
+.codebox.hidecode dd {/* code */}
+
+/* tag */
+.mentiontag {/* code */}
+
+/* --- CLASSES UTILITAIRES DIVERSES --- */ 
+
+/* fix hauteur forum (#top button) */
+#top {
+  top: -11rem;
+  position: relative;
+}
+
+/* boutons (nouveau, répondre) */
+a.buttons {
+  position: relative; 
+  background: var(--baseClr2-20); 
+  padding: 0.5rem 1rem; 
+  border-radius: var(--small-radius); 
+  margin-right: 0.5rem; 
+}
+
+a.buttons span {
+  background: var(--grad1); 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: var(--medium2); 
+  text-transform: uppercase; 
+  font-weight: var(--semibold-fw); 
+  letter-spacing: -0.05rem; 
+}
+
+/* survol et animation */
+a.buttons::after {
+  content: "";
+  position: absolute !important;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  border-radius: var(--small-radius);
+  background: var(--baseClr2-20);
+  transition: var(--base-transi);
+}
+
+a.buttons:hover {
+  transition: var(--base-transi);
+}
+
+a.buttons:hover::after {
+  opacity: 1; 
+}
+
+/* select (dropdown), input (petits boutons), label (textes divers) */
+select, input {
+  position: relative;
+  font-family: var(--font1) !important;
+  background-color: var(--baseClr2-20);
+  border-radius: 0.4rem;
+  font-size: var(--medium);
+  padding: 0.4rem 0.8rem;
+  transition: var(--base-transi);
+  border-style: none;
+  color: var(--textClr); 
+}
+
+input {
+  font-weight: var(--semibold-fw); 
+}
+
+input:hover {
+  transition: var(--base-transi); 
+  color: var(--accentClr); 
+}
+
+label {
+  font-size: var(--medium); 
+  font-weight: var(--semibold-fw) !important; 
+  text-transform: uppercase;  
+}
+
+/* ---------------- FIN GENERALITES -------------------- */
+
+/* --- HEADER (BANNIERE ET HAUT DE PAGE) --- */
+#header {
+  background: var(--header);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+  margin: 12rem 0 5rem 0; 
+  height: 60rem; 
+}
+
+/* ANIMATION HEADER (à voir plus tard)
+.header__progressbar {
+  height: 0.1rem; 
+  width: 60rem; 
+  background: var(--baseClr); 
+  z-index: 999; 
+  opacity: 1; 
+  position: absolute; 
+  top: 45%;
+  left: 50vw; 
+  transform: translate(-50%); 
+  transition: var(--base-transi);
+}
+
+.header__progressbar::after { 
+  content: ""; 
+  background: var(--grad2); 
+  height: 0.1rem; 
+  width: 60rem;
+  position: absolute; 
+  transform-origin: left; 
+  transition: var(--base-transi); 
+  animation: header__progressbar 2s ease forwards; 
+}
+
+@keyframes header__progressbar {
+  0% {
+    transform: scaleX(0); opacity: (0); 
+  }
+  99% {
+    transform: scaleX(1); opacity: (1);
+  }
+  100% {
+    transform: scaleX(1); opacity: (0); 
+  }
+}
+
+@keyframes header__apparition {
+  0% {
+    clip-path: circle(0% at 50% 50%);
+  }
+  100% {
+    clip-path: circle(100% at 50% 50%);
+  }
+}
+*/
+
+/* --- NAVIGATION --- */
+/* --- NAVBAR ET FOOTERBAR --- */
+.navbar, .footerbar {
+  height: 4.5rem; 
+  width: 100%; 
+  background: var(--baseClr-90); 
+  position: fixed; 
+  z-index: 999; 
+  left: 0; 
+}
+
+/* --- navbar (top) --- */
+.navbar {
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  padding: 0 2rem; 
+  top: 0; 
+}
+
+.navbar ul {
+  display: flex; 
+}
+
+/* liens inutilisés */
+.navbar li:nth-child(2), .navbar li:nth-child(3), .navbar li:nth-child(4) {
   display: none; 
 }
 
-.post:has(.bh_admin) .container__post {
-  width: 108rem; /* 1080px */
+a.mainmenu, .footerbar a {
+  font-size: var(--medium2);
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--textClr); 
+}
+
+a.mainmenu:hover, .footerbar a:hover {
+  color: var(--accentClr); 
+}
+
+.navbar .navbar__rightmenu {
+  width: 30rem;
+  text-align: right;
+}
+
+/* -- icônes -- */
+a.mainmenu[href^="/"]::before {
+  display: inline-block;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Font Awesome 6 Free';
+  background: var(--grad2); 
+  background-clip: text; 
+  -webkit-text-fill-color: transparent; 
+  padding-left: 0.5rem; 
+  font-size: var(--medium2);  
+  content: "\f08b"; 
+}
+
+/* accueil */ a.mainmenu[href="/"]::before {content: '\f015';}
+/* rechercher */ a.mainmenu[href="/search"]::before {content: '\f002';}
+/* membres */ a.mainmenu[href="/memberlist"]::before {content: '\f0c9';}
+/* rechercher */ a.mainmenu[href="/groups"]::before {content: '\e533';}
+/* profil */ a.mainmenu[href="/profile?mode=editprofile"]::before {content: "\f007";}
+/* messagerie */ a.mainmenu[href="/privmsg?folder=inbox"]::before {content: "\f0e0";}
+
+/* --- footerbar (bottom) --- */
+.footerbar {
+  bottom: 0;
+  display: flex;
+  justify-content: right; 
+  align-items: center;
+}
+
+.footerbar, .footerbar a {
+  font-size: var(--smaller); 
+}
+
+#page-footer {
+  min-width: 65rem; 
+  max-width: 100rem; 
+  margin-right: 2rem; 
+  color: var(--baseClr2); 
+}
+
+/* --- BOUTONS FOOTERBAR --- */
+.footerbar_buttons {
+  display: flex;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* --- boutons switch de thème et up/down --- */
+@media (prefers-color-scheme: dark) {
+	.color-scheme-toggle .dark {
+		display: none;
+	}
+}
+@media (prefers-color-scheme: light) {
+	.color-scheme-toggle .light {
+		display: none;
+	}
+}
+.color-scheme-toggle,
+[data-color-scheme="light"] .color-scheme-toggle .dark,
+[data-color-scheme="dark"] .color-scheme-toggle .light {
+	display: block;
+	width: 100%;
+}
+
+[data-color-scheme="dark"] .color-scheme-toggle .dark,
+[data-color-scheme="light"] .color-scheme-toggle .light {
+	display: none;
+}
+
+.color-scheme-toggle, .footerbar_buttons a {
+	background-color: var(--baseClr3-20);
+	color: var(--textClr);
+  display: flex; 
+  align-items: center; 
+  transition: var(--base-transi); 
+  width: 3rem; 
+  height: 3rem; 
+  position: relative; 
+  z-index: 1;
+}
+
+.color-scheme-toggle {
+  font-size: var(--medium2); 
+}
+
+.footerbar_buttons a {
+  margin: 0 0.1rem; 
+  justify-content: center; 
+  font-size: var(--small); 
+}
+
+.footerbar_buttons a:hover::after, .color-scheme-toggle:hover::after {
+  opacity: 1; 
+}
+
+.footerbar_buttons a::after, .color-scheme-toggle::after {
+  content: ""; 
+  position: absolute !important; 
+  top: 0; 
+  bottom: 0; 
+  left: 0; 
+  right: 0; 
+  opacity: 0; 
+  background-color: var(--baseClr3-20); 
+  z-index: -1; 
+  transition: var(--base-transi); 
+}
+
+.color-scheme-toggle:hover, .footerbar_buttons a:hover {
+	color: var(--accentClr);
+  transition: var(--base-transi);
+}
+
+/* radius boutons + hover */
+.footerbar_buttons a[href="#top"], .footerbar_buttons a[href="#top"]::after {
+  border-radius: 0.8rem 0 0 0.8rem; 
+}
+
+.footerbar_buttons a[href="#bottom"], .footerbar_buttons a[href="#bottom"]::after {
+  border-radius: 0 0.8rem 0.8rem 0; 
+}
+
+/* "panneau d'administration" */
+.adminlink {
+  color: var(--baseClr3); 
+}
+
+.adminlink::after {
+  content: " | "; 
+}
+
+.adminlink a {
+  color: var(--accentClr) !important;
+}
+
+.adminlink a:hover {
+  color: var(--accentClr2) !important; 
+}
+
+/* liens de bas de page */
+.right a {
+  color: var(--baseClr2); 
+}
+
+/* --- SIDEBAR : css externe (voir overall_header) --- */
+/* --- SWITCHEROO : css externe (voir overall_header) --- */
+
+/* ------------------------------------ */
+
+/* --- TOOLBAR ET MENU D'ACCUEIL FORUMACTIF --- */
+#fa_left {display: none;} /* suppression logo fa */
+
+/* conteneur menu welcome */
+#fa_menulist {
+  /* code */
+}
+
+/* --- NOTIFICATIONS --- */
+.sidebar ul#notif_list {
+  background: var(--baseClr-90); 
+  border-radius: var(--small-radius); 
+  top: 1.5rem;
+  z-index: 3;
+  position: absolute; 
+  width: 30rem;
+  display: none;
+  transform: translateX(88%); 
+}
+
+.sidebar--open ul#notif_list {
+    transform: translateX(-29%); 
+}
+
+#fa_right.notification #notif_list {
+  display: flex !important; 
+  flex-wrap: wrap; 
+  padding: 1.5rem; 
+}
+
+/* popup notifications */
+#fa_toolbar #live_notif {
+  /* code */
+}
+
+#fa_toolbar #live_notif .fa_notification {
+  /* code */
+}
+
+/* ------------------------------------ */
+
+/* --- PA : css externe (voir overall_header) --- */
+/* ------------------------------------ */
+
+/* --- CATEGORIES (index_box) --- */
+
+/* --- forums --- */
+.forums {
+  width: 100%; 
+  background: var(--baseClr2-20); 
+  border-radius: var(--radius); 
+  padding: 1rem 0; 
+  display: flex; 
+  flex-direction: column; 
+  gap: 1rem; 
+}
+
+/* forum seul */
+.forum.row {
+  margin: 0 1rem; 
+  display: flex; 
+  flex-wrap: wrap; 
+  height: 19.6rem; 
+}
+
+/* généralités */
+.background__tledesc, .background__lastpost, .container__subforums {
+  background: var(--baseClr-90);  
+}
+
+.container__tledesc, .container__laspost {
+  height: 100%; 
+  background: var(--baseClr); 
+  border-radius: var(--radius); 
+  filter: var(--drop-shadow); 
+}
+
+/* généralités de texte */
+.forumtitle, .forum_stats:not(strong) { 
+  text-transform: uppercase; 
+  background: var(--grad1);
+  background-size: 100%; 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+}
+
+.forum_stats strong {
+  background: var(--accentClr); 
+  font-weight: bold; 
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent;
+  z-index: 3; 
+}
+
+/* --- TITRE ET DESC --- */
+.background__tledesc {
+  height: 15rem; 
+  width: 75rem; 
+  border-radius: var(--radius) 0 0 0;
+  padding: 1rem; 
+}
+
+.container__tledesc {
+  display: flex; 
+  flex-wrap: wrap; 
+  justify-content: space-between; 
+  padding: 1rem; 
+}
+
+/* titres (texte) */
+.forumtitle {
+  height: 3rem; 
+  width: 75%;
+  font-family: var(--font2); 
+  font-size: var(--biggest); 
+  letter-spacing: 0.1rem; 
+}
+
+.forumtitle:hover {
+  letter-spacing: 0.2rem;  
+}
+
+/* "x messages dans x sujets" */
+.forum_stats {
+  margin-top: 0.6rem; 
+  height: 2rem; 
+  width: 25%; 
+  text-align: right; 
+  font-size: var(--small); 
+  font-weight: var(--semibold-fw);  
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  position: relative; 
+}
+
+.forum_stats::after {
+  content: ""; 
+  background: var(--bg2);  
+  border-radius: var(--radius); 
+  position: absolute; 
+  top: 0; 
+  right: 0; 
+  left: 0; 
+  bottom: 0; 
+}
+
+/* description */
+.forum_desc {
+  height: 7rem; 
+  margin: 1rem 0; 
+  overflow: auto; 
+  font-size: var(--medium); 
+  text-align: justify; 
+  padding-right: 1rem; 
+}
+
+/* --- LAST POST --- */
+.background__lastpost {
+  height: 15rem;
+  width: 30.9rem;  
+  margin-left: 0.1rem; 
+  border-radius: 0 var(--radius) 0 0;
+  padding: 1rem; 
+}
+
+.container__laspost {
+  display: flex; 
+  justify-content: space-between; 
+}
+
+.lastpost {
+  width: 19.9rem; 
+  font-size: var(--medium); 
+  text-align: right; 
+  font-style: italic; 
+  padding: 5rem 4rem 0 0;
+}
+
+.lastpost .old-message {
+  display: none; 
+}
+
+.lastpost .new-message { 
+  display: flex; 
+  align-items: center; 
+  position: absolute; 
+  left: 13rem; 
+  top: 1.5rem; 
+  height: 2rem; 
+  color: var(--accentClr); 
+  font-style: normal; 
+  text-transform: uppercase; 
+  font-size: var(--small); 
+  font-weight: var(--semibold-fw); 
+}
+
+.lastpost .new-message::after {
+  content: ""; 
+  display: block; 
+  position: absolute; 
+  top: 0; 
+  right: -0.5rem; 
+  width: 120%; 
+  height: 100%; 
+  border-radius: var(--radius); 
+  background: var(--grad2); 
+  opacity: 0.3;  
+}
+
+.lastpost a[href^="/u"] {
+  position: relative; 
+  top: 0.5rem; 
+  font-size: var(--medium); 
+  text-transform: uppercase;  
+}
+
+.lastpost i {
+  position: relative; 
+  top: 0.4rem; 
+  font-size: var(--smallest); 
+  padding: 0 0.5rem; 
+  color: var(--textClr); 
+  transition: var(--base-transi); 
+}
+
+.lastpost i:hover {
+  color: var(--accentClr2); 
+  transition: var(--base-transi); 
+}
+
+.lastpost a, .lastpost i {
+  font-style: normal !important;
+}
+
+/* avatar */
+.lastpost__avatar, .lastpost__avatar img {
+  width: 9rem !important; 
+  height: 100%; 
+  object-fit: cover; 
+  border-radius: 0 var(--radius) var(--radius) 0; 
+}
+
+.lastpost__avatar img {
+  opacity: 70%; 
+  transition: var(--slow-transi); 
+}
+
+.lastpost__avatar img:hover {
+  opacity: 100%; 
+  transition: var(--slow-transi); 
+}
+
+/* --- SOUS-FORUMS --- */
+.container__subforums {
+  border-radius: 0 0 var(--radius) var(--radius);
+  margin-top: 0.1rem;
+  height: 4.5rem; 
+  width: 100%; 
+  padding: 1rem 1rem; 
+  display: flex; 
+  align-items: center; 
+}
+
+.subforums a {
+  font-size: var(--medium); 
+  text-transform: uppercase; 
+  font-weight: var(--semibold-fw); 
+  color: var(--textClr); 
+  padding: 0 1rem; 
+  position: relative; 
+}
+
+.subforums a::after {
+  content: ""; 
+  position: absolute; 
+  top: 0; 
+  right: 0; 
+  left: 0; 
+  bottom: 0; 
+  background: var(--bg2); 
+  border-radius: var(--radius); 
+  transition: var(--base-transi); 
+  height: 2.5rem; 
+  margin: auto; 
+  opacity: 0; 
+}
+
+.subforums a:hover::after {
+  opacity: 1; 
+  transition: var(--base-transi); 
+}
+
+/* ------------------------------------ */
+
+/* --- QEEL | QUI EST EN LIGNE (index_body) --- */
+/* ------------------------------------ */
+
+/* --- PAGE LISTE DES SUJETS --- */
+/* ------------------------------------ */
+
+/* --- PAGE SUJETS SURVEILLES --- */
+/* ------------------------------------ */
+
+/* --- PAGE MESSAGES --- */
+.container {
+  display: flex; 
+  flex-direction: column; 
+  flex-wrap: wrap; 
+}
+
+/* structure */
+.post {
+  display: flex; 
+  margin: 0.5rem 0; 
+}
+
+/* containers divers (titres, prévisualisation, postingbox, dés, options) */
+.container__title, #preview, #postingbox, .postingbox__dices, .postingbox__options {
+  display: flex; 
+  flex-wrap: wrap; 
+  align-items: center; 
+  justify-content: space-between;
+  background: var(--baseClr-90); 
+  width: 100%; 
+  min-height: 10rem; 
+  margin: 0.5rem 0;
+  border-radius: var(--big-radius);  
+}
+
+.container__title {margin-top: 0 !important;}
+
+.container__title {
+  padding: 0.5rem 1.5rem; 
+}
+
+/* titres h3 divers (prévisualisation, poster une réponse, options, etc) */
+.container__title .h3 {
+  padding: 0 2rem; 
+}
+
+#preview .h3, #postingbox h3, .postingbox__dices h3, .postingbox__options h3, .postingbox__options .h3, #postingbox .fields1 {
+  padding: 0 3.5rem; 
+}
+
+#preview .h3 {
+  margin: 1rem 0 !important; 
+}
+
+/* -- messages -- */
+.container__post {
+  background: var(--baseClr2-20); 
+  width: 81rem; 
+  border-radius: 0 1.6rem 1.6rem 0;
+}
+
+/* contenu messages */
+.post_message.postbody.content { 
+background: var(--baseClr);
+  border-radius: var(--radius);
+  filter: var(--drop-shadow);
+  margin: 2rem;
+  font-size: var(--medium);
+  line-height: var(--base-lh);
+  padding: 2.5rem;
+  min-height: 62rem !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* chaîne de navigation et pagination */
+.container__title .navigation_links, .container__title .pagination.right {
+  width: 50%; 
+}
+
+.container__title .navigation_chain {
+  font-size: var(--small); 
+  text-transform: uppercase; 
+  font-weight: var(--semibold-fw); 
+}
+
+.container__title .navigation_chain a {
+    color: var(--textClr);
+}
+
+.container__title .navigation_chain a:hover {
+    color: var(--accentClr);
+}
+
+.container__title .navigation_chain i {
+  font-size: var(--smallest);  
+  padding: 0 0.2rem; 
+}
+
+/* -- participants -- */
+.title_posterslist {
+  display: flex;
+  align-items: center;
+}
+
+.poster-list {
+  display: flex; 
+  flex-wrap: nowrap; 
+  gap: 0.5rem; 
+  margin-right: 1rem; 
+  margin-left: 0.5rem; 
+}
+
+.poster {
+  background-image: var(--poster-avatar); 
+  height: 3rem;
+  width: 3rem;
+  border-radius: 100%;
+  background-size: cover;
+  transition: all ease .8s;
+  opacity: 0.8; 
+}
+
+.poster:hover {
+  opacity: 1; 
+}
+
+.poster-more {
+  background-image: var(--baseClr2-20); 
+  height: 3rem;
+  width: 3rem;
+  border-radius: 100%;
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+}
+
+.poster-more:hover .poster-more-list {
+  /* à définir */
+}
+
+.poster-count, .poster-more-list {
+  display: none; 
+}
+
+/* --- container interne --- */
+
+/* détails du post (et boutons citer, éditer, etc) */
+.post_details {
+  padding: 2rem 2.5rem 0 2.5rem; 
+}
+.post_details, .profile-icons {
+  display: flex; 
+  justify-content: space-between; 
+}
+
+/* lien du sujet, date */
+.post_date {
+  display: flex;  
+  font-size: var(--small); 
+  text-transform: uppercase;
+  font-weight: var(--semibold-fw); 
+}
+
+.post_date a { 
+  max-width: 200px; 
+  display: inline-block; 
+  overflow: hidden; 
+  white-space: nowrap; 
+  text-overflow: ellipsis; 
+  color: var(--textClr); 
+}
+
+.post_date a:hover {
+  color: var(--accentClr);
+}
+
+time::before {
+  content: "|"; 
+  padding-right: 0.3rem; 
+}
+
+/* citer, éditer, etc */
+.profile-icons {
+  font-size: var(--medium); 
+  font-weight: var(--semibold-fw); 
+  background: var(--grad1); 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase; 
+  letter-spacing: -0.05px; 
+}
+
+.profile-icons li {
+  padding: 0 0.3rem; 
+}
+
+/* bouton like */
+.rep-button, .rep-button:active, .rep-button:focus {
+  background: var(--accentClr); 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border: none;
+  font-size: var(--small2);  
+  transition: var(--base-transi); 
+}
+
+.rep-button:hover {
+  background: var(--accentClr2); 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: var(--base-transi); 
+}
+
+button.rep-button .rep-nb {
+  padding: 0.5rem; 
+}
+
+/* liste des like */
+.fa_like_list {
+  background: var(--baseClr3-10); 
+  border-radius: var(--small-radius); 
+  margin-top: 2rem; 
+  padding: 0.4rem 1.2rem; 
+  text-transform: lowercase; 
+  font-size: var(--small); 
+}
+
+/* ------ PROFIL MESSAGES ------ */
+/* base profil message */
+.post_profile {
+  background: var(--baseClr-90);
+  width: 26.5rem; 
+  border-radius: 1.6rem 0 0 1.6rem;
+  margin-right: 0.5rem;  
+}
+
+.post_pseudo {
+  font-family: var(--font2); 
+  text-transform: uppercase; 
+  font-size: var(--bigger); 
+  float: right; 
+  padding: 1.5rem 1.5rem 1.6rem 1.5rem; 
+}
+
+.post_avatar {
+  display: flex; 
+  justify-content: center; 
+  padding: 1rem;
+  width: 24.5rem; 
+  height: 38rem; 
+  border-radius: var(--radius); 
+  margin: auto; 
+}  
+
+.post_avatar img {
+    border-radius: var(--radius); 
+}
+
+/* --- BAS DE PAGE --- */
+.container__footermsgs {
+  background: var(--baseClr-90); 
+  width: 100%;  
+  border-radius: var(--big-radius); 
+  padding: 1rem 1.5rem 6rem 1.5rem; 
+  margin-top: 1rem;
+}
+
+.links_bar__msgslinks {
+  display: flex; 
+  font-size: var(--medium); 
+  font-weight: var(--semibold-fw); 
+  text-transform: uppercase; 
+}
+
+.links_bar__msgslinks a {
+  color: var(--textClr); 
+}
+
+.links_bar__msgslinks a:hover {
+  color: var(--accentClr); 
+}
+
+.links_bar__msgslinks a:nth-child(2)::before, .links_bar__msgslinks a:nth-child(2)::after {
+  content: " | "; 
+  color: var(--textClr); 
+}
+
+.links_bar__msgslinks span:nth-child(3) { 
+  padding: 0 0.3rem; 
+}
+
+/* --- REPONSE RAPIDE --- */
+#quickreply_content .h3 {
+  display: none; 
+}
+
+.quickreply {
+  display: flex; 
+  justify-content: center; 
+  flex-direction: row !important; 
+  margin-top: 4rem; 
+}
+
+/* container réponse rapide */
+.sceditor-container {
+  border: none !important;  
+}
+
+.sceditor-container, .sceditor-container textarea {
+  width: 80rem !important; 
+  min-height: 20rem !important; 
+  max-height: 35rem !important; 
+  margin: 0 !important; 
+  background: var(--baseClr3-10) !important;  
   border-radius: var(--radius) !important; 
+}
+
+/* zone de texte */
+.sceditor-container textarea {
+  padding: 1rem !important;  
+  color: var(--textClr) !important; 
+  font-family: var(--font1) !important; 
+  line-height: var(--base-lh); 
+  border-radius: 0 0 var(--radius) var(--radius) !important;
+  overflow: auto; 
+}
+
+/* icône redimensioner */
+div.sceditor-grip {
+  display: none !important; 
+}
+
+/* barre d'outils */
+div.sceditor-toolbar {
+  background: var(--baseClr2-20) !important; 
+  border-bottom: none !important; 
+  padding: 0.5rem !important; 
+  border-radius: var(--radius) var(--radius) 0 0 !important; 
+  text-align: center !important; 
+}
+
+div.sceditor-group {
+  border-radius: 0.4rem !important; 
+  background: none !important; 
+  border: none !important; 
+}
+
+a.sceditor-button {
+  height: 26px !important;
+  width: 26px !important;
+}
+
+a.sceditor-button:hover, a.sceditor-button.hover {
+  box-shadow: none !important; 
+  background: var(--baseClr) !important; 
+}
+
+.sceditor-dropdown {
+  border: none !important; 
+  box-shadow: var(--drop-shadow) !important; 
+  border-radius: var(--small-radius) !important; 
+}
+
+html#sceditor_smilies body#sce_smilies_body {
+  background: none; 
+}
+
+form#smilies_categ select {
+  display: none; 
+}
+
+/* dropdown */
+div.sceditor-dropdown input {
+  border-radius: var(--small-radius) !important;  
+  color: var(--textClr) !important; 
+  box-shadow: none !important; 
+  outline: none !important; 
+  border-style: none !important; 
+}
+
+input.button {
+  background: var(--baseClr3-10) !important; 
+}
+
+.sceditor-mention-user img {
+  display: none !important; 
+}
+
+.sceditor-mention-user {
+  text-align: left; 
+  padding-left: 1.5rem !important; 
+  border-radius: var(--small-radius) !important; 
+  border: none !important; 
+  transition: var(--base-transi); 
+  text-transform: uppercase; 
+  font-size: var(--medium); 
+  font-family: var(--font1); 
+  font-weight: var(--semibold-fw); 
+}
+
+.sceditor-mention-user:hover {
+  background-color: var(--baseClr2-20) !important; 
+}
+
+/* couleurs web */
+.sceditor-dropdown.sceditor-color-picker {
+  width: 20rem !important;  
+  height: 10rem !important;  
+  padding: 0.5rem !important;
+  border-radius: 0.4rem !important; 
+  display: flex; 
+}
+
+.sceditor-dropdown.sceditor-color-picker div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.color-option {
+  width: 2rem !important;  
+  height: 2rem !important;  
+  margin: 0.2rem !important;
+  cursor: pointer !important;
+}
+
+.color-option span {
+  display: block !important;
+  width: 2rem !important;  
+  height: 2rem !important;
+} 
+
+.color-option, .color-option span {
+  border-radius: 0.2rem;
+ }
+
+/* liens sous la quick answers */
+.container__footermsgs .links_bar__buttons {
+  float: right; 
+}
+
+form.left, form.right {
+  margin-top: 2rem; 
+  padding: 0 0.5rem; 
+}
+
+/* ------------------------------------ */
+/* --- PAGE POSTER UN MESSAGE | BOITE DE TEXTE --- */
+
+.message-edition {
+  display: flex;
+}
+
+#message-box .sceditor-container {
+  height: 27rem !important; 
+}
+
+/* posting box, prévisualisation */
+#postingbox, #preview {
+  margin-bottom: 0.5rem !important; 
+}
+
+/* "prévisualiser" et "envoyer" */
+.posting-buttons {
+  margin: 1.5rem auto 2.5rem auto; 
+}
+
+/* --- boîte prévisualisation --- */
+#preview {
+  width: 108rem; 
+}
+
+/* contenu */
+#preview .content {
+  width: 105rem; 
+  font-size: var(--medium); 
+  text-align: justify; 
+  padding: 1rem 2rem; 
+  margin: 0 1.5rem; 
+  background: var(--baseClr);
+  border-radius: var(--radius);
+}
+
+.container__preview hr:last-child {display: none;}
+.container__preview .content hr {display: block !important;}
+.postingbox__options hr {margin: 1.5rem 0 2.5rem 0;}
+
+/* smileys */
+#smileyContainer {
+  width: 20rem; 
+  background: white; 
+  margin: 0 1rem 0 0; 
+  border-radius: var(--radius); 
+  height: 27rem; 
+  overflow: hidden; 
+}
+
+ /* dl = container d'input (dl > dd > input) */
+.fields1 dl {
+  grid-template-columns: 18rem auto !important;
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  margin-bottom: 2rem; 
+}
+
+#postingbox dl, .postingbox__dices dl, .postingbox__options dl {
+  display: grid !important; 
+}
+
+.fields1 dd input {
+  width: 80rem !important;   
+  border-radius: var(--small-radius); 
+}
+
+/* zone de textes */
+input[type=text], .postingbox__dices select {
+  height: 4rem;
+}
+
+/* survolé */
+input[type=text]:hover {
+  color: var(--textClr); 
+}
+
+/* sélectionné */
+input[type=text]:focus {
+  outline: 0.2rem solid var(--accentClr); 
+  background: var(--baseClr3-40);  
+}
+
+/* --- OPTIONS BOX --- */
+/* "modifier le titre du sujet" */
+.postingbox__options .fields1 dt label {
+  font-size: var(--small2); 
+}
+
+/* "sauter vers" postingbox */
+.postingbox__options .right {
+  font-size: var(--medium);
+  font-weight: var(--semibold-fw);
+  text-transform: uppercase;
+  margin: 2rem 0 0 3.5rem;
+  padding: 2rem 0; 
+}
+
+.postingbox__options, .postingbox__dices {
+  margin-bottom: 1rem; 
+}
+
+/* --- DES --- */
+.postingbox__dices {
+  padding-right: 3.5rem !important; 
+  flex-direction: column; 
+  align-items: flex-start !important; 
+}
+
+.postingbox__dices .panel {
+  padding: 0 3.5rem 1.5rem 3.5rem; 
+}
+
+.postingbox__dices #list_dice, .postingbox__dices #list_dice label {
+  font-variant-numeric: tabular-nums;
+  font-size: var(--medium) !important; 
+  text-transform: uppercase; 
+  font-weight: var(--semibold-fw); 
+}
+
+/* --- SONDAGES --- */
+.postingbox__options .panel {
+  width: 100%; 
+  margin: 0 3.5rem 3.5rem 3.5rem; 
+}
+
+/* choix de sondage */
+textarea[name="poll_option_text"] {
+  min-width: 30rem !important; 
+  max-width: 68rem !important; 
+  font-family: var(--font1); 
+  font-size: var(--medium);
+}
+
+/* petit input ("sondage pendant") */
+.tiny {
+  margin-right: 1rem; /* espace entre l'input et le texte qui suit */
+}
+
+.inner dl {
+  grid-template-columns: 300px auto;
+  grid-gap: 2rem; 
+}
+
+/* input texte de la boîte interne des options (sondages) */
+.inner input[type=text] {
+  width: 30rem; 
+}
+
+.postingbox__options .inner hr {
+  margin: 4rem 0; 
+}
+
+/* --- HISTORIQUE DU SUJET (posting_topic_review) --- */
+.wrapped__messages .panel {
+  background-color: var(--baseClr2-20); 
+  border-radius: var(--radius);
+  margin: 1rem 0;  
+  padding: 2rem 1rem; 
+}
+
+/* contenu */
+.wrapped__messages .content {
+  font-size: var(--medium); 
+  padding: 1rem; 
+  background: var(--baseClr-90);
+  border-radius: var(--radius);
+  margin: 2rem; 
+}
+
+/* "par auteur / date / heure" */
+div.panel .postbody > span:first-of-type {
+  margin-left: 4rem; 
+  text-transform: uppercase; 
+  font-size: var(--medium); 
+  font-weight: var(--semibold-fw); 
+}
+
+/* cases à cocher */
+.postingbox__options input[type='checkbox'] {
+  margin: 0 0.5rem 0 0; 
+}
+
+/* ------------------------------------ */
+
+/* --- PAGE MESSAGES PRIVES --- */
+/* ------------------------------------ */
+
+/* ------------------------------------ */
+/* --- PAGE DE PROFIL --- */
+/* ------------------------------------ */
+
+/* --- PAGE LISTE DES MEMBRES --- */
+/* ------------------------------------ */
+
+/* --- PAGE DES GROUPES --- */
+/* ------------------------------------ */
+
+/* ------------------------------------ */
+/* --- DIVERS --- */
+
+/* ------------------------------------ */
+/* --- TOOLTIP (Z) --- */
+
+/* retirer le fond blanc par défaut */
+.tooltipster-default{
+  background:none !important;
+  box-shadow:none !important;
+}
+/* flèche */
+.tooltipster-arrow{display:none !important;}
+
+/* fond, conteneur */
+.tooltipster-content{
+  background: var(--baseClr3-10);
+  padding:5px;
+  border-radius: var(--radius);
+}
+
+/* fond, contenu */
+.main-tooltip{
+  background: var(--baseClr);
+  border-radius: var(--radius);
+  padding:5px;
+}
+
+/* contenu */
+.main-tooltip .preview_content{
+  display:flex !important;
+}
+
+/* avatar */
+.preview_avatar img{
+  width:50px;
+  height:50px;
+  border-radius: var(--radius);
+  object-fit:cover;
 }
