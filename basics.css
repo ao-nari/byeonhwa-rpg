@@ -201,3 +201,13 @@ evid3 {}
 /* --- alignements --- */
 left, .left {float: left !important;}
 right, .right {float: right !important;}
+
+/* --- tw (blurry) --- */
+twhide, .twhide {
+  filter: blur(3px); 
+  transition: filter .3s; 
+}
+
+twhide:hover, .twhide:hover {
+  filter: none; 
+}
