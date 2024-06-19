@@ -1344,7 +1344,7 @@ button.rep-button .rep-nb {
   font-style: italic;  
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  padding-bottom: 0.5rem; 
+  padding: 0.5rem; 
 } 
 
 /* --- BAS DE PAGE --- */
