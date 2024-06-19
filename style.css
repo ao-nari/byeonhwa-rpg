@@ -75,7 +75,8 @@
   --big: 1.6rem; /* 16 px */
   --bigger: 1.8rem; /* 18px */
   --bigger2: 2rem; /* 20 px */
-  --biggest: 2.4rem; /* 24 px */
+  --bigger3: 2.4rem; /* 24 px */
+  --biggest: 2.6rem; /* 26 px */
 
   /* --- effets --- */
   --semibold-fw: 600; 
@@ -846,11 +847,12 @@ a.mainmenu[href^="/"]::before {
 
 /* titres (texte) */
 .forumtitle {
-  height: 3rem; 
+  height: 3rem;
   width: 75%;
-  font-family: var(--font2); 
-  font-size: var(--biggest); 
-  letter-spacing: 0.1rem; 
+  font-family: var(--font2);
+  font-size: var(--biggest);
+  letter-spacing: 0.1rem;
+  font-weight: var(--bold-fw);
 }
 
 .forumtitle:hover {
