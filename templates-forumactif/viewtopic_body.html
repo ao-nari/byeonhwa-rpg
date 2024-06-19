@@ -65,19 +65,15 @@
             <div class="post_avatar">
                 {postrow.displayed.POSTER_AVATAR}
             </div>
-            <br />
 
             <!-- Rang -->
             <span class="post_rank">
-                {postrow.displayed.POSTER_RANK_NEW} <!-- Textuel -->
-                {postrow.displayed.RANK_IMAGE} <!-- Image -->
-            </span><br />
+                {postrow.displayed.POSTER_RANK_NEW} <!-- texte --> <!-- {postrow.displayed.RANK_IMAGE} --> <!-- image (inactif) -->
+            </span>
 
-            <!-- En ligne -->
-            <div class="{postrow.displayed.ONLINE_IMG_NEW}"> <!-- VOIR CSS .online -->
-                {postrow.displayed.ONLINE_IMG_NEW}<!-- Textuel -->
-            </div>
-            <br />
+            <!-- <div class="{postrow.displayed.ONLINE_IMG_NEW}"> (class .online pour le css)
+                 {postrow.displayed.ONLINE_IMG_NEW} (online image (inactif))
+            </div> -->
 
             <div class="post_userinfo">  
                 <!-- Champs de profil -->
@@ -335,7 +331,7 @@ document.addEventListener("DOMContentLoaded", function() {
     postPseudoSpans.forEach(function(span) {
       var color = window.getComputedStyle(span).getPropertyValue("color");
       var rgbaColor = addOpacity(color, 0.3);
-      var gradientColor = "linear-gradient(to bottom, " + rgbaColor + ", var(--baseClr3-10)"; 
+      var gradientColor = "linear-gradient(to bottom, " + rgbaColor + ", transparent"; 
       
       var postProfil = span.closest('.post_profile');
       var postAvatar = postProfil.querySelector('.post_avatar');
@@ -350,5 +346,24 @@ document.addEventListener("DOMContentLoaded", function() {
         rgbaComponents[3] = opacity;
         return "rgba(" + rgbaComponents.join(", ") + ")";
     }
+});
+</script>
+
+<!-- récupération de la couleur de groupe pour les rangs -->
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    var postPseudoSpans = document.querySelectorAll('.post_profile .post_pseudo a[href*="/u"] span');
+    console.log(postPseudoSpans); 
+  
+    postPseudoSpans.forEach(function(span) {
+      var color = window.getComputedStyle(span).getPropertyValue("color");
+      
+      var postProfil = span.closest('.post_profile');
+      var postRank = postProfil.querySelector('.post_rank');
+      
+      if (postRank) {
+        postRank.style.color = color;
+      }
+    });
 });
 </script>

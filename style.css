@@ -60,7 +60,7 @@
 
   /* --- polices --- */
   --font1: 'Montserrat', 'Arial', sans-serif; 
-  --font2: 'sinervaregular', 'Times new roman', serif; 
+  --font2: 'Lamoric Rowen Regular', 'Times new roman', serif; 
   --font3: 'Playfair display', 'Palatino', serif; 
 
   --krfont: 'Diphylleia', serif; 
@@ -1300,19 +1300,50 @@ button.rep-button .rep-nb {
 
 /* --- RANGS --- */
 .post_rank {
-  display: block; 
-  width: 24.5rem; 
-  margin: auto; 
+  display: flex; 
+  flex-wrap: wrap; 
+  flex-direction: column-reverse; 
+  justify-content: center; 
+  align-items: center; 
+  width: 22.5rem; 
+  margin: 1rem auto; 
+  line-height: 0.5; 
 }
 
-.title-rank { /* niveau */
+.rank__cont {
+  display: flex; 
+  align-items: center; 
+}
+
+.rank__cont::before, .rank__cont::after {
+  display: inline-block; 
+  content: ""; 
+  height: 1px; 
+  width: 100%;  
+  opacity: 0.8; 
+  background: var(--lord-icon-secondary); 
+}
+
+.rank { /* niveau */
+  font-size: var(--bigger); 
   font-family: var(--font2); 
   text-transform: uppercase; 
+  letter-spacing: 0.2rem; 
+  padding: 0.5rem 0.2rem; 
+  width: 22.5rem; 
+  text-align: center; 
+  white-space: nowrap; 
 }
 
+/* --- */
 .qrank { /* quote */
   font-size: var(--medium); 
-}
+  background: var(--grad2);  
+  font-style: italic;  
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding-bottom: 0.5rem; 
+} 
 
 /* --- BAS DE PAGE --- */
 .container__footermsgs {
