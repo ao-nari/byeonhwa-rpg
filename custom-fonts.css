@@ -1,26 +1,11 @@
 /* --- installation polices NON google fonts --- */
 
-/* --- LAMORIC ROWEN --- */
+/* --- SUGAR BABY (title font) --- */
 @font-face {
-  font-family: 'Lamoric Rowen Regular';
-  src: url('LamoricRowen-8OOLB.woff') format('woff'), 
-  url('lamoricrowen-8oolb.ttf') format('truetype');
-  font-style: normal;
+  font-family: 'sugar_babyregular';
+  src: url('sugar-baby-personal-use-webfont.woff2') format('woff2'),
+       url('sugar-baby-personal-use-webfont.woff') format('woff'),
+       url('sugar-baby-personal-use-webfont.ttf') format('truetype');
   font-weight: normal;
-  }
-
-@font-face {
-  font-family: 'Lamoric Rowen Regular';
-  src: url('LamoricRowen-8OOLB.woff') format('woff'), 
-  url('lamoricrowen-8oolb.ttf') format('truetype');
   font-style: normal;
-  font-weight: bold;
-  }
-
-@font-face {
-  font-family: 'Lamoric Rowen Regular';
-  src: url('LamoricRowen-8OOLB.woff') format('woff'), 
-  url('lamoricrowen-8oolb.ttf') format('truetype');
-  font-style: italic;
-  font-weight: normal;
-  }
+}
