@@ -1298,6 +1298,22 @@ button.rep-button .rep-nb {
     border-radius: var(--radius); 
 }
 
+/* --- RANGS --- */
+.post_rank {
+  display: block; 
+  width: 24.5rem; 
+  margin: auto; 
+}
+
+.title-rank { /* niveau */
+  font-family: var(--font2); 
+  text-transform: uppercase; 
+}
+
+.qrank { /* quote */
+  font-size: var(--medium); 
+}
+
 /* --- BAS DE PAGE --- */
 .container__footermsgs {
   background: var(--baseClr-90); 
