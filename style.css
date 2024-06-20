@@ -5,7 +5,7 @@
 :root {
   font-size: 62.5%; /* default = 10px = 1rem */
   --body: url('https://i.imgur.com/3AW0kt1.png'); /* fond */
-  --header: url('https://i.imgur.com/40jOgFC.png'); /* bannière */
+  --header: url('https://i.imgur.com/8qD0shL.png'); /* bannière */
   --bhavatar: url('https://i.imgur.com/29ucVBL.png'); /* avatar byeonhwa */
 
   /* --- palette --- */
@@ -127,7 +127,7 @@
 [data-color-scheme="dark"] {
   font-size: 62.5%; /* default = 10px = 1rem */
   --body: url('https://i.imgur.com/BsFKZgm.png'); /* fond */
-  --header: url('https://i.imgur.com/k1eLxlG.png'); /* bannière */
+  --header: url('https://i.imgur.com/jUQE2la.png'); /* bannière */
   --bhavatar: url('https://i.imgur.com/3JwTGSH.png'); /* avatar byeonhwa */
 
   /* --- palette --- */
@@ -1610,7 +1610,7 @@ form.left, form.right {
 }
 
 /* zone de textes */
-input[type=text], .postingbox__dices select {
+input[type=text], input[type=password], .postingbox__dices select {
   height: 4rem;
 }
 
