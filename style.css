@@ -295,6 +295,7 @@ h1.page-title {
   text-overflow: ellipsis; 
   position: relative; 
   margin-left: 0.5rem; 
+  letter-spacing: 0.1rem;
 }
 
 h2, .h2 {
@@ -381,9 +382,9 @@ blockquote cite a {/* code */}
 }
 
 /* boutons (nouveau, répondre) */
-a.buttons {
+a.buttons, #main-content .links_bar a {
   position: relative; 
-  background: var(--baseClr2-20); 
+  background: var(--bg2); 
   padding: 0.5rem 1rem; 
   border-radius: var(--small-radius); 
   margin-right: 0.5rem; 
@@ -400,7 +401,7 @@ a.buttons span {
 }
 
 /* survol et animation */
-a.buttons::after {
+a.buttons::after, #main-content .links_bar a::after {
   content: "";
   position: absolute !important;
   top: 0;
@@ -413,11 +414,11 @@ a.buttons::after {
   transition: var(--base-transi);
 }
 
-a.buttons:hover {
+a.buttons:hover, #main-content .links_bar a:hover {
   transition: var(--base-transi);
 }
 
-a.buttons:hover::after {
+a.buttons:hover::after, #main-content .links_bar a:hover::after {
   opacity: 1; 
 }
 
@@ -762,8 +763,16 @@ a.mainmenu[href^="/"]::before {
   letter-spacing: 0.3rem; 
 }
 
+.category[id^="f"] .cate_title {
+  display: none;
+}
+
+#c1 .cate_title, #c2 .cate_title, #c3 .cate_title, #c4 .cate_title, #c5 .cate_title {
+  display: block !important; 
+}
+
 .cate_title h2 {
-  display: none; 
+  display: none;
 }
 
 .cate_title .subtext {
@@ -806,7 +815,7 @@ a.mainmenu[href^="/"]::before {
   background: var(--baseClr-90);  
 }
 
-.container__tledesc, .container__laspost {
+.container__tledesc, .container__laspost, .forum-page_desc {
   height: 100%; 
   background: var(--baseClr); 
   border-radius: var(--radius); 
@@ -1034,12 +1043,65 @@ a.mainmenu[href^="/"]::before {
   transition: var(--base-transi); 
 }
 
+/* liens messages/marquer comme lu */ 
+#main-content .links_bar {
+  margin: 4rem 0 1rem 0; 
+  font-size: var(--small2);
+  text-transform: uppercase; 
+  font-weight: var(--semibold-fw);
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center;  
+}
+
+#main-content .links_bar a, #main-content .links_bar #mark_read {
+  position: relative;  
+  padding: 0.5rem 1rem; 
+  color: var(--textClr) !important;
+}
+
 /* ------------------------------------ */
 
 /* --- QEEL | QUI EST EN LIGNE (index_body) --- */
 /* ------------------------------------ */
 
 /* --- PAGE LISTE DES SUJETS --- */
+/* --- sous-forums --- */
+.forum-page_desc {
+  width: 100%; 
+  margin-bottom: 1rem; 
+  padding: 1rem; 
+  font-size: var(--medium); 
+}
+
+.container__users {
+  width: 50%; 
+  display: flex; 
+  justify-content: flex-end; 
+}
+
+#users_here {
+  text-align: right; 
+  position: relative; 
+  padding: 0 1rem; 
+  font-size: var(--small); 
+  text-transform: uppercase; 
+  font-weight: var(--semibold-fw); 
+  margin-top: 0.5rem;
+}
+
+#users_here::after {
+  content: ""; 
+  top: 0; 
+  right: 0; 
+  left: 0; 
+  bottom: 0; 
+  position: absolute; 
+  background: var(--bg2); 
+  border-radius: var(--radius); 
+}
+
+/* --- liste des sujets --- */
 /* ------------------------------------ */
 
 /* --- PAGE SUJETS SURVEILLES --- */
