@@ -382,7 +382,7 @@ blockquote cite a {/* code */}
 }
 
 /* boutons (nouveau, répondre) */
-a.buttons, #main-content .links_bar a {
+a.buttons, #main-content .links_bar a, #sort-btn {
   position: relative; 
   background: var(--bg2); 
   padding: 0.5rem 1rem; 
@@ -401,7 +401,7 @@ a.buttons span {
 }
 
 /* survol et animation */
-a.buttons::after, #main-content .links_bar a::after {
+a.buttons::after, #main-content .links_bar a::after, #sort-btn::after {
   content: "";
   position: absolute !important;
   top: 0;
@@ -926,7 +926,7 @@ a.mainmenu[href^="/"]::before {
   font-size: var(--medium); 
   text-align: right; 
   font-style: italic; 
-  padding: 5rem 4rem 0 0;
+  padding: 4.5rem 2.7rem 0 0; 
 }
 
 .lastpost .old-message {
@@ -936,15 +936,21 @@ a.mainmenu[href^="/"]::before {
 .lastpost .new-message { 
   display: flex; 
   align-items: center; 
+  justify-content: center; 
   position: absolute; 
   left: 13rem; 
-  top: 1.5rem; 
+  top: 1rem; 
   height: 2rem; 
+  width: 4.5rem; 
   color: var(--accentClr); 
   font-style: normal; 
   text-transform: uppercase; 
   font-size: var(--small); 
   font-weight: var(--semibold-fw); 
+}
+
+.container__laspost .new-message {
+  top: 1.5rem; 
 }
 
 .lastpost .new-message::after {
@@ -1045,7 +1051,7 @@ a.mainmenu[href^="/"]::before {
 
 /* liens messages/marquer comme lu */ 
 #main-content .links_bar {
-  margin: 4rem 0 1rem 0; 
+  margin: 3rem 0 1rem 0; 
   font-size: var(--small2);
   text-transform: uppercase; 
   font-weight: var(--semibold-fw);
@@ -1126,10 +1132,10 @@ a.mainmenu[href^="/"]::before {
   width: 75rem; 
   height: 7.5rem; 
   border-radius: var(--radius) 0 0 0;
-  padding: 1rem;
+  padding: 1.5rem 1rem;
   display: flex; 
   flex-wrap: wrap; 
-  align-items: center; 
+  align-items: flex-start; 
   justify-content: space-between;
 }
 
@@ -1158,7 +1164,8 @@ a.mainmenu[href^="/"]::before {
 .topicslist-stats {
   width: 17.75rem; 
   margin-right: 1rem; 
-  margin-top: 0 !important; 
+  margin-top: 0.4rem !important; 
+  height: 1.6rem !important; 
 }
 
 .topicslist-stats strong {
@@ -1212,14 +1219,14 @@ a.mainmenu[href^="/"]::before {
 }
 
 .topicslist-lastpost .lastpost-in {
+  width: 15rem; 
   line-height: 1; 
-  text-align: right !important; 
-  height: 5rem; 
-  margin: 3rem; 
+  height: 4rem; 
+  margin: 3rem 0 0 0; 
 }
 
-.topicslist-img {
-  display: none; 
+.topicslist-img .new-message {
+  height: 1.6rem !important;  
 }
 
 /* avatar */
@@ -1235,6 +1242,26 @@ a.mainmenu[href^="/"]::before {
 .topicslist-avatar-lastpost img:hover {
   opacity: 1; 
   transition: var(--base-transi);
+}
+
+/* --- footer liste des sujets --- */
+.container__footertopics {
+  background: var(--baseClr-90); 
+  border-radius: var(--radius); 
+  /* display: flex; 
+  flex-wrap: wrap; */
+}
+
+.expanded ~ .sort-form {
+  display: block; 
+}
+
+.sort-form {
+  display: none; 
+}
+
+#sort-btn {
+  margin-left: 1rem; 
 }
 
 /* ------------------------------------ */
