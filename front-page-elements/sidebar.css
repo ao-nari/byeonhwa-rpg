@@ -76,3 +76,23 @@
     transform: rotateZ(135deg); 
     transition: var(--base-transi); 
 }
+
+/* --- TOOLBAR FA GAUCHE (dans sidebar) --- */
+ul#fa_menulist, #fa_search, #fa_share {
+    display: none; 
+}
+
+#fa_right:not(#notif_list) {
+    display: flex; 
+    justify-content: space-between; 
+    width: 35rem; 
+    height: 20rem; 
+    background: var(--bg1); 
+}
+
+.fa_avatar img {
+    width: 6.5rem; 
+    height: 6.5rem; 
+    object-fit: cover; 
+    border-radius: 100%; 
+}
