@@ -93,8 +93,9 @@ ul#fa_menulist, #fa_search, #fa_share {
 }
 
 #fa_right .fa_avatar, #fa_right #fa_menu {
-    order: 1; 
-    margin: 0 2.5rem; 
+    height: 6.5rem; 
+    object-fit: cover; 
+    border-radius: 100%; 
 } 
 
 .fa_avatar, .fa_avatar img {
@@ -111,7 +112,7 @@ ul#fa_menulist, #fa_search, #fa_share {
 #fa_welcome {
     font-family: var(--font2); 
     text-transform: uppercase; 
-    font-size: var(--bigger); 
+    margin-left: 2rem; 
 }
 
 /* github, can you please upload my changes? */
