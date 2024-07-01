@@ -436,7 +436,7 @@ select, input {
 }
 
 input {
-  font-weight: var(--semibold-fw); 
+  font-weight: var(--semibold-fw);  
 }
 
 input:hover {
@@ -444,10 +444,121 @@ input:hover {
   color: var(--accentClr); 
 }
 
+input[type="checkbox"], input[type="checkbox"]:checked {
+  accent-color: var(--baseClr3) !important; 
+}
+
 label {
   font-size: var(--medium); 
   font-weight: var(--semibold-fw) !important; 
   text-transform: uppercase;  
+}
+
+/* ---------------- CONNEXION / S'ENREGISTRER ---------------- */
+#frmAgreement {
+  background-color: var(--baseClr-90);
+  border-radius: var(--radius); 
+  padding: 2rem; 
+  text-align: justify; 
+  font-size: var(--medium2); 
+}
+
+#frmAgreement h2 {
+  font-family: var(--font2); 
+  text-transform: uppercase; 
+  background: var(--grad2); 
+  background-size: 100%; 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: var(--biggest); 
+  margin: 0 0 1rem 0; 
+}
+
+#frmAgreement p {
+  margin: 1rem 0; 
+}
+
+#frmAgreement .panel:first-of-type span:nth-of-type(2) {
+  display: block; 
+  background: var(--baseClr3-10); 
+  padding: 2rem; 
+  margin: 2rem 0; 
+  border-radius: var(--small-radius); 
+  color: tomato !important; 
+}
+
+#frmAgreement .panel:last-of-type {
+  text-align: center; 
+}
+
+#frmAgreement .panel:last-of-type .button1.cgu-buttons {
+  font-size: var(--medium2); 
+  padding: 1rem;
+}
+
+/* connexion */
+form[name="form_login"] > .panel div.content, .panel > .inner > div.content {
+  background: var(--baseClr-90); 
+}
+
+form[name="form_login"] .h3 {
+  margin-bottom: 2rem !important;  
+  text-transform: none; 
+  font-size: var(--medium2) !important; 
+  -webkit-text-fill-color: unset; 
+  font-weight: var(--base-fw); 
+  font-family: var(--font1) !important; 
+}
+
+.fields1.left.fld_connexion {
+  display: flex; 
+  flex-direction: column;
+  align-items: flex-start; 
+  justify-content: flex-start; 
+}
+
+.fields1.left.fld_connexion #username, .fields1.left.fld_connexion #password {
+  height: 4rem !important; 
+  width: 30rem !important; 
+}
+
+.fields1.left.fld_connexion dl {
+  margin: 0.5rem; 
+}
+
+.fields1.left.fld_connexion dd input {
+  width: auto !important; 
+  padding: 0.5rem 1.5rem;  
+}
+
+#autologin {
+  width: auto !important; 
+}
+
+.panel .inner {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem auto 0 auto;
+}
+
+.panel .inner hr {
+  display: none; 
+}
+
+.content {
+  border-radius: var(--radius) !important; 
+  padding: 2rem; 
+}
+
+.panel .inner .content .h3 {
+  margin-bottom: 2rem !important;    
+  -webkit-text-fill-color: unset; 
+  font-family: var(--font2); 
+  font-size: var(--bigger); 
+}
+
+.panel .inner .content p:last-of-type {
+  padding-top: 2rem !important; 
 }
 
 /* ---------------- FIN GENERALITES -------------------- */
@@ -1326,6 +1437,10 @@ a.mainmenu[href^="/"]::before {
 /* titres h3 divers (prévisualisation, poster une réponse, options, etc) */
 .container__title .h3 {
   padding: 0 2rem; 
+}
+
+#postingbox dd input, .postingbox__options dd input {
+  height: 4rem !important; 
 }
 
 #preview .h3, #postingbox h3, .postingbox__dices h3, .postingbox__options h3, .postingbox__options .h3, #postingbox .fields1 {
