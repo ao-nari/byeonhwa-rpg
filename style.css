@@ -1977,8 +1977,9 @@ input[type=text]:hover {
 }
 
 /* sélectionné */
-input[type=text]:focus {
-  outline: 0.2rem solid var(--accentClr); 
+input[type=text]:focus, input[type=password]:focus {
+  background-color: var(--baseClr3-40) !important; 
+  outline: 0.2rem solid var(--accentClr) !important; 
 }
 
 /* --- OPTIONS BOX --- */
