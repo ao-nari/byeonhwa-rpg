@@ -181,7 +181,7 @@
 	transform: translateY(-50%) scale(1);
 }
 
-.switcheroo__logo, .switcheroo__divider {
+.switcheroo--open .switcheroo__popper:hover, .switcheroo__logo, .switcheroo__divider {
 	display: none;
 }
 
@@ -262,7 +262,7 @@
 
 .switcheroo__form-input:focus {
   outline: 0.1rem solid var(--accentClr) !important; 
-  background: var(--baseClr3-40) !important; 
+  background-color: var(--baseClr3-20) !important;
 }
 
 input:-webkit-autofill, input:-webkit-autofill:focus, input:-webkit-autofill:hover, input:-webkit-autofill:active {

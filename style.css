@@ -1979,7 +1979,6 @@ input[type=text]:hover {
 /* sélectionné */
 input[type=text]:focus {
   outline: 0.2rem solid var(--accentClr); 
-  background: var(--baseClr3-40);  
 }
 
 /* --- OPTIONS BOX --- */
