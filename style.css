@@ -2100,10 +2100,6 @@ div.panel .postbody > span:first-of-type {
 /* ------------------------------------ */
 /* --- DIVERS --- */
 
-/* ------------------------------------ */
-
-/* --- ONGLETS --- */
-
 /* --- onglets généraux --- */
 .tabs-content > div {
   display: none;
@@ -2113,8 +2109,39 @@ div.panel .postbody > span:first-of-type {
   display: block;
 }
 
-/* --- TOOLTIP (Z) --- */
+/* --- STATISTIQUES --- */
+.values, .statistical, .bars {
+  background: var(--baseClr-90); 
+  border-radius: var(--radius); 
+  padding: 1rem; 
+  font-size: var(--medium); 
+}
 
+.values .catHead, .statistical .catHead, .bars .catHead {
+  text-align: left; 
+  padding-bottom: 2rem; 
+  font-family: var(--font2); 
+  font-size: var(--bigger3); 
+  text-transform: uppercase; 
+  margin: 2rem 0; 
+  text-align: left !important; 
+  background: var(--grad2); 
+  background-size: 100%; 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.values th, .statistical th, .bars th {
+  text-transform: uppercase; 
+}
+
+.values .thTop, .statistical .thTop, .bars .thTop {
+  width: 15% !important; 
+}
+
+/* ------------------------------------ */
+
+/* --- TOOLTIP (Z) --- */
 /* retirer le fond blanc par défaut */
 .tooltipster-default{
   background:none !important;
