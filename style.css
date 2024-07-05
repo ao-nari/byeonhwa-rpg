@@ -1557,6 +1557,7 @@ background: var(--baseClr);
 /* détails du post (et boutons citer, éditer, etc) */
 .post_details {
   padding: 2rem 2.5rem 0 2.5rem; 
+  line-height: var(--small-lh); 
 }
 .post_details, .profile-icons {
   display: flex; 
