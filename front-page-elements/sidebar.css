@@ -92,6 +92,7 @@ ul#fa_menulist, #fa_search, #fa_share {
     padding-top: 3rem; 
 }
 
+/* avatar */
 #fa_right .fa_avatar, #fa_right #fa_menu {
     height: 6.5rem; 
     object-fit: cover; 
@@ -105,15 +106,58 @@ ul#fa_menulist, #fa_search, #fa_share {
     border-radius: 100%; 
 }
 
-#fa_menu, #fa_welcome { 
-    display: inline-block;
-    margin-left: 4rem;
+/* menu et bienvenue */
+#fa_menu {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;  
+    margin-left: 4rem; 
 }
 
 #fa_welcome {
     font-family: var(--font2); 
     text-transform: uppercase; 
-    margin-left: 2rem; 
+}
+
+/* menu tooltip dans la toolbar (liens utiles) */
+.container__tbtp {
+    display: flex; 
+    font-size: var(--medium); 
+}
+
+.tbtp__box:first-of-type {
+    width: 9rem !important;  
+    border-radius: var(--small-radius) 0 0 var(--small-radius); 
+    text-align: center; 
+    padding: 1rem; 
+    line-height: 1; 
+    font-variant: small-caps; 
+    font-weight: bold; 
+}
+
+.tbtp__box:last-of-type {
+    border-radius: 0 var(--small-radius) var(--small-radius) 0; 
+}
+
+.tbtp__box {
+    background: var(--baseClr); 
+    width: 3.5rem; 
+    height: 3.5rem; 
+    margin: 0.5px; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+.tbtp__box a {
+    background: var(--grad1); 
+    background-size: 100%; 
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+}
+
+.tbtp__box i {
+    font-size: var(--medium2); 
 }
 
 /* github, can you please upload my changes? */
