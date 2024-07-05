@@ -107,6 +107,7 @@ ul#fa_menulist, #fa_search, #fa_share {
 
 #fa_menu, #fa_welcome { 
     display: inline-block;
+    margin-left: 4rem;
 }
 
 #fa_welcome {

@@ -42,7 +42,7 @@
   --lord-icon-secondary: #C7B97B; 
 
   /* --- gradients --- */
-  --bg1: linear-gradient(to bottom, rgba(100, 139, 90, 0.6), transparent); /* textClr 60% opacité > transparent (fond) */
+  --bg1: linear-gradient(to bottom, rgba(100, 169, 112, 0.3), transparent); /* baseClr2 30% opacité > transparent (fond) */
   --bg2: linear-gradient(to bottom, rgba(100, 169, 112, 0.3), rgba(118, 158, 113, 0.1)); /* baseClr2 30% opacité > baseClr3 10% opacité (fond) */
 
   --grad1: linear-gradient(to right, var(--gradClr2), var(--gradClr3)); /* gradient 2 couleurs */
@@ -161,7 +161,7 @@
   --lord-icon-secondary: #B4B34F;
 
   /* --- gradients --- */
-  --bg1: linear-gradient(to bottom, var(--baseClr3-40) 0%, transparent 100%); /* baseClr3 40% > transparent (fond) */
+  --bg1: linear-gradient(to bottom, rgba(75, 89, 165, 0.3), transparent); /* baseClr2 30% > transparent (fond) */
   --bg2: linear-gradient(to bottom, rgba(117, 134, 227, 0.3), rgba(70, 83, 153, 0.1)); /* textClr 30% opacité > baseClr3 10% opacité (fond) */
 
   --grad1: linear-gradient(to right, var(--baseClr2), var(--textClr), var(--baseClr2)); /* gradient métallisé */
@@ -1471,6 +1471,7 @@ background: var(--baseClr);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  flex: 100%; 
 }
 
 /* chaîne de navigation et pagination */
