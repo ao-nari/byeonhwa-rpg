@@ -15,7 +15,7 @@
 
 .post:has(.bh_admin) .container__sprofile {
   display: flex; 
-  margin: 1rem 2rem 0 2rem;
+  margin: 2rem 2rem 0 2rem;
   line-height: var(--small-lh); 
   align-items: center; 
   flex: 50%; 
@@ -90,4 +90,5 @@
   display: flex; 
   flex-direction: column-reverse; 
   align-items: flex-end;   
+  justify-content: center; 
 }
