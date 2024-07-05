@@ -9,12 +9,85 @@
 
 /* --- */
 
-.post:has(.bh_admin) .post_profile {
-  /* par exemple, on peut supprimer l'affichage du profil d'un post contenant un message d'administration */
+.post:has(.bh_admin) .post_profile, .post:has(.bh_admin) .post_userinfo, .post:has(.bh_admin) .profil_contact {
   display: none; 
 }
 
+.post:has(.bh_admin) .container__sprofile {
+  display: flex; 
+  margin: 1rem 2rem 0 2rem;
+  line-height: var(--small-lh); 
+  align-items: center; 
+  flex: 50%; 
+}
+
+.post:has(.bh_admin) .container__pr {
+  display: flex; 
+  flex-direction: column; 
+}
+
+.post:has(.bh_admin) .post_avatar, .post:has(.bh_admin) .post_pseudo, .post:has(.bh_admin) .post_rank {
+  all: unset; 
+}
+
+/* avatar */
+.post:has(.bh_admin) .post_avatar {
+  height: 4rem; 
+  width: 4rem;  
+  margin-right: 1rem; 
+}
+
+.post:has(.bh_admin) .post_avatar img {
+  height: 4rem; 
+  width: 4rem; 
+  object-fit: cover; 
+  border-radius: 100%; 
+}
+
+/* pseudo */
+.post:has(.bh_admin) .post_pseudo {
+  font-size: var(--big); 
+  font-family: var(--font2); 
+  text-transform: uppercase; 
+}
+
+/* rang */
+.post:has(.bh_admin) .post_rank {
+  text-transform: uppercase; 
+  font-size: var(--small);  
+}
+
+.post:has(.bh_admin) .rank {
+  font-weight: bold !important; 
+}
+
+.post:has(.bh_admin) .post_rank .rank__cont, .post:has(.bh_admin) .rank, .post:has(.bh_admin) .qrank {
+  all: unset;
+}
+
+.post:has(.bh_admin) .rank__cont::before, .post:has(.bh_admin) .rank__cont::after {
+  display: none; 
+}
+
+.post:has(.bh_admin) .rank, .post:has(.bh_admin) .qrank {
+  font-style: unset; 
+}
+
+.post:has(.bh_admin) .post_rank br {
+  display: none; 
+}
+
+/* post */
 .post:has(.bh_admin) .container__post {
   width: 108rem; /* 1080px */
   border-radius: var(--radius) !important; 
+  display: flex; 
+  flex-wrap: wrap; 
+}
+
+/* post details */
+.post:has(.bh_admin) .post_details {
+  display: flex; 
+  flex-direction: column-reverse; 
+  align-items: flex-end;   
 }
