@@ -139,7 +139,7 @@ yeoreum, .yeoreum, yeo, .yeo {color: var(--yeo);}
 gaeul, .gaeul {color: var(--gaeul);}
 gyeoul, .gyeoul {color: var(--gyeoul);}
 akma, .akma {color: var(--akma);}
-munoehan, .munoehan, mun, .mun {color: var(munoehan);}
+munoehan, .munoehan, mun, .mun {color: var(--munoehan);}
 
 /* --- couleurs secondaires --- */
 /* --- plus CLAIRES ---*/
