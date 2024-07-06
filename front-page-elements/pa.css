@@ -1,0 +1,5 @@
+.container__pa {
+    display: flex; 
+    flex-direction: column; 
+    height: 32rem; 
+}
