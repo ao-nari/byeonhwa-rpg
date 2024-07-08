@@ -57,21 +57,37 @@ $(document).ready(function() {
 <!---------------------------------------->
 <!-- DEBUT sidebar -->
 <div id="sidebar" class="sidebar">
-    <!-- code -->
+    <!-- guide du membre -->
+     <div class="sidebar__hrp">
+        <!-- titre --> 
+        <div class="sb-title">guide du membre</div>
+
+        <!-- liens annexes -->
+         <div class="sb-link">
+            <a href="/" target="_blank"><i class=""></i> <span>règlement</span></a>
+         </div>
+     </div>
+
+     <!-- univers byeonhwa -->
+      <div class="sidebar__irp">
+        <!-- titre --> 
+        <div class="sb-title">l'univers byeonhwa</div>
+        
+        <!-- liens annexes -->
+        <div class="sb-link">
+            <a href="/" target="_blank"><i class=""></i> <span>contexte</span></a>
+         </div>
+      </div>
+
+      <!-- crédits -->
+       <div class="sidebar__credits">
+        <p class="credits">ici texte des crédits</p>
+       </div>
 </div>
 <!-- FIN sidebar -->
 <!---------------------------------------->
   
 <!-- WOMBAT plugin -->
-<script src="https://cdn.jsdelivr.net/gh/caezd/wombat/dist/wombat.min.js"></script>
-<!-- Script qui permet d'initialiser le plugin -->
-<script>
-(function() {
-	new Wombat({
-        allowGuests: true
-  });
-})();
-</script>  
 
 <!-- SWITCHEROO plugins -->
 <!-- Monomer.js et Switcheroo.js -->
@@ -89,43 +105,58 @@ $(document).ready(function() {
         confirmMsg: 'Confirmer le Switcheroo de personnage ?', /* le message affiché lors de la confirmation */
         deleteIcon: '×', /* accepte html, icone pour supprimer un compte lié */
         addIcon: '<i class="bi bi-plus"></i>', /* accepte html, icone qui ouvre le formulaire de connexion et d'association */
-        errorMsg: 'Une erreur est surviendue lors du Switcheroo.',
+        errorMsg: 'Whoops! Une erreur est survenue lors du Switcheroo.',
     });
 })(); 
 </script>
 
 <!-- EDISON plugin -->
 <script>
-    (function () {
-        const html = document.documentElement;
-        const themeControls = document.querySelector("[data-theme-controls]");
-        const toggle = themeControls.querySelector(".color-scheme-toggle");
-        
-        const setToggleLabel = function () {
-            let mode = html.dataset.colorScheme;
-            toggle.setAttribute(
-                "title",
-                "Activer le mode " + (mode === "dark" ? "clair" : "sombre")
-            );
-        };
+(function () {
+    const html = document.documentElement;
+    const themeControls = document.querySelector("[data-theme-controls]");
+    const toggle = themeControls.querySelector(".color-scheme-toggle");
 
-        const setColorScheme = function (value) {
-            html.dataset.colorScheme = value;
-            localStorage.setItem("color-scheme", value);
-            setToggleLabel();
-        };
+    const setToggleLabel = function () {
+        let mode = html.dataset.colorScheme;
+        toggle.setAttribute(
+            "title",
+            "Activate " + (mode === "dark" ? "light" : "dark") + " mode"
+        );
+    };
 
-        const init = function () {
-            setToggleLabel();
-        };
+    const setColorScheme = function (value) {
+        html.dataset.colorScheme = value;
+        localStorage.setItem("color-scheme", value);
+        setToggleLabel();
+        updateBhAvatar();
+    };
 
-        toggle.addEventListener("click", function () {
-            const scheme = html.dataset.colorScheme === "dark" ? "light" : "dark";
-            setColorScheme(scheme);
+    const init = function () {
+        setToggleLabel();
+    };
+
+    toggle.addEventListener("click", function () {
+        const scheme = html.dataset.colorScheme === "dark" ? "light" : "dark";
+        setColorScheme(scheme);
+    });
+
+    init();
+
+    document.addEventListener("DOMContentLoaded", function() {
+        updateBhAvatar();
+    });
+
+    function updateBhAvatar() {
+        const mainContent = document.getElementById("main-content");
+        const bhAvatar = mainContent.querySelectorAll(".container .post .post_profile .post_avatar a[href='/u1'] img");
+
+        bhAvatar.forEach(function (bhAvatar) {
+            const newSrc = getComputedStyle(document.documentElement).getPropertyValue('--bhavatar').replace(/(?:^url\(['"]?|['"]?\)$)/g, '');
+            bhAvatar.src = newSrc;
         });
-
-        init();
-    })();
+    }
+})();
 </script>
 </body>
 </html>
