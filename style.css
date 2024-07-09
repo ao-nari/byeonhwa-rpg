@@ -686,6 +686,37 @@ a.mainmenu[href^="/"]::before {
 /* profil */ a.mainmenu[href="/profile?mode=editprofile"]::before {content: "\f007";}
 /* messagerie */ a.mainmenu[href="/privmsg?folder=inbox"]::before {content: "\f0e0";}
 
+/* --- recherche --- */
+#search_menu form[action="/search"] {
+  background: var(--baseClr-90);
+  border-radius: var(--small-radius); 
+  margin-top: 2rem; 
+  padding: 0.5rem; 
+  font-size: var(--medium); 
+}
+
+#search_menu .input-wrap {
+  display: flex; 
+  justify-content: center; 
+  padding-bottom: 1rem; 
+}
+
+#search_menu .inputbox {
+  width: 90% !important; 
+}
+
+.ion-android-search {
+  background: none;
+}
+
+.ion-android-search::before {
+  content: "\f002"; 
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+  padding: 0 0.5rem; 
+  color: var(--accentClr); 
+}
+
 /* --- footerbar (bottom) --- */
 .footerbar {
   bottom: 0;
@@ -833,17 +864,53 @@ a.mainmenu[href^="/"]::before {
   position: absolute; 
   width: 30rem;
   display: none;
-  transform: translateX(88%); 
+  transform: translateX(130%); 
 }
 
 .sidebar--open ul#notif_list {
-    transform: translateX(-29%); 
+    transform: translateX(13%); 
 }
 
 #fa_right.notification #notif_list {
   display: flex !important; 
   flex-wrap: wrap; 
-  padding: 1.5rem; 
+  max-height: 40rem; 
+  padding: 0.25rem 0; 
+  overflow: auto; 
+}
+
+#notif_list .content, .see_all {
+  padding: 0.5rem 1rem !important; 
+  text-align: justify; 
+  background: var(--baseClr3-10); 
+  margin: 0.25rem 0.5rem; 
+  border-radius: var(--small-radius) !important; 
+  font-size: var(--medium); 
+  display: flex; 
+  justify-content: space-between; 
+}
+
+#notif_list .content a[href^="/u"] {
+  text-transform: uppercase !important; 
+}
+
+#fa_toolbar #fa_right #notif_list li a.delete {
+  display: inline-block; 
+}
+
+#fa_toolbar #fa_right #notif_list li a.delete::before {
+  content: '\f2d3'; 
+  font-family: 'Font Awesome 6 Free'; 
+  font-weight: 900; 
+  margin-left: 1.5rem; 
+}
+
+.see_all { 
+  width: 100%; 
+  justify-content: center; 
+  text-transform: uppercase; 
+  font-weight: var(--semibold-fw); 
+  background: none; 
 }
 
 /* popup notifications */
