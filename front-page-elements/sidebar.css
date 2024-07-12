@@ -118,9 +118,23 @@ ul#fa_menulist, #fa_search, #fa_share {
     margin-left: 2rem; 
 }
 
-#fa_welcome {
+#fa_welcome, .rightHeaderLink {
     font-family: var(--font2); 
     text-transform: uppercase; 
+}
+
+#fa_menu div:first-of-type {
+    width: 100%; 
+    display: flex; 
+    justify-content: space-evenly; 
+}
+
+.rightHeaderLink {
+    font-size: var(--medium2);  
+}
+
+#fa_hide {
+    display: none; 
 }
 
 /* menu tooltip dans la toolbar (liens utiles) */
@@ -155,6 +169,13 @@ ul#fa_menulist, #fa_search, #fa_share {
 
 .tbtp__box a {
     background: var(--grad1); 
+    background-size: 100%; 
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+}
+
+.tbtp__box a:hover {
+    background: var(--grad2); 
     background-size: 100%; 
    -webkit-background-clip: text;
    -webkit-text-fill-color: transparent;
