@@ -166,7 +166,7 @@ ul#fa_menulist, #fa_search, #fa_share {
 
 /* --- SIDEBAR CONTENU --- */
 .sidebar-in {
-    height: 71vh; 
+    height: 75vh; 
     display: flex; 
     flex-direction: column; 
     justify-content: space-between; 
@@ -224,5 +224,6 @@ ul#fa_menulist, #fa_search, #fa_share {
     padding: 0.5rem 1rem; 
     border-radius: var(--small-radius); 
     filter: var(--drop-shadow); 
-    line-height: var(--small-lh); 
+    line-height: var(--small-lh);  
+    margin-top: auto; 
 }
