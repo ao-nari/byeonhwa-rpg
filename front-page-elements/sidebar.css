@@ -184,7 +184,6 @@ ul#fa_menulist, #fa_search, #fa_share {
 }
 
 .sb-button {
-    display: inline-block; 
     background: var(--baseClr2-20);
     height: 6rem; 
     width: 9.8rem; 
@@ -197,6 +196,7 @@ ul#fa_menulist, #fa_search, #fa_share {
     justify-content: center; 
     align-items: center; 
     font-weight: var(--semibold-fw); 
+    position: relative; 
 }
 
 .sb-button span, .sb-button i {
