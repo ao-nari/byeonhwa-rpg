@@ -11,9 +11,18 @@
   /* --- palette --- */
   --baseClr: #F5FCF1; /* couleur 1 */
   --baseClr-90: rgba(245, 252, 241, 0.9); /* 90% opacité */
+  --baseClr-80: rgba(245, 252, 241, 0.8); /* 80% opacité */
   --baseClr-70: rgba(245, 252, 241, 0.7); /* 70% opacité */
+  --baseClr-60: rgba(245, 252, 241, 0.6); /* 60% opacité */
+  --baseClr-50: rgba(245, 252, 241, 0.5); /* 50% opacité */
+  --baseClr-40: rgba(245, 252, 241, 0.4); /* 40% opacité */
+  --baseClr-30: rgba(245, 252, 241, 0.3); /* 30% opacité */
+  --baseClr-20: rgba(245, 252, 241, 0.2); /* 20% opacité */
+  --baseClr-10: rgba(245, 252, 241, 0.1); /* 10% opacité */
 
   --baseClr2: #64A970; /* couleur 2 */
+  --baseClr2-60:rgba(100, 169, 112, 0.6); /* 60% opacité */
+  --baseClr2-40:rgba(100, 169, 112, 0.4); /* 40% opacité */
   --baseClr2-20:rgba(100, 169, 112, 0.2); /* 20% opacité */
 
   --baseClr3: #769E71; /* couleur 3 */
@@ -133,9 +142,18 @@
   /* --- palette --- */
   --baseClr: #06070F; /* couleur 1 */
   --baseClr-90: rgba(6, 7, 15, 0.9); /* 90% opacité */
+  --baseClr-80: rgba(6, 7, 15, 0.8); /* 80% opacité */
   --baseClr-70: rgba(6, 7, 15, 0.7); /* 70% opacité */
+  --baseClr-60: rgba(6, 7, 15, 0.6); /* 60% opacité */
+  --baseClr-50: rgba(6, 7, 15, 0.5); /* 50% opacité */
+  --baseClr-40: rgba(6, 7, 15, 0.4); /* 40% opacité */
+  --baseClr-30: rgba(6, 7, 15, 0.3); /* 30% opacité */
+  --baseClr-20: rgba(6, 7, 15, 0.2); /* 20% opacité */
+  --baseClr-10: rgba(6, 7, 15, 0.1); /* 10% opacité */
 
   --baseClr2: #4B59A5; /* couleur 2 */
+  --baseClr2-60: rgba(75, 89, 165, 0.6); /* 60% opacité */
+  --baseClr2-40: rgba(75, 89, 165, 0.4); /* 40% opacité */
   --baseClr2-20: rgba(75, 89, 165, 0.2); /* 20% opacité */
 
   --baseClr3: #465399; /* couleur 3 */
@@ -401,7 +419,7 @@ a.buttons span {
 }
 
 /* survol et animation */
-a.buttons::after, #main-content .links_bar a::after, #sort-btn::after {
+a.buttons::after, #main-content .links_bar a::after, #sort-btn::after, .sb-button::after {
   content: "";
   position: absolute !important;
   top: 0;
@@ -414,11 +432,11 @@ a.buttons::after, #main-content .links_bar a::after, #sort-btn::after {
   transition: var(--base-transi);
 }
 
-a.buttons:hover, #main-content .links_bar a:hover, #sort-btn:hover {
+a.buttons:hover, #main-content .links_bar a:hover, #sort-btn:hover, .sb-button:hover {
   transition: var(--base-transi);
 }
 
-a.buttons:hover::after, #main-content .links_bar a:hover::after, #sort-btn:hover::after {
+a.buttons:hover::after, #main-content .links_bar a:hover::after, #sort-btn:hover::after, .sb-button:hover::after {
   opacity: 1; 
 }
 
@@ -2209,6 +2227,11 @@ div.panel .postbody > span:first-of-type {
   width: 15% !important; 
 }
 
+/* --- fix toolbar --- */
+.fa_fix {
+    position: static !important; 
+}
+
 /* ------------------------------------ */
 
 /* --- TOOLTIP (Z) --- */
@@ -2223,15 +2246,19 @@ div.panel .postbody > span:first-of-type {
 /* fond, conteneur */
 .tooltipster-content{
   background: var(--baseClr3-10);
-  padding:5px;
   border-radius: var(--radius);
+  padding:5px !important;
+}
+.tooltipster-default .tooltipster-content{
+  padding:5px !important;
+  line-height:12px !important;
 }
 
 /* fond, contenu */
 .main-tooltip{
   background: var(--baseClr);
   border-radius: var(--radius);
-  padding:5px;
+  padding:5px !important;
 }
 
 /* contenu */
@@ -2241,8 +2268,40 @@ div.panel .postbody > span:first-of-type {
 
 /* avatar */
 .preview_avatar img{
-  width:50px;
-  height:50px;
+  width:65px;
+  height:65px;
   border-radius: var(--radius);
   object-fit:cover;
+}
+
+/* pseudo */
+.preview_pseudo{
+  font-family: var(--font2);
+  text-transform: uppercase;
+  font-size: var(--bigger);
+}
+
+/* infos */
+.preview_right{
+  display:flex;
+  gap:3px;
+  width:100%;
+  justify-content:center;
+  align-items:center;
+}
+
+.preview_infos{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  width:100%;
+}
+
+.preview_infos a{
+  text-transform:uppercase;
+  font-size:11px;
+  font-family:var(--font1);
+  font-weight:var(--bold-fw);
+  letter-spacing:0.5px;
 }

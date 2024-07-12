@@ -162,8 +162,8 @@ munf, .munf {color: var(--munf);}
 
 /* --- GRADIENTS --- */
 /* --- fonctionnement de base --- */
-bhtransp, bhtransp_rev, bhtransp_mid, yeobom, gabom, gyeobom, bomak, bomun, gayeo, gyeoyeo, yeoak, yeomun, gyeoga, gaak, gamun, gyeoak, munak, gyeomun, mungyeo, akga, bomyeo, bomga, bomgyeo, akbom, munbom, yeoga, yeogyeo, munyeo, gagyeo, munga, akyeo, akgyeo, akmun,
-.yeobom, .gabom, .gyeobom, .bomak, .bomun, .gayeo, .gyeoyeo, .yeoak, .yeomun, .gyeoga, .gaak, .gamun, .gyeoak, .munak, .gyeomun, .mungyeo, .akga, .bomyeo, .bomga, .bomgyeo, .akbom, .munbom, .yeoga, .yeogyeo, .munyeo, .gagyeo, .munga, .akyeo, .akgyeo, .akmun {
+bhtransp, bhtransp_rev, bhtransp_mid, bomyeo, yeobom, bomga, gabom, bomgyeo, gyeobom, bomak, akbom, bomun, munbom, gayeo, yeoga, gyeoyeo, yeogyeo, yeoak, akyeo, yeomun, gyeoga, gaak, gamun, gyeoak, munak, gyeomun, mungyeo, akga, bomyeo, bomga, bomgyeo, akbom, munbom, yeoga, yeogyeo, munyeo, gagyeo, munga, akyeo, akgyeo, akmun,
+.bomyeo, .yeobom, .bomga, .gabom, .bomgyeo, .gyeobom, .bomak, .akbom, .bomun, .munbom, .gayeo, .yeoga, .gyeoyeo, .yeogyeo, .yeoak, .akyeo, .yeomun, .gyeoga, .gaak, .gamun, .gyeoak, .munak, .gyeomun, .mungyeo, .akga, .bomyeo, .bomga, .bomgyeo, .akbom, .munbom, .yeoga, .yeogyeo, .munyeo, .gagyeo, .munga, .akyeo, .akgyeo, .akmun {
 background-size: 100%; 
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
@@ -181,15 +181,25 @@ bomgradtop, .bomgradtop {background: var(--bomgradtop);}
 bomgradbottom, .bomgradbottom {background: var(--bomgradbottom);}
 
 /* --- groupe vers groupe --- */
-bomyeo, .bomyeo {background: var(--bomyeo);} /* bom > yeo */
-yeobom, .yeobom {background: var(--yeobeom);} /* yeo > bom */
+/* --- BOM > groupe --- */
+bomyeo, .bomyeo {background: var(--bomyeo);} 
+yeobom, .yeobom {background: var(--yeobeom);} 
+bomga, .bomga {background: var(--bomga);} 
+gabom, .gabom {background: var(--gabom);} 
+bomgyeo, .bomgyeo {background: var(--bomgyeo);}
+gyeobom, .gyeobom {background: var(--gyeobom);}
+bomak, .bomak {background: var(--bomak);}
+akbom, .akbom {background: var(--akbom);}
+bomun, .bomun {background: var(--bomun);}
+munbom, .munbom {background: var(--munbom);}
 
-bomga, .bomga {background: var(--bomga);} /* bom > gaeul */
-gabom, .gabom {background: var(--gabom);} /* gaeul > bom */
-
-bomgyeo, .bomgyeo {}
-gyeobom, .gyeobom {}
-
+/* --- YEOREUM > groupe --- */
+gayeo, .gayeo {background: var(--gayeo);}
+yeoga, .yeoga {background: var(--yeoga);}
+yeogyeo, .yeogyeo {background: var(--yeogyeo);}
+gyeoyeo, .gyeoyeo {background: var(--gyeoyeo);}
+yeoak, .yeoak {background: var(--yeoak);}
+akyeo, .akyeo {background: var(--akyeo);}
 
 /* --- évidences : evid, evid2, evid3 --- */
 evid {}

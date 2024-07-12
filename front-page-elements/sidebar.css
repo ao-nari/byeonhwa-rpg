@@ -7,7 +7,7 @@
     height: calc(100vh - 9rem); 
     transition: var(--slow-transi);  
     background: var(--baseClr-90); 
-    z-index: 999; 
+    z-index: 999;  
 }
 
 /* sidebar ouverte (spécifiquement) */
@@ -78,6 +78,10 @@
 }
 
 /* --- TOOLBAR FA GAUCHE (dans sidebar) --- */
+#fa_toolbar.fa_fix {
+    position: static !important; 
+}
+
 ul#fa_menulist, #fa_search, #fa_share {
     display: none; 
 }
@@ -87,9 +91,9 @@ ul#fa_menulist, #fa_search, #fa_share {
     flex-wrap: wrap; 
     justify-content: center; 
     width: 35rem; 
-    height: 20rem; 
+    height: 16rem; 
     background: var(--bg1); 
-    padding-top: 3rem; 
+    padding-top: 2rem; 
 }
 
 /* avatar */
@@ -161,3 +165,59 @@ ul#fa_menulist, #fa_search, #fa_share {
 }
 
 /* --- SIDEBAR CONTENU --- */
+.sidebar-in {
+    height: 71vh; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-between; 
+}
+
+.sidebar__hrp, .sidebar__irp, .sidebar__credits {
+    margin: 0 2.5rem;  
+}
+
+/* boutons */
+.sb-link {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+}
+
+.sb-button {
+    display: inline-block; 
+    background: var(--baseClr2-20);
+    height: 6rem; 
+    width: 9.8rem; 
+    margin: 0.15rem 0; 
+    border-radius: var(--small-radius); 
+    font-size: var(--medium); 
+    font-variant: small-caps; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    font-weight: var(--semibold-fw); 
+}
+
+.sb-button span, .sb-button i {
+    background: var(--grad1); 
+    background-size: 100%; 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.sb-button i {
+    font-size: var(--big); 
+    padding-bottom: 0.2rem; 
+}
+
+/* crédits */
+.sidebar__credits { 
+    background: var(--bg2); 
+    font-size: var(--medium); 
+    text-align: justify; 
+    padding: 0.5rem 1rem; 
+    border-radius: var(--small-radius); 
+    filter: var(--drop-shadow); 
+    line-height: var(--small-lh); 
+}
