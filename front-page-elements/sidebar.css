@@ -213,6 +213,10 @@ ul#fa_menulist, #fa_search, #fa_share {
     justify-content: space-between; 
 }
 
+.sb-link:first-of-type {
+    margin-bottom: 2rem; 
+}
+
 .sb-button {
     background: var(--baseClr2-20);
     height: 6rem; 
