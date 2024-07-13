@@ -473,7 +473,7 @@ label {
 }
 
 /* ---------------- CONNEXION / S'ENREGISTRER ---------------- */
-#frmAgreement {
+#frmAgreement, #cp-main {
   background-color: var(--baseClr-90);
   border-radius: var(--radius); 
   padding: 2rem; 

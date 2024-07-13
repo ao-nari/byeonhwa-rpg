@@ -118,6 +118,10 @@ ul#fa_menulist, #fa_search, #fa_share {
     margin-left: 2rem; 
 }
 
+#fa_welcome:hover {
+    color: var(--accentClr); 
+}
+
 #fa_welcome, .rightHeaderLink {
     font-family: var(--font2); 
     text-transform: uppercase; 
