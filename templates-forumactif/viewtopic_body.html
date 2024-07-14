@@ -55,15 +55,41 @@
     <div id="{postrow.displayed.U_POST_ID}"></div>
     <div class="post post_row post--{postrow.displayed.U_POST_ID}" id="p{postrow.displayed.U_POST_ID}">
 
+        <!---------------------------------------------------------------------------->
         <!-- Colonne de profil -->
         <div class="post_profile" id="profile{postrow.displayed.U_POST_ID}">
 
             <!-- Pseudo -->
             <span class="post_pseudo">{postrow.displayed.POSTER_NAME}</span><br />
 
+            <!-- champ "joué par" -->
+             <span class="playedby">
+                <!-- champ faceclaim -->
+             </span>
+
             <!-- Avatar -->
             <div class="post_avatar">
                 {postrow.displayed.POSTER_AVATAR}
+
+                <!-- hover avatar profil message -->
+                <div class="hover_profile">
+                    <div class="hover_pfields">
+                        <!-- champs images (les 3), pseudo, pronoms, messages, points et menu de contact -->
+                        <!-- BEGIN profile_field -->
+                        <!-- Contenu d'un champs de profil -->
+                        <span class="field_content">{postrow.displayed.profile_field.CONTENT}</span>
+                        <!-- END profile_field -->
+
+                        <!-- champs de contact (menu) -->
+                        <div class="profil_contact">
+                            <div class="contact-block"><span>{postrow.displayed.PROFILE_IMG}</span></div> <!-- profil -->
+                            <div class="contact-block"><span>{postrow.displayed.PM_IMG}</span></div> <!-- mp -->
+                            <!-- BEGIN contact_field -->
+                            <div class="contact-block"><span>{postrow.displayed.contact_field.CONTENT}</span></div> <!-- autres champs de contact (liens) -->
+                            <!-- END contact_field -->
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <!-- Rang -->
@@ -75,17 +101,16 @@
                  {postrow.displayed.ONLINE_IMG_NEW} (online image (inactif))
             </div> -->
 
+            <!-- champs sous l'avatar : tw/cw, crédits -->
             <div class="post_userinfo">  
                 <!-- Champs de profil -->
                 <!-- BEGIN profile_field -->
                     <div class="user_field">
                         <!-- Label d'un champs de profil -->
-                        <span class="field_label">{postrow.displayed.profile_field.LABEL}</span>
-                        
+                        <span class="field_label">{postrow.displayed.profile_field.LABEL}</span> 
                         <!-- Contenu d'un champs de profil -->
                         <span class="field_content">{postrow.displayed.profile_field.CONTENT}</span>
-                        
-            <!-- Séparateur entre champs de profil -->                      
+                        <!-- Séparateur entre champs de profil -->                      
                         <span class="field_separator">{postrow.displayed.profile_field.SEPARATOR}</span>
                     </div>
                 <!-- END profile_field -->
@@ -100,19 +125,9 @@
                 <!-- Champs de profil de la feuille de personnage -->
                 {postrow.displayed.POSTER_RPG}
             </div>
-            <br />
-
-            <!-- Lien de contact -->
-            <div class="profil_contact">
-                {postrow.displayed.PROFILE_IMG} &nbsp; <!-- Profil -->
-                {postrow.displayed.PM_IMG} &nbsp; <!-- MP -->
-                <!-- Autre contact-->
-                <!-- BEGIN contact_field -->
-                {postrow.displayed.contact_field.CONTENT} <!-- Autre champs de contact -->
-                <!-- END contact_field -->
-            </div>
         </div>
         <!-- Fin colonne profil -->
+        <!---------------------------------------------------------------------------->
 
         <div class="container__post">
             <!-- Conteneur informations du message -->
