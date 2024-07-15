@@ -7,7 +7,7 @@
     height: calc(100vh - 9rem); 
     transition: var(--slow-transi);  
     background: var(--baseClr-90); 
-    z-index: 999;  
+    z-index: 998;  
 }
 
 /* sidebar ouverte (spécifiquement) */

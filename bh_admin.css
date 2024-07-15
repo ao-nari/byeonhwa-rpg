@@ -92,3 +92,8 @@
   align-items: flex-end;   
   justify-content: center; 
 }
+
+/* profil étendu */
+.post:has(.bh_admin) .hover_profile {
+  display: none !important; 
+}
