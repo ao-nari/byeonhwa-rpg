@@ -191,6 +191,10 @@
 /* ---------------------------- */
 
 /* --- généralités --- */
+html {
+    font-size: 62.5%;
+}
+
 *, body, div {
   box-sizing: border-box; 
   scrollbar-width: thin; /* scrollbars firefox */
@@ -1799,6 +1803,9 @@ button.rep-button .rep-nb {
   background: var(--baseClr-90);  
   border-radius: 1.5rem; 
   /* overflow: hidden; */
+  display: flex; 
+  flex-direction: column; 
+  justify-content: space-between; 
 }
 
 .hover_profile:hover {
@@ -1806,7 +1813,7 @@ button.rep-button .rep-nb {
 }
 
 .hover_profile, .hover_profile:hover {
-  transition: var(--base-transi); 
+  transition: var(--slow-transi); 
 }
 
 .hover_profile .field_label, .hover_profile .field_separator {
@@ -1816,8 +1823,9 @@ button.rep-button .rep-nb {
 /* images/gifs */
 .hover_imgfields {
   display: flex; 
+  flex-direction: row-reverse; 
   justify-content: center; 
-  margin: 4rem 0; 
+  margin: 4rem 0 2.5rem 0; 
 }
 
 .hover_imgfields img {
@@ -1825,7 +1833,7 @@ button.rep-button .rep-nb {
   width: 5rem; 
   object-fit: cover; 
   border-radius: 100%; 
-  margin: 0 0.5rem; 
+  margin: 0 0.3rem; 
 }
 
 /* --- */
@@ -1856,10 +1864,12 @@ button.rep-button .rep-nb {
 
 .hover_profile .field-messages::after, .hover_profile .field-points::after {
   background: var(--grad2Op); 
-  padding: 0.2rem 0.4rem; 
+  padding: 0 0.4rem; 
   border-radius: var(--small-radius); 
   color: var(--accentClr); 
   font-weight: var(--base-fw);
+  display: flex; 
+  justify-content: center; 
 }
 
 .hover_profile .field-messages::after {
@@ -1876,11 +1886,93 @@ button.rep-button .rep-nb {
 
 .hover_profile .field-messages, .hover_profile .field-points {
   font-weight: var(--semibold-fw); 
+  display: grid; 
+  grid-template-columns: 20% 40%; 
+  font-variant-numeric: tabular-nums;
+  font-size: var(--small2); 
+}
+
+.hover_profile .field-points {
+    grid-template-columns: 20% 30% !important;
 }
 
 /* --- MENU CONTACT --- */
 .profil_contact {
+  width: 22.5rem; 
+  height: 10rem;   
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: center; 
+  background: linear-gradient(to top, var(--baseClr2-20), transparent); 
+  border-radius: 0 0 1.5rem 1.5rem; 
+}
+
+/* structure */
+.profil_contact .pcontact_top, .profil_contact .pcontact_bottom {
+  display: flex;  
+}
+
+.profil_contact .pcontact_top {
+  margin-bottom: 1px; 
+}
+
+.profil_contact .pcontact_top .contact-block:first-child {
+  border-radius: var(--small-radius) 0 0 0; 
+  width: 7.3rem !important; 
+}
+
+.profil_contact .pcontact_top .contact-block:nth-child(3) {
+  border-radius: 0 var(--small-radius) 0 0; 
+}
+
+.profil_contact .pcontact_bottom .contact-block:nth-child(4) {
+  border-radius: 0 0 0 var(--small-radius); 
+}
+
+.profil_contact .pcontact_bottom .contact-block:last-child {
+  border-radius: 0 0 var(--small-radius) 0; 
+}
+
+.profil_contact .contact-block {
+  width: 3.6rem; 
+  height: 3rem; 
+  background: var(--baseClr); 
+  margin: 0 0.5px; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+}
+
+/* liens menu contacts */
+
+/* barre du haut visibles : 1, 2, 3 
+   barre du bas visibles : 4, 5, 6, 7, 8 */
+.profil_contact .pcontact_top > .contact-block:nth-child(4), .profil_contact .pcontact_top > .contact-block:nth-child(5), .profil_contact .pcontact_top > .contact-block:nth-child(6), .profil_contact .pcontact_top > .contact-block:nth-child(7), .profil_contact .pcontact_top > .contact-block:nth-child(8),
+.profil_contact .pcontact_bottom > .contact-block:nth-child(1), .profil_contact .pcontact_bottom > .contact-block:nth-child(2), .profil_contact .pcontact_bottom > .contact-block:nth-child(3) {
   display: none; 
+}
+
+.profil_contact a {
+  background: var(--grad1); 
+  background-size: 100%; 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;  
+  text-transform: uppercase;
+  font-variant: small-caps;  
+  font-size: var(--medium); 
+  font-weight: var(--semibold-fw); 
+}
+
+.profil_contact a:hover {
+  background: var(--grad2); 
+  background-size: 100%; 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+}
+
+.profil_contact a i {
+  font-size: var(--medium2); 
 }
 
 /* --- RANGS --- */
