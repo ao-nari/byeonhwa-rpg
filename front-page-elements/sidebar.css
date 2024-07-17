@@ -144,7 +144,7 @@ ul#fa_menulist, #fa_search, #fa_share {
 /* menu tooltip dans la toolbar (liens utiles) */
 .container__tbtp {
     display: flex; 
-    font-size: var(--medium); 
+    font-size: var(--medium2); 
 }
 
 .tbtp__box:first-of-type {
@@ -223,13 +223,13 @@ ul#fa_menulist, #fa_search, #fa_share {
     width: 9.8rem; 
     margin: 0.15rem 0; 
     border-radius: var(--small-radius); 
-    font-size: var(--medium); 
+    font-size: var(--medium2); 
     font-variant: small-caps; 
     display: flex; 
     flex-direction: column; 
     justify-content: center; 
     align-items: center; 
-    font-weight: var(--semibold-fw); 
+    font-weight: bold;  
     position: relative; 
 }
 
