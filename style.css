@@ -2024,7 +2024,34 @@ button.rep-button .rep-nb {
 
 /* --- PROFIL SOUS L'AVATAR --- */
 .post_userinfo {
-  display: none; 
+  margin: 2rem; 
+  background: var(--baseClr3-10); 
+  border-radius: var(--small-radius); 
+  padding: 1rem;  
+}
+
+.post_userinfo .post_userinfoin {
+  height: 10rem; 
+  overflow: auto;
+}
+
+.post_userinfo .field-tw-cw {
+  margin-bottom: 1rem; 
+}
+
+.post_userinfo .field_label {
+  background: var(--grad2); 
+  background-size: 100%; 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;  
+  font-size: var(--medium); 
+  display: block; 
+  text-transform: uppercase; 
+}
+
+.post_userinfo .field_content {
+  font-size: var(--medium); 
 }
 
 /* --- BAS DE PAGE --- */
