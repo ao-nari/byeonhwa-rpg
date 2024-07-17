@@ -326,7 +326,7 @@ h2, .h2 {
   font-size: var(--bigger) !important; 
 }
 
-h3, .h3 {
+h3, .h3, h4, .h4 {
   font-size: var(--big); 
   text-transform: uppercase; 
   font-weight: var(--semibold-fw); 
@@ -335,8 +335,12 @@ h3, .h3 {
   -webkit-text-fill-color: transparent;
 }
 
-h1, .h1, h2, .h2, h3, .h3 {
+h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
   display: inline-block; 
+}
+
+h4, .h4 {
+  background: var(--grad1) !important; 
 }
 
 p {
@@ -1780,9 +1784,9 @@ button.rep-button .rep-nb {
 }
 
 .playedby .field_content::before {
-  content: "joué par "; 
-  font-style: italic; 
-  font-weight: var(--base-fw); 
+  content: "incarné par ";
+  font-style: italic;
+  font-weight: var(--base-fw);
 }
 
 .playedby .field_content {
