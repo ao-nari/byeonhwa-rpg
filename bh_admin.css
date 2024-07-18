@@ -97,3 +97,33 @@
 .post:has(.bh_admin) .hover_profile {
   display: none !important; 
 }
+
+/* --------------------------------------------------------- */
+/* -------------- ANNEXES ET DEMANDES ---------------------- */
+
+/* container */
+.bh_annexe {
+  display: flex; 
+  flex-wrap: wrap; 
+}
+
+/* table of content */
+.annexe_toc {
+  background: var(--bg2); 
+  border-radius: var(--radius) 0 0 var(--radius); 
+  width: 22rem; 
+  border-right: 0.4rem var(--baseClr3-20) solid; 
+}
+
+/* contenu annexe */
+.annexe_content {
+  background: var(--bg2); 
+  border-radius: 0 var(--radius) var(--radius) 0; 
+  flex-grow: 1; 
+}
+
+.annexe_toc, .annexe_content {
+  height: 100%; 
+  margin: 0 2.5px; 
+  height: 60rem; 
+}
