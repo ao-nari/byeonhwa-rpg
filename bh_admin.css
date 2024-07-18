@@ -104,14 +104,14 @@
 /* container */
 .bh_annexe {
   display: flex; 
-  flex-wrap: wrap; 
 }
 
 /* table of content */
 .annexe_toc {
   background: var(--bg2); 
   border-radius: var(--radius) 0 0 var(--radius); 
-  width: 22rem; 
+  min-width: 22rem !important; 
+  max-width: 22rem !important; 
   border-right: 0.4rem var(--baseClr3-20) solid; 
 }
 
@@ -122,8 +122,26 @@
   flex-grow: 1; 
 }
 
+/* titre */
+.annexe_title {
+  text-align: center; 
+  padding: 2rem 0 1rem 0; 
+}
+
+.annexe_text {
+  height: 75%; 
+  margin: 0 2rem; 
+  padding-right: 2rem; 
+  overflow: auto; 
+  text-align: justify; 
+}
+
 .annexe_toc, .annexe_content {
-  height: 100%; 
   margin: 0 2px; 
   height: 60rem; 
+}
+
+/* liens utiles du bas */
+.annexe_links {
+  /* code */
 }
