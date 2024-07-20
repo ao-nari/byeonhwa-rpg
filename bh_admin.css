@@ -158,7 +158,7 @@
 .annexe_text {
   height: 75%;
   margin: 1rem 2rem;
-  padding-right: 2rem;
+  padding: 2rem;
   overflow: auto;
   text-align: justify;
   background: var(--baseClr-70);
