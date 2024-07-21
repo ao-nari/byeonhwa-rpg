@@ -135,7 +135,7 @@
   color: var(--baseClr3); 
 }
 
-.toc_links a:hover {
+.toc_links a:hover, .toc_links a.active {
   color: var(--accentClr); 
   background: var(--baseClr-60); 
   border-bottom: 1px var(--baseClr2-40) solid;  
