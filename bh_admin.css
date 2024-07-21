@@ -116,9 +116,9 @@
 }
 
 .toc_links {
-  display: flex; 
-  flex-direction: column; 
-  padding: 1rem; 
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem;
 }
 
 .toc_links a {
