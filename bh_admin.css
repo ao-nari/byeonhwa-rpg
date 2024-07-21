@@ -115,6 +115,33 @@
   border-right: 0.4rem var(--baseClr3-20) solid;
 }
 
+.toc_links {
+  display: flex; 
+  flex-direction: column; 
+  padding: 1rem; 
+}
+
+.toc_links a {
+  height: 3rem; 
+  margin: 0.2rem 0; 
+  padding: 0 1rem; 
+  border-bottom: 1px var(--baseClr3-20) solid;  
+  border-left: 4px var(--baseClr3-20) solid; 
+  display: flex; 
+  align-items: center; 
+  text-transform: uppercase; 
+  font-weight: var(--semibold-fw); 
+  font-size: var(--small2); 
+  color: var(--baseClr3); 
+}
+
+.toc_links a:hover {
+  color: var(--accentClr); 
+  background: var(--baseClr-60); 
+  border-bottom: 1px var(--baseClr2-40) solid;  
+  border-left: 4px var(--baseClr2-40) solid;
+}
+
 /* -- contenu annexe -- */
 .annexe_content {
   background: linear-gradient(var(--baseClr3-10), var(--baseClr2-20)); 
@@ -169,10 +196,68 @@
 /* général */
 .annexe_toc, .annexe_content {
   margin: 0 2px;
-  height: 65rem;
+  height: 68rem;
 }
 
-/* -- liens utiles-- */
+/* -- liens utiles -- */
 .annexe_links {
-  /* code */
+  margin: 0 2rem; 
+  text-align: center; 
+}
+
+/* titre */
+.annexe_links div {
+  background: var(--grad1); 
+  background-size: 100%; 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: var(--big); 
+  font-family: var(--font2); 
+  text-transform: uppercase; 
+  font-weight: var(--semibold-fw); 
+  margin: 0.5rem 0; 
+  display: flex; 
+  flex-wrap: nowrap; 
+  white-space: nowrap; 
+  align-items: center; 
+}
+
+.annexe_links div span {
+  padding: 0 0.5rem; 
+}
+
+.annexe_links div::before, .annexe_links div::after {
+  content: ""; 
+  height: 1px; 
+  width: 100%; 
+  display: block; 
+  background: var(--baseClr3-60); 
+}
+
+/* boutons liens utiles */
+.annexe_links a {
+  position: relative; 
+  background: var(--bg2); 
+  padding: 0.5rem 1rem; 
+  border-radius: var(--radius); 
+  margin-right: 0.5rem;  
+  font-weight: var(--semibold-fw); 
+  color: var(--textClr); 
+}
+
+.annexe_links a::after {
+  content: "";
+  position: absolute !important;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  border-radius: var(--radius);
+  background: var(--baseClr2-20);
+  transition: var(--base-transi);
+}
+
+.annexe_links a:hover::after {
+  opacity: 1; 
 }
