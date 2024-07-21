@@ -132,6 +132,7 @@
   text-transform: uppercase; 
   font-weight: var(--semibold-fw); 
   font-size: var(--small2); 
+  color: var(--textClr); 
 }
 
 .toc_links a:hover, .toc_links a.active {
