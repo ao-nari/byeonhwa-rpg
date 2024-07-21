@@ -196,7 +196,7 @@
 /* général */
 .annexe_toc, .annexe_content {
   margin: 0 2px;
-  height: 68rem;
+  height: 70rem;
 }
 
 /* -- liens utiles -- */
@@ -211,11 +211,11 @@
   background-size: 100%; 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: var(--big); 
+  font-size: var(--medium2); 
   font-family: var(--font2); 
   text-transform: uppercase; 
   font-weight: var(--semibold-fw); 
-  margin: 0.5rem 0; 
+  margin: 1rem 0; 
   display: flex; 
   flex-wrap: nowrap; 
   white-space: nowrap; 
