@@ -125,7 +125,7 @@
 /* titre */
 .annexe_title, .annexe_toc h2 {
   text-align: center;
-  padding: 2rem 0 1rem 0;
+  padding: 1rem 0;
   display: block;
 }
 
@@ -135,23 +135,24 @@
 }
 
 .annexe_title h2, .annexe_toc h2 {
-  font-size: 2.2rem !important; 
+  font-size: 2.4rem !important; 
 }
 
-.annexe_title h2::after {
+.annexe_subtitle {
+  margin-top: -2.5rem; 
+  color: var(--baseClr3);  
+  font-style: italic; 
+  text-transform: uppercase; 
+  font-size: var(--small); 
+}
+
+.annexe_subtitle::after {
   display: inline-block; 
   content: ""; 
   background: var(--grad2); 
   height: 1px; 
-  width: 94%; 
-  margin: -0.5rem; 
+  width: 95%;  
   opacity: 0.5; 
-}
-
-.annexe_subtitle {
-  margin-top: -2rem; 
-  color: var(--baseClr3);  
-  font-style: italic; 
 }
 
 /* -- texte interne -- */
@@ -167,8 +168,8 @@
 
 /* général */
 .annexe_toc, .annexe_content {
-  margin: 0 2px; 
-  height: 65rem; 
+  margin: 0 2px;
+  height: 65rem;
 }
 
 /* -- liens utiles-- */

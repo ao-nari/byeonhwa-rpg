@@ -250,7 +250,7 @@ hr, .hr_transp {
   height: 1px;
   border: none; 
   opacity: 0.8; 
-  margin: 1rem; 
+  margin: 1rem 0; 
   display: block; 
   width: 100%; 
 }
@@ -365,8 +365,14 @@ a:hover {
 }
 
 /* blocs de texte */
-blockquote div {
-  /* code */
+blockquote {
+  background: var(--baseClr);  
+  filter: var(--drop-shadow); 
+  border-radius: var(--small-radius); 
+  padding: 1rem; 
+  margin: 2rem; 
+  border-left: var(--baseClr2-40) solid 2px; 
+  border-right: var(--baseClr2-40) solid 2px;
 }
 
 /* code, spoiler, hide, cite */ 
