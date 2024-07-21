@@ -132,7 +132,6 @@
   text-transform: uppercase; 
   font-weight: var(--semibold-fw); 
   font-size: var(--small2); 
-  color: var(--baseClr3); 
 }
 
 .toc_links a:hover, .toc_links a.active {
@@ -167,7 +166,6 @@
 
 .annexe_subtitle {
   margin-top: -2.5rem; 
-  color: var(--baseClr3);  
   font-style: italic; 
   text-transform: uppercase; 
   font-size: var(--small); 
