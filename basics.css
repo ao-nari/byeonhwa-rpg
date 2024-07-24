@@ -24,37 +24,37 @@ krfont, .krfont {font-family: var(--krfont)}
   --bh: #B4B34F; 
   --bhc: #c3c272; 
   --bhf: #908f3f; 
-  --bhOp: rgba(180, 179, 79, 0.3); 
+  --bhOp: rgba(180, 179, 79, 0.2); 
 
   --bom: #BC6A8C; 
   --bomc: #c987a3; 
   --bomf: #965470; 
-  --bomOp: rgba(188, 106, 140, 0.3); 
+  --bomOp: rgba(188, 106, 140, 0.2); 
 
   --yeo: #66A465; 
   --yeoc: #84b683; 
   --yeof: #518350; 
-  --yeoOp: rgba(102, 164, 101, 0.3); 
+  --yeoOp: rgba(102, 164, 101, 0.2); 
 
   --gaeul: #D36E43; 
   --gaeulc: #db8b68; 
   --gaeulf: #a85835; 
-  --gaeulOp: rgba(211, 110, 67, 0.3); 
+  --gaeulOp: rgba(211, 110, 67, 0.2); 
 
   --gyeoul: #539D9F; 
   --gyeoc: #75b0b2; 
   --gyeof: #427d7f; 
-  --gyeoOp: rgba(83, 157, 159, 0.3); 
+  --gyeoOp: rgba(83, 157, 159, 0.2); 
 
   --akma: #B84654; 
   --akmac: #c66a76;
   --akmaf: #933843;
-  --akmaOp: rgba(184, 70, 84, 0.3); 
+  --akmaOp: rgba(184, 70, 84, 0.2); 
 
   --mun: #706BD0; 
   --munc: #8c88d9;
   --munf: #5955a6;
-  --munOp: rgba(112, 107, 208, 0.3); 
+  --munOp: rgba(112, 107, 208, 0.2); 
 
   /* variables de gradients */
   --bhtransp: linear-gradient(to left, transparent, var(--bh)); 

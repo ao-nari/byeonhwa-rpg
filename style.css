@@ -466,7 +466,7 @@ a.buttons:hover::after, #main-content .links_bar a:hover::after, #sort-btn:hover
 select, input, .inputbox {
   position: relative;
   font-family: var(--font1) !important;
-  background-color: var(--baseClr3-10);
+  background-color: var(--baseClr2-20);
   border-radius: 0.4rem;
   font-size: var(--medium);
   padding: 0.4rem 0.8rem;
@@ -1328,8 +1328,8 @@ a.mainmenu[href^="/"]::before {
 	font-weight: bold;  
 	background: var(--grad2); 
 	background-size: 100%; 
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 	height: 1.6rem; 
 	display: flex; 
 	align-items: center; 
