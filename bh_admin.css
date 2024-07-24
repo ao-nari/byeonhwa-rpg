@@ -181,17 +181,6 @@
   opacity: 0.5; 
 }
 
-/* petit titre */
-.small-title {
-  all: unset;
-  font-size: var(--big) !important;
-  text-transform: uppercase;
-  font-weight: var(--semibold-fw);
-  font-family: var(--font2);
-  display: inline-block;
-  margin-bottom: 0.5rem;
-}
-
 /* -- texte interne -- */
 .annexe_text {
   height: 75%;
