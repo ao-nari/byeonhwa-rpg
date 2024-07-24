@@ -336,7 +336,7 @@ h3, .h3 {
 }
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
-  display: inline-block; 
+  display: inline-block;
 }
 
 h4, .h4 {
@@ -462,16 +462,16 @@ a.buttons:hover::after, #main-content .links_bar a:hover::after, #sort-btn:hover
 }
 
 /* select (dropdown), input (petits boutons), label (textes divers) */
-select, input {
+select, input, .inputbox {
   position: relative;
   font-family: var(--font1) !important;
-  background-color: var(--baseClr2-20);
+  background-color: var(--baseClr3-10);
   border-radius: 0.4rem;
   font-size: var(--medium);
   padding: 0.4rem 0.8rem;
   transition: var(--base-transi);
   border-style: none;
-  color: var(--textClr); 
+  color: var(--textClr);
 }
 
 input {
@@ -496,10 +496,10 @@ label {
 /* ---------------- CONNEXION / S'ENREGISTRER ---------------- */
 #frmAgreement, #cp-main {
   background-color: var(--baseClr-90);
-  border-radius: var(--radius); 
-  padding: 2rem; 
-  text-align: justify; 
-  font-size: var(--medium2); 
+  border-radius: var(--radius);
+  padding: 2rem;
+  text-align: justify;
+  font-size: var(--medium2);
 }
 
 #frmAgreement h2 {
@@ -598,6 +598,38 @@ form[name="form_login"] .h3 {
 
 .panel .inner .content p:last-of-type {
   padding-top: 2rem !important; 
+}
+
+/* ---------------- MISC PAGES DIVERSES ----------------- */
+.panel {
+	background: var(--baseClr-90);
+	border-radius: var(--radius);
+	padding: 0 2rem 2rem 2rem;
+}
+
+.panel .page-title {
+	margin-left: 0; 
+}
+
+.panel p {
+	font-size: var(--medium2);
+}
+
+.panel p a {
+	font-weight: var(--semibold-fw); 
+}
+
+.topic-actions {
+	display: none; 
+}
+
+.fields1 dd input[type=checkbox] {
+	width: auto !important; 
+}
+
+.fields1 dd label {
+	display: flex; 
+	align-items: center; 
 }
 
 /* ---------------- FIN GENERALITES -------------------- */
@@ -807,8 +839,8 @@ a.mainmenu[href^="/"]::before {
 }
 
 .color-scheme-toggle, .footerbar_buttons a {
-	background-color: var(--baseClr3-20);
-	color: var(--textClr);
+  background-color: var(--baseClr3-20);
+  color: var(--textClr);
   display: flex; 
   align-items: center; 
   transition: var(--base-transi); 
@@ -1289,6 +1321,19 @@ a.mainmenu[href^="/"]::before {
 /* ------------------------------------ */
 
 /* --- PAGE LISTE DES SUJETS --- */
+/* --- sujets spéciaux --- */
+.topic-type { 
+	font-size: var(--medium); 
+	font-weight: bold;  
+	background: var(--grad2); 
+	background-size: 100%; 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+	height: 1.6rem; 
+	display: flex; 
+	align-items: center; 
+}
+
 /* --- sous-forums --- */
 .forum-page_desc {
   width: 100%; 
@@ -1524,15 +1569,15 @@ a.mainmenu[href^="/"]::before {
 
 /* containers divers (titres, prévisualisation, postingbox, dés, options) */
 .container__title, #preview, #postingbox, .postingbox__dices, .postingbox__options {
-  display: flex; 
-  flex-wrap: wrap; 
-  align-items: center; 
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   justify-content: space-between;
-  background: var(--baseClr-90); 
-  width: 100%; 
-  min-height: 10rem; 
+  background: var(--baseClr-90);
+  width: 100%;
+  min-height: 10rem;
   margin: 0.5rem 0;
-  border-radius: var(--big-radius);  
+  border-radius: var(--big-radius);
 }
 
 .container__title {margin-top: 0 !important;}
@@ -1546,12 +1591,8 @@ a.mainmenu[href^="/"]::before {
   padding: 0 2rem; 
 }
 
-#postingbox dd input, .postingbox__options dd input {
-  height: 4rem !important; 
-}
-
 #preview .h3, #postingbox h3, .postingbox__dices h3, .postingbox__options h3, .postingbox__options .h3, #postingbox .fields1 {
-  padding: 0 3.5rem; 
+  padding: 0 3.5rem;
 }
 
 #preview .h3 {
@@ -2267,7 +2308,11 @@ form.left, form.right {
 
 /* posting box, prévisualisation */
 #postingbox, #preview {
-  margin-bottom: 0.5rem !important; 
+  margin-bottom: 0.5rem !important;
+}
+
+#postingbox.panel {
+	padding: 0 !important; 
 }
 
 /* "prévisualiser" et "envoyer" */
@@ -2319,24 +2364,32 @@ form.left, form.right {
 }
 
 .fields1 dd input {
-  width: 80rem !important;   
-  border-radius: var(--small-radius); 
+  width: 80rem !important;
+  border-radius: var(--small-radius);
 }
 
-/* zone de textes */
-/* input[type=text], input[type=password], .postingbox__dices select {
+/* zone de textes et input */
+input[type=text], input[type=password], input[type=email], input[type=url], .postingbox__dices select, select[name="profile_field_4_-12[]"] {
   height: 4rem;
-} */
+}
 
-/* survolé */
-input[type=text]:hover {
-  color: var(--textClr); 
+input[name="search_keywords"] {
+  height: 2rem !important; 
 }
 
 /* sélectionné */
-input[type=text]:focus, input[type=password]:focus {
-  background-color: var(--baseClr3-40) !important; 
+input[type=text]:focus, input[type=password]:focus, input[type=email]:focus, input[type=url]:focus, .inputbox:focus {
+  background-color: var(--baseClr3-20) !important; 
   outline: 0.2rem solid var(--accentClr) !important; 
+}
+
+input[type=text]:hover, input[type=password]:hover, input[type=email]:hover, input[type=url]:hover {
+	color: unset;  
+}
+
+/* cases à cocher */
+input[type=radio] {
+  accent-color: var(--baseClr3); 
 }
 
 /* --- OPTIONS BOX --- */
@@ -2378,8 +2431,8 @@ input[type=text]:focus, input[type=password]:focus {
 
 /* --- SONDAGES --- */
 .postingbox__options .panel {
-  width: 100%; 
-  margin: 0 3.5rem 3.5rem 3.5rem; 
+  width: 100%;
+  margin: 0 1.5rem;
 }
 
 /* choix de sondage */
@@ -2428,10 +2481,10 @@ textarea[name="poll_option_text"] {
 
 /* "par auteur / date / heure" */
 div.panel .postbody > span:first-of-type {
-  margin-left: 4rem; 
-  text-transform: uppercase; 
-  font-size: var(--medium); 
-  font-weight: var(--semibold-fw); 
+  margin-left: 2.5rem;
+  text-transform: uppercase;
+  font-size: var(--medium);
+  font-weight: var(--semibold-fw);
 }
 
 /* cases à cocher */
@@ -2446,6 +2499,73 @@ div.panel .postbody > span:first-of-type {
 
 /* ------------------------------------ */
 /* --- PAGE DE PROFIL --- */
+
+/* -- PAGE "REMPLIR SON PROFIL" -- */
+#tabs ul {
+	display: flex;
+	justify-content: space-evenly; 
+	text-transform: uppercase;
+	font-size: var(--medium);
+	font-weight: var(--semibold-fw);
+	margin-bottom: 0.5rem;
+	background: var(--baseClr-90); 
+	padding: 1rem; 
+	border-radius: var(--radius);  
+}
+
+#tabs ul .activetab a, #tabs ul li a:hover {
+	color: var(--accentClr2) !important; 
+}
+
+form[action="/profile"] .page-title {
+	 margin-left: 2rem; 
+}
+
+form[action="/profile"] fieldset {
+	background: var(--baseClr);
+	border-radius: var(--radius); 
+	filter: var(--drop-shadow); 
+	padding: 1rem 2rem; 
+}
+
+form[action="/profile"] .submit-buttons {
+	background: none !important; 
+}
+
+form[action="/profile"] dl dd {
+	display: flex;
+	flex-direction: column;
+}
+
+/* date de naissance */
+form[action="/profile"] .panel dl {
+	display: grid; 
+	grid-template-columns: 30% 60%; 
+}
+
+form[action="/profile"] .panel:first-of-type dl dd {
+	display: flex;
+	justify-content: center; 
+}
+
+form[action="/profile"] .panel:nth-of-type(2) dl:nth-child(10) dd {
+	flex-direction: row; 
+	align-items: center;  
+}
+
+form[action="/profile"] .panel:nth-of-type(2) dl:nth-child(10) dd select {
+	margin-right: 0.5rem; 
+}
+
+form[action="/profile"] .panel:nth-of-type(2) dl:nth-child(10) dt {
+	display: flex; 
+	align-items: center; 
+}
+
+form[action="/profile"] > .panel:nth-of-type(3) dl:nth-child(6), .panel:nth-of-type(3) dl:nth-child(7), .panel:nth-of-type(3) dl:nth-child(8), .panel:nth-of-type(3) dl:nth-child(9), .panel:nth-of-type(3) dl:nth-child(10) {
+	display: none; 
+}
+
 /* ------------------------------------ */
 
 /* --- PAGE LISTE DES MEMBRES --- */
