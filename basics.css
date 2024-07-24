@@ -18,30 +18,37 @@ biggest, .biggest {font-size: var(--biggest);}
   --bh: #B4B34F; 
   --bhc: #c3c272; 
   --bhf: #908f3f; 
+  --bhOp: truc; 
 
   --bom: #BC6A8C; 
   --bomc: #c987a3; 
   --bomf: #965470; 
+  --bomOp: truc; 
 
   --yeo: #66A465; 
   --yeoc: #84b683; 
   --yeof: #518350; 
+  --yeoOp: truc; 
 
   --gaeul: #D36E43; 
   --gaeulc: #db8b68; 
   --gaeulf: #a85835; 
+  --gaeulOp: truc; 
 
   --gyeoul: #539D9F; 
   --gyeoc: #75b0b2; 
   --gyeof: #427d7f; 
+  --gyeoOp: truc; 
 
   --akma: #B84654; 
   --akmac: #c66a76;
   --akmaf: #933843;
+  --akmaOp: truc; 
 
   --mun: #706BD0; 
   --munc: #8c88d9;
   --munf: #5955a6;
+  --munOp: truc; 
 
   /* variables de gradients */
   --bhtransp: linear-gradient(to left, transparent, var(--bh)); 
