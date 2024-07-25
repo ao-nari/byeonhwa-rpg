@@ -1,5 +1,62 @@
 .container__pa {
-    display: flex; 
-    flex-direction: column; 
-    height: 32rem; 
+    background: linear-gradient(to right, var(--baseClr2-20), var(--baseClr-90) 60%);
+    border-radius: var(--radius);
+}
+
+/* intérieur */
+.pa__int {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap; 
+    height: 32rem;
+    gap: 1rem; 
+    padding-top: 1rem; 
+}
+
+/* top-sites */
+.pa_tops {
+    height: 100%;
+    width: 4.5rem; 
+}
+
+/* -- GENERAL -- */
+.pa__main, .pa__infos, .pa__pnote, .pa__meteo, .pa__staff, .pa__scen {
+    background: var(--baseClr); 
+    filter: var(--drop-shadow); 
+    border-radius: var(--radius); 
+}
+
+/* -- main -- */
+.pa__main {
+    width: 40rem; 
+    height: 21rem; 
+}
+
+/* -- infos -- */
+.pa__infos {
+    width: 40rem; 
+    height: 8rem; 
+}
+
+/* -- patch note -- */
+.pa__pnote {
+    width: 15.5rem; 
+    height: 8rem; 
+}
+
+/* -- météo -- */
+.pa__meteo {
+    width: 15.5rem; 
+    height: 21rem; 
+}
+
+/* -- staff et scénarios -- */
+.pa__staff, .pa__scen {
+    width: 30rem; 
+    height: 14.5rem; 
+}
+
+/* -- partenaires -- */
+.pa__partners {
+    width: 100%;  
 }
