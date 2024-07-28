@@ -1,15 +1,74 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <!-------------- DEBUT QEEL ------------>
+<!-------------------------------------->
+<!-------------- DEBUT QEEL ------------>
 
+<!-- BEGIN disable_viewonline -->
+<div class="container__qeel">
 
+    <!-- last user et messages/membres -->
+    <div class="qeel__welcome">
 
-    <!-------------- FIN QEEL -------------->
-</body>
-</html>
+        <!-- last user -->
+        <div id="last_user">
+            <!-- avatar -->
+            <span id="lastuser_avatar"></span>
+
+            <!-- welcome -->
+            <div class="lastuser_welc">bienvenue</div>
+            <span id="lastuser_id">{NEWEST_USER}</span>
+        </div>
+
+        <!-- nb membres et messages -->
+        <div id="qeel__stats">
+            <div class="nb_members">{TOTAL_USERS} membres</div>
+            <div class="nb_messages">{TOTAL_POSTS} messages</div>
+        </div>
+    </div>
+
+    <!-- groupes -->
+    <div class="qeel_groups">
+
+        <!-- tabs container -->
+        <div class="tabs-container" data-system="qeel-groups">
+
+            <!-- tabs -->
+            <div class="tabs">
+                <a href="#bomq" class="tab-button sliding-tab active"><img class="bomq-img" src="https://i.imgur.com/yOf6S7V.png"></a>
+                <a href="#yeoq" class="tab-button sliding-tab"><img class="yeoq-img" src="https://i.imgur.com/ekyfrC2.png"></a>
+                <a href="#gaeulq" class="tab-button sliding-tab"><img class="gaeulq-img" src="https://i.imgur.com/a2azgJk.png"></a>
+                <a href="#gyeoulq" class="tab-button sliding-tab"><img class="gyeoulq-img" src="https://i.imgur.com/Rr37yrZ.png"></a>
+                <a href="#munq" class="tab-button sliding-tab"><img class="munq-img" src="https://i.imgur.com/likkWoa.png"></a>
+                <a href="#akmaq" class="tab-button sliding-tab"><img class="akmaq-img" src="https://i.imgur.com/xQUC6TY.png"></a>
+            </div>
+
+            <!-- contenus -->
+            <div class="tabs-content">
+                <!-- BOM --> <div id="bomq" class="tab-content sliding-content active">Le <ebom><bom><a href="/" target="_blank"><b>clan bom</b></a></bom></ebom> est à l’image du <bom><b>printemps</b></bom> et ses mages ont le don de contrôler <bom><b>la nature</b></bom>. Leurs catalyseurs sont en <bom><b>quartz rose</b></bom>, pierre des sentiments, et leur animal totem, <bom><b>le cerf</b></bom>, veille majestueusement sur eux.</div>
+
+                <!-- YEOREUM --> <div id="yeoq" class="tab-content sliding-content">Le <ebom><a href="/" target="_blank"><b>clan bom</b></a></ebom> est à l’image du <bom><b>printemps</b></bom> et ses mages ont le don de contrôler <bom><b>la nature</b></bom>. Leurs catalyseurs sont en <bom><b>quartz rose</b></bom>, pierre des sentiments, et leur animal totem, <bom><b>le cerf</b></bom>, veille majestueusement sur eux.</div>
+
+                <!-- GAEUL --> <div id="gaeulq" class="tab-content sliding-content">Le <ebom><a href="/" target="_blank"><b>clan bom</b></a></ebom> est à l’image du <bom><b>printemps</b></bom> et ses mages ont le don de contrôler <bom><b>la nature</b></bom>. Leurs catalyseurs sont en <bom><b>quartz rose</b></bom>, pierre des sentiments, et leur animal totem, <bom><b>le cerf</b></bom>, veille majestueusement sur eux.</div>
+
+                <!-- GYEOUL --> <div id="gyeoulq" class="tab-content sliding-content">Le <ebom><a href="/" target="_blank"><b>clan bom</b></a></ebom> est à l’image du <bom><b>printemps</b></bom> et ses mages ont le don de contrôler <bom><b>la nature</b></bom>. Leurs catalyseurs sont en <bom><b>quartz rose</b></bom>, pierre des sentiments, et leur animal totem, <bom><b>le cerf</b></bom>, veille majestueusement sur eux.</div>
+
+                <!-- MUNOEHAN --> <div id="munq" class="tab-content sliding-content">Le <ebom><a href="/" target="_blank"><b>clan bom</b></a></ebom> est à l’image du <bom><b>printemps</b></bom> et ses mages ont le don de contrôler <bom><b>la nature</b></bom>. Leurs catalyseurs sont en <bom><b>quartz rose</b></bom>, pierre des sentiments, et leur animal totem, <bom><b>le cerf</b></bom>, veille majestueusement sur eux.</div>
+
+                <!-- AKMA --> <div id="akmaq" class="tab-content sliding-content">Le <ebom><a href="/" target="_blank"><b>clan bom</b></a></ebom> est à l’image du <bom><b>printemps</b></bom> et ses mages ont le don de contrôler <bom><b>la nature</b></bom>. Leurs catalyseurs sont en <bom><b>quartz rose</b></bom>, pierre des sentiments, et leur animal totem, <bom><b>le cerf</b></bom>, veille majestueusement sur eux.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- connectés et connectés 48h -->
+    <div class="qeel_infos">
+        <!-- en ligne -->
+        <div class="online_users">{LOGGED_IN_USER_LIST}</div>
+        
+        <!-- séparation -->
+        <hr class="qeelinfos__sep">
+
+        <!-- 48h -->
+        <div class="lastonline">{L_CONNECTED_MEMBERS}</div>
+    </div>
+</div>
+
+<!-------------- FIN QEEL -------------->
+<!-------------------------------------->

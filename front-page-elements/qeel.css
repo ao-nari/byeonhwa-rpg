@@ -1,0 +1,12 @@
+/* --- QEEL DE BYEONHWA --- */
+.container__qeel {
+    background: linear-gradient(to left, var(--baseClr2-20), var(--baseClr-90) 60%);
+    border-radius: var(--radius);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap; 
+    height: 22rem;
+    gap: 1rem; 
+    padding-top: 1rem; 
+}
+
