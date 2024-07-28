@@ -7,13 +7,16 @@
     flex-wrap: wrap; 
     height: 22rem;
     gap: 1rem; 
-    padding-top: 1rem; 
+    padding: 1rem; 
+}
+
+.qeel__welcome, .qeel__groups, .qeel__infos {  
+    border-radius: var(--radius); 
+    filter: var(--drop-shadow); 
 }
 
 .qeel__welcome, .qeel__infos {
-    background: var(--baseClr) !important;  
-    border-radius: var(--radius); 
-    filter: var(--drop-shadow); 
+    background: var(--baseClr); 
 }
 
 /* -- bloc gauche haut : welcome, stats -- */
@@ -21,9 +24,63 @@
     height: 7rem; 
 }
 
-/* -- bloc gauche bas : groupes -- */
-qeel__groups {
-    height: 12rem; 
-    width: 52.5rem; 
+#lastuser_avatar img {
+    height: 5rem; 
+    width: 5rem; 
+    object-fit: cover; 
+    border-radius: 100%; 
 }
 
+/* -- bloc gauche bas : groupes -- */
+.qeel__groups {
+    height: 12rem;
+    width: 52.5rem;
+    background: var(--baseClr2-20);
+    border-radius: var(--radius);
+    /* margin-left: 1rem; */
+}
+
+/* GROUP TABS BUTTONS */
+.qeel__groups .tabs-container {
+    height: 10rem; 
+    width: 50.5rem; 
+    margin: 1rem; 
+    background: var(--baseClr); 
+    border-radius: var(--radius); 
+    display: flex; 
+    flex-direction: row-reverse; 
+}
+
+.qeel__groups .tabs-container .tabs {
+    display: flex; 
+}
+
+.qeel__groups .tabs img {
+    height: 10rem; 
+    width: 1.5rem; 
+    object-fit: cover; 
+    padding: 0 0.5px;  
+}
+
+.qeel__groups .tabs .akmaq-img {
+    border-radius: 0 var(--radius) var(--radius) 0; 
+    padding: 0; 
+}
+
+.qeel__groups .tabs .bomq-img {
+    border-radius: var(--radius) 0 0 var(--radius); 
+    padding-left: 0; 
+}
+
+/* -- contents -- */
+.qeel__groups .tab-content {
+    font-size: var(--medium); 
+    text-align: justify; 
+    padding: 1rem; 
+}
+
+/* -- bloc droit : connectés et 48h -- */
+.qeel__infos {
+    width: 52.5rem; 
+    height: 20rem; 
+}
