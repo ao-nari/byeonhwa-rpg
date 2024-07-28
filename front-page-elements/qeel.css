@@ -10,3 +10,20 @@
     padding-top: 1rem; 
 }
 
+.qeel__welcome, .qeel__infos {
+    background: var(--baseClr) !important;  
+    border-radius: var(--radius); 
+    filter: var(--drop-shadow); 
+}
+
+/* -- bloc gauche haut : welcome, stats -- */
+.qeel__welcome {
+    height: 7rem; 
+}
+
+/* -- bloc gauche bas : groupes -- */
+qeel__groups {
+    height: 12rem; 
+    width: 52.5rem; 
+}
+
