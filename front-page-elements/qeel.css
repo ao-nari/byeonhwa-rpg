@@ -144,6 +144,14 @@
     text-transform: lowercase; 
 }
 
+.qeel__infos .online_users .onlinenow, .qeel__infos .lastonline .online48 {
+    background: var(--grad2); 
+    background-size: 100%; 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: var(--semibold-fw); 
+}
+
 .qeel__infos .online_users br {
     display: none; 
 }
