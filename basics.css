@@ -24,37 +24,37 @@ krfont, .krfont {font-family: var(--krfont)}
   --bh: #B4B34F; 
   --bhc: #c3c272; 
   --bhf: #908f3f; 
-  --bhOp: rgba(180, 179, 79, 0.2); 
+  --bhOp: rgba(180, 179, 79, 0.3); 
 
   --bom: #BC6A8C; 
   --bomc: #c987a3; 
   --bomf: #965470; 
-  --bomOp: rgba(188, 106, 140, 0.2); 
+  --bomOp: rgba(188, 106, 140, 0.3); 
 
   --yeo: #66A465; 
   --yeoc: #84b683; 
   --yeof: #518350; 
-  --yeoOp: rgba(102, 164, 101, 0.2); 
+  --yeoOp: rgba(102, 164, 101, 0.3); 
 
   --gaeul: #D36E43; 
   --gaeulc: #db8b68; 
   --gaeulf: #a85835; 
-  --gaeulOp: rgba(211, 110, 67, 0.2); 
+  --gaeulOp: rgba(211, 110, 67, 0.3); 
 
   --gyeoul: #539D9F; 
   --gyeoc: #75b0b2; 
   --gyeof: #427d7f; 
-  --gyeoOp: rgba(83, 157, 159, 0.2); 
+  --gyeoOp: rgba(83, 157, 159, 0.3); 
 
   --akma: #B84654; 
   --akmac: #c66a76;
   --akmaf: #933843;
-  --akmaOp: rgba(184, 70, 84, 0.2); 
+  --akmaOp: rgba(184, 70, 84, 0.3); 
 
   --mun: #706BD0; 
   --munc: #8c88d9;
   --munf: #5955a6;
-  --munOp: rgba(112, 107, 208, 0.2); 
+  --munOp: rgba(112, 107, 208, 0.3); 
 
   /* variables de gradients */
   --bhtransp: linear-gradient(to left, transparent, var(--bh)); 
@@ -282,21 +282,31 @@ evid, .evid {
   -webkit-text-fill-color: transparent;
 }
 
-evid2, .evid2 {
-  background: var(--bg2);
+/* -- effet bouton -- */
+evid2, .evid2, ebh, .ebh, ebom, .ebom, eyeo, .eyeo, ega, .ega, egyeo, .egyeo, emun, .emun, eak, .eak {
   border-radius: 0.5rem;
   padding: 0 0.5rem;
 }
 
+evid2, .evid2 {background: var(--bg2);}
+ebh, .ebh {background: linear-gradient(to bottom, var(--baseClr2-20), var(--bhOp));}
+ebom, .ebom {background: linear-gradient(to bottom, var(--baseClr2-20), var(--bomOp));}
+eyeo, .eyeo {background: linear-gradient(to bottom, var(--baseClr2-20), var(--yeoOp));}
+ega, .ega {background: linear-gradient(to bottom, var(--baseClr2-20), var(--gaeulOp));}
+egyeo, .egyeo {background: linear-gradient(to bottom, var(--baseClr2-20), var(--gyeoOp));}
+emun, .emun {background: linear-gradient(to bottom, var(--baseClr2-20), var(--munOp));}
+eak, .eak {background: linear-gradient(to bottom, var(--baseClr2-20), var(--akmaOp));}
+
+
 /* surlignement */
 evid3, .evid3 {box-shadow: inset 0 -6px 0 var(--baseClr2-20);}
-ebh, .ebh {box-shadow: inset 0 -6px 0 var(--bhOp);}
-ebom, .ebom {box-shadow: inset 0 -6px 0 var(--bomOp);}
-eyeo, .eyeo {box-shadow: inset 0 -6px 0 var(--yeoOp);}
-ega, .ega {box-shadow: inset 0 -6px 0 var(--gaeulOp);}
-egyeo, .egyeo {box-shadow: inset 0 -6px 0 var(--gyeoOp);}
-emun, .emun {box-shadow: inset 0 -6px 0 var(--munOp);}
-eak, .eak {box-shadow: inset 0 -6px 0 var(--akmaOp);}
+ebh2, .ebh2 {box-shadow: inset 0 -6px 0 var(--bhOp);}
+ebom2, .ebom2 {box-shadow: inset 0 -6px 0 var(--bomOp);}
+eyeo2, .eyeo2 {box-shadow: inset 0 -6px 0 var(--yeoOp);}
+ega2, .ega2 {box-shadow: inset 0 -6px 0 var(--gaeulOp);}
+egyeo2, .egyeo2 {box-shadow: inset 0 -6px 0 var(--gyeoOp);}
+emun2, .emun2 {box-shadow: inset 0 -6px 0 var(--munOp);}
+eak2, .eak2 {box-shadow: inset 0 -6px 0 var(--akmaOp);}
 
 /* --- AUTRES --- */
 

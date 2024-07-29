@@ -8,6 +8,7 @@
     height: 22rem;
     gap: 1rem; 
     padding: 1rem; 
+    margin: 8rem 0 2rem 0; 
 }
 
 .qeel__welcome, .qeel__groups, .qeel__infos {  
@@ -68,6 +69,7 @@
     width: 1.5rem; 
     object-fit: cover; 
     padding: 0 0.5px; 
+    opacity: 0.8; 
 }
 
 .qeel__groups .accordion .a-header .akmaq-img {
