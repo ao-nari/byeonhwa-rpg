@@ -44,49 +44,64 @@
     width: 52.5rem;
     background: var(--baseClr2-20);
     border-radius: var(--radius);
+    padding: 1rem; 
 }
 
-/* GROUP TABS BUTTONS */
-.qeel__groups .tabs-container {
-    height: 10rem; 
-    width: 50.5rem; 
-    margin: 1rem; 
+.qeel__groups .accordion {
     background: var(--baseClr); 
+    height: 100%; 
+    width: 100%; 
     border-radius: var(--radius); 
     display: flex; 
-    flex-direction: row-reverse; 
+    justify-content: flex-end; 
+    overflow: hidden; 
 }
 
-.qeel__groups .tabs-container .tabs {
+/* -- headers -- */
+.qeel__groups .accordion .a-header {
     display: flex; 
+    cursor: pointer; 
 }
 
-.qeel__groups .tabs img {
+.qeel__groups .accordion .a-header img {
     height: 10rem; 
     width: 1.5rem; 
     object-fit: cover; 
-    padding: 0 0.5px;  
+    padding: 0 0.5px; 
 }
 
-.qeel__groups .tabs .akmaq-img {
-    border-radius: 0 var(--radius) var(--radius) 0; 
+.qeel__groups .accordion .a-header .akmaq-img {
     padding: 0; 
 }
 
-.qeel__groups .tabs .bomq-img {
-    border-radius: var(--radius) 0 0 var(--radius); 
-    padding-left: 0; 
+/* -- items -- */
+.qeel__groups .accordion .a-item {
+    display: flex;
+    flex-direction: row;
+    transition: flex 0.5s ease;
 }
 
-.tabs .bomq-img {
-    transform: translateX(-42rem); 
+.qeel__groups .accordion .a-item.active {
+    flex: 3;
 }
 
-/* -- contents -- */
-.qeel__groups .tab-content {
+/* -- contenus -- */
+.qeel__groups .accordion .a-content {
+    transform: scaleX(0); 
+    transition: transform 0.5s ease, opacity 0.3s ease;
+    opacity: 0; 
     font-size: var(--medium); 
     text-align: justify; 
+    width: 0; 
+}
+
+.a-item.active .a-content {
+    opacity: 1; 
+    transform-origin: left; 
+    transform: scaleX(1);   
+    transition: transform 0.5s ease, opacity 0.3s ease;
     padding: 1rem; 
+    width: 100%; 
 }
 
 /* -- bloc droit : connectés et 48h -- */
