@@ -131,4 +131,26 @@
 .qeel__infos {
     width: 52.5rem; 
     height: 20rem; 
+    display: flex; 
+    align-items: center; 
+}
+
+.qeel__infos .online_users, .qeel__infos .lastonline {
+    width: 50%; 
+    height: 100%; 
+    font-size: var(--medium);  
+    padding: 2rem; 
+    text-align: justify; 
+    text-transform: lowercase; 
+}
+
+.qeel__infos .online_users br {
+    display: none; 
+}
+
+/* séparateur */
+.qeelinfos__sep {
+    width: 1px; 
+    border-left: 1px solid var(--baseClr3-40); 
+    height: 80%; 
 }
