@@ -22,14 +22,24 @@
 
 /* -- bloc gauche haut : welcome, stats -- */
 .qeel__welcome {
-    height: 7rem; 
-    display: flex; 
+    height: 7rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    padding: 0 1rem;
+    line-height: 1; 
 }
 
 #last_user {
-    display: flex; 
-    flex-direction: column; 
-    flex-wrap: wrap; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    flex-wrap: wrap;
+    height: 5rem;
+}
+
+.lastuser_welc, #lastuser_id {
+    padding-left: 1rem; 
 }
 
 #lastuser_avatar img {
@@ -37,6 +47,15 @@
     width: 5rem; 
     object-fit: cover; 
     border-radius: 100%; 
+}
+
+#last_user, #qeel__stats {
+    font-family: var(--font2); 
+    text-transform: uppercase; 
+}
+
+#qeel__stats {
+    text-align: right; 
 }
 
 /* -- bloc gauche bas : groupes -- */
