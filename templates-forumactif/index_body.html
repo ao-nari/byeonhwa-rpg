@@ -113,57 +113,100 @@
             <span id="lastuser_avatar"></span>
 
             <!-- welcome -->
-            <div class="lastuser_welc">bienvenue</div>
-            <span id="lastuser_id">{NEWEST_USER}</span>
+            <div id="qeel__welc">
+                <div class="lastuser_welc">bienvenue</div>
+                <span id="lastuser_id">{NEWEST_USER}</span>
+            </div>
         </div>
 
         <!-- nb membres et messages -->
         <div id="qeel__stats">
-            <div class="nb_members">{TOTAL_USERS} membres</div>
-            <div class="nb_messages">{TOTAL_POSTS} messages</div>
+            <div id="nb_members">{TOTAL_USERS} membres</div>
+            <div id="nb_messages">{TOTAL_POSTS}</div>
         </div>
     </div>
 
     <!-- groupes -->
-    <div class="qeel_groups">
+    <div class="qeel__groups">
 
-        <!-- tabs container -->
-        <div class="tabs-container" data-system="qeel-groups">
+        <!-- accordion horizontal groupes -->
+        <div class="accordion" data-accordion="qeel-groups">
 
-            <!-- tabs -->
-            <div class="tabs">
-                <a href="#bomq" class="tab-button sliding-tab active"><img class="bomq-img" src="https://i.imgur.com/yOf6S7V.png"></a>
-                <a href="#yeoq" class="tab-button sliding-tab"><img class="yeoq-img" src="https://i.imgur.com/ekyfrC2.png"></a>
-                <a href="#gaeulq" class="tab-button sliding-tab"><img class="gaeulq-img" src="https://i.imgur.com/a2azgJk.png"></a>
-                <a href="#gyeoulq" class="tab-button sliding-tab"><img class="gyeoulq-img" src="https://i.imgur.com/Rr37yrZ.png"></a>
-                <a href="#munq" class="tab-button sliding-tab"><img class="munq-img" src="https://i.imgur.com/likkWoa.png"></a>
-                <a href="#akmaq" class="tab-button sliding-tab"><img class="akmaq-img" src="https://i.imgur.com/xQUC6TY.png"></a>
+            <!-- BOM -->
+            <div class="a-item" data-accordion-item="qeel-groups">
+                <div class="a-header">
+                    <img class="bomq-img" src="https://i.imgur.com/yOf6S7V.png">
+                </div>
+
+                <div class="a-content">
+                    Le <ebom><a href="/" target="_blank"><b><bom>clan bom</bom></b></a></ebom> est à l’image du <bom><b>printemps</b></bom> et ses éveillés ont le don de contrôler <bom><b>la nature</b></bom>. Leurs catalyseurs sont en <bom><b>quartz rose</b></bom>, pierre des sentiments, et leur animal totem, <bom><b>le cerf</b></bom>, veille majestueusement sur eux.
+                </div>
             </div>
 
-            <!-- contenus -->
-            <div class="tabs-content">
-                <!-- BOM --> <div id="bomq" class="tab-content sliding-content active">Le <ebom><a href="/" target="_blank"><b>clan bom</b></a></ebom> est à l’image du <bom><b>printemps</b></bom> et ses mages ont le don de contrôler <bom><b>la nature</b></bom>. Leurs catalyseurs sont en <bom><b>quartz rose</b></bom>, pierre des sentiments, et leur animal totem, <bom><b>le cerf</b></bom>, veille majestueusement sur eux.</div>
+            <!-- YEOREUM -->
+            <div class="a-item" data-accordion-item="qeel-groups">
+                <div class="a-header">
+                    <img class="yeoq-img" src="https://i.imgur.com/ekyfrC2.png">
+                </div>
+                
+                <div class="a-content">
+                    Le <eyeo><a href="/" target="_blank"><b><yeo>clan yeoreum</yeo></b></a></eyeo> arbore les couleurs de <yeo><b>l'été</b></yeo> et ses éveillés ont dompté <yeo><b>le feu et la lumière</b></yeo>. Leurs catalyseurs sont en <yeo><b>jade</b></yeo>, pierre de l'équilibre et de la spiritualité, et leur animal totem, <yeo><b>le tigre</b></yeo>, leur ouvre la voie.
+                </div>
+            </div>
 
-                <!-- YEOREUM --> <div id="yeoq" class="tab-content sliding-content">Le <ebom><a href="/" target="_blank"><b>clan bom</b></a></ebom> est à l’image du <bom><b>printemps</b></bom> et ses mages ont le don de contrôler <bom><b>la nature</b></bom>. Leurs catalyseurs sont en <bom><b>quartz rose</b></bom>, pierre des sentiments, et leur animal totem, <bom><b>le cerf</b></bom>, veille majestueusement sur eux.</div>
+            <!-- GAEUL -->
+            <div class="a-item" data-accordion-item="qeel-groups">
+                <div class="a-header">
+                    <img class="gaeulq-img" src="https://i.imgur.com/a2azgJk.png">
+                </div>
+                
+                <div class="a-content">
+                    Le <ega><a href="/" target="_blank"><b><gaeul>clan gaeul</gaeul></b></a></ega> représente les valeurs de <gaeul><b>l'automne</b></gaeul> et ses éveillés jouent avec <gaeul><b>le vent et le tonnerre</b></gaeul>. Leurs catalyseurs sont faits <b><gaeul>d'ambre</gaeul></b>, pierre de sagesse conductrice d'électricité. Leur animal totem, <gaeul><b>l'ours noir</b></gaeul>, accompagne leurs décisions.
+                </div>
+            </div>
 
-                <!-- GAEUL --> <div id="gaeulq" class="tab-content sliding-content">Le <ebom><a href="/" target="_blank"><b>clan bom</b></a></ebom> est à l’image du <bom><b>printemps</b></bom> et ses mages ont le don de contrôler <bom><b>la nature</b></bom>. Leurs catalyseurs sont en <bom><b>quartz rose</b></bom>, pierre des sentiments, et leur animal totem, <bom><b>le cerf</b></bom>, veille majestueusement sur eux.</div>
+            <!-- GYEOUL -->
+            <div class="a-item" data-accordion-item="qeel-groups">
+                <div class="a-header">
+                    <img class="gyeoulq-img" src="https://i.imgur.com/Rr37yrZ.png">
+                </div>
+                
+                <div class="a-content">
+                    Le <egyeo><a href="/" target="_blank"><b><gyeoul>clan gyeoul</gyeoul></b></a></egyeo> est mordant comme <gyeoul><b>l'hiver</b></gyeoul> et ses éveillés sont insaisissables comme <gyeoul><b>l'eau</b></gyeoul>. <gyeoul><b>L'aigue-marine</b></gyeoul> orne leurs catalyseurs, pierre des passions et des espoirs. Leur animal totem, <gyeoul><b>le loup</b></gyeoul>, guide leurs ambitions.
+                </div>
+            </div>
 
-                <!-- GYEOUL --> <div id="gyeoulq" class="tab-content sliding-content">Le <ebom><a href="/" target="_blank"><b>clan bom</b></a></ebom> est à l’image du <bom><b>printemps</b></bom> et ses mages ont le don de contrôler <bom><b>la nature</b></bom>. Leurs catalyseurs sont en <bom><b>quartz rose</b></bom>, pierre des sentiments, et leur animal totem, <bom><b>le cerf</b></bom>, veille majestueusement sur eux.</div>
+            <!-- MUNOEHAN -->
+            <div class="a-item" data-accordion-item="qeel-groups">
+                <div class="a-header">
+                    <img class="munq-img" src="https://i.imgur.com/likkWoa.png">
+                </div>
+                
+                <div class="a-content">
+                    Les <emun><a href="/" target="_blank"><b><mun>munoehan</mun></b></a></emun> sont affranchis des clans, n'accordant leur confiance qu'à leurs instincts. Leurs éveillés sont issus de <mun><b>toutes les saisons</b></mun> et ils se battent pour la liberté. <mun><b>Nomades ou étrangers</b></mun>, ils viennent de tous horizons. 
+                </div>
+            </div>
 
-                <!-- MUNOEHAN --> <div id="munq" class="tab-content sliding-content">Le <ebom><a href="/" target="_blank"><b>clan bom</b></a></ebom> est à l’image du <bom><b>printemps</b></bom> et ses mages ont le don de contrôler <bom><b>la nature</b></bom>. Leurs catalyseurs sont en <bom><b>quartz rose</b></bom>, pierre des sentiments, et leur animal totem, <bom><b>le cerf</b></bom>, veille majestueusement sur eux.</div>
-
-                <!-- AKMA --> <div id="akmaq" class="tab-content sliding-content">Le <ebom><a href="/" target="_blank"><b>clan bom</b></a></ebom> est à l’image du <bom><b>printemps</b></bom> et ses mages ont le don de contrôler <bom><b>la nature</b></bom>. Leurs catalyseurs sont en <bom><b>quartz rose</b></bom>, pierre des sentiments, et leur animal totem, <bom><b>le cerf</b></bom>, veille majestueusement sur eux.</div>
+            <!-- AKMA -->
+            <div class="a-item" data-accordion-item="qeel-groups">
+                <div class="a-header">
+                    <img class="akmaq-img" src="https://i.imgur.com/xQUC6TY.png">
+                </div>
+                
+                <div class="a-content">
+                    Les <eak><a href="/" target="_blank"><b><akma>akma</akma></b></a></eak> (ou <akma><b>démons</b></akma>) viennent d'un monde dévasté. Maudits, ils sont devenus des êtres <akma><b>immortels</b></akma> capables <akma><b>d'illusions</b></akma>. Certains se nourrissent, d'autres combattent pour leur <akma><b>reine</b></akma>, mais tous ne désirent qu'une chose ; <akma><b>vivre</b></akma>.
+                </div>
             </div>
         </div>
     </div>
 
     <!-- connectés et connectés 48h -->
-    <div class="qeel_infos">
+    <div class="qeel__infos">
         <!-- en ligne -->
         <div class="online_users">{LOGGED_IN_USER_LIST}</div>
         
         <!-- séparation -->
-        <hr class="qeelinfos__sep">
+        <div class="qeelinfos__sep"></div>
 
         <!-- 48h -->
         <div class="lastonline">{L_CONNECTED_MEMBERS}</div>
@@ -177,17 +220,14 @@
 <script type="text/javascript">
   $("#last_user").html($("#last_user").html().replace("L'utilisateur enregistré le plus récent est", ""));
   
-  $("#qeel_posts").html($("#qeel_posts").html().replace("Nos membres ont posté un total de", ""));
+  $("#nb_messages").html($("#nb_messages").html().replace("Nos membres ont posté un total de", ""));
   
-  $("#qeel_members").html($("#qeel_members").html().replace("Nous avons", ""));
+  $("#nb_members").html($("#nb_members").html().replace("Nous avons", ""));
+  $("#nb_members").html($("#nb_members").html().replace("membres enregistrés", " "));
   
-  $("#total_users").html($("#total_users").html().replace("Il y a en tout", ""));
-  $("#total_users").html($("#total_users").html().replace("utilisateur en ligne", "connecté"));
-  $("#total_users").html($("#total_users").html().replace("utilisateurs en ligne", "connectés"));
+  $("#online_users").html($("#online_users").html().replace("Utilisateurs enregistrés :", "Ils sont en ligne ••• "));
   
-  $("#online_users").html($("#online_users").html().replace("Utilisateurs enregistrés", "En ligne"));
-  
-  $("#last_connected").html($("#last_connected").html().replace("Membres connectés au cours des 24 dernières heures :", "aperçus récemment "));
+  $("#lastonline").html($("#lastonline").html().replace("Membres connectés au cours des 48 dernières heures :", "Aperçus récemment ••• "));
 </script>
 
 <!-- Conteneur des infos CB -->

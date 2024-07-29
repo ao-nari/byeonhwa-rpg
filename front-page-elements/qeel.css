@@ -20,7 +20,7 @@
     background: var(--baseClr); 
 }
 
-/* -- bloc gauche haut : welcome, stats -- */
+/* --- BLOC GAUCHE : WELCOME, STATS --- */
 .qeel__welcome {
     height: 7rem;
     display: flex;
@@ -58,7 +58,7 @@
     text-align: right; 
 }
 
-/* -- bloc gauche bas : groupes -- */
+/* BLOC GAUCHE BAS : GROUPES */
 .qeel__groups {
     height: 12rem;
     width: 52.5rem;
@@ -67,6 +67,7 @@
     padding: 1rem; 
 }
 
+/* accordion container */
 .qeel__groups .accordion {
     background: var(--baseClr); 
     height: 100%; 
@@ -77,7 +78,7 @@
     overflow: hidden; 
 }
 
-/* -- headers -- */
+/* --- IMAGES/HEADERS */
 .qeel__groups .accordion .a-header {
     display: flex; 
     cursor: pointer; 
@@ -95,21 +96,23 @@
     padding: 0; 
 }
 
-/* -- items -- */
+/* --- ITEMS --- */
 .qeel__groups .accordion .a-item {
     display: flex;
     flex-direction: row;
-    transition: flex 0.5s ease;
+    transition: flex 0.8s ease; 
 }
 
 .qeel__groups .accordion .a-item.active {
-    flex: 3;
+    transform: translate(0); 
+    flex: 3; 
+    transition: transform 1s ease, opacity 5s ease; 
 }
 
-/* -- contenus -- */
+/* --- CONTENTS --- */
 .qeel__groups .accordion .a-content {
-    transform: scaleX(0); 
-    transition: transform 0.5s ease, opacity 0.3s ease;
+    transform: translateX(40rem); 
+    transition: transform 0.8s ease;
     opacity: 0; 
     font-size: var(--medium); 
     text-align: justify; 
@@ -118,14 +121,13 @@
 
 .a-item.active .a-content {
     opacity: 1; 
-    transform-origin: left; 
-    transform: scaleX(1);   
-    transition: transform 0.5s ease, opacity 0.3s ease;
+    transform: translateX(0);   
+    transition: transform 0.8s ease, opacity 2.5s ease;
     padding: 1rem; 
     width: 100%; 
 }
 
-/* -- bloc droit : connectés et 48h -- */
+/* --- BLOC DROIT : EN LIGNE, 48H --- */
 .qeel__infos {
     width: 52.5rem; 
     height: 20rem; 
