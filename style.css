@@ -467,6 +467,10 @@ a.buttons:hover::after, #main-content .links_bar a:hover::after, #sort-btn:hover
   opacity: 1; 
 }
 
+select {
+  outline: none; 
+}
+
 /* -- select (dropdown), input (petits boutons), label (textes divers) -- */
 select, input, .inputbox {
   position: relative;
@@ -1927,7 +1931,7 @@ button.rep-button .rep-nb {
   margin-top: 3rem; 
 }
 
-.hover_profile .field-messages::after, .hover_profile .field-points::after {
+.hover_profile .field-messages::after, .hover_profile .field-auras::after {
   background: var(--grad2Op); 
   padding: 0 0.4rem; 
   border-radius: var(--small-radius); 
@@ -1941,15 +1945,15 @@ button.rep-button .rep-nb {
   content: " messages"; 
 }
 
-.hover_profile .field-points::after {
-  content: " points"; 
+.hover_profile .field-auras::after {
+  content: " auras"; 
 }
 
-.hover_profile .field-points {
+.hover_profile .field-auras {
   margin-top: 0.5rem; 
 }
 
-.hover_profile .field-messages, .hover_profile .field-points {
+.hover_profile .field-messages, .hover_profile .field-auras {
   font-weight: var(--semibold-fw); 
   display: grid; 
   grid-template-columns: 20% 40%; 
@@ -1957,7 +1961,7 @@ button.rep-button .rep-nb {
   font-size: var(--small2); 
 }
 
-.hover_profile .field-points {
+.hover_profile .field-auras {
     grid-template-columns: 20% 30% !important;
 }
 
@@ -2263,7 +2267,7 @@ input.button {
 
 /* couleurs web */
 .sceditor-dropdown.sceditor-color-picker {
-  width: 20rem !important;  
+  width: 17rem !important;  
   height: 10rem !important;  
   padding: 0.5rem !important;
   border-radius: 0.4rem !important; 

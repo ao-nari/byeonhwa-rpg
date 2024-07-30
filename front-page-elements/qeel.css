@@ -136,12 +136,14 @@
 }
 
 .qeel__infos .online_users, .qeel__infos .lastonline {
-    width: 50%; 
-    height: 100%; 
-    font-size: var(--medium);  
-    padding: 2rem; 
-    text-align: justify; 
-    text-transform: lowercase; 
+    width: 50%;
+    height: 80%;
+    font-size: var(--medium);
+    margin: 2rem;
+    padding-right: 1rem;
+    text-align: justify;
+    text-transform: lowercase;
+    overflow: auto;
 }
 
 .qeel__infos .online_users .onlinenow, .qeel__infos .lastonline .online48 {
