@@ -197,15 +197,27 @@ html {
 
 *, body, div {
   box-sizing: border-box; 
-  scrollbar-width: thin; /* scrollbars firefox */
-  scrollbar-color: var(--scrollbar2) var(--scrollbar1); 
-  -webkit-font-smoothing: antialiased;
+}
+
+@-moz-document url-prefix() {
+	*, body, div {
+	  scrollbar-width: thin; /* scrollbars firefox */
+	  scrollbar-color: var(--scrollbar2) var(--scrollbar1); 
+	  -webkit-font-smoothing: antialiased;
+	}
 }
 
 /* --- SCROLLBARS (chrome) --- */ 
-::-webkit-scrollbar {width: 0.5rem;}
-::-webkit-scrollbar-track {color: var(--scrollbar1);}
-::-webkit-scrollbar-thumb {color: var(--scrollbar2);}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	::-webkit-scrollbar {width: 0.3rem;}
+	::-webkit-scrollbar-track {background: var(--scrollbar1);}
+	::-webkit-scrollbar-thumb {
+		background: var(--scrollbar2);
+		border-radius: var(--radius); 
+	}
+	
+	::-webkit-scrollbar-button {display: none !important;}
+}
 
 /* --- FIX DIVERS --- */
 
