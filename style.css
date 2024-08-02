@@ -657,6 +657,31 @@ form[name="form_login"] .h3 {
 	align-items: center; 
 }
 
+/* form signature */
+#parent_editor_simple {
+	display: flex; 
+}
+
+#parent_editor_simple #message-box br {
+	display: none; 
+}
+
+.fields1:has(#parent_editor_simple) {
+	padding: 0 !important;
+}
+
+.panel.row3:has(.inner) {
+	padding: 0;
+}
+
+.inner:has(.ucp-main) {
+	margin: 0; 
+}
+
+form[action="/profile?mode=editprofile&page_profil=friendsfoes"] input {
+	margin: 0.5rem 0; 
+}
+
 /* ---------------- FIN GENERALITES -------------------- */
 
 /* --- HEADER (BANNIERE ET HAUT DE PAGE) --- */
@@ -2328,7 +2353,7 @@ form.left, form.right {
 }
 
 #message-box .sceditor-container {
-  height: 27rem !important; 
+  height: 27rem !important;
 }
 
 /* posting box, prévisualisation */
@@ -2367,12 +2392,12 @@ form.left, form.right {
 
 /* smileys */
 #smileyContainer {
-  width: 20rem; 
-  background: white; 
-  margin: 0 1rem 0 0; 
-  border-radius: var(--radius); 
-  height: 27rem; 
-  overflow: hidden; 
+  width: 20rem;
+  background: white;
+  margin: 0 1rem 0 0;
+  border-radius: var(--radius);
+  height: 27rem;
+  overflow: hidden;
 }
 
  /* dl = container d'input (dl > dd > input) */
@@ -2482,6 +2507,10 @@ textarea[name="poll_option_text"] {
   margin: 4rem 0; 
 }
 
+.postingbox__options .panel.row3:has(.inner) {
+	padding: 0 2rem 2rem 2rem !important; 
+}
+
 /* --- HISTORIQUE DU SUJET (posting_topic_review) --- */
 .wrapped__messages .panel {
   background-color: var(--baseClr2-20); 
@@ -2564,8 +2593,12 @@ form[action="/profile"] dt {
 
 /* date de naissance FIX */
 form[action="/profile"] .panel dl {
-	display: grid;
+	display: grid !important;
 	grid-template-columns: 30% 60%;
+	background: var(--baseClr);
+	padding: 1rem;
+	border-radius: var(--radius);
+	filter: var(--drop-shadow);
 }
 
 form[action="/profile"] .panel:nth-of-type(2) dl:nth-child(10) dd {
@@ -2584,6 +2617,10 @@ form[action="/profile"] .panel:nth-of-type(2) dl:nth-child(10) dt {
 
 /* champs autres NON UTILISES */
 form[action="/profile"] > .panel:nth-of-type(3) dl:nth-child(6), .panel:nth-of-type(3) dl:nth-child(7), .panel:nth-of-type(3) dl:nth-child(8), .panel:nth-of-type(3) dl:nth-child(9), .panel:nth-of-type(3) dl:nth-child(10) {
+	display: none !important; 
+}
+
+form[action="/profile"] .export__profile {
 	display: none; 
 }
 
@@ -2601,7 +2638,7 @@ form[action="/profile"] > .panel:nth-of-type(3) dl:nth-child(6), .panel:nth-of-t
 .profil_editavatar fieldset dl:nth-of-type(2), 
 .profil_editavatar fieldset dl:nth-of-type(3), 
 .profil_editavatar fieldset dl:nth-of-type(5) {
-	display: none; 
+	display: none !important; 
 }
 
 /* ------------------------------------ */
