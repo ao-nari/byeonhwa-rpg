@@ -1,6 +1,47 @@
 /* ----------------------------------------- */
 /* ---------- PAGE PROFIL ------------------ */
 
+/* --- SUMMARY DES CHAMPS : 
+#field_id5 = faceclaim, 
+#field_id2 = image gauche, #field_id3 = image gauche, #field_id4 = image droite, 
+#field_id-12 = date de naissance, #field_id-5 = âge */
+
 .container__profile {
     background: var(--baseClr2-20); 
+    height: 65rem; 
+    border-radius: var(--radius); 
+}
+
+/* --- HEADER --- */
+.profile__header {
+    height: 7rem;
+    display: flex; 
+}
+
+.profile__header .profile_field:not(#field_id5, #field_id2, #field_id3, #field_id4, #field_id-12, #field_id-5) {
+    display: none; 
+}
+
+/* --- remise à 0 du rang --- */
+.profile__header .rank, .profile__header .rank__cont, .profile__header .rank__cont::before, .profile__header .rank__cont::after {
+    all: unset; 
+}
+
+/* --- liens --- */
+.profile__header .profile__links {
+    display: none; 
+}
+
+/* --- MAIN --- */
+.profile__main .profile_field {
+    display: none; 
+}
+
+.profile__main .profil_avatar {
+    display: none; 
+}
+
+/* --- FOOTER --- */
+.profile__footer .profile_field {
+    display: none; 
 }
