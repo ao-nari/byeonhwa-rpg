@@ -34,8 +34,12 @@ HEADER
 .profile__header .profile__title, 
 .profile__header .profile__rank {
     width: 50%; 
+    height: 2.5rem; 
     text-transform: uppercase; 
     font-family: var(--font2); 
+    font-weight: var(--semibold-fw);
+    font-size: var(--bigger2); 
+    margin-top: 1rem; 
 }
 
 .profile__header .profile__rank {
@@ -48,6 +52,7 @@ HEADER
     flex-direction: row;
     height: 5rem;
     justify-content: space-between;
+    align-items:  center;
 }
 
 .profile__header .field_label {
@@ -58,17 +63,47 @@ HEADER
     width: 39.7rem;
     display: flex;
     flex-wrap: wrap;
-    align-items: center; 
 }
 
 .profile__header .fieldsin {
-    width: 100%; 
-    display: flex; 
-    justify-content: space-between; 
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: var(--small2);
+    color: var(--baseClr2);
+    margin-bottom: 1rem; 
 }
 
-.profile__header .fieldsin #field_id-12 {
+/* --- fc (id5), dob (id-12) et âge (id-5) --- */
+.profile__header .fieldsin #field_id5, 
+.profile__header .fieldsin #field_id-12, 
+.profile__header .fieldsin #field_id-5 {
     display: flex; 
+}
+
+.profile__header .fieldsin #field_id5::before, 
+.profile__header .fieldsin #field_id-12::before {
+    content: "incarné par"; 
+    padding-right: 0.3rem; 
+    font-style: italic; 
+}
+
+/* fc */
+.profile__header .fieldsin #field_id5::before {
+    content: "incarné par"; 
+}
+
+/* dob */
+.profile__header .fieldsin #field_id-12::before {
+    content: "né(e) le"; 
+}
+
+/* age */
+.profile__header .fieldsin #field_id-5::before {content: "("; padding-left: 0.3rem;}
+.profile__header .fieldsin #field_id-5::after {content: "ans)"; padding-left: 0.3rem;}
+
+.profile__header .fieldsin #field_id5 .field_content, .profile__header .fieldsin #field_id-12 .field_content {
+    font-weight: var(--semibold-fw); 
 }
 
 /* --- A SUPPRIMER --- */
