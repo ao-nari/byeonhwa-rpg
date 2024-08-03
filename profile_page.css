@@ -227,8 +227,49 @@ CHAMP DIALOGUES : #field_id14 = dialogues */
 }
 
 .profile__charin {
-    height: 29.5rem; 
+    height: 29.5rem;
+    width: 100%;
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+}
+
+.charin-overflow {
+    height: 90%; 
+    width: 95%; 
+    overflow: auto; 
+    overflow-x: hidden; 
+    padding-right: 1rem; 
+}
+
+/* --- CHAMPS --- */
+.profile__char .profile__charin .profile_field {
+    text-align: justify; 
+}
+
+.profile__char .profile__charin .field_label {
+    color: var(--accentClr);  
+    font-size: var(--medium); 
+    font-weight: var(--semibold-fw); 
+    text-transform: uppercase; 
+    display: flex;  
+    align-items: center; 
+    white-space: nowrap;  
+    justify-content: space-between; 
+}
+
+.profile__char .charin-overflow .field_label::after {
+    display: inline-block; 
+    content: ""; 
+    height: 1px; 
     width: 100%; 
+    background: var(--accentClr); 
+    margin-left: 1rem; 
+    opacity: 0.5; 
+}
+
+.profile__char .charin-overflow .field_content {
+    padding: 0.5rem 0 1.5rem 0; 
 }
 
 /* --- MESSAGES, AURAS ET DIALOGUES --- */
