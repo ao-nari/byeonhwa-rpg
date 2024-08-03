@@ -21,6 +21,10 @@ HEADER
     font-size: var(--medium); 
 }
 
+.container__profile .profile__footer {
+    display: none; 
+}
+
 /* ----------------------------------- */
 /* --- HEADER --- */
 .profile__header {
