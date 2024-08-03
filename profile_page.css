@@ -115,7 +115,7 @@ HEADER
 }
 
 /* --- A SUPPRIMER --- */
-.profile__header .profile_field:not(#field_id5, #field_id-12, #field_id-5, #field_id2, #field_id3, #field_id4) {
+.profile__header #field_id-4 {
     display: none; 
 }
 
@@ -201,13 +201,13 @@ HEADER
 }
 
 .profile__char, .profile__player {
-    height: 36rem; 
-    width: 39.7rem; 
+    height: 36rem !important; 
+    width: 39.7rem !important; 
 }
 
-/* --- bloc gauche : personnage --- */
+/* --- BLOCS PERSONNAGE ET JOUEUR (gauche et droite) --- */
 
-/* --- CHAMPS DU BLOC PERSONNAGE INTERNE (charin) : 
+/* --- CHAMPS DU BLOC PERSONNAGE INTERNE (profile__charin charin-overflow) : 
 #field_id15 = autre(s) nom(s), 
 #field_id16 = identité, 
 #field_id17 = astrologie, 
@@ -218,36 +218,54 @@ HEADER
 
 CHAMP MESSAGES : #field_id-6 = messages, 
 CHAMP AURAS : #field_id-13 = auras, 
-CHAMP DIALOGUES : #field_id14 = dialogues */
+CHAMP DIALOGUES : #field_id14 = dialogues 
+
+/* --- CHAMPS DU BLOC JOUEUR INTERNE (profile__player player-overflow) : 
+#field_id1 = joueur, 
+#field_id11 = pronoms, 
+#field_id12 = crédits,
+#field_id13 = tw/cw, */
 
 .profile__char {
-    display: flex; 
-    flex-wrap: wrap; 
-    gap: 1rem; 
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 
 .profile__charin {
     height: 29.5rem;
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile__player {
     display: flex; 
-    align-items: center; 
     justify-content: center; 
+    padding: 1.4rem 0; 
 }
 
-.charin-overflow {
-    height: 90%; 
-    width: 95%; 
-    overflow: auto; 
-    overflow-x: hidden; 
-    padding-right: 1rem; 
+.charin-overflow, .player-overflow {
+    height: 90%;
+    width: 95%;
+    overflow: auto;
+    overflow-x: hidden;
+    padding-right: 1rem;
 }
 
-/* --- CHAMPS --- */
-.profile__char .profile__charin .profile_field {
+.player-overflow {
+    height: 100% !important; 
+}
+
+/* --- CHAMPS PERSONNAGE ET JOUEUR --- */
+.profile__char .profile__charin .profile_field, 
+.profile__player .profile_field {
     text-align: justify; 
 }
 
-.profile__char .profile__charin .field_label {
+.profile__char .profile__charin .field_label, 
+.profile__player .field_label {
     color: var(--accentClr);  
     font-size: var(--medium); 
     font-weight: var(--semibold-fw); 
@@ -258,7 +276,8 @@ CHAMP DIALOGUES : #field_id14 = dialogues */
     justify-content: space-between; 
 }
 
-.profile__char .charin-overflow .field_label::after {
+.profile__char .charin-overflow .field_label::after, 
+.profile__player .player-overflow .field_label::after {
     display: inline-block; 
     content: ""; 
     height: 1px; 
@@ -268,8 +287,31 @@ CHAMP DIALOGUES : #field_id14 = dialogues */
     opacity: 0.5; 
 }
 
-.profile__char .charin-overflow .field_content {
-    padding: 0.5rem 0 1.5rem 0; 
+.profile__char .charin-overflow .field_content, 
+.profile__player .player-overflow .field_content:not(#field_id11 .field_content) {
+    padding: 0.5rem 0 1.5rem 0;
+}
+
+/* champ PSEUDO (#field_id1) et PRONOMS JOUEUR (#field_id11) */
+.profile__player #field_id11 .field_label {
+    display: none; 
+}
+
+.profile__player #field_id1 .field_content {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    font-family: var(--font2); 
+    text-transform: uppercase; 
+    font-size: var(--bigger2); 
+    font-weight: var(--bold-fw); 
+}
+
+.profile__player #field_id11 .field_content {
+    font-family: var(--font1) !important; 
+    text-transform: lowercase !important; 
+    font-size: var(--medium) !important; 
+    font-weight: var(--base-fw) !important; 
 }
 
 /* --- MESSAGES, AURAS ET DIALOGUES --- */
@@ -339,8 +381,6 @@ CHAMP DIALOGUES : #field_id14 = dialogues */
     border-radius: var(--radius); 
     object-fit: cover; 
 }
-
-/* --- bloc droit : joueur --- */
 
 /* ----------------------------------------------------- */
 /* ------------ FOOTER ONLY FOR AWOKEN ---------------- */
