@@ -9,9 +9,12 @@ HEADER
 
 .container__profile {
     background: var(--baseClr2-20); 
-    height: 65rem; 
+    height: 48rem; 
     border-radius: var(--radius); 
     padding: 1rem; 
+    display: flex; 
+    flex-direction: column; 
+    gap: 1rem; 
 }
 
 /* ----------------------------------- */
@@ -178,16 +181,60 @@ HEADER
 
 /* ----------------------------------- */
 /* --- MAIN --- */
-.profile__main .profile_field {
-    display: none; 
+.profile__main {
+  height: 38rem;
+  border-radius: var(--radius);
+  padding: 1rem;
+  display: flex; 
+  gap: 1rem; 
 }
 
-.profile__main .profil_avatar {
-    display: none; 
+/* général */
+.profile__charin, .profile__player {
+    background: var(--baseClr-90); 
+    border-radius: var(--radius); 
 }
 
-/* ---------------------------------- */
-/* --- FOOTER --- */
-.profile__footer .profile_field {
-    display: none; 
+.profile__char, .profile__player {
+    height: 36rem; 
+    width: 39.7rem; 
 }
+
+/* --- bloc gauche : personnage --- */
+.profile__char {
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 1rem; 
+}
+
+.profile__charin {
+    height: 29.5rem; 
+    width: 100%; 
+}
+
+.profile__char .profile__messages, 
+.profile__char .profile__auras {
+    width: 11rem; 
+}
+
+.profile__char .profile__dialogues {
+    width: 15.7rem; 
+}
+
+.profile__char .profile__messages, 
+.profile__char .profile__auras, 
+.profile__char .profile__dialogues {
+    height: 5.5rem; 
+    background: var(--baseClr-90); 
+    border-radius: var(--radius); 
+}
+
+/* --- bloc droit : joueur --- */
+
+.profile__main .profil_avatar img {
+    border-radius: var(--radius); 
+    object-fit: cover; 
+}
+
+/* ----------------------------------------------------- */
+/* ------------ FOOTER ONLY FOR AWOKEN ---------------- */
