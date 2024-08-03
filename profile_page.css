@@ -17,6 +17,10 @@ HEADER
     gap: 1rem; 
 }
 
+.container__profile .field_content {
+    font-size: var(--medium); 
+}
+
 /* ----------------------------------- */
 /* --- HEADER --- */
 .profile__header {
@@ -201,6 +205,14 @@ HEADER
 }
 
 /* --- bloc gauche : personnage --- */
+
+/* --- CHAMPS DU BLOC PERSONNAGE INTERNE (charin) : 
+autre(s) nom(s), identité, astrologie, occupation, signe(s) distinctif(s), possessions, infos diverses
+
+CHAMP MESSAGES : #field_id-6 = messages, 
+CHAMP AURAS : #field_id-13 = auras, 
+CHAMP DIALOGUES : #field_id14 = dialogues */
+
 .profile__char {
     display: flex; 
     flex-wrap: wrap; 
@@ -224,9 +236,52 @@ HEADER
 .profile__char .profile__messages, 
 .profile__char .profile__auras, 
 .profile__char .profile__dialogues {
-    height: 5.5rem; 
-    background: var(--baseClr-90); 
-    border-radius: var(--radius); 
+    height: 5.5rem;
+    background: var(--baseClr-90);
+    border-radius: var(--radius);
+    display: flex;
+}
+
+.profile__char .profile__messages .profile_field, 
+.profile__char .profile__auras .profile_field, 
+.profile__char .profile__dialogues .profile_field {
+    display: flex; 
+    flex-direction: column-reverse;  
+    width: 100%; 
+}
+
+/* labels messages, auras, dialogues */
+.profile__char .profile__messages .profile_field .field_label, 
+.profile__char .profile__auras .profile_field .field_label, 
+.profile__char .profile__dialogues .profile_field .field_label {
+    font-size: var(--small);
+    text-transform: uppercase;
+    font-weight: var(--bold-fw);
+    text-align: right;
+    height: 1.2rem;  
+    margin: 0 1rem 0.3rem 0; 
+    background: var(--grad1);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* content messages, auras, dialogues */
+.profile__char .profile__messages .profile_field .field_content, 
+.profile__char .profile__auras .profile_field .field_content {
+    font-size: var(--bigger3); 
+    font-family: var(--font2); 
+    color: var(--accentClr); 
+    height: 2.6rem; 
+    margin: 0 0 0.4rem 1rem; 
+}
+.profile__char .profile__dialogues .profile_field .field_content {
+    height: 100%; 
+    margin: 0.8rem 0.8rem 0 1rem; 
+    overflow: auto; 
+    line-height: var(--small-lh); 
+    display: flex; 
+    align-items: center; 
 }
 
 /* --- bloc droit : joueur --- */
