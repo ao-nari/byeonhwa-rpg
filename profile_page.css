@@ -236,7 +236,7 @@ CHAMP DIALOGUES : #field_id14 = dialogues
     gap: 1rem;
 }
 
-.profile__charin {
+.profile__charin, .profile__powers, .profile__more {
     height: 29.5rem;
     width: 100%;
     display: flex;
@@ -250,7 +250,7 @@ CHAMP DIALOGUES : #field_id14 = dialogues
     padding: 1.4rem 0; 
 }
 
-.charin-overflow, .player-overflow {
+.charin-overflow, .player-overflow, .powers-overflow, .more-overflow {
     height: 90%;
     width: 95%;
     overflow: auto;
@@ -263,13 +263,15 @@ CHAMP DIALOGUES : #field_id14 = dialogues
 }
 
 /* --- CHAMPS PERSONNAGE ET JOUEUR --- */
-.profile__char .profile__charin .profile_field, 
-.profile__player .profile_field {
-    text-align: justify; 
+.profile__char .profile__charin .field_content, 
+.profile__player .field_content, 
+.profile__footer .field_content {
+    text-align: justify !important; 
 }
 
 .profile__char .profile__charin .field_label, 
-.profile__player .field_label {
+.profile__player .field_label, 
+.profile__footer .field_label {
     color: var(--accentClr);  
     font-size: var(--medium); 
     font-weight: var(--semibold-fw); 
@@ -281,7 +283,9 @@ CHAMP DIALOGUES : #field_id14 = dialogues
 }
 
 .profile__char .charin-overflow .field_label::after, 
-.profile__player .player-overflow .field_label::after {
+.profile__player .player-overflow .field_label::after, 
+.profile__footer .powers-overflow .field_label::after, 
+.profile__footer .more-overflow .field_label::after {
     display: inline-block; 
     content: ""; 
     height: 1px; 
@@ -292,7 +296,9 @@ CHAMP DIALOGUES : #field_id14 = dialogues
 }
 
 .profile__char .charin-overflow .field_content, 
-.profile__player .player-overflow .field_content:not(#field_id11 .field_content) {
+.profile__player .player-overflow .field_content:not(#field_id11 .field_content),
+.profile__footer .powers-overflow .field_content,
+.profile__footer .more-overflow .field_content {
     padding: 0.5rem 0 1.5rem 0;
 }
 
@@ -388,3 +394,42 @@ CHAMP DIALOGUES : #field_id14 = dialogues
 
 /* ----------------------------------------------------- */
 /* ------------ FOOTER ONLY FOR AWOKEN ---------------- */
+
+/* --- CHAMPS : 
+#field_id25 = pouvoirs, 
+#field_id26 = catalyseur, 
+#field_id27 = forme démoniaque */
+
+/* fonctionnement */
+.container__profile:has(#field_id25), 
+.container__profile:has(#field_id26), 
+.container__profile:has(#field_id27) {
+    height: 65rem; 
+}
+
+.container__profile:has(#field_id25) .profile__footer, 
+.container__profile:has(#field_id26) .profile__footer, 
+.container__profile:has(#field_id27) .profile__footer {
+    display: flex; 
+    height: 16rem; 
+    border-radius: var(--radius); 
+    align-items: center; 
+    justify-content: center; 
+    gap: 1rem; 
+}
+
+.profile__footer .profile__powers, 
+.profile__footer .profile__more {
+    height: 14rem; 
+    background: var(--baseClr-90); 
+    border-radius: var(--radius); 
+}
+
+/* --- POUVOIRS --- */
+.profile__footer .profile__powers {
+    width: 63.2rem; 
+}
+
+.profile__footer .profile__more {
+    width: 39.7rem; 
+}
