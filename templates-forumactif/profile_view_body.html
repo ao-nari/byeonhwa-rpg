@@ -16,22 +16,17 @@
                 <!-- rang -->
                 <span class="profile__rank">{POSTER_RANK}</span>
 
-                <!-- BEGIN profile_field -->
-                <div class="profile_field" id="field_id{profile_field.ID}">
-                    <div class="field_label">{profile_field.LABEL}</div>
-                    <div class="field_content">{profile_field.CONTENT}</div>
+                <div class="fieldsin">
+                    <!-- BEGIN profile_field -->
+                    <div class="profile_field" id="field_id{profile_field.ID}">
+                        <div class="field_label">{profile_field.LABEL}</div>
+                        <div class="field_content">{profile_field.CONTENT}</div>
+                    </div>
+                    <!-- END profile_field -->
                 </div>
-                <!-- END profile_field -->
             </div>
 
-            <div class="headerimages">
-                <!-- BEGIN profile_field -->
-                <div class="profile_field" id="field_id{profile_field.ID}">
-                    <div class="field_label">{profile_field.LABEL}</div>
-                    <div class="field_content">{profile_field.CONTENT}</div>
-                </div>
-                <!-- END profile_field -->
-            </div>
+            <div class="headerimages"></div>
 
             <div class="profile__links">
                 <!-- BEGIN profile_field -->
@@ -89,6 +84,17 @@
 </div>
 
 <!-- JAVASCRIPT -->
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    var titleSpan = document.querySelector('.profile__title span');
+    if (titleSpan) {
+        var color = window.getComputedStyle(titleSpan).color;
+        document.querySelectorAll('.profile__rank .rank__cont .rank').forEach(function(rank) {
+            rank.style.color = color;
+        });
+    }
+});
+</script>
 
 <script>
 document.addEventListener("DOMContentLoaded", function() {
@@ -115,62 +121,6 @@ document.addEventListener("DOMContentLoaded", function() {
         return color;
     }
 });
-</script>
+</script>   
 
 <script src="{JQUERY_ROOT}json/jquery.json-1.3.min.js" type="text/javascript"></script>
-<script type="text/javascript">
-    //<![CDATA[
-    $(document).ready(function() {
-        $('[id^=field_id]').each(function() {
-            if ($(this).find('.field_editable').is('span, div')) {
-                $(this).hover(function() {
-                    if ($(this).find('.field_editable.invisible').is('span, div')) {
-                        $(this).find('.field_editable').prev().addClass('ajax-profil_hover').parent().addClass('ajax-profil_parent').append('<div class="ajax-profil_edit"><img src="{AJAX_EDIT_IMG}" /></div>');
-                        $(this).find('.ajax-profil_edit').attr({
-                            alt: "{L_FIELD_EDIT_VALUE}",
-                            title: "{L_FIELD_EDIT_VALUE}"
-                        }).click(function() {
-                            $(this).prev().prev().removeClass('ajax-profil_hover').addClass('invisible').next().removeClass('invisible').append('<img src="{AJAX_VALID_IMG}" class="ajax-profil_valid" />').find('input,select');
-                            $(this).prev().find('.ajax-profil_valid').attr({
-                                alt: "{L_VALIDATE}",
-                                title: "{L_VALIDATE}"
-                            }).click(function() {
-                                var content = new Array();
-                                $(this).parent().find('[name]').each(function() {
-                                    var type_special = $(this).is('input[type=radio],input[type=checkbox]');
-                                    if ((type_special && $(this).is(':checked')) || !type_special) {
-                                        content.push(new Array($(this).attr('name'), $(this).attr('value')));
-                                    }
-                                });
-                                var id_name = $(this).parents('[id^=field_id]').attr('id');
-                                var id = id_name.substring(8, id_name.length);
-                                $.post(
-                                    "{U_AJAX_PROFILE}", {
-                                        id: id,
-                                        user: "{CUR_USER_ID}",
-                                        active: "{CUR_USER_ACTIVE}",
-                                        content: $.toJSON(content),
-                                        tid: "{TID}"
-                                    },
-                                    function(data) {
-                                        $.each(data, function(i, item) {
-                                            $('[id=field_id' + i + ']').find('.field_uneditable').html(item).end().find('.ajax-profil_valid').remove().end().find('.field_editable').addClass('invisible').end().find('.field_uneditable').removeClass('invisible');
-                                        });
-                                    },
-                                    "json"
-                                );
-                            });
-                            $(this).remove();
-                        });
-                    }
-                }, function() {
-                    if ($(this).find('.field_editable.invisible').is('span, div')) {
-                        $(this).find('.field_editable').prev().removeClass('ajax-profil_hover');
-                        $(this).find('.ajax-profil_edit').remove();
-                    }
-                });
-            }
-        });
-    });
-    //]]>
-</script>

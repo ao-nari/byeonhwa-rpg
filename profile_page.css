@@ -5,9 +5,7 @@
 HEADER
 #field_id5 = faceclaim, 
 #field_id2 = image gauche, #field_id3 = image gauche, #field_id4 = image droite, 
-#field_id-12 = date de naissance, #field_id-5 = âge 
-
-MAIN*/
+#field_id-12 = date de naissance, #field_id-5 = âge */
 
 .container__profile {
     background: var(--baseClr2-20); 
@@ -16,55 +14,134 @@ MAIN*/
     padding: 1rem; 
 }
 
+/* ----------------------------------- */
 /* --- HEADER --- */
 .profile__header {
     height: 7rem; 
     border-radius: var(--radius); 
+    padding: 1rem; 
 }
 
+/* --- NOM ET RANG --- */
 /* --- remise à 0 du rang --- */
-.profile__header .rank, .profile__header .rank__cont, .profile__header .rank__cont::before, .profile__header .rank__cont::after {
+.profile__header .rank, 
+.profile__header .rank__cont, 
+.profile__header .rank__cont::before, 
+.profile__header .rank__cont::after {
     all: unset; 
+}
+
+.profile__header .profile__title, 
+.profile__header .profile__rank {
+    width: 50%; 
+    text-transform: uppercase; 
+    font-family: var(--font2); 
+}
+
+.profile__header .profile__rank {
+    text-align: right; 
 }
 
 /* --- champs du header : fc, dob/age, images, liens --- */
 .profile__header .profile_headerin {
-    display: flex; 
-    flex-direction: row; 
-    height: 7rem; 
+    display: flex;
+    flex-direction: row;
+    height: 5rem;
+    justify-content: space-between;
 }
 
 .profile__header .field_label {
     display: none; 
 }
 
-.profile__header .profile_headerin .headerfields .profile_field:not(#field_id5, #field_id-12, #field_id-5) {
+.profile__header .headerfields {
+    width: 39.7rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center; 
+}
+
+.profile__header .fieldsin {
+    width: 100%; 
+    display: flex; 
+    justify-content: space-between; 
+}
+
+.profile__header .fieldsin #field_id-12 {
+    display: flex; 
+}
+
+/* --- A SUPPRIMER --- */
+.profile__header .profile_field:not(#field_id5, #field_id-12, #field_id-5, #field_id2, #field_id3, #field_id4) {
     display: none; 
 }
 
 /* --- images --- */
-.profile__header .profile_headerin .headerimages .profile_field:not(#field_id2, #field_id3, #field_id4) {
-    display: none; 
+.profile__header .headerimages {
+    display: flex;
+    gap: 1rem;
 }
 
-.profile__header .profile_headerin .headerimages {
-    display: flex;  
-    height: 5rem;
-    width: 5rem;
-}
-
-.profile__header .profile_headerin .headerimages img {
+.profile__header .headerimages img {
     border-radius: 100%; 
     object-fit: cover; 
     height: 5rem;
-    width: 5rem; 
+    width: 5rem;  
 }
 
 /* --- liens --- */
 .profile__header .profile__links {
-    
+    height: 5rem; 
+    display: flex; 
+    flex-wrap: wrap; 
+    flex-direction: column; 
 }
 
+/* général */
+.profile__header .profile__topicslink, 
+.profile__header .profile__msgslink, 
+.profile__header .profile__misclinks {
+    background: var(--baseClr); 
+    width: 19.8rem; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    font-size: var(--medium); 
+    font-weight: var(--semibold-fw); 
+    text-transform: uppercase; 
+}
+
+/* --- sujets --- */
+.profile__header .profile__topicslink {
+    height: 2.4rem; 
+    margin-bottom: 1px;  
+    border-radius: var(--radius) 0 0 0; 
+}
+
+/* --- messages --- */
+.profile__header .profile__msgslink {
+    height: 2.5rem; 
+    border-radius: 0 0 0 var(--radius); 
+}
+
+/* --- autres liens --- */
+.profile__header .profile__misclinks {
+    margin-left: 1px; 
+    height: 10rem; 
+    border-radius: 0 var(--radius) var(--radius) 0; 
+    font-size: var(--big) !important; 
+}
+
+.profile__header .profile__misclinks a {
+    padding: 0.5rem; 
+}
+
+/* email invisible */
+.profile__header .profile__misclinks #field_id:nth-child(2) {
+    display: none; 
+}
+
+/* ----------------------------------- */
 /* --- MAIN --- */
 .profile__main .profile_field {
     display: none; 
@@ -74,6 +151,7 @@ MAIN*/
     display: none; 
 }
 
+/* ---------------------------------- */
 /* --- FOOTER --- */
 .profile__footer .profile_field {
     display: none; 
