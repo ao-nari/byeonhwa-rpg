@@ -18,18 +18,8 @@ MAIN*/
 
 /* --- HEADER --- */
 .profile__header {
-    height: 7rem;
-    display: flex; 
+    height: 7rem; 
     border-radius: var(--radius); 
-}
-
-.profile__header .field_label {
-    display: none; 
-}
-
-/* --- champs du header : fc, dob/age, images, liens --- */
-.profile__header .profile_field:not(#field_id5, #field_id2, #field_id3, #field_id4, #field_id-12, #field_id-5) {
-    display: none; 
 }
 
 /* --- remise à 0 du rang --- */
@@ -37,9 +27,42 @@ MAIN*/
     all: unset; 
 }
 
+/* --- champs du header : fc, dob/age, images, liens --- */
+.profile__header .profile_headerin {
+    display: flex; 
+    flex-direction: row; 
+    height: 7rem; 
+}
+
+.profile__header .field_label {
+    display: none; 
+}
+
+.profile__header .profile_headerin .headerfields .profile_field:not(#field_id5, #field_id-12, #field_id-5) {
+    display: none; 
+}
+
+/* --- images --- */
+.profile__header .profile_headerin .headerimages .profile_field:not(#field_id2, #field_id3, #field_id4) {
+    display: none; 
+}
+
+.profile__header .profile_headerin .headerimages {
+    display: flex;  
+    height: 5rem;
+    width: 5rem;
+}
+
+.profile__header .profile_headerin .headerimages img {
+    border-radius: 100%; 
+    object-fit: cover; 
+    height: 5rem;
+    width: 5rem; 
+}
+
 /* --- liens --- */
 .profile__header .profile__links {
-    display: none; 
+    
 }
 
 /* --- MAIN --- */

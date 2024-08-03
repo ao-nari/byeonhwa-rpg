@@ -8,32 +8,45 @@
 
     <!-- HEADER -->
     <div class="profile__header">
-        <!-- nom -->
-        <span class="profile__title">{USERNAME}</span>
+        <div class="profile_headerin">
+            <div class="headerfields">
+                <!-- nom -->
+                <span class="profile__title">{USERNAME}</span>
 
-        <!-- rang -->
-        <span class="profile__rank">{POSTER_RANK}</span>
+                <!-- rang -->
+                <span class="profile__rank">{POSTER_RANK}</span>
 
-        <!-- BEGIN profile_field -->
-        <div class="profile_field" id="field_id{profile_field.ID}">
-            <div class="field_label">{profile_field.LABEL}</div>
-            <div class="field_content">{profile_field.CONTENT}</div>
-        </div>
-        <!-- END profile_field -->
+                <!-- BEGIN profile_field -->
+                <div class="profile_field" id="field_id{profile_field.ID}">
+                    <div class="field_label">{profile_field.LABEL}</div>
+                    <div class="field_content">{profile_field.CONTENT}</div>
+                </div>
+                <!-- END profile_field -->
+            </div>
 
-        <div class="profile__links">
-            <!-- BEGIN profile_field -->
-            <!-- BEGIN profil_type_user_posts -->
-            <div class="profile__topicslink"><a rel="nofollow" href="/sta/{PUSERNAME}" id="alltopics">{L_TOPICS}</a></div> <!-- lien sujets -->
-            <div class="profile__msgslink"><a rel="nofollow" href="/spa/{PUSERNAME}" id="allposts">{L_POSTS}</a></div> <!-- lien messages -->
-            <!-- END profil_type_user_posts -->
-            <!-- END profile_field --> 
+            <div class="headerimages">
+                <!-- BEGIN profile_field -->
+                <div class="profile_field" id="field_id{profile_field.ID}">
+                    <div class="field_label">{profile_field.LABEL}</div>
+                    <div class="field_content">{profile_field.CONTENT}</div>
+                </div>
+                <!-- END profile_field -->
+            </div>
 
-            <!-- autres liens -->
-            <div class="profile__misclinks">
-                <!-- BEGIN contact_field -->
-                <div id="field_id{contact_field.ID}">{contact_field.CONTENT}</div>
-                <!-- END contact_field -->
+            <div class="profile__links">
+                <!-- BEGIN profile_field -->
+                <!-- BEGIN profil_type_user_posts -->
+                <div class="profile__topicslink"><a rel="nofollow" href="/sta/{PUSERNAME}" id="alltopics">{L_TOPICS}</a></div> <!-- lien sujets -->
+                <div class="profile__msgslink"><a rel="nofollow" href="/spa/{PUSERNAME}" id="allposts">{L_POSTS}</a></div> <!-- lien messages -->
+                <!-- END profil_type_user_posts -->
+                <!-- END profile_field --> 
+
+                <!-- autres liens -->
+                <div class="profile__misclinks">
+                    <!-- BEGIN contact_field -->
+                    <div id="field_id{contact_field.ID}">{contact_field.CONTENT}</div>
+                    <!-- END contact_field -->
+                </div>
             </div>
         </div>
     </div>
@@ -44,10 +57,7 @@
         <div class="profile__char">
             <div class="profile__charin">
                 <!-- BEGIN profile_field -->
-                <div class="profile_field" id="field_id{profile_field.ID}">
-                    <div class="field_label">{profile_field.LABEL}</div>
-                    <div class="field_content">{profile_field.CONTENT}</div>
-                </div>
+                <div class="profile_field" id="field_id{profile_field.ID}"></div>
                 <!-- END profile_field -->
             </div>
 
@@ -67,10 +77,7 @@
         <!-- côté droit (joueur) -->
         <div class="profile__player">
             <!-- BEGIN profile_field -->
-            <div class="profile_field" id="field_id{profile_field.ID}">
-                <div class="field_label">{profile_field.LABEL}</div>
-                <div class="field_content">{profile_field.CONTENT}</div>
-            </div>
+            <div class="profile_field" id="field_id{profile_field.ID}"></div>
             <!-- END profile_field -->
         </div>
     </div>
