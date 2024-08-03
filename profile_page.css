@@ -2,22 +2,32 @@
 /* ---------- PAGE PROFIL ------------------ */
 
 /* --- SUMMARY DES CHAMPS : 
+HEADER
 #field_id5 = faceclaim, 
 #field_id2 = image gauche, #field_id3 = image gauche, #field_id4 = image droite, 
-#field_id-12 = date de naissance, #field_id-5 = âge */
+#field_id-12 = date de naissance, #field_id-5 = âge 
+
+MAIN*/
 
 .container__profile {
     background: var(--baseClr2-20); 
     height: 65rem; 
     border-radius: var(--radius); 
+    padding: 1rem; 
 }
 
 /* --- HEADER --- */
 .profile__header {
     height: 7rem;
     display: flex; 
+    border-radius: var(--radius); 
 }
 
+.profile__header .field_label {
+    display: none; 
+}
+
+/* --- champs du header : fc, dob/age, images, liens --- */
 .profile__header .profile_field:not(#field_id5, #field_id2, #field_id3, #field_id4, #field_id-12, #field_id-5) {
     display: none; 
 }

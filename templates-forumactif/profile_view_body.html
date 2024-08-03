@@ -77,34 +77,35 @@
 
     <!-- FOOTER (bloc pouvoirs optionel) -->
     <div class="profile__footer">
-        <!-- code-->
+        <!-- code -->
     </div>
 </div>
 
-<!-- script couleur -->
+<!-- JAVASCRIPT -->
+
 <script>
 document.addEventListener("DOMContentLoaded", function() {
-    var profileTitleSpan = document.querySelector('.profile__title span[style*="color"]');
-
-    if (profileTitleSpan) {
-        var color = profileTitleSpan.style.color;
+    var profileTitleSpans = document.querySelectorAll('.profile__title span[style*="color"]');
+  
+    profileTitleSpans.forEach(function(span) {
+        var color = window.getComputedStyle(span).getPropertyValue("color");
         var rgbaColor = addOpacity(color, 0.3);
-        var baseClr90 = getComputedStyle(document.documentElement).getPropertyValue('--baseClr-90');
-        var gradientColor = "linear-gradient(to top, " + rgbaColor + ", " + baseClr90 + ")"; 
-
+        var baseClr90 = getComputedStyle(document.documentElement).getPropertyValue('--baseClr-90').trim();
+        var gradientColor = "linear-gradient(to top, " + rgbaColor + ", " + baseClr90 + ")";
         var elements = document.querySelectorAll('.profile__header, .profile__main, .profile__footer');
-        
+  
         elements.forEach(function(element) {
             element.style.background = gradientColor;
         });
-    }
+    });
 
     function addOpacity(color, opacity) {
-        var hex = color.replace("#", "");
-        var r = parseInt(hex.substring(0, 2), 16);
-        var g = parseInt(hex.substring(2, 4), 16);
-        var b = parseInt(hex.substring(4, 6), 16);
-        return "rgba(" + r + ", " + g + ", " + b + ", " + opacity + ")";
+        var rgbaComponents = color.match(/\d+/g);
+        if (rgbaComponents) {
+            rgbaComponents[3] = opacity;
+            return "rgba(" + rgbaComponents.join(", ") + ")";
+        }
+        return color;
     }
 });
 </script>
