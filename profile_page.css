@@ -78,7 +78,7 @@ HEADER
     justify-content: space-between;
     font-size: var(--small2);
     color: var(--baseClr2);
-    margin-bottom: 1rem; 
+    margin-bottom: 1rem;
 }
 
 /* --- fc (id5), dob (id-12) et âge (id-5) --- */
@@ -110,7 +110,8 @@ HEADER
 .profile__header .fieldsin #field_id-5::after {content: "ans)"; padding-left: 0.3rem;}
 
 .profile__header .fieldsin #field_id5 .field_content, .profile__header .fieldsin #field_id-12 .field_content {
-    font-weight: var(--semibold-fw); 
+    font-weight: var(--bold-fw); 
+    font-size: var(--small2); 
 }
 
 /* --- A SUPPRIMER --- */
@@ -207,7 +208,13 @@ HEADER
 /* --- bloc gauche : personnage --- */
 
 /* --- CHAMPS DU BLOC PERSONNAGE INTERNE (charin) : 
-autre(s) nom(s), identité, astrologie, occupation, signe(s) distinctif(s), possessions, infos diverses
+#field_id15 = autre(s) nom(s), 
+#field_id16 = identité, 
+#field_id17 = astrologie, 
+#field_id-9 = occupation, 
+#field_id18 = signe(s) distinctif(s), 
+#field_id19 = possessions, 
+#field_id20 = infos diverses
 
 CHAMP MESSAGES : #field_id-6 = messages, 
 CHAMP AURAS : #field_id-13 = auras, 
@@ -224,6 +231,7 @@ CHAMP DIALOGUES : #field_id14 = dialogues */
     width: 100%; 
 }
 
+/* --- MESSAGES, AURAS ET DIALOGUES --- */
 .profile__char .profile__messages, 
 .profile__char .profile__auras {
     width: 11rem; 
@@ -250,7 +258,7 @@ CHAMP DIALOGUES : #field_id14 = dialogues */
     width: 100%; 
 }
 
-/* labels messages, auras, dialogues */
+/* labels */
 .profile__char .profile__messages .profile_field .field_label, 
 .profile__char .profile__auras .profile_field .field_label, 
 .profile__char .profile__dialogues .profile_field .field_label {
@@ -266,7 +274,7 @@ CHAMP DIALOGUES : #field_id14 = dialogues */
     -webkit-text-fill-color: transparent;
 }
 
-/* content messages, auras, dialogues */
+/* contents */
 .profile__char .profile__messages .profile_field .field_content, 
 .profile__char .profile__auras .profile_field .field_content {
     font-size: var(--bigger3); 
@@ -275,6 +283,7 @@ CHAMP DIALOGUES : #field_id14 = dialogues */
     height: 2.6rem; 
     margin: 0 0 0.4rem 1rem; 
 }
+
 .profile__char .profile__dialogues .profile_field .field_content {
     height: 100%; 
     margin: 0.8rem 0.8rem 0 1rem; 
@@ -284,12 +293,13 @@ CHAMP DIALOGUES : #field_id14 = dialogues */
     align-items: center; 
 }
 
-/* --- bloc droit : joueur --- */
-
+/* --- milieu : AVATAR --- */
 .profile__main .profil_avatar img {
     border-radius: var(--radius); 
     object-fit: cover; 
 }
+
+/* --- bloc droit : joueur --- */
 
 /* ----------------------------------------------------- */
 /* ------------ FOOTER ONLY FOR AWOKEN ---------------- */
