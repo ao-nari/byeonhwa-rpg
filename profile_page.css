@@ -215,7 +215,7 @@ HEADER
 #field_id15 = autre(s) nom(s), 
 #field_id16 = identité, 
 #field_id17 = astrologie, 
-#field_id-9 = occupation, 
+#field_id28 = occupation, 
 #field_id18 = signe(s) distinctif(s), 
 #field_id19 = possessions, 
 #field_id20 = infos diverses
@@ -228,7 +228,12 @@ CHAMP DIALOGUES : #field_id14 = dialogues
 #field_id1 = joueur, 
 #field_id11 = pronoms, 
 #field_id12 = crédits,
-#field_id13 = tw/cw, */
+#field_id13 = tw/cw,
+#field_id21 = multicomptes,
+#field_id22 = présence,
+#field_id23 = disponibilité,
+#field_id24 = gameplay,
+#field_id-20 = commentaire */
 
 .profile__char {
     display: flex;
