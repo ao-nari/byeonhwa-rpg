@@ -365,7 +365,8 @@ display: flex !important;
 
 .fdp-idfieldin {
   max-height: 11rem;
-  overflow: auto;
+  overflow-y: auto;
+  overflow-x: hidden; 
 }
 
 /* images boîte bas */
