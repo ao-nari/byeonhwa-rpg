@@ -1,0 +1,453 @@
+:root {
+  --fdpshadow: 0px 0px 5px var(--baseClr3-10);
+}
+    
+/* --- container général --- */
+.fdp {
+  align-items: center;
+  width: 95%; 
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* --- containers externes --- */
+.fdp-container {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, var(--baseClr3-10), var(--baseClr3-20));
+  padding: 0.6rem;
+  border-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- contenus --- */
+.fdp-content {
+  box-shadow: var(--fdpshadow);
+  background: var(--baseClr);
+  width: 100%;
+  height: 100%;
+  padding: 1.4rem;
+  border-radius: var(--radius);
+}
+
+/* ---------------------------------------- */
+/* --- HEADER FICHE --- */
+.fdp-header {
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+}
+
+.fdp-tabsh {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  flex-direction: column;
+  height: 15rem;
+}
+
+/* entête titre */
+.fdp-title {
+  width: 100%;
+  display: flex;
+  flex-direction: column;  
+  line-height: 0.8; 
+}
+
+.fdp-htle {
+  display: flex;
+  width: 100%;
+  padding: 0 2.6rem;
+}
+
+.fdp-name,
+.fdp-groupe {
+  font-family: var(--font2);
+  text-transform: uppercase;
+  font-size: var(--bigger3);
+  width: 50%;
+}
+
+.fdp-groupe {
+  color: var(--fdpclr);
+}
+
+.fdp-fc,
+.fdp-rang {
+  color: var(--baseClr3);
+  text-transform: uppercase;
+  width: 50%;
+}
+
+.fdp-gif {
+  width: 10rem;
+  height: 10rem;
+  object-fit: cover;
+  border-radius: var(--radius);
+}
+
+.fdp-headr {
+  display: flex;
+  flex-direction: column;
+  height: 15rem;
+  justify-content: space-between;
+}
+
+/* boîte entête (infos diverses) */
+.fdp-moodb {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  background: var(--baseClr3-10);
+  width: 100%;
+  min-height: 10rem;
+  max-height: 10rem; 
+  border-radius: var(--radius);
+  padding: 1rem;
+  overflow: auto;
+}
+
+/* liens onglets */
+.fdp-header .tabs span a {
+  background: var(--baseClr3-10);
+  border-radius: var(--small-radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font2);
+  font-size: var(--big); 
+  font-style: italic;
+  width: 3.5rem;
+  height: 3.5rem;
+  font-weight: var(--bold-fw);
+}
+
+/* contenus tabs */
+.fdp-header .tabs-content {
+  width: 100%;
+}
+
+/* --- styles divers (textes, tag, et autres) --- */
+tag1 {
+  background: var(--fdpclr);
+  color: var(--baseClr);
+}
+
+tag2 {
+  background: var(--baseClr3-60);
+  color: var(--baseClr);
+}
+
+tag3 {
+  background: var(--baseClr);
+}
+
+.fdp-creds b,
+.fdp-fc b,
+.fdp-rang b {
+  font-weight: var(--bold-fw);
+  color: var(--textClr);
+}
+
+tag1, tag2, tag3 {
+  padding: 0.3rem;
+  border-radius: var(--small-radius);
+  font-weight: var(--bold-fw);
+}
+
+.fdp-moodb b {
+  background: linear-gradient(to top, var(--fdpclr), var(--textClr));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: var(--bold-fw);
+}
+
+.fdp-quote {
+  font-family: var(--font2);
+}
+
+.fdp-twcred {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.spoiler_title {
+  background: linear-gradient(to top, var(--fdpclr), var(--textClr));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: var(--bold-fw);
+}
+
+.fdp-name,
+.fdp-fc {
+  text-align: left;
+}
+
+.fdp-groupe,
+.fdp-rang {
+  text-align: right;
+}
+
+.fdp-name {
+  color: var(--fdpclr);
+}
+
+.fdp-cred {
+  color: var(--baseClr3);
+  text-transform: uppercase;
+  width: 100%;
+  text-align: right;
+}
+
+/* -------------------- */
+/* ---- MILIEU FICHE ------- */
+
+.fdp-intro {
+  height: 40rem;
+  display: flex;
+  width: 100%;
+  gap: 0.6rem; 
+}
+
+/* avatar */
+.fdp-avatar {
+  width: fit-content;
+}
+
+.fdp-avatar img {
+  border-radius: var(--radius);
+  height: 100%;
+  object-fit: cover;
+}
+
+/* carte d'identité */
+.fdp-id {
+  overflow: auto;
+  width: 100%;
+  height: 36rem;
+}
+
+/* titres onglets */
+.fdp-id .tabs {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  font-family: var(--font2);
+  text-transform: uppercase;
+  font-size: var(--big);
+  font-weight: var(--bold-fw);
+}
+
+.fdp-id .tabs a {
+  background: linear-gradient(to top, var(--fdpclr), var(--fdpclr), var(--baseClr3));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* tabs carte d'identité et stats */
+.fdp-header .tabs-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem; 
+}
+
+.fdp-headr .tabs {
+  display: flex;
+  width: 100%;
+  border-radius: var(--radius);
+  align-items: center;
+  justify-content: space-around;
+}
+
+.fdp-statscont {
+  display: flex;
+  flex-direction: column;
+  padding: 0 0.6rem;
+}
+
+.fdp-statsback {
+  width: 100%;
+  height: 1rem;
+  background: var(--baseClr3-10);
+  display: flex;
+  border-radius: var(--small-radius);
+  overflow: hidden;
+}
+
+.fdp-statsfill {
+  background: linear-gradient(to left, var(--fdpclr), var(--fdpclr), var(--baseClr3-20));
+  height: 100%;
+  opacity: 0.8;
+}
+
+.fdp-statstle {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+}
+
+/* titre catégories stats */
+hfdp {
+  background: var(--grad2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  font-size: var(--medium2);
+  font-weight: var(--bold-fw);
+}
+
+.fdp-id .tabs-content {
+  text-align: justify;
+  height: 31rem;
+  background: var(--baseClr3-10);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+}
+
+.fdp-id .tabs-contentin {
+  height: 28rem;
+  overflow: auto;
+}
+
+.fdp-statscont hr {
+  margin: 0 0 1rem 0 !important;
+}
+
+/* --------------- CASE HISTOIRE (bas) ---------- */
+.fdp-histoire {
+  display: flex;
+  gap: 1rem;
+}
+
+.fdp-left {
+  width: 100%;
+  height: 32.5rem;
+  background: var(--baseClr3-10);
+  text-align: justify;
+  padding: 1.6rem;
+  border-radius: var(--radius);
+}
+
+/* .fdp .inner dl,
+.fdp dl {
+grid-template-columns: none;
+grid-gap: unset !important;
+display: flex;
+margin: 0px;
+background: var(--baseClr);
+padding: 6px;
+border-radius: var(--radius);
+} */
+
+.fdp .spoiler_content.hidden {
+display: block;
+margin: 0px 10px;
+}
+
+/* .fdp dl {
+display: flex !important;
+} */
+
+.fdp-idfield {
+  background: var(--baseClr-70);
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  max-height: 16.5rem; 
+  width: 100%;
+  scroll: auto;
+}
+
+.fdp-idfieldin {
+  max-height: 11rem;
+  overflow: auto;
+}
+
+/* images boîte bas */
+.fdpmood {
+  width: 10rem;
+  height: 10rem;
+  object-fit: cover;
+  border-radius: var(--radius);
+}
+
+.fdp-icons .fdp-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fdp-storyb {
+  height: fit-content;
+  display: flex;
+  width: 100%;
+}
+
+/* .fdp-creds {
+width: 13rem;
+height: -webkit-fill-available;
+background: var(--baseClr3-10);
+border-radius: var(--radius);
+padding: 5px;
+text-align: justify;
+} */
+
+.fdp-tw b {
+  background: linear-gradient(to top, var(--fdpclr), var(--textClr));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: var(--bold-fw);
+}
+
+.fdp-tw {
+  width: 100%;
+  text-align: justify;
+}
+
+.fdp-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* titre story */
+.fdp-storytle {
+  width: 100%;
+  display: block;
+  text-align: left;
+  font-size: var(--big);
+  line-height: 1.6rem;
+  background: var(--grad2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding: 0 1rem;
+  font-weight: var(--bold-fw);
+  font-family: var(--font2);
+}
+
+.fdp-storyleg {
+  display: flex;
+  width: 100%;
+  padding: 0 1.5rem;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: end;
+}
+
+.fdp-dial {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 100%; 
+}
+
+.fdp-leftin {
+  width: 100%;
+  height: 29.5rem;
+  overflow: auto;
+}
