@@ -184,8 +184,6 @@
 /* -- boîte texte interne GENERALE -- */
 .annexe_textcont {
   height: 75%;
-  margin: 1rem 2rem;
-  padding: 2rem;
   text-align: justify;
   background: var(--baseClr-70);
   border-radius: var(--radius);
@@ -194,7 +192,7 @@
 /* -- texte interne overflow -- */
 .annexe_text {
   height: 100%;
-  padding: 2rem;
+  padding: 0 2rem;
   overflow: auto;
   text-align: justify;
   border-radius: var(--radius);
