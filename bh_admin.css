@@ -150,7 +150,7 @@
 }
 
 /* border-radius AVEC navigation (toc) */
-.bh_annexe:has(.annexe_toc) .bh_content {
+.bh_annexe:has(.annexe_toc) .annexe_content {
   border-radius: 0 var(--radius) var(--radius) 0; 
 }
 
