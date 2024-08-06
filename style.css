@@ -658,6 +658,10 @@ form[name="form_login"] .h3 {
 }
 
 /* form signature */
+.panel:has(#parent_editor_simple) {
+	background: transparent; 
+}
+
 #parent_editor_simple {
 	display: flex; 
 }
@@ -2175,6 +2179,7 @@ button.rep-button .rep-nb {
   font-family: var(--font1) !important;
   line-height: var(--base-lh);
   border-radius: 0 0 var(--radius) var(--radius) !important;
+  min-height: 27rem !important; 
 }
 
 /* barre d'outils */

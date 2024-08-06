@@ -314,6 +314,27 @@ eak2, .eak2 {box-shadow: inset 0 -6px 0 var(--akmaOp);}
 left, .left {float: left !important;}
 right, .right {float: right !important;}
 
+
+/* --- TW/CW --- */
+tw, .tw, cw, .vw {
+  font-weight: var(--bold-fw);
+  text-transform: uppercase; 
+}
+
+tw::before, .tw::before, cw::before, .cw::before {
+  background: linear-gradient(to top, var(--akma), var(--akmac));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+tw::before, .tw::before {
+  content: "tw : "; 
+}
+
+cw::before, .cw::before {
+  content: "cw : "; 
+}
+
 /* --- tw (blurry) --- */
 twhide, .twhide {
   filter: blur(3px); 
