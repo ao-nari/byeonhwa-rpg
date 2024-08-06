@@ -145,8 +145,13 @@
 /* -- contenu annexe -- */
 .annexe_content {
   background: linear-gradient(var(--baseClr3-10), var(--baseClr2-20)); 
-  border-radius: 0 var(--radius) var(--radius) 0; 
+  border-radius: var(--radius); 
   flex-grow: 1; 
+}
+
+/* border-radius AVEC navigation (toc) */
+.bh_annexe:has(.annexe_toc) .bh_content {
+  border-radius: 0 var(--radius) var(--radius) 0; 
 }
 
 /* titre */
