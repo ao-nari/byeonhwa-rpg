@@ -22,6 +22,7 @@ krfont, .krfont {font-family: var(--krfont)}
 :root {
   /* variables de couleurs */
   --bh: #B4B34F; 
+  --byeonhwa: #B4B34F;
   --bhc: #c3c272; 
   --bhf: #908f3f; 
   --bhOp: rgba(180, 179, 79, 0.3); 
@@ -32,6 +33,7 @@ krfont, .krfont {font-family: var(--krfont)}
   --bomOp: rgba(188, 106, 140, 0.3); 
 
   --yeo: #66A465; 
+  --yeoreum: #66A465;
   --yeoc: #84b683; 
   --yeof: #518350; 
   --yeoOp: rgba(102, 164, 101, 0.3); 
@@ -52,6 +54,7 @@ krfont, .krfont {font-family: var(--krfont)}
   --akmaOp: rgba(184, 70, 84, 0.3); 
 
   --mun: #706BD0; 
+  --munoehan: #706BD0;
   --munc: #8c88d9;
   --munf: #5955a6;
   --munOp: rgba(112, 107, 208, 0.3); 
