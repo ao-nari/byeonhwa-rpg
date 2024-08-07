@@ -24,27 +24,20 @@
 
         <!-- contexte/intrigue/event -->
         <div class="pa__main">
-            <!-- accordion -->
-            <div class="accordion" data-accordion="pa-main">
-                <!-- intrigue -->
-                <div class="a-item" data-accordion-item="pa-main">
-                    <div class="a-header">••• intrigue</div>
-                    <div class="a-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua.</div>
+            <div class="tabs-container" data-system="pa-main-tabs">
+                <div class="tabs">
+                    <a href="#pa-intrigue" class="tab active">••• intrigue</a>
+                    <a href="#pa-event" class="tab">••• event</a>
+                    <a href="#pa-contexte" class="tab">••• contexte</a>
                 </div>
-
-                <!-- event -->
-                <div class="a-item" data-accordion-item="pa-main">
-                    <div class="a-header">••• event</div>
-                    <div class="a-content">event</div>
-                </div>
-
-                <!-- contexte -->
-                <div class="a-item active" data-accordion-item="pa-main">
-                    <div class="a-header">••• contexte</div>
-                    <div class="a-content">contexte</div>
+        
+                <div class="tabs-content">
+                    <div id="pa-intrigue" class="tab-content active">intrigue content</div>
+                    <div id="pa-event" class="tab-content">event content</div>
+                    <div id="pa-contexte" class="tab-content">contexte content</div>
                 </div>
             </div>
-        </div>
+        </div>        
 
         <!-- texte complémentaire -->
         <div class="pa__infos">
