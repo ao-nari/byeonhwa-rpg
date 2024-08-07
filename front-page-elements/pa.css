@@ -194,6 +194,7 @@
     font-size: var(--small2);
     font-weight: var(--semibold-fw); 
     border-radius: 1.6rem !important; 
+    margin: 0; 
 }
 
 .seepartners-button::after {
