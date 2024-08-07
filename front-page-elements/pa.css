@@ -39,6 +39,12 @@
     height: 8rem; 
 }
 
+.bh_infos {
+    font-size: var(--medium); 
+    text-align: justify; 
+    padding: 0.5rem 1rem; 
+}
+
 /* -- patch note -- */
 .pa__pnote {
     width: 15.5rem; 

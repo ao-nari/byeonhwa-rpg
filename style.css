@@ -6,7 +6,7 @@
   font-size: 62.5%; /* default = 10px = 1rem */
   --body: url('https://i.imgur.com/3AW0kt1.png'); /* fond */
   --header: url('https://i.imgur.com/8qD0shL.png'); /* bannière */
-  --bhavatar: url('https://i.imgur.com/29ucVBL.png'); /* avatar byeonhwa */
+  --bhavatar: url('https://i.imgur.com/YV00Hh3.png'); /* avatar byeonhwa */
 
   /* --- palette --- */
   --baseClr: #F5FCF1; /* couleur 1 */
@@ -138,7 +138,7 @@
   font-size: 62.5%; /* default = 10px = 1rem */
   --body: url('https://i.imgur.com/BsFKZgm.png'); /* fond */
   --header: url('https://i.imgur.com/jUQE2la.png'); /* bannière */
-  --bhavatar: url('https://i.imgur.com/3JwTGSH.png'); /* avatar byeonhwa */
+  --bhavatar: url('https://i.imgur.com/yok8Omn.png'); /* avatar byeonhwa */
 
   /* --- palette --- */
   --baseClr: #060813; /* couleur 1 */
@@ -1217,11 +1217,15 @@ a.mainmenu[href^="/"]::before {
   opacity: 0.3;  
 }
 
-.lastpost a[href^="/u"] {
+.lastpost a[href^="/u"], .color-groups {
   position: relative; 
-  top: 0.5rem; 
   font-size: var(--medium); 
   text-transform: uppercase;  
+}
+
+.color-groups {
+	top: 0.5rem;
+	font-style: normal; 
 }
 
 .lastpost i {
