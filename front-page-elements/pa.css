@@ -86,6 +86,36 @@
 .pa__pnote {
     width: 15.5rem; 
     height: 8rem; 
+    background: var(--pnoteimg); 
+    position: relative; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+.pa__pnote::after {
+  content: "";
+  position: absolute !important;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  border-radius: var(--radius);
+  background: var(--baseClr2-20);
+  transition: var(--base-transi);
+}
+
+.pa__pnote:hover::after {
+    opacity: 1; 
+}
+
+.pa-pnotetxt {
+    font-family: var(--font2); 
+    text-transform: uppercase; 
+    color: var(--textClr); 
+    font-size: var(--bigger);  
+    text-align: center; 
 }
 
 /* -- météo -- */

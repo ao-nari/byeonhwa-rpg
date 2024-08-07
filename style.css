@@ -5,6 +5,7 @@
 :root {
   font-size: 62.5%; /* default = 10px = 1rem */
   --body: url('https://i.imgur.com/3AW0kt1.png'); /* fond */
+  --pnoteimg: url('https://i.imgur.com/WELyyeO.png'); /* fond patch note pa */
   --header: url('https://i.imgur.com/8qD0shL.png'); /* bannière */
   --bhavatar: url('https://i.imgur.com/YV00Hh3.png'); /* avatar byeonhwa */
 
@@ -137,6 +138,7 @@
 [data-color-scheme="dark"] {
   font-size: 62.5%; /* default = 10px = 1rem */
   --body: url('https://i.imgur.com/BsFKZgm.png'); /* fond */
+  --pnoteimg: url('https://i.imgur.com/aEoAdZs.png'); /* fond patch note pa */
   --header: url('https://i.imgur.com/jUQE2la.png'); /* bannière */
   --bhavatar: url('https://i.imgur.com/yok8Omn.png'); /* avatar byeonhwa */
 
