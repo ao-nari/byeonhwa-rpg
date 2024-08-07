@@ -18,10 +18,30 @@
 .pa_tops {
     height: 100%;
     width: 4.5rem; 
+    margin: 0 0 1rem 1rem; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-between; 
+    align-items: center;  
+    padding: 1rem; 
+}
+
+.pa_tops a {
+    border-radius: 100%; 
+    width: 3rem; 
+    height: 3rem; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+}
+
+.pa_tops a lord-icon {
+    height: 4rem; 
+    width: 4rem; 
 }
 
 /* -- GENERAL -- */
-.pa__main, .pa__infos, .pa__pnote, .pa__meteo, .pa__staff, .pa__scen {
+.pa__main, .pa__infos, .pa__pnote, .pa__meteo, .pa__staff, .pa__scen, .pa_tops {
     background: var(--baseClr); 
     filter: var(--drop-shadow); 
     border-radius: var(--radius); 
@@ -65,5 +85,7 @@
 
 /* -- partenaires -- */
 .pa__partners {
-    width: 100%;  
+    width: 13rem;  
+    display: flex; 
+    flex-direction: column; 
 }
