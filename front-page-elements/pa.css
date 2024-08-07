@@ -142,7 +142,7 @@
     display: flex; 
     flex-direction: column; 
     align-items: center;  
-    justify-content: space-around; 
+    justify-content: space-between; 
 }
 
 .pa__partners a {
@@ -187,4 +187,15 @@
     font-family: var(--font2); 
     text-transform: uppercase; 
     font-size: var(--bigger); 
+}
+
+/* bouton */
+.seepartners-button {
+    font-size: var(--small2);
+    font-weight: var(--semibold-fw); 
+    border-radius: 1.6rem !important; 
+}
+
+.seepartners-button::after {
+    border-radius: 1.6rem !important; 
 }

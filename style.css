@@ -438,7 +438,7 @@ hr {
 }
 
 /* --- BOUTONS (nouveau, répondre) --- */
-a.buttons, #main-content .links_bar a, #sort-btn {
+a.buttons, #main-content .links_bar a, #sort-btn, .seepartners-button {
   position: relative; 
   background: var(--bg2); 
   padding: 0.5rem 1rem; 
@@ -460,7 +460,8 @@ a.buttons span {
 a.buttons::after, 
 #main-content .links_bar a::after, 
 #sort-btn::after, 
-.sb-button::after {
+.sb-button::after, 
+.seepartners-button::after {
   content: "";
   position: absolute !important;
   top: 0;
@@ -473,11 +474,11 @@ a.buttons::after,
   transition: var(--base-transi);
 }
 
-a.buttons:hover, #main-content .links_bar a:hover, #sort-btn:hover, .sb-button:hover {
+a.buttons:hover, #main-content .links_bar a:hover, #sort-btn:hover, .sb-button:hover, .seepartners-button:hover {
   transition: var(--base-transi);
 }
 
-a.buttons:hover::after, #main-content .links_bar a:hover::after, #sort-btn:hover::after, .sb-button:hover::after {
+a.buttons:hover::after, #main-content .links_bar a:hover::after, #sort-btn:hover::after, .sb-button:hover::after, .seepartners-button:hover::after {
   opacity: 1; 
 }
 
