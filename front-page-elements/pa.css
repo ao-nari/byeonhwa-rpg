@@ -113,9 +113,13 @@
 .pa-pnotetxt {
     font-family: var(--font2); 
     text-transform: uppercase; 
-    color: var(--textClr); 
     font-size: var(--bigger);  
-    text-align: center; 
+    text-align: center;  
+    font-weight: var(--bold-fw); 
+    background: var(--grad1); 
+    background-size: 100%; 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 /* -- météo -- */
