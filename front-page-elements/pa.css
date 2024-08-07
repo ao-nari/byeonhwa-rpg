@@ -136,7 +136,55 @@
 
 /* -- partenaires -- */
 .pa__partners {
+    padding: 0 1rem 1rem 0; 
+    height: 100%; 
     width: 13rem;  
     display: flex; 
     flex-direction: column; 
+    align-items: center;  
+    justify-content: space-around; 
+}
+
+.pa__partners a {
+    text-align: center;  
+    color: var(--textClr);
+}
+
+.pa__partners a:hover {
+    color: var(--accentClr); 
+}
+
+/* isekai */ 
+.imo {
+    font-family: 'Philosopher', serif; 
+    font-size: var(--medium2); 
+    text-transform: uppercase;  
+    font-weight: var(--bold-fw);
+}
+
+/* lca */
+.lca {
+    font-family: 'Galada', sans serif; 
+}
+
+/* itu */
+.itu {
+    font-family: 'Times New Roman', serif; 
+    text-transform: uppercase; 
+    font-size: var(--medium2); 
+}
+
+.itu-2 {
+    font-family: 'La belle Aurore'; 
+    text-transform: lowercase; 
+    font-size: var(--bigger); 
+    font-weight: var(--base-fw); 
+    letter-spacing: 1.5; 
+}
+
+/* vous ? */
+.become-partners {
+    font-family: var(--font2); 
+    text-transform: uppercase; 
+    font-size: var(--bigger); 
 }
