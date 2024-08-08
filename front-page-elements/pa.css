@@ -200,6 +200,10 @@
 }
 
 /* autres clans */
+.pa__meteo .meteo-in i {
+    text-align: center; 
+}
+
 .pa__meteo .meteo-deg {
     color: var(--baseClr3); 
     font-size: var(--small2); 
