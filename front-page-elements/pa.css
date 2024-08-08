@@ -77,13 +77,16 @@
     padding: 1rem; 
 }
 
-.pa__main .tabs {
+.pa__main .tabs, .pa__staff .staff-title, .pa__scen .scen-title, .pa__meteo .meteo-title {
     font-family: var(--font2); 
     text-transform: uppercase; 
     font-size: var(--bigger); 
+    letter-spacing: 0.5; 
+}
+
+.pa__main .tabs {
     display: flex; 
     justify-content: space-around; 
-    letter-spacing: 0.5; 
 }
 
 .pa__main .tabs .tab.active {
@@ -157,10 +160,27 @@
     height: 21rem; 
 }
 
+.pa__meteo .meteo-title {
+    display: flex; 
+    justify-content: center; 
+    padding: 1rem; 
+    color: var(--accentClr); 
+}
+
 /* -- staff et scénarios -- */
 .pa__staff, .pa__scen {
     width: 30rem; 
     height: 14.5rem; 
+    padding: 1rem;
+}
+
+.pa__staff .staff-title, .pa__scen .scen-title {
+    padding-left: 1rem; 
+    color: var(--accentClr); 
+}
+
+.pa__scen .scen-title {
+    float: right; 
 }
 
 /* -- partenaires -- */
