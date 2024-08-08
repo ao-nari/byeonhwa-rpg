@@ -233,10 +233,6 @@
     color: var(--accentClr); 
 }
 
-.pa__scen .scen-title {
-    float: right; 
-}
-
 /* -- staff -- */
 .staff__int {
     overflow: auto; 
@@ -287,6 +283,44 @@
 .staff__int .staff-infos {
     font-size: var(--small2); 
     text-align: justify; 
+}
+
+/* -- scen -- */
+.pa__scen {
+    overflow-x: auto; 
+    overflow-y: hidden; 
+    display: flex; 
+    flex-wrap: wrap; 
+}
+
+.pa__scen .scen-title {
+    width: 100%; 
+    text-align: right; 
+}
+
+.pa__scen .scen-box a img {
+    height: 5rem; 
+    width: 5rem; 
+    object-fit: cover; 
+    border-radius: var(--small-radius); 
+    opacity: 0.8; 
+}
+
+.pa__scen .scen-box {
+    background: var(--baseClr3-10); 
+    border-radius: var(--small-radius); 
+    padding: 1rem; 
+    display: flex; 
+    height: 70%; 
+    gap: 1rem; 
+}
+
+.pa__scen .scen-infos {
+    font-size: var(--medium); 
+}
+
+.scen-infos .scen-name {
+    font-weight: var(--semibold-fw); 
 }
 
 
