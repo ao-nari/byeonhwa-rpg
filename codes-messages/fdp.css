@@ -174,7 +174,7 @@ tag1, tag2, tag3 {
   justify-content: space-between;
 }
 
-.spoiler_title {
+.fdp .spoiler_title {
   background: linear-gradient(to top, var(--fdpclr), var(--textClr));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
