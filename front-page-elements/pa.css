@@ -180,11 +180,7 @@
     padding: 0 0.5rem; 
 }
 
-.pa__meteo .meteo-in i {
-    text-align: center; 
-}
-
-.pa__meteo .meteo-in > bom, yeoreum, mun, gaeul, gyeoul {
+.pa__meteo > .meteo-in bom, .meteo-in yeoreum, .meteo-in mun, .meteo-in gaeul, .meteo-in gyeoul {
     display: flex; 
     flex-direction: column; 
 }
@@ -217,7 +213,7 @@
     font-size: var(--small2); 
     text-align: justify; 
     overflow: auto; 
-    margin: 1.5rem 0.5rem;  
+    margin: 1rem 0.5rem;  
     padding: 0 0.5rem; 
 }
 
