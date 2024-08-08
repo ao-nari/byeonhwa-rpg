@@ -70,6 +70,35 @@
     height: 21rem; 
 }
 
+.pa__main .tabs-container {
+    display: flex; 
+    flex-direction: column; 
+    height: 100%; 
+    padding: 1rem; 
+}
+
+.pa__main .tabs {
+    font-family: var(--font2); 
+    text-transform: uppercase; 
+    font-size: var(--bigger); 
+    display: flex; 
+    justify-content: space-around; 
+    letter-spacing: 0.5; 
+}
+
+.pa__main .tabs .tab.active {
+    color: var(--textClr); 
+}
+
+/* contenus tabs */
+.tabs-content {
+    overflow: auto; 
+    text-align: justify; 
+    margin: 1rem 0; 
+    padding: 0 1rem; 
+    font-size: var(--medium); 
+}
+
 /* -- infos -- */
 .pa__infos {
     width: 40rem; 
