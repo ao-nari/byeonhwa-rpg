@@ -286,11 +286,15 @@
 }
 
 /* -- scen -- */
-.pa__scen {
-    overflow-x: auto; 
-    overflow-y: hidden; 
+.pa__scen .scen-in {
+    width: 100%; 
+    height: 80%; 
+    overflow-x: auto !important; 
+    overflow-y: hidden !important; 
     display: flex; 
+    flex-direction: column; 
     flex-wrap: wrap; 
+    gap: 1rem; 
 }
 
 .pa__scen .scen-title {
@@ -299,11 +303,17 @@
 }
 
 .pa__scen .scen-box a img {
-    height: 5rem; 
+    height: 7rem; 
     width: 5rem; 
     object-fit: cover; 
     border-radius: var(--small-radius); 
     opacity: 0.8; 
+    transition: var(--base-transi); 
+}
+
+.pa__scen .scen-box a img:hover {
+    opacity: 0.4; 
+    transition: var(--base-transi); 
 }
 
 .pa__scen .scen-box {
@@ -311,18 +321,30 @@
     border-radius: var(--small-radius); 
     padding: 1rem; 
     display: flex; 
+    justify-content: center; 
+    align-items: center; 
     height: 70%; 
+    flex: 1; 
     gap: 1rem; 
+    margin-bottom: 1rem; 
 }
 
+/* bloc infos */
 .pa__scen .scen-infos {
     font-size: var(--medium); 
 }
 
-.scen-infos .scen-name {
+.scen-infos .scen-name, .scen-infos .scen-rank {
     font-weight: var(--semibold-fw); 
+    display: flex; 
+    justify-content: space-between; 
 }
 
+.scen-infos .scen-adj {
+    font-size: var(--small2); 
+    text-align: justify; 
+    padding-top: 0.8rem; 
+}
 
 /* -- partenaires -- */
 .pa__partners {
