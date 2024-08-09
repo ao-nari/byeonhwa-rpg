@@ -378,15 +378,11 @@ a:hover {
 	padding: 1rem; 
 }
 
-#codeBox dd {
-	height: 20rem; 
-}
-
 .codebox code {
-	height: 100%; 
-	display: block; 
-	overflow: auto;  
-	padding: 1rem; 
+	display: block;
+	overflow: auto;
+	padding: 1rem;
+	max-height: 20rem;
 }
 
 /* "copier" */

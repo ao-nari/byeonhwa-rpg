@@ -1,6 +1,8 @@
 :root {
   --fdpshadow: 0px 0px 5px var(--baseClr3-10);
 }
+
+.fdp-idfield br{display:initial !important;}.fdp-statscont br{display:none;}
     
 /* --- container général --- */
 .fdp {

@@ -321,13 +321,13 @@ right, .right {float: right !important;}
 /* --- TW/CW --- */
 tw, .tw, cw, .vw {
   font-weight: var(--bold-fw);
-  text-transform: uppercase; 
 }
 
 tw::before, .tw::before, cw::before, .cw::before {
   background: linear-gradient(to top, var(--akma), var(--akmac));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  text-transform: uppercase; 
 }
 
 tw::before, .tw::before {
