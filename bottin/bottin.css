@@ -15,11 +15,12 @@
 }
 
 .listing-bh .item-row, .listing-bh .sorting-row  {
-  white-space: nowrap; 
-  margin: 0.3rem; 
-  padding: 0.5rem; 
-  background: var(--baseClr-90); 
-  border-radius: var(--small-radius); 
+  white-space: nowrap;
+  margin: 0.3rem;
+  padding: 0.5rem 1rem;
+  background: var(--baseClr-90);
+  border-radius: var(--small-radius);
+  align-items: center;
 }
 
 /* ----------------- */
@@ -38,10 +39,6 @@
 }
 
 /* -- lignes -- */
-.listing-bh .item-row {
-  align-items: center; 
-}
-
 .listing-bh .item-row a {
   font-weight: var(--semibold-fw); 
 }
