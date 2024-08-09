@@ -1,6 +1,30 @@
 /* --- structure bottin --- */
 .listing-bh > .sorting-row, .item-row {
-  display: grid; 
-  grid-template-columns: repeat(5, 1fr); 
-  gap: 5px; 
+  display: grid;
+  grid-template-columns: 10% 25% 20% 20% 25%;
+}
+
+.listing-bh br {
+  display: none; 
+}
+
+.listing-bh {
+  background: linear-gradient(var(--baseClr3-10), var(--baseClr2-20));
+  border-radius: var(--small-radius);
+  padding: 0.5rem; 
+}
+
+.listing-bh .item-row, .listing-bh .sorting-row  {
+  white-space: nowrap; 
+  margin: 0.3rem; 
+  padding: 0.5rem; 
+  background: var(--baseClr-90); 
+  border-radius: var(--small-radius); 
+}
+
+/* ----------------- */
+/* -- titres -- */
+.listing-bh .sorting-row {
+  font-weight: var(--semibold-fw); 
+  text-transform: uppercase; 
 }
