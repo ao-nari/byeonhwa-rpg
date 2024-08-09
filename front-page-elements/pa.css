@@ -94,7 +94,7 @@
 }
 
 /* contenus tabs */
-.tabs-content {
+.pa__main .tabs-content {
     overflow: auto; 
     text-align: justify; 
     margin: 1rem 0; 
