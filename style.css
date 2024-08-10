@@ -6,32 +6,32 @@
   font-size: 62.5%; /* default = 10px = 1rem */
   --body: url('https://i.imgur.com/3AW0kt1.png'); /* fond */
   --pnoteimg: url('https://i.imgur.com/WELyyeO.png'); /* fond patch note pa */
-  --header: url('https://i.imgur.com/8qD0shL.png'); /* banniÃ¨re */
+  --header: url('https://i.imgur.com/8qD0shL.png'); /* bannière */
   --bhavatar: url('https://i.imgur.com/YV00Hh3.png'); /* avatar byeonhwa */
 
   /* --- palette --- */
   --baseClr: #F5FCF1; /* couleur 1 */
-  --baseClr-90: rgba(245, 252, 241, 0.9); /* 90% opacitÃ© */
-  --baseClr-80: rgba(245, 252, 241, 0.8); /* 80% opacitÃ© */
-  --baseClr-70: rgba(245, 252, 241, 0.7); /* 70% opacitÃ© */
-  --baseClr-60: rgba(245, 252, 241, 0.6); /* 60% opacitÃ© */
-  --baseClr-50: rgba(245, 252, 241, 0.5); /* 50% opacitÃ© */
-  --baseClr-40: rgba(245, 252, 241, 0.4); /* 40% opacitÃ© */
-  --baseClr-30: rgba(245, 252, 241, 0.3); /* 30% opacitÃ© */
-  --baseClr-20: rgba(245, 252, 241, 0.2); /* 20% opacitÃ© */
-  --baseClr-10: rgba(245, 252, 241, 0.1); /* 10% opacitÃ© */
+  --baseClr-90: rgba(245, 252, 241, 0.9); /* 90% opacité */
+  --baseClr-80: rgba(245, 252, 241, 0.8); /* 80% opacité */
+  --baseClr-70: rgba(245, 252, 241, 0.7); /* 70% opacité */
+  --baseClr-60: rgba(245, 252, 241, 0.6); /* 60% opacité */
+  --baseClr-50: rgba(245, 252, 241, 0.5); /* 50% opacité */
+  --baseClr-40: rgba(245, 252, 241, 0.4); /* 40% opacité */
+  --baseClr-30: rgba(245, 252, 241, 0.3); /* 30% opacité */
+  --baseClr-20: rgba(245, 252, 241, 0.2); /* 20% opacité */
+  --baseClr-10: rgba(245, 252, 241, 0.1); /* 10% opacité */
 
   --baseClr2: #64A970; /* couleur 2 */
-  --baseClr2-60:rgba(100, 169, 112, 0.6); /* 60% opacitÃ© */
-  --baseClr2-40:rgba(100, 169, 112, 0.4); /* 40% opacitÃ© */
-  --baseClr2-20:rgba(100, 169, 112, 0.2); /* 20% opacitÃ© */
+  --baseClr2-60:rgba(100, 169, 112, 0.6); /* 60% opacité */
+  --baseClr2-40:rgba(100, 169, 112, 0.4); /* 40% opacité */
+  --baseClr2-20:rgba(100, 169, 112, 0.2); /* 20% opacité */
 
   --baseClr3: #769E71; /* couleur 3 */
-  --baseClr3-80: rgba(118, 158, 113, 0.8); /* 80% opacitÃ© */
-  --baseClr3-60: rgba(118, 158, 113, 0.6); /* 60% opacitÃ© */
-  --baseClr3-40: rgba(118, 158, 113, 0.4); /* 40% opacitÃ© */
-  --baseClr3-20: rgba(118, 158, 113, 0.2); /* 20% opacitÃ© */ 
-  --baseClr3-10: rgba(118, 158, 113, 0.1); /* 10% opacitÃ© */ 
+  --baseClr3-80: rgba(118, 158, 113, 0.8); /* 80% opacité */
+  --baseClr3-60: rgba(118, 158, 113, 0.6); /* 60% opacité */
+  --baseClr3-40: rgba(118, 158, 113, 0.4); /* 40% opacité */
+  --baseClr3-20: rgba(118, 158, 113, 0.2); /* 20% opacité */ 
+  --baseClr3-10: rgba(118, 158, 113, 0.1); /* 10% opacité */ 
 
   --accentClr: #85692E; /* accent 1 */
   --accentClr2: #862631; /* accent 2 */
@@ -47,17 +47,17 @@
   --gradClr2: #507446; 
   --gradClr3: #769E71; 
 
-  /* icÃ Â´nes animÃ©es (lord-icon) */
+  /* icÃ Â´nes animées (lord-icon) */
   --lord-icon-primary: #85692E; 
   --lord-icon-secondary: #C7B97B; 
 
   /* --- gradients --- */
-  --bg1: linear-gradient(to bottom, rgba(100, 169, 112, 0.3), transparent); /* baseClr2 30% opacitÃ© > transparent (fond) */
-  --bg2: linear-gradient(to bottom, rgba(100, 169, 112, 0.3), rgba(118, 158, 113, 0.1)); /* baseClr2 30% opacitÃ© > baseClr3 10% opacitÃ© (fond) */
+  --bg1: linear-gradient(to bottom, rgba(100, 169, 112, 0.3), transparent); /* baseClr2 30% opacité > transparent (fond) */
+  --bg2: linear-gradient(to bottom, rgba(100, 169, 112, 0.3), rgba(118, 158, 113, 0.1)); /* baseClr2 30% opacité > baseClr3 10% opacité (fond) */
 
   --grad1: linear-gradient(to right, var(--gradClr2), var(--gradClr3)); /* gradient 2 couleurs */
-  --grad2: linear-gradient(to right, var(--accentClr), var(--gradClr1), var(--accentClr)); /* gradient mÃ©tallisÃ© */
-  --grad2Op: linear-gradient(to right, rgba(133, 105, 46, 0.3), rgba(199, 185, 123, 0.3), rgba(133, 105, 46, 0.3)); /* gradient mÃ©tallisÃ© 30% opacitÃ© */
+  --grad2: linear-gradient(to right, var(--accentClr), var(--gradClr1), var(--accentClr)); /* gradient métallisé */
+  --grad2Op: linear-gradient(to right, rgba(133, 105, 46, 0.3), rgba(199, 185, 123, 0.3), rgba(133, 105, 46, 0.3)); /* gradient métallisé 30% opacité */
 
   /* --- autres --- */
   --small-radius: 0.8rem; /* 8px */
@@ -94,7 +94,7 @@
   --base-fw: 500; 
   --bold-fw: 700; 
 
-  /* --- espacements des caractÃ¨res --- */
+  /* --- espacements des caractères --- */
   --small-lh: 1.3; 
   --base-lh: 1.5; 
 
@@ -109,7 +109,7 @@
   --FAM-chatBackground: var(); /* fond de la fenÃªtre de chat */ 
   --FAM-textAreaBackground: var(); /* fond de la boÃ®te de texte */
   --FAM-msgBackground: var(); /* fond des messages reÃ§us */
-  --FAM-myMsgBackground: var(); /* fond des messages envoyÃ©s */
+  --FAM-myMsgBackground: var(); /* fond des messages envoyés */
   --FAM-quoteBackground: var(); /* fond des citations */
   --FAM-sleepModeBackground: rgba(0, 0, 0, 0.5); /* fond du mode veille */ 
 
@@ -139,32 +139,32 @@
   font-size: 62.5%; /* default = 10px = 1rem */
   --body: url('https://i.imgur.com/BsFKZgm.png'); /* fond */
   --pnoteimg: url('https://i.imgur.com/aEoAdZs.png'); /* fond patch note pa */
-  --header: url('https://i.imgur.com/jUQE2la.png'); /* banniÃ¨re */
+  --header: url('https://i.imgur.com/jUQE2la.png'); /* bannière */
   --bhavatar: url('https://i.imgur.com/yok8Omn.png'); /* avatar byeonhwa */
 
   /* --- palette --- */
   --baseClr: #060813; /* couleur 1 */
-  --baseClr-90: rgba(6, 8, 19, 0.9); /* 90% opacitÃ© */
-  --baseClr-80: rgba(6, 8, 19, 0.8); /* 80% opacitÃ© */
-  --baseClr-70: rgba(6, 8, 19, 0.7); /* 70% opacitÃ© */
-  --baseClr-60: rgba(6, 8, 19, 0.6); /* 60% opacitÃ© */
-  --baseClr-50: rgba(6, 8, 19, 0.5); /* 50% opacitÃ© */
-  --baseClr-40: rgba(6, 8, 19, 0.4); /* 40% opacitÃ© */
-  --baseClr-30: rgba(6, 8, 19, 0.3); /* 30% opacitÃ© */
-  --baseClr-20: rgba(6, 8, 19, 0.2); /* 20% opacitÃ© */
-  --baseClr-10: rgba(6, 8, 19, 0.1); /* 10% opacitÃ© */
+  --baseClr-90: rgba(6, 8, 19, 0.9); /* 90% opacité */
+  --baseClr-80: rgba(6, 8, 19, 0.8); /* 80% opacité */
+  --baseClr-70: rgba(6, 8, 19, 0.7); /* 70% opacité */
+  --baseClr-60: rgba(6, 8, 19, 0.6); /* 60% opacité */
+  --baseClr-50: rgba(6, 8, 19, 0.5); /* 50% opacité */
+  --baseClr-40: rgba(6, 8, 19, 0.4); /* 40% opacité */
+  --baseClr-30: rgba(6, 8, 19, 0.3); /* 30% opacité */
+  --baseClr-20: rgba(6, 8, 19, 0.2); /* 20% opacité */
+  --baseClr-10: rgba(6, 8, 19, 0.1); /* 10% opacité */
 
   --baseClr2: #4B59A5; /* couleur 2 */
-  --baseClr2-60: rgba(75, 89, 165, 0.6); /* 60% opacitÃ© */
-  --baseClr2-40: rgba(75, 89, 165, 0.4); /* 40% opacitÃ© */
-  --baseClr2-20: rgba(75, 89, 165, 0.2); /* 20% opacitÃ© */
+  --baseClr2-60: rgba(75, 89, 165, 0.6); /* 60% opacité */
+  --baseClr2-40: rgba(75, 89, 165, 0.4); /* 40% opacité */
+  --baseClr2-20: rgba(75, 89, 165, 0.2); /* 20% opacité */
 
   --baseClr3: #465399; /* couleur 3 */
-  --baseClr3-80: rgba(70, 83, 153, 0.8); /* 80% opacitÃ© */
-  --baseClr3-60: rgba(70, 83, 153, 0.6); /* 60% opacitÃ© */
-  --baseClr3-40: rgba(70, 83, 153, 0.4); /* 40% opacitÃ© */
-  --baseClr3-20: rgba(70, 83, 153, 0.2); /* 20% opacitÃ© */
-  --baseClr3-10: rgba(70, 83, 153, 0.1); /* 10% opacitÃ© */
+  --baseClr3-80: rgba(70, 83, 153, 0.8); /* 80% opacité */
+  --baseClr3-60: rgba(70, 83, 153, 0.6); /* 60% opacité */
+  --baseClr3-40: rgba(70, 83, 153, 0.4); /* 40% opacité */
+  --baseClr3-20: rgba(70, 83, 153, 0.2); /* 20% opacité */
+  --baseClr3-10: rgba(70, 83, 153, 0.1); /* 10% opacité */
 
   --accentClr: #B4B34F; /* accent 1 */
   --accentClr2: #318388; /* accent 2 */
@@ -177,17 +177,17 @@
   /* --- couleurs pour gradients --- */
   --gradClr1: #5E5B32;  
 
-  /* icÃ Â´nes animÃ©es (lord-icon) */
+  /* icÃ Â´nes animées (lord-icon) */
   --lord-icon-primary: #5E5B32; 
   --lord-icon-secondary: #B4B34F;
 
   /* --- gradients --- */
   --bg1: linear-gradient(to bottom, rgba(75, 89, 165, 0.3), transparent); /* baseClr2 30% > transparent (fond) */
-  --bg2: linear-gradient(to bottom, rgba(117, 134, 227, 0.3), rgba(70, 83, 153, 0.1)); /* textClr 30% opacitÃ© > baseClr3 10% opacitÃ© (fond) */
+  --bg2: linear-gradient(to bottom, rgba(117, 134, 227, 0.3), rgba(70, 83, 153, 0.1)); /* textClr 30% opacité > baseClr3 10% opacité (fond) */
 
-  --grad1: linear-gradient(to right, var(--baseClr2), var(--textClr), var(--baseClr2)); /* gradient mÃ©tallisÃ© */
+  --grad1: linear-gradient(to right, var(--baseClr2), var(--textClr), var(--baseClr2)); /* gradient métallisé */
   --grad2: linear-gradient(to right, var(--gradClr1), var(--accentClr)); /* gradient 2 couleurs */
-  --grad2Op: linear-gradient(to right, rgba(94, 91, 50, 0.3), rgba(180, 179, 79, 0.3)); /* gradient 2 couleurs 30% opacitÃ© */
+  --grad2Op: linear-gradient(to right, rgba(94, 91, 50, 0.3), rgba(180, 179, 79, 0.3)); /* gradient 2 couleurs 30% opacité */
 }
 
 /* ---------------------------- */
@@ -264,7 +264,7 @@ body {
   margin-bottom: 5rem !important; 
 }
 
-/* rÃ©duction taille des emojis forumactif */ 
+/* réduction taille des emojis forumactif */ 
 .emojione {
   width: 18px !important; 
 }
@@ -396,7 +396,7 @@ a:hover {
 	transition: var(--base-transi); 
 }
 
-/* fermÃ© */ .spoiler_content {display: none;}
+/* fermé */ .spoiler_content {display: none;}
 /* ouvert */ .spoiler_content.hidden {display: block;}
 
 /* CITER "NOM" */
@@ -414,7 +414,7 @@ blockquote:has(cite) {
 	margin: 0; 
 }
 
-/* -- sÃ©parateurs -- */
+/* -- séparateurs -- */
 hr, .hr_transp {
   height: 1px;
   border: none; 
@@ -460,7 +460,7 @@ hr {
   background: linear-gradient(to left, transparent, var(--lord-icon-primary), var(--lord-icon-secondary)); 
 }
 
-/* --- BOUTONS (nouveau, rÃ©pondre) --- */
+/* --- BOUTONS (nouveau, répondre) --- */
 a.buttons, #main-content .links_bar a, #sort-btn, .seepartners-button {
   position: relative; 
   background: var(--bg2); 
@@ -744,7 +744,7 @@ form[action="/profile?mode=editprofile&page_profil=friendsfoes"] input {
   display: flex; 
 }
 
-/* liens inutilisÃ©s */
+/* liens inutilisés */
 .navbar li:nth-child(2), .navbar li:nth-child(3), .navbar li:nth-child(4) {
   display: none; 
 }
@@ -844,7 +844,7 @@ a.mainmenu[href^="/"]::before {
   transform: translateX(-50%);
 }
 
-/* --- boutons switch de thÃ¨me et up/down --- */
+/* --- boutons switch de thème et up/down --- */
 @media (prefers-color-scheme: dark) {
 	.color-scheme-toggle .dark {
 		display: none;
@@ -1094,7 +1094,7 @@ a.mainmenu[href^="/"]::before {
   height: 19.6rem; 
 }
 
-/* gÃ©nÃ©ralitÃ©s */
+/* généralités */
 .background__tledesc, .background__lastpost, .container__subforums {
   background: var(--baseClr-90);  
 }
@@ -1106,7 +1106,7 @@ a.mainmenu[href^="/"]::before {
   filter: var(--drop-shadow); 
 }
 
-/* gÃ©nÃ©ralitÃ©s de texte */
+/* généralités de texte */
 .forumtitle, .forum_stats:not(strong), .topicslist-stats:not(strong) { 
   text-transform: uppercase; 
   background: var(--grad1);
@@ -1360,7 +1360,7 @@ a.mainmenu[href^="/"]::before {
 /* ------------------------------------ */
 
 /* --- PAGE LISTE DES SUJETS --- */
-/* --- sujets spÃ©ciaux --- */
+/* --- sujets spéciaux --- */
 .topic-type { 
 	font-size: var(--medium); 
 	font-weight: bold;  
@@ -1583,7 +1583,7 @@ a.mainmenu[href^="/"]::before {
   cursor: pointer; 
 }
 
-/* infos modÃ©ration bas de page */
+/* infos modération bas de page */
 #moderation_forum_tools {
   font-size: var(--medium); 
 }
@@ -1606,7 +1606,7 @@ a.mainmenu[href^="/"]::before {
   margin: 0.5rem 0; 
 }
 
-/* containers divers (titres, prÃ©visualisation, postingbox, dÃ©s, options) */
+/* containers divers (titres, prévisualisation, postingbox, dés, options) */
 .container__title, #preview, #postingbox, .postingbox__dices, .postingbox__options {
   display: flex;
   flex-wrap: wrap;
@@ -1625,7 +1625,7 @@ a.mainmenu[href^="/"]::before {
   padding: 0.5rem 1.5rem; 
 }
 
-/* titres h3 divers (prÃ©visualisation, poster une rÃ©ponse, options, etc) */
+/* titres h3 divers (prévisualisation, poster une réponse, options, etc) */
 .container__title .h3 {
   padding: 0 2rem; 
 }
@@ -1732,7 +1732,7 @@ background: var(--baseClr);
 }
 
 .poster-more:hover .poster-more-list {
-  /* Ã Â  dÃ©finir */
+  /* Ã Â  définir */
 }
 
 .poster-count, .poster-more-list {
@@ -1741,7 +1741,7 @@ background: var(--baseClr);
 
 /* --- container interne --- */
 
-/* dÃ©tails du post (et boutons citer, Ã©diter, etc) */
+/* détails du post (et boutons citer, éditer, etc) */
 .post_details {
   padding: 2rem 2.5rem 0 2.5rem; 
   line-height: var(--small-lh); 
@@ -1777,7 +1777,7 @@ time::before {
   padding-right: 0.3rem; 
 }
 
-/* citer, Ã©diter, etc */
+/* citer, éditer, etc */
 .profile-icons {
   font-size: var(--medium); 
   font-weight: var(--semibold-fw); 
@@ -1875,7 +1875,7 @@ button.rep-button .rep-nb {
 }
 
 .playedby .field_content::before {
-  content: "incarnÃ© par ";
+  content: "incarné par ";
   font-style: italic;
   font-weight: var(--base-fw);
 }
@@ -2190,7 +2190,7 @@ button.rep-button .rep-nb {
   margin-top: 4rem; 
 }
 
-/* container rÃ©ponse rapide */
+/* container réponse rapide */
 .sceditor-container {
   border: none !important;  
 }
@@ -2335,7 +2335,7 @@ form.left, form.right {
   display: flex;
 }
 
-/* posting box, prÃ©visualisation */
+/* posting box, prévisualisation */
 #postingbox, #preview {
   margin-bottom: 0.5rem !important;
 }
@@ -2344,12 +2344,12 @@ form.left, form.right {
 	padding: 0 !important; 
 }
 
-/* "prÃ©visualiser" et "envoyer" */
+/* "prévisualiser" et "envoyer" */
 .posting-buttons {
   margin: 1.5rem auto 2.5rem auto; 
 }
 
-/* --- boÃ®te prÃ©visualisation --- */
+/* --- boÃ®te prévisualisation --- */
 #preview {
   width: 108rem; 
 }
@@ -2401,7 +2401,7 @@ input[name="search_keywords"] {
   height: 2rem !important; 
 }
 
-/* sÃ©lectionnÃ© */
+/* sélectionné */
 input[type=text]:focus, input[type=password]:focus, input[type=email]:focus, input[type=url]:focus, .inputbox:focus {
   background-color: var(--baseClr3-20) !important; 
   outline: 0.2rem solid var(--accentClr) !important; 
@@ -2631,7 +2631,7 @@ form[action="/profile"] .export__profile {
 /* ------------------------------------ */
 /* --- DIVERS --- */
 
-/* --- onglets gÃ©nÃ©raux --- */
+/* --- onglets généraux --- */
 .tabs-content > div {
   display: none;
 }
@@ -2678,12 +2678,12 @@ form[action="/profile"] .export__profile {
 /* ------------------------------------ */
 
 /* --- TOOLTIP (Z) --- */
-/* retirer le fond blanc par dÃ©faut */
+/* retirer le fond blanc par défaut */
 .tooltipster-default{
   background:none !important;
   box-shadow:none !important;
 }
-/* flÃ¨che */
+/* flèche */
 .tooltipster-arrow{display:none !important;}
 
 /* fond, conteneur */
