@@ -180,9 +180,9 @@ munf, .munf {color: var(--munf);}
 /* --- fonctionnement de base --- */
 bomyeo, yeobom, bomga, gabom, bomgyeo, gyeobom, bomak, akbom, bomun, munbom, gayeo, yeoga, yeogyeo, gyeoyeo, yeoak, akyeo, yeomun, munyeo, gagyeo, gyeoga, gaak, akga, gamun, munga, gyeoak, akgyeo, gyeomun, mungyeo, akmun, munak, 
 .bomyeo, .yeobom, .bomga, .gabom, .bomgyeo, .gyeobom, .bomak, .akbom, .bomun, .munbom, .gayeo, .yeoga, .yeogyeo, .gyeoyeo, .yeoak, .akyeo, .yeomun, .munyeo, .gagyeo, .gyeoga, .gaak, .akga, .gamun, .munga, .gyeoak, .akgyeo, .gyeomun, .mungyeo, .akmun, .munak {
-  background-size: 100%; 
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background-size: 100% !important; 
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
 }
 
 /* --- couleur > couleur (et plus) --- */
