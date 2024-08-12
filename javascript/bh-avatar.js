@@ -1,4 +1,5 @@
 // le js de thème control a été adapté (template overall_footer_end) pour intégrer le switch d'avatar selon le clic du bouton 
+// placé dans overall_footer_end
 
 (function () {
     const html = document.documentElement;

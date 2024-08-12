@@ -1,0 +1,235 @@
+<style>
+    .mpread .mp_chain{
+    display: flex; align-items: center; font-size: var(--smallest); color: var(--textClr); margin-left:0.5rem;
+    }
+  .mpread .mp_links{
+    font-size:var(--small);
+    color:var(--txtClr);
+    }
+    .mpread .mp_links span{
+      font-size: var(--small);
+      background: var(--grad2);
+      background-size: 100%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      height: 1.6rem;
+      display: flex;
+      align-items: center;
+      text-transform: uppercase;
+      letter-spacing: 0.1rem;
+      margin: 0 3px;
+  }
+  .mpread .mp_chain a{
+      background: var(--baseClr2);
+      background-size: 100%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+  }
+  .mpread .mp_chain a:hover{
+      background: var(--accentClr);
+      background-size: 100%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+  .mpread .container__title {
+      padding: 0.5rem 1rem;
+      display: flex;
+  }
+  .mp_readtlel {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+  }
+  .mp_readtler {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 10px;
+  }
+  .mpread h1.page-title {
+      max-width: 50rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      position: relative;
+      letter-spacing: 0.1rem;
+      margin: 0 0.5rem;
+    font-size:var(--bigger2) !important;
+  }
+  
+  .mpread .links_bar2 {
+      font-size: var(--small2);
+      text-transform: uppercase;
+      font-weight: var(--semibold-fw);
+      display: flex;
+      align-items: center;
+      margin: 0 0.5rem;
+  }
+  
+  .mpread .links_bar2 a, .mpread .links_bar2 input {
+      position: relative;
+      background: var(--bg2);
+      padding: 0.5rem 1rem;
+      border-radius: var(--small-radius);
+      margin-right: 0.5rem;
+      text-transform: uppercase;
+      font-size: var(--small);
+      font-weight: var(--semibold-fw);
+  }
+  .mpread__profil a, .mpread__profil input {
+      position: relative;
+      background-image: var(--bg1);
+      padding: 0.5rem 1rem;
+      border-radius: var(--small-radius);
+      margin-right: 0.5rem;
+      text-transform: uppercase;
+      font-size: var(--small);
+      background-color: var(--baseClr);
+      box-shadow: var(--drop-shadow);
+      font-weight: var(--semibold-fw);
+      color:var(--textClr);
+  }
+  .mpread__profil a:hover, .mpread__profil input:hover{
+    color:var(--accentClr);
+   }
+  .mpread__from{
+      display: flex;
+      align-items: center;
+      font-size: var(--small);
+      color: var(--textClr);
+      position: relative;
+      margin: 0 0.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05rem;
+  }
+  .mpread .container__post {
+      background: var(--baseClr2-20);
+      width: 81rem;
+      border-radius: 0 1.6rem 1.6rem 0;
+      display: flex;
+      flex-direction: column;
+  }
+  .mpread .post_message.postbody.content {
+      background: var(--baseClr);
+      filter: var(--drop-shadow);
+      margin: 0 2rem 2rem 2rem;
+      font-size: var(--medium);
+      line-height: var(--base-lh);
+      padding: 2.5rem;
+      min-height: unset !important;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex: 100%;
+  }
+  
+  .mpread__form .mpread__profil{
+      justify-content: flex-end;
+      display: flex;
+      width: 100%;
+    }
+  .mpread .post_avatar{
+      display: flex;
+      flex-direction: column;
+      padding: 2rem 1rem;
+      width: 24.5rem;
+      height: fit-content;
+      border-radius: var(--radius);
+      margin: auto;
+  }
+  .mpread .post_details{
+      display: flex;
+      justify-content: space-between;
+      margin: 0 0 2rem 0;
+  }
+  .mpread .post {
+      display: flex;
+      margin: 1rem 0;
+  }</style><section class="mpread"><div class="container__title">
+  
+      <div class="mp_readtlel">
+        <div class="mp_links">
+          <!-- Chaîne de liens -->
+          <div class="mp_chain">
+             <span>{INBOX}</span> 
+            <i class="fas fa-chevron-right fa-icon" aria-hidden="true"></i> <span>{SENTBOX}</span>
+            <i class="fas fa-chevron-right fa-icon" aria-hidden="true"></i> <span>{OUTBOX}</span>
+            <i class="fas fa-chevron-right fa-icon" aria-hidden="true"></i> <span>{SAVEBOX}</span>
+          </div>
+      </div>
+        
+      <div class="links_bar2">
+            <!-- BEGIN switch_post_reply -->
+            <a href="{POST_PM_URL}" class="button2">NOUVEAU</a>
+            <!-- END switch_post_reply -->
+            <!-- BEGIN switch_post_reply -->
+            <a href="{REPLY_PM_URL}" class="button2">RÉPONDRE</a>
+            <!-- END switch_post_reply -->
+      </div>
+  </div>
+  
+      <div class="mp_readtler">
+    <h1 class="page-title">{POST_SUBJECT}</h1>
+   <div class="links_bar2">
+         <form action="{S_PRIVMSGS_ACTION}" method="post" class="mpread__form">
+          <div class="mpread__from">
+       <span class="mpread__profil">
+  <fieldset class="submit-buttons">
+              {S_HIDDEN_FIELDS}
+              <!-- BEGIN switch_save -->
+              <input class="button2" type="submit" name="save" value="{L_SAVE_MSG}" />&nbsp;&nbsp;
+              <!-- END switch_save -->
+  
+              <!-- BEGIN switch_move_profile -->
+              <input class="button2" type="submit" name="moveprofile" value="{L_MOVE_PROFILE}" />&nbsp;&nbsp;
+              <!-- END switch_move_profile -->
+  
+              <input class="button2" type="submit" name="delete" value="{L_DELETE_MSG}" />
+          </fieldset>
+        </span>
+      </div>
+      </form>
+     <div>
+  
+     </div>
+  </div>
+    </div>
+  </div>
+  
+  <div class="post">
+    <div class="post_profile">
+      <div class="post_avatar">{AVATAR_FROM}</div>
+    </div>
+    <div class="container__post">
+    <div class="post_details">
+      
+      <div class="mpread__from">     
+        envoyé par&nbsp;{MESSAGE_FROM}, {POST_DATE}</div>
+   
+      <div class="mpread__from">
+       <span class="mpread__profil">
+         
+          <!-- BEGIN switch_user_contact -->
+          {PROFILE_IMG}
+          <!-- END switch_user_contact -->
+          <!-- BEGIN switch_quote -->
+          {QUOTE_PM_IMG}
+         <!-- END switch_quote -->
+         {EDIT_PM_IMG}       
+        </span>
+      </div>
+    </div>
+    <div class="post_message postbody content">
+      {MESSAGE}
+    </div>    
+  </div>
+  </div>
+  
+  
+  <!-- BEGIN switch_review_box -->
+  {TOPIC_REVIEW_BOX}
+  <!-- END switch_review_box -->
+  
+  
+  </section>

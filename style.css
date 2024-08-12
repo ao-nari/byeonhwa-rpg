@@ -509,6 +509,10 @@ select {
   outline: none; 
 }
 
+.button2 {
+	height: 2.5rem; 
+}
+
 /* -- select (dropdown), input (petits boutons), label (textes divers) -- */
 select, input, .inputbox {
   position: relative;
@@ -975,14 +979,9 @@ a.mainmenu[href^="/"]::before {
   display: flex !important;
   flex-wrap: wrap;
   max-height: 40rem;
-  padding: 0.25rem 0; 
-}
-
-#notif_list .notif_listin {
-	max-height: 39rem; 
-	overflow-y: auto; 
-	overflow-x: hidden; 
-	margin: 0.25rem 0.25rem; 
+  padding: 0.25rem 0;
+  overflow: auto;
+  justify-content: center;
 }
 
 #notif_list .content, .see_all {
@@ -1011,12 +1010,10 @@ a.mainmenu[href^="/"]::before {
   margin-left: 1.5rem; 
 }
 
-.see_all { 
-  width: 100%; 
-  justify-content: center; 
-  text-transform: uppercase; 
-  font-weight: var(--semibold-fw); 
-  background: none; 
+.see_all {
+  text-transform: uppercase;
+  font-weight: var(--semibold-fw);
+  background: none;
 }
 
 /* popup notifications */
@@ -1250,14 +1247,14 @@ a.mainmenu[href^="/"]::before {
 }
 
 .lastpost a[href^="/u"], .color-groups {
-  position: relative; 
-  font-size: var(--medium); 
-  text-transform: uppercase;  
+  position: relative;
+  font-size: var(--medium);
+  text-transform: uppercase;
 }
 
-.color-groups {
+.lastpost a[href^="/u"] {
 	top: 0.5rem;
-	font-style: normal; 
+	font-style: normal;
 }
 
 .lastpost i {
@@ -1373,16 +1370,22 @@ a.mainmenu[href^="/"]::before {
 	align-items: center; 
 }
 
+.topic-type evid2 {
+	margin-right: 0.3rem; 
+}
+
 /* --- sous-forums --- */
 .forum-page_desc {
   width: 100%; 
   margin-bottom: 1rem; 
   padding: 1rem; 
   font-size: var(--medium); 
+  text-align: justify; 
 }
 
 .container__users {
-  display: flex; 
+  display: flex;
+  justify-content: space-between;
 }
 
 #users_here {
@@ -1439,17 +1442,21 @@ a.mainmenu[href^="/"]::before {
 
 /* titre des sujets */
 .infos-titre {
-  width: 74%;
+  width: 72%;
   display: flex; 
   align-items: center; 
   padding-left: 1rem; 
 }
 
 .topictitle {
-  font-size: var(--medium2); 
-  text-transform: uppercase; 
-  color: var(--textClr); 
-  font-weight: var(--semibold-fw); 
+  font-size: var(--medium2);
+  text-transform: uppercase;
+  color: var(--textClr);
+  font-weight: var(--semibold-fw);
+  margin-top: 0.1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /* desc */
@@ -1460,10 +1467,10 @@ a.mainmenu[href^="/"]::before {
 
 /* stats */
 .topicslist-stats {
-  width: 17.75rem; 
-  margin-right: 1rem; 
-  margin-top: 0.4rem !important; 
-  height: 1.6rem !important; 
+  width: 17.75rem;
+  margin-right: 1rem;
+  margin-top: 0.4rem !important;
+  height: 1.6rem !important;
 }
 
 .topicslist-stats strong {
@@ -1517,12 +1524,12 @@ a.mainmenu[href^="/"]::before {
 }
 
 .topicslist-lastpost .lastpost-in {
-  width: 15rem; 
-  line-height: 1; 
-  height: 4rem; 
-  margin: 3.5rem 0 0 0; 
-  display: flex; 
-  flex-direction: column; 
+  width: 16rem;
+  line-height: 1;
+  height: 4rem;
+  margin: 3.5rem 0 0 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .topicslist-img .new-message {
@@ -1622,7 +1629,7 @@ a.mainmenu[href^="/"]::before {
 .container__title {margin-top: 0 !important;}
 
 .container__title {
-  padding: 0.5rem 1.5rem; 
+  padding: 1rem 1.5rem;
 }
 
 /* titres h3 divers (prévisualisation, poster une réponse, options, etc) */
@@ -1662,16 +1669,25 @@ background: var(--baseClr);
 }
 
 /* chaÃ®ne de navigation et pagination */
-.container__title .navigation_links, .container__title .pagination.right {
-  width: 50%; 
+.navigation_links, .pagination.right {
+  width: 50%;
+}
+
+.pagination.right {
+	text-align: right; 
+	padding-right: 0.5rem; 
+}
+
+.pagination.right strong {
+	color: var(--accentClr2) !important; 
 }
 
 .container__title .navigation_chain h1 {
   all: unset; 
 }
 
-.container__title .navigation_chain, .container__title .navigation_chain h1 {
-  font-size: var(--small); 
+.container__title .navigation_chain, .container__title .navigation_chain h1, .pagination.right, .topicslist-pagination {
+  font-size: var(--small2); 
   text-transform: uppercase; 
   font-weight: var(--semibold-fw); 
 }
@@ -1721,22 +1737,37 @@ background: var(--baseClr);
   opacity: 1; 
 }
 
-.poster-more {
-  background-image: var(--baseClr2-20); 
+.poster-more span {
+  background: var(--baseClr2-20); 
   height: 3rem;
   width: 3rem;
   border-radius: 100%;
-  display: flex; 
-  align-items: center; 
-  justify-content: center; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+	font-size: var(--small2); 
+	font-weight: var(--semibold-fw); 
 }
 
-.poster-more:hover .poster-more-list {
-  /* Ã Â  définir */
+.poster-more:hover .poster-more-list, .poster-more:hover .poster-count {
+	display: flex;
+	flex-direction: column;  
+	text-transform: uppercase; 
+	font-size: var(--medium); 
+	font-weight: var(--semibold-fw); 
+	background: var(--baseClr-90); 
+	width: 15rem;   
+	position: relative; 
+	top: -7.8rem; 
+	left: -32rem; 
+	z-index: 999; 
+	padding: 1rem; 
+	border-radius: var(--radius); 
+	border: 0.5rem var(--baseClr2-20) solid; 
 }
 
 .poster-count, .poster-more-list {
-  display: none; 
+	display: none; 
 }
 
 /* --- container interne --- */
@@ -2122,12 +2153,14 @@ button.rep-button .rep-nb {
   margin: 2rem; 
   background: var(--baseClr3-10); 
   border-radius: var(--small-radius); 
-  padding: 1rem;  
+  padding: 0.5rem;  
+  text-align: justify !important;
 }
 
 .post_userinfo .post_userinfoin {
   height: 10rem; 
   overflow: auto;
+  padding: 0.5rem; 
 }
 
 .post_userinfo .field-tw-cw {
@@ -2156,6 +2189,11 @@ button.rep-button .rep-nb {
   border-radius: var(--big-radius); 
   padding: 1rem 1.5rem 6rem 1.5rem; 
   margin-top: 1rem;
+}
+
+.pagination.right a::before, 
+.pagination.right a::after {
+	display: none !important; 
 }
 
 .links_bar__msgslinks {
@@ -2201,7 +2239,6 @@ button.rep-button .rep-nb {
   margin: 0 !important;
   background: var(--baseClr3-10) !important;
   border-radius: var(--radius) !important;
-  overflow: auto;
 }
 
 /* zone de texte */
@@ -2210,7 +2247,7 @@ button.rep-button .rep-nb {
   color: var(--textClr) !important;
   font-family: var(--font1) !important;
   line-height: var(--base-lh);
-  border-radius: 0 0 var(--radius) var(--radius) !important;
+  border-radius: 0 0 0 var(--radius) !important;
 }
 
 /* barre d'outils */
@@ -2356,11 +2393,11 @@ form.left, form.right {
 
 /* contenu */
 #preview .content {
-  width: 105rem; 
-  font-size: var(--medium); 
-  text-align: justify; 
-  padding: 1rem 2rem; 
-  margin: 0 1.5rem; 
+  width: 105rem;
+  font-size: var(--medium);
+  text-align: justify;
+  padding: 1rem 2rem;
+  margin: 1.5rem;
   background: var(--baseClr);
   border-radius: var(--radius);
 }

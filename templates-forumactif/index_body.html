@@ -30,54 +30,121 @@
 <!--------------------------------------------->
 <!------------------ DEBUT PA ----------------->
 
+<!-- polices partenaires -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Galada&family=La+Belle+Aurore&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
 <div class="container__pa">
-    <!-- fond image --> <img class="" src="">
 
     <!-- intérieur -->
      <div class="pa__int">
         <!-- top-sites -->
         <div class="pa_tops">
             <!-- liens top-sites -->
+            <a href="#topsite" target="_blank"><script src="https://cdn.lordicon.com/lordicon.js"></script><lord-icon src="https://cdn.lordicon.com/lgmqrevt.json" trigger="morph" stroke="bold" state="morph-open"></lord-icon></a>
+            <a href="#topsite" target="_blank"><script src="https://cdn.lordicon.com/lordicon.js"></script><lord-icon src="https://cdn.lordicon.com/kgsrmdut.json" trigger="hover" stroke="bold"></lord-icon></a>
+            <a href="#topsite" target="_blank"><script src="https://cdn.lordicon.com/lordicon.js"></script><lord-icon src="https://cdn.lordicon.com/jmeofbeb.json" trigger="hover" stroke="bold"></lord-icon></a>
+            <a href="#topsite" target="_blank"><script src="https://cdn.lordicon.com/lordicon.js"></script><lord-icon src="https://cdn.lordicon.com/velcigpn.json" trigger="hover" stroke="bold"></lord-icon></a>
+            <a href="#topsite" target="_blank"><script src="https://cdn.lordicon.com/lordicon.js"></script><lord-icon src="https://cdn.lordicon.com/yiqaeuwc.json" trigger="hover" stroke="bold"></lord-icon></a>
+            <a href="#topsite" target="_blank"><script src="https://cdn.lordicon.com/lordicon.js"></script><lord-icon src="https://cdn.lordicon.com/kkiecexg.json" trigger="hover" stroke="bold" state="hover-look-around"></lord-icon></a>
+            <a href="#" target="_blank"><span>+</span></a>
         </div>
 
         <!-- contexte/intrigue/event -->
         <div class="pa__main">
-            <!-- onglets -->
-            <!-- contenus onglets -->
-        </div>
+            <div class="tabs-container" data-system="pa-main-tabs">
+                <div class="tabs">
+                    <a href="#pa-contexte" class="tab active">••• contexte</a>
+                    <a href="#pa-intrigue" class="tab">••• intrigue</a>
+                    <a href="#pa-event" class="tab">••• event</a>
+                </div>
+        
+                <div class="tabs-content">
+                    <div id="pa-contexte" class="tab-content active">Au commencement, il n’y avait qu’une faille. Un trou béant qui éventrait la terre. Des créatures ont envahi nos terres et décimé nos enfants alors que nous mourrions face à leur nombre grandissant de jour en jour. Seuls ceux maîtrisant les éléments nous revenaient vivant, les esprits marqués à jamais par des batailles acharnées, mais leur détermination inébranlable. Nos plus grands combattants se sont réunis, et quatre familles ont changé le destin de notre pays. Elles ont bâti leurs clans autour de la porte infernale, condamnant tout démon osant fouler notre sol à payer pour les crimes de ses pairs. Ainsi Byeonhwa est née, ainsi j’ai pris mes fonctions afin de naviguer ces temps de troubles. <a href="t39-contexte">voir le contexte</a></div>
+                    <div id="pa-intrigue" class="tab-content">intrigue content</div>
+                    <div id="pa-event" class="tab-content">event content</div>
+                </div>
+            </div>
+        </div>        
 
         <!-- texte complémentaire -->
         <div class="pa__infos">
-            <p>texte</p>
+            <p class="bh_infos">Forum <b>fantastique</b> situé en <b>Corée du Sud</b> à l’époque moderne dans un univers alternatif <b><span style="color: var(--accentClr2);">⬪</span></b> thèmes matures <b><span style="color: var(--accentClr2);">⬪</span></b> aucun minimum de mots <b><span style="color: var(--accentClr2);">⬪</span></b> recensement à chaque version (tous les 3 mois) <b><span style="color: var(--accentClr2);">⬪</span></b> toutes les origines sont bienvenues !</p>
         </div>
 
         <!-- lien patch note -->
-        <a class="pa__pnote" href="/" target="_blank">
-            <span>patch note version 1</span>
+        <a class="pa__pnote" href="t32-patch-note-de-preouverture" target="_blank">
+            <span class="pa-pnotetxt">patch note préouverture</span>
         </a>
          
         <!-- météo -->
         <div class="pa__meteo">
             <span class="meteo-title">••• été 2024 •••</span>
-            <!-- météo -->
+
+            <div class="meteo-in">
+                <!-- bom --> <bom><i class="fa-solid fa-cloud-sun"></i><span class="meteo-deg">26°C</span></bom>
+                <!-- yeoreum --> <yeoreum><i class="fa-solid fa-sun"></i> <span class="meteo-deg">40°C</span></yeoreum>
+                <!-- centre-ville --> <mun><i class="fa-solid fa-sun"></i> <span class="meteo-deg">32°C</span></mun>
+                <!-- gaeul --> <gaeul><i class="fa-solid fa-cloud-sun"></i> <span class="meteo-deg">24°C</span></gaeul>
+                <!-- gyeoul --> <gyeoul><i class="fa-solid fa-wind"></i><span class="meteo-deg">18°C</span></gyeoul>
+            </div>
+
+            <div class="meteo-text">La <b>canicule</b> est là ! Le <mun>centre</mun> chauffe presque autant que le clan <yeo>estival</yeo>, les clans <bom>printanier</bom> et <gaeul>automnal</gaeul> sont stables, quant au clan <gyeoul>hivernal</gyeoul>, il se démarque par son climat toujours frais.</div>
         </div>
 
         <!-- staff -->
         <div class="pa__staff">
-            <span class="staff-title">••• staff</span>
+            <div class="staff-title">••• staff</div>
             <!-- staff -->
+            <div class="staff__int">
+                <div class="staff-links">
+                    <!-- nans --> <a href="#"><img src="https://i.imgur.com/Bkajnyn.png"><span class="staff-name">nans</span></a>
+                    <!-- yul --> <a href="#"><img src="https://i.imgur.com/CZ7EgCa.png"><span class="staff-name">yul</span></a>
+                    <!-- zion --> <a href="#"><img src="https://i.imgur.com/ujE9h2Y.png"><span class="staff-name">zion</span></a>
+                </div>
+
+                <div class="staff-infos">merci de ne <b>pas</b> mp <b><bh>byeonhwa</bh></b> et de contacter directement le staff en cas de besoin.</div>
+            </div>
         </div>
 
         <!-- scénarios -->
         <div class="pa__scen">
-            <span class="scen-title">scénarios attendus •••</span>
-            <!-- scénarios -->
+            <div class="scen-title">scénarios attendus •••</div>
+
+            <div class="scen-in">
+                <!-- scénario -->
+                <div class="scen-box" style="background: linear-gradient(to top, var(--bhOp), var(--baseClr3-10));">
+                    <a href="#"><img src="https://i.imgur.com/FxX7Gud.png"></a>
+                    <div class="scen-infos">
+                        <div class="scen-name"><a href="#">Nom Prénom</a> <span><b>20</b> ans</span></div>
+                        <div class="scen-rank"><span><ebh><bh>RANG</bh></ebh></span> métier</div>
+                        <div class="scen-adj">qualité, défaut, qualité, défaut, qualité, défaut, qualité, défaut.</div>
+                    </div>
+                </div>
+
+                <!-- scénario -->
+                <div class="scen-box" style="background: linear-gradient(to top, var(--bhOp), var(--baseClr3-10));">
+                    <a href="#"><img src="https://i.imgur.com/FxX7Gud.png"></a>
+                    <div class="scen-infos">
+                        <div class="scen-name"><a href="#">Nom Prénom</a> <span><b>20</b> ans</span></div>
+                        <div class="scen-rank"><span><ebh><bh>RANG</bh></ebh></span> métier</div>
+                        <div class="scen-adj">qualité, défaut, qualité, défaut, qualité, défaut, qualité, défaut.</div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!-- partenaires -->
         <div class="pa__partners">
             <!-- partenaires -->
-            <!-- bouton partenaires -->
+            <!-- isekai --> <a href="https://isekai-monogatari.forumactif.com/" target="_blank" class="imo">isekai monogatari</a>
+            <!-- lca --> <a href="http://www.lights-camera-action.org/" target="_blank" class="lca">lights, camera, action !</a>
+            <!-- itu --> <a href="https://intotheunknown.forumactif.com/" target="_blank" class="itu">into the <span class="itu-2">unknown</span></a>
+            <!-- devenir partenaire --> <a href="#" target="_blank" class="become-partners">vous ?</a>
+
+            <!-- bouton nos partenaires -->
+            <a href="#" target="_blank" class="seepartners-button">nos partenaires</a>
         </div>
      </div>
 </div>
@@ -225,9 +292,9 @@
   $("#nb_members").html($("#nb_members").html().replace("Nous avons", ""));
   $("#nb_members").html($("#nb_members").html().replace("membres enregistrés", " "));
   
-  $("#online_users").html($("#online_users").html().replace("Utilisateurs enregistrés :", "Ils sont en ligne ••• "));
+  $(".online_users").html($(".online_users").html().replace("Utilisateurs enregistrés :", '<span class="onlinenow">Ils sont en ligne&nbsp;&nbsp;•••&nbsp;&nbsp;</span>'));
   
-  $("#lastonline").html($("#lastonline").html().replace("Membres connectés au cours des 48 dernières heures :", "Aperçus récemment ••• "));
+  $(".lastonline").html($(".lastonline").html().replace("Membres connectés au cours des 48 dernières heures :", '<span class="online48">Aperçus récemment&nbsp;&nbsp;•••&nbsp;&nbsp;</span>'));
 </script>
 
 <!-- Conteneur des infos CB -->

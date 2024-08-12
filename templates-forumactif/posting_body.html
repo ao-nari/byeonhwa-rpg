@@ -62,18 +62,18 @@
                     <dt><label>{L_USERNAME}</label></dt>
                     <dd>
                         <!-- BEGIN switch_username -->
-                        <input class="inputbox" style="width:15%;margin:1px 0" type="text" name="username[]" value="{switch_privmsg.switch_username.USERNAME}" /><br />
+                        <input class="inputbox" type="text" name="username[]" value="{switch_privmsg.switch_username.USERNAME}" /><br />
                         <!-- END switch_username -->
-                        <input class="inputbox" style="width:15%;margin:1px 0" type="text" id="username" name="username[]" value="{USERNAME}" tabindex="1" />&nbsp;
+                        <input class="inputbox" type="text" id="username" name="username[]" value="{USERNAME}" tabindex="1" />&nbsp;
                         <img id="add_username" src="{ADD_USERNAME_IMG}" class="selectHover" style="vertical-align:middle" alt="" />&nbsp;
-                        <input class="button2" type="button" id="find_user" value="{L_FIND_USERNAME}" />
                     </dd>
+                  <input class="button2" type="button" id="find_user" value="{L_FIND_USERNAME}" />
                 </dl>
 
                 <!-- BEGIN switch_privmsg_group -->
                 <dl>
                     <dt><label>{switch_privmsg.switch_privmsg_group.L_OR_GROUP}</label></dt>
-                    <dd>{switch_privmsg.switch_privmsg_group.MASS_PM} <input type="button" value="  ?  " title="{switch_privmsg.switch_privmsg_group.MASS_PM_EXPLAIN}" class="button2" /></dd>
+                    <dd>{switch_privmsg.switch_privmsg_group.MASS_PM} </dd>
                 </dl>
                 <!-- END switch_privmsg_group -->
                 <!-- END switch_privmsg -->
@@ -313,6 +313,7 @@
 
 <script src="{JQUERY_DIR}jqmodal/jqmodal.js" type="text/javascript"></script>
 <!-- END switch_privmsg -->
+
 <script type="text/javascript">
 //<![CDATA[
 $(function(){

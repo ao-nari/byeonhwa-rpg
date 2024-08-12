@@ -1,0 +1,160 @@
+<style>.grouplist_container{
+    background: var(--baseClr2-20);
+    border-radius: var(--radius);
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+.grouplist_content{
+    background: var(--baseClr-90);
+    border-radius: var(--radius);
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 30px;
+}
+.grouplist .container__title{
+justify-content:space-evenly !important;
+}
+.grouplist .annexe_links{ width:100%;}
+.grouplist_infos .annexe_links{width:fit-content !important;}
+  
+.grouplist .annexe_links a{
+    font-size: var(--small2);
+    text-transform: lowercase;
+}
+  
+.grouplist .annexe_links div span{
+    background: var(--grad2);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: var(--bigger2);
+ }
+.grouplist_infos{
+    display: flex;
+    width: 100%;
+    white-space: nowrap;
+    padding:0 2rem;
+    justify-content:space-between;
+    align-items:center;
+    position:relative;
+    top:-20px;
+}
+.gl_in{display:flex;}
+.gl_in ul{display:flex;gap:2px;}
+.gl_in a{font-weight:var(--bold-fw);font-family:var(--font2);letter-spacing:0.2rem;text-transform:uppercase;}
+
+.grouplist_self{
+  display:flex;
+  gap:2px;
+  font-size:var(--medium);
+}
+
+.grouplist_group{
+    background: var(--bg2);
+    padding: 10px;
+    border-radius: var(--radius);
+    width: 275px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    background-color: var(--baseClr);
+    gap: 10px;
+}
+
+.group-image{
+    width: 100px;
+    height: 100%;
+    border-radius: var(--radius);
+    object-fit: cover;
+  }
+  
+.grouplist_groupin{
+    display: flex;
+    flex-direction: column;
+    width: -webkit-fill-available;
+    text-align: right;
+    background: linear-gradient(177deg, var(--baseClr), var(--baseClr), var(--glclr));
+    height: 100%;
+    justify-content: center;
+    padding: 10px;
+    border-radius: var(--radius);
+}
+
+.grouplist_members::after {
+    content: " membres";
+}
+.grouplist_members{
+    font-size: var(--small2);
+    text-transform: uppercase;
+    margin: 0px 3px;
+}
+.grouplist_groupname a{
+    font-family: var(--font2);
+    text-transform: uppercase;
+    font-size: var(--bigger);
+    letter-spacing: 0.2rem;
+    font-weight: var(--bold-fw);
+}
+.grouplist_groupname{margin:-5px 0px;}
+.grouplist_groupleg{
+    font-size: var(--small2);
+    text-transform: uppercase;
+    margin: -3px 0px;
+    background: var(--grad2);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: var(--bold-fw);
+}</style>
+
+<section class="grouplist">
+  <div class="container">
+  <div class="container__title">
+    
+    <div class="annexe_links"><div><span>LES GROUPES DE BYEONHWA</span></div></div>
+    
+    <div class="grouplist_infos"><div class="grouplist_self">Vous appartenez au groupe <div class="gl_in">{GROUP_MEMBER_SELECT_NEW}</div></div>
+    
+    <div class="annexe_links">
+      <a href="/">les groupes</a>
+    <a href="/">les énergies</a>
+    <a href="/">contexte</a>
+    </div>
+    </div>
+    </div>
+  
+  <br>
+  
+  <div class="grouplist_container">
+    <div class="grouplist_content">
+
+      
+     <!-- BEGIN switch_display_groups_all -->
+      <!-- BEGIN group_details -->
+      <div class="grouplist_group">
+        <div class="grouplist_aes"><img class="group-image" src="" alt="Group Image"></div>
+        <div class="grouplist_groupin">
+          <span class="grouplist_groupname">
+            <a href="{switch_display_groups_all.group_details.U_GROUP}" {switch_display_groups_all.group_details.GROUP_STYLE}>{switch_display_groups_all.group_details.GROUP_NAME}</a>
+          </span>
+          
+          <span class="grouplist_groupleg"> </span>
+          
+          <center><hr style="opacity: 0.5; margin: 0.5rem 0rem;"></center>
+          
+      <span class="grouplist_members grouplist_members_count">
+        {switch_display_groups_all.group_details.NB_GROUP_MEMBERS} 
+       </span>
+          </div>
+         </div>
+      <!-- END group_details -->
+     <!-- END switch_display_groups_all --> 
+     
+      
+    </div>
+  </div>
+</div>
+</section>

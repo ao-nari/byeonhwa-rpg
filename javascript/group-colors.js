@@ -1,3 +1,5 @@
+// placé dans le template viewtopic_body 
+
 document.addEventListener("DOMContentLoaded", function() {
     var postPseudoSpans = document.querySelectorAll('.post_profile .post_pseudo a[href*="/u"] span');
     console.log(postPseudoSpans); 

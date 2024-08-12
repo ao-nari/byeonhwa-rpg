@@ -1,0 +1,213 @@
+<style>.groupbody_container{
+    background: var(--baseClr2-20);
+    border-radius: var(--radius);
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+.groupbody_content{
+    border-radius: var(--radius);
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 30px;
+}
+.groupbody .container__title{
+justify-content:space-evenly !important;
+}
+.groupbody .annexe_links{ width:100%;}
+.groupbody_infos .annexe_links{width:fit-content !important;margin:0 !important;}
+  
+.groupbody .annexe_links a{
+    font-size: var(--small2);
+    text-transform: lowercase;
+}
+  
+.groupbody .annexe_links div span{
+    font-size: var(--bigger2);
+    background: var(--grad2);
+    background-size: 100%;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent;
+    font-weight: var(--bold-fw);
+ }
+.groupbody_infos{
+    display: flex;
+    width: 100%;
+    white-space: nowrap;
+    padding:0 2rem;
+    justify-content:space-between;
+    align-items:center;
+    position:relative;
+    top:-10px;
+}
+.groupbody_self{
+  display:flex;
+  gap:2px;
+  font-size:var(--medium);
+  text-transform:uppercase;
+}
+
+.group_count {
+    position: relative;
+    z-index: 1;
+}
+
+.groupbody_desc{
+    background: var(--baseClr-60);
+    padding: 10px;
+    border-radius: var(--radius);
+    width:100%;
+}
+.groupbody_descin{
+    border-radius: var(--radius);
+    padding: 20px;
+    font-size: var(--medium2);
+    text-align: justify;
+    display: flex;
+    gap: 30px;
+}
+
+.selfin{
+    background: var(--grad2);
+    background-size: 100%;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent;
+    font-weight: var(--bold-fw);
+}
+.selfcount{
+    opacity: 0.8;
+    margin: 0 0.5rem;
+    font-weight: 600;
+  }
+.groupbody_rows{
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    align-items: center;
+    justify-content: start;
+    flex-wrap: wrap;
+    background: var(--baseClr-80);
+    padding: 20px 15px;
+    border-radius: var(--radius);
+}
+.groupbody_row{
+    width: 460px;
+    background: var(--bg2);
+    padding: 10px;
+    border-radius: var(--radius);
+    font-size: var(--medium);
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+}
+
+.bodygroup-image{border-radius:var(--radius);
+  background:var(--bg2);
+  padding:7px;
+  }
+.bodygroup_descg{
+    padding: 7px;
+    background: var(--bg2);
+    border-radius: var(--radius);
+    font-size: var(--medium2);
+    display: flex;
+    align-items: center;
+    text-align-last: center;
+}
+.bodygroup_descgi{
+    background: var(--baseClr);
+    padding: 30px;
+    border-radius: var(--radius);
+    width: 100%;
+    height: 100%;
+    font-size: var(--medium);
+    display: flex;
+    align-items: center;
+    text-align: justify;
+    text-align-last: justify;
+}
+
+.groupbody_row lord-icon{
+    width: 18px;
+    height: 18px;
+}
+.groupbody_profile{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.groupbody_messages{
+    font-size: var(--small2);
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    opacity: 0.7;
+}</style>
+
+<section class="groupbody">
+  <div class="container">
+  <div class="container__title">
+    
+<div class="annexe_links">
+    <div>
+        <span class="group_name" data-group-name="{GROUP_NAME}">{GROUP_NAME}</span>
+    </div>
+</div>
+
+<div class="groupbody_infos">
+    <div class="groupbody_self">
+        <!-- BEGIN switch_count_users_group -->
+       <span class="selfin"> </span> <span class="selfcount"><b class="group_count">{switch_count_users_group.GROUP_COUNT}</b> membres</span>
+        <!-- END switch_count_users_group -->
+    </div>
+      
+    
+    <div class="annexe_links">
+       
+    </div>
+    </div>
+    
+  
+    
+    </div>
+  
+  <br>
+  
+  <div class="groupbody_container">
+    <div class="groupbody_content">
+
+           <div class="groupbody_desc">
+       <div class="groupbody_descin">
+        <div class="bodygroup_aes"><img class="bodygroup-image" src="" alt="Group Image"></div> 
+          <div class="bodygroup_descg">
+            <div class="bodygroup_descgi">{GROUP_DESC}</div>
+            </div>
+       </div>
+    </div>
+      
+      <div class="groupbody_desc">
+      <center>
+        <div class="groupbody_rows">
+        <!-- BEGIN member_row -->
+        <div class="groupbody_row">
+          <div class="groupbody_profile">
+          <a href="{member_row.U_VIEWPROFILE}" class="profile-link" data-profile-url="{member_row.U_VIEWPROFILE}"><lord-icon src="https://cdn.lordicon.com/xfzuyvam.json" trigger="hover" stroke="bold"></a>
+          {member_row.USERNAME}
+          </div>
+          <span class="groupbody_messages">{member_row.POSTS} messages</span>
+         
+        </div>     
+      <!-- END member_row -->
+        </div>
+        </center>
+      </div>
+          </div>
+         </div>
+     
+      
+    </div>
+  </div>
+</div>
+</section>
