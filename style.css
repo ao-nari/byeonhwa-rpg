@@ -1633,10 +1633,6 @@ a.mainmenu[href^="/"]::before {
   padding: 1rem 1.5rem;
 }
 
-.navigation_links {
-	width: 100%; 
-}
-
 /* titres h3 divers (prévisualisation, poster une réponse, options, etc) */
 .container__title .h3 {
   padding: 0 2rem; 
@@ -1750,8 +1746,12 @@ background: var(--baseClr);
 }
 
 .pagination {
-	display: flex; 
-	align-items: center; 
+	display: flex;
+	align-items: center;
+}
+
+.container__paglinks .pagination {
+	align-items: flex-start; 
 }
 
 .pagination i {
