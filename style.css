@@ -291,13 +291,14 @@ h1, .h1,  h1.page-title, h2, .h2 {
 }
 
 h1.page-title {
-  max-width: 50rem; 
+  max-width: 50rem;
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis; 
-  position: relative; 
-  margin-left: 0.5rem; 
+  text-overflow: ellipsis;
+  position: relative;
+  margin-left: 0.5rem;
   letter-spacing: 0.1rem;
+  width: 100%;
 }
 
 h2, .h2 {
@@ -1630,6 +1631,10 @@ a.mainmenu[href^="/"]::before {
 
 .container__title {
   padding: 1rem 1.5rem;
+}
+
+.navigation_links {
+	width: 100%; 
 }
 
 /* titres h3 divers (prévisualisation, poster une réponse, options, etc) */
