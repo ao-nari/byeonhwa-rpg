@@ -7,17 +7,19 @@
     <!----------------------------------------------->
     <!-- LIENS DE NAVIGATION -------------->
     
-    <div class="navigation_links">
-        <!-- Chaîne de lien : Catégorie > Forum > Sous-fo -->
-        <span class="navigation_chain">
-            {NAV_CAT_DESC}
+    <div class="container__paglinks">
+        <div class="navigation_links">
+            <!-- Chaîne de lien : Catégorie > Forum > Sous-fo -->
+            <span class="navigation_chain">
+                {NAV_CAT_DESC}
+            </span>
+        </div>
+
+        <!-- Pagination -->
+        <span class="pagination right">
+            {PAGINATION}
         </span>
     </div>
-
-    <!-- Pagination -->
-    <span class="pagination right">
-        {PAGINATION}
-    </span>
 
     <div class="title_posterslist">
         <!-- Liste des participants du sujet -->
@@ -207,23 +209,25 @@
 <div class="container__footermsgs">
     <!--- BARRE DE GESTION --->
     <div class="links_bar__msgslinks">
-        <!-- Lien "surveiller le sujet" -->
-        <!-- BEGIN switch_user_logged_in -->
-        <!-- BEGIN watchtopic -->
-        <span class="specials_links">{S_WATCH_TOPIC}</span>
-        <!-- END watchtopic -->
-        <!-- END switch_user_logged_in -->
-        
-        <!-- BEGIN switch_plus_menu -->
-        <!-- Lien "sujets surveillés" -->
-        <a class="specials_links" href="{U_WATCHSEARCH_JS_PLUS_MENU}">Sujets surveillés</a>
-        <!-- END switch_plus_menu -->
+        <div class="footerlinks">
+            <!-- Lien "surveiller le sujet" -->
+            <!-- BEGIN switch_user_logged_in -->
+            <!-- BEGIN watchtopic -->
+            <span class="specials_links">{S_WATCH_TOPIC}</span>
+            <!-- END watchtopic -->
+            <!-- END switch_user_logged_in -->
+            
+            <!-- BEGIN switch_plus_menu -->
+            <!-- Lien "sujets surveillés" -->
+            <a class="specials_links" href="{U_WATCHSEARCH_JS_PLUS_MENU}">Sujets surveillés</a>
+            <!-- END switch_plus_menu -->
 
-        <!-- BEGIN switch_plus_menu -->
-        <span class="right">
-            <a href="{U_FAVOURITE_JS_PLUS_MENU}">Ajouter aux favoris</a>
-        </span>
-        <!-- END switch_plus_menu -->
+            <!-- BEGIN switch_plus_menu -->
+            <span class="right">
+                <a href="{U_FAVOURITE_JS_PLUS_MENU}">Ajouter aux favoris</a>
+            </span>
+            <!-- END switch_plus_menu -->
+        </div>
 
         <!-- Pagination -->
         <!-- BEGIN topicpagination -->

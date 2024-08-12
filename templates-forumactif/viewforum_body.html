@@ -8,11 +8,6 @@
         </span>
     </div>
 
-    <!-- pagination -->
-    <span class="right pagination page-topic">
-        {PAGINATION}
-    </span>
-
     <!-- Titre liste des sujets -->
     <h1 class="page-title">{FORUM_NAME}</h1>
 
@@ -93,7 +88,7 @@
 <div class="container__footertopics">
 
     <!-- LIENS UTILES -------------->
-    <span class="links_bar__msgslinks">
+    <span class="links_bar__msgslinks topics">
         <a href="{U_EGOSEARCH_JS_PLUS_MENU}">Voir ses messages</a><a href="{U_NEWPOSTS_JS_PLUS_MENU}">Nouveaux messages depuis la dernière visite</a><a href="{U_UNANSWERED_JS_PLUS_MENU}">Messages sans réponses</a>
     </span>
 
@@ -124,14 +119,6 @@
             $("#users_here").html($("#users_here").html().replace("Utilisateurs parcourant actuellement ce forum",
                 "Actuellement sur ce forum"));
         </script>
-      
-        <!-- Conteneur : utilisateurs et pagination -->
-        <div class="navigation_links">
-            <!-- Pagination -->
-            <span class="right pagination page-topic">
-                {PAGINATION}
-            </span>
-        </div>
     </span>
 </div>
 
