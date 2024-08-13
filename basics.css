@@ -347,3 +347,37 @@ twhide, .twhide {
 twhide:hover, .twhide:hover {
   filter: none; 
 }
+
+/* -- tags -- */
+bh_taken, bh_free, bh_npc, bh_res, bh_scen {
+  font-weight: var(--semibold-fw); 
+  text-transform: uppercase; 
+  font-size: var(--small); 
+  padding: 0.2rem 1rem; 
+  border-radius: var(--small-radius);   
+}
+
+bh_taken {
+  background: var(--akmaOp); 
+  color: var(--akma); 
+}
+
+bh_free {
+  background: var(--yeoOp); 
+  color: var(--yeo); 
+}
+
+bh_res {
+  background: var(--gaeulOp); 
+  color: var(--gaeul); 
+}
+
+bh_npc {
+  background: var(--bhOp); 
+  color: var(--bh); 
+}
+
+bh_scen {
+  background: var(--munOp); 
+  color: var(--mun); 
+}
