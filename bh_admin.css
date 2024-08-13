@@ -334,6 +334,7 @@
   background: var(--baseClr-90); 
   border-radius: var(--small-radius); 
   padding: 0.5rem; 
+  text-align: justify !important;
 }
 
 .vc-grid-title {
