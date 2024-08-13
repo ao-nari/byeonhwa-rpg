@@ -335,3 +335,25 @@
   border-radius: var(--small-radius); 
   padding: 0.5rem; 
 }
+
+.vc-grid-title {
+  all: unset; 
+  text-transform: uppercase; 
+  font-size: var(--small2) !important; 
+  font-weight: var(--semibold-fw); 
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  justify-content: space-between;
+  color: var(--accentClr); 
+}
+
+.vc-grid-title::after {
+  display: inline-block;
+  content: "";
+  height: 1px;
+  width: 100%;
+  background: var(--accentClr);
+  margin-left: 1rem;
+  opacity: 0.5;
+}
