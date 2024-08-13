@@ -309,3 +309,29 @@
     margin-left: 1rem; 
     opacity: 0.5;
 }
+
+/* ----------- STYLES SPECIAUX -------- */
+
+/* --- tableau valeurs groupes --- */
+.vc-grid {
+  width: 90%; 
+  background: linear-gradient(to top, var(--bomOp), var(--baseClr3-10)); 
+  display: grid; 
+  grid-template-columns: 1fr 1fr;  
+  gap: 0.5rem; 
+  padding: 0.5rem; 
+  border-radius: var(--small-radius); 
+  margin: auto; 
+}
+
+.vc-grid .vc-grid-in {
+  display: flex; 
+  flex-direction: column; 
+  gap: 0.5rem; 
+}
+
+.vc-grid .elem {
+  background: var(--baseClr-90); 
+  border-radius: var(--small-radius); 
+  padding: 0.5rem; 
+}
