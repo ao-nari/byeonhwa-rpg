@@ -1758,6 +1758,18 @@ background: var(--baseClr);
 	font-size: var(--small); 
 }
 
+.container__paglinks .pagination i, 
+.container__footermsgs .pagination i {
+	font-size: var(--smallest); 
+	margin-right: 0.2rem; 
+}  
+
+.container__paglinks .pagination span:first-of-type,
+.container__footermsgs .pagination span:first-of-type {
+	display: flex; 
+	align-items: center; 
+}
+
 .container__title .navigation_chain {
 	display: flex; 
 	align-items: center; 
