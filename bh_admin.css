@@ -375,10 +375,9 @@
 }
 
 .group-family .family-card .card-in {
-  display: grid; 
-  background: var(--baseClr-90); 
-  border-radius: var(--small-radius); 
-  padding: 0.5rem; 
+  background: var(--baseClr-90);
+  border-radius: var(--small-radius);
+  padding: 0.5rem;
 }
 
 .familyc-title {
