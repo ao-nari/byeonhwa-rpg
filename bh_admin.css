@@ -325,9 +325,9 @@
 }
 
 .vc-grid .vc-grid-in {
-  display: flex; 
-  flex-direction: column; 
-  gap: 0.5rem; 
+  display: grid;
+  gap: 0.5rem;
+  grid-template-rows: 20% 20% 55%;
 }
 
 .vc-grid .elem {
