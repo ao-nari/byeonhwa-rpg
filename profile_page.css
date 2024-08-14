@@ -441,7 +441,8 @@ CHAMP DIALOGUES : #field_id14 = dialogues
 
 /* --------------------- */
 /* --- style des profils --- */
-.container__profile .profile_field strong {
+.container__profile .profile_field strong, 
+.post_userinfo .user_field strong {
     font-weight: var(--bold-fw); 
     background: var(--grad1); 
     background-size: 100% !important; 
@@ -449,7 +450,8 @@ CHAMP DIALOGUES : #field_id14 = dialogues
     -webkit-text-fill-color: transparent !important;
 }
 
-.container__profile .profile_field u {
+.container__profile .profile_field u,
+.post_userinfo .user_field u {
     text-decoration: none; 
     font-weight: var(--semibold-fw); 
     background: var(--grad2); 
@@ -458,7 +460,8 @@ CHAMP DIALOGUES : #field_id14 = dialogues
     -webkit-text-fill-color: transparent !important;
 }
 
-.container__profile .profile_field strike {
+.container__profile .profile_field strike,
+.post_userinfo .user_field strike {
     text-decoration: none; 
     font-weight: var(--semibold-fw); 
     color: var(--accentClr2); 
@@ -466,8 +469,11 @@ CHAMP DIALOGUES : #field_id14 = dialogues
 
 /* -- titres -- */
 .container__profile .profile_field h2, 
-.container__profile .profile_field  h3, 
-.container__profile .profile_field h4 {
+.post_userinfo .user_field h2, 
+.container__profile .profile_field  h3,
+.post_userinfo .user_field h3, 
+.container__profile .profile_field h4, 
+.post_userinfo .user_field h4 {
     all: unset; 
     background-size: 100%; 
     -webkit-background-clip: unset !important;
@@ -476,26 +482,24 @@ CHAMP DIALOGUES : #field_id14 = dialogues
     font-weight: var(--semibold-fw); 
 }
 
-.container__profile .profile_field h2 {
+.container__profile .profile_field h2, 
+.post_userinfo .user_field h2 {
     font-family: var(--font2); 
     text-transform: uppercase; 
     
 }
 
-.container__profile .profile_field h3 {
+.container__profile .profile_field h3, 
+.post_userinfo .user_field h3 {
     background: var(--bg2);
     border-radius: 0.5rem;
     padding: 0 0.5rem;
 }
 
-.container__profile .profile_field h4 {
+.container__profile .profile_field h4, 
+.post_userinfo .user_field h4 {
     background: var(--grad2Op) !important;
     border-radius: 0.5rem;
     padding: 0 0.5rem;
     color: var(--accentClr); 
-}
-
-/* blockquote */
-.container__profile .profile_field blockquote {
-    background: var(--baseClr3-10); 
 }
