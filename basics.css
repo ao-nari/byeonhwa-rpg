@@ -277,7 +277,15 @@ munak, .munak {background: var(--munak);}
 
 
 /* --- évidences : evid, evid2, evid3 --- */
-evid, .evid {
+grad1, .grad1 {
+  background: var(--grad1); 
+  font-weight: var(--semibold-fw); 
+  background-size: 100%; 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+evid, .evid, grad2, .grad2 {
   background: var(--grad2); 
   font-weight: var(--semibold-fw); 
   background-size: 100%; 
