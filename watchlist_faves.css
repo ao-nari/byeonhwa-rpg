@@ -1,0 +1,280 @@
+/*------ WATCH SEARCH ------*/
+
+.watchsearch .table1{
+background: var(--baseClr2-20);
+border-radius: var(--radius);
+padding: 2rem;
+}
+
+.watchsearch #cp-main {
+background-color: unset !important;
+padding: 0 !important;
+margin: 0 !important;
+}
+
+.watchsearch .table1 tr th{display:none;}
+
+.watchsearch .row2, .watchsearch .row1{
+background: var(--baseClr-90);
+display: flex;
+padding: 2rem;
+border-radius: var(--radius);
+width: 100%;
+justify-content: space-between;
+filter: var(--drop-shadow);
+font-size: var(--medium);
+text-transform: uppercase;
+font-weight: var(--semibold-fw);
+text-align: right;
+}
+.watchsearch .row2 img, .watchsearch .row1 img{max-height:30px;}
+
+.watchsearch tbody{
+display: flex;
+flex-direction: column;
+gap: 1.5rem;
+}
+
+.watchsearch .old-message {
+display: none; 
+}
+
+.watchsearch .new-message {
+display: flex;
+align-items: center;
+justify-content: center;
+position: relative;
+color: var(--accentClr);
+font-style: normal;
+text-transform: uppercase;
+font-size: var(--smaller);
+font-weight: var(--semibold-fw);
+}
+
+.watchsearch .panel p, .favouritesearch .panel p {
+font-size: var(--medium2);
+display: flex;
+gap: 10px;
+align-items: center;
+}
+
+.watchsearch .new-message::after {
+content: ""; 
+display: block; 
+position: absolute; 
+top: 0; 
+width: 140%; 
+height: 100%; 
+border-radius: var(--radius); 
+background: var(--grad2); 
+opacity: 0.3;  
+}
+
+.watchsearch .mobile-visible{display:none;}
+.watchsearch .topictitle{
+width: 300px;
+white-space: nowrap;
+display: block;
+}
+.watchsearch .mobile-hidden{
+width:115px;
+}
+
+/*------ FAVOURITES ------*/
+.favouritesearch #cp-main {
+background-color: unset !important;
+padding: 0 !important;
+margin: 0 !important;
+}
+.favouritesearch .panel.msgdie-panel .inner h1.page-title{display:none;}  
+.favouritesearch .panel.msgdie-panel .inner {
+text-align: center;
+display: flex;
+justify-content: center;
+align-items: center;
+padding-top: 2rem;
+}
+.favouritesearch .favourites__tle {
+display: flex;
+flex-direction: column;
+width: 100%;
+align-items: flex-end;
+background: var(--baseClr-90);
+padding: 2rem;
+border-radius: var(--radius);
+margin: 1rem 0;
+}
+
+.favouritesearch h1.page-title {
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+position: relative;
+margin: -0.5rem 1rem;
+}
+.favouritesearch h1.page-title::after {
+content: " sujet(s) favori(s)";
+}
+
+.favouritesearch .panel p {
+font-size: var(--small2);
+text-transform: uppercase;
+letter-spacing: 0.1rem;
+}
+
+.favouritesearch .favourites__subtle{
+display: flex;
+align-items: center;
+gap: 10px;
+}
+.favouritesearch .button1{
+text-transform: uppercase;
+font-size: var(--small);
+font-weight: var(--semibold-fw);
+letter-spacing: 0.1rem;
+}
+.favouritesearch .post {
+display: flex;
+margin: 0.5rem 0;
+background-image: var(--bg1);
+padding: 2rem;
+border-radius: var(--radius);
+width: 49%;
+filter: var(--drop-shadow);
+background-color: var(--baseClr-70);
+}
+.favouritesearch .posts {
+width: 100%;
+background: var(--baseClr2-20);
+border-radius: var(--radius);
+padding: 2rem;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+gap: 2rem;
+}
+.favouritesearch .postdetails {
+background: var(--baseClr-90);
+width: 100%;
+border-radius: var(--radius);
+padding: 2rem;
+filter: var(--drop-shadow);
+}
+.favourites__topictle{
+width: 100%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+text-transform: uppercase;
+}
+.topicforum{
+font-size:var(--small);
+text-transform:uppercase;
+}
+.topicforum::before{
+content: "dans ";
+color:var(--textClr);
+}
+
+.favouritesearch .old-message {
+display: none; 
+}
+
+.favouritesearch .new-message {
+display: flex;
+align-items: center;
+justify-content: center;
+position: relative;
+color: var(--accentClr);
+font-style: normal;
+text-transform: uppercase;
+font-size: var(--smaller);
+font-weight: var(--semibold-fw);
+}
+
+.favouritesearch img{display:none;}
+
+.favouritesearch .new-message::after {
+content: ""; 
+display: block; 
+position: absolute; 
+top: 0; 
+width: 140%; 
+height: 100%; 
+border-radius: var(--radius); 
+background: var(--grad2); 
+opacity: 0.3;  
+}
+
+.favourites__topictle .topictitle { font-size: var(--big);font-family: var(--font2); }
+.favourites__topicleg {
+display: flex;
+align-items: center;
+justify-content: space-between;
+text-transform: uppercase;
+font-size: var(--small2);
+font-weight: var(--semibold-fw);
+}
+
+.favouritesearch .auteur::before{
+content:"posté par ";
+color:var(--textClr);
+}
+.favouritesearch .reponses::after{
+content:" réponses";
+}
+.favouritesearch .vues::after{
+content:" vues";
+}
+.favouritesearch .panel .inner hr {
+display: inherit;
+margin: 0.75rem 0px;
+opacity: 0.5;
+}
+
+.favouritesearch .lastpost-infos{
+width: fit-content;
+display: flex;
+flex-direction: row-reverse;
+font-size: var(--small2);
+text-transform: uppercase;
+font-weight: var(--semibold-fw);
+align-items:center;
+}
+.favourites__foot{
+display: flex;
+justify-content: space-between;
+align-items: center;
+background: var(--bg2);
+padding: 0.5rem;
+border-radius: var(--small-radius);
+margin: 0.5rem -0.5rem;
+}
+.favouritesearch .favourites__foot .posts{
+width: fit-content;
+padding: 0.3rem;
+border-radius: var(--small-radius);
+background: none;
+}
+
+.favouritesearch .favourites__foot .lastpost-infos a span strong::after{
+content: " le ";
+color: var(--textClr);
+margin: 0 0.4rem 0 0;
+}
+.favouritesearch .favourites__foot .lastpost-infos a span strong::before{
+content: "dernier message par ";
+color: var(--textClr);
+margin: 0 0.4rem 0 0;
+}
+
+
+/* A PRECISER (sinon ça enlève les avatars partout) */
+/* .lastpost img{display:none;} */
+
+.favouritesearch input[type=checkbox]{width: 9px; height: 9px;} 
+.favourites__foot img{
+display: block;
+margin-right: 0.4rem;
+width: 7px;
+}

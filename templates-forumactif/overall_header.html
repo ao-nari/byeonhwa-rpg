@@ -1,2248 +1,408 @@
-<style>
-	/*------ STA USERS (historique des sujets) ------*/
-	
-	  .stauser .old-message {
-	display: none; 
-  }
-  
-  .stauser .new-message {
-	  display: flex;
-	  align-items: center;
-	  justify-content: center;
-	  position: relative;
-	  color: var(--accentClr);
-	  font-style: normal;
-	  text-transform: uppercase;
-	  font-size: var(--smaller);
-	  font-weight: var(--semibold-fw);
-  }
-	
-  .stauser .new-message::after {
-	content: ""; 
-	display: block; 
-	position: absolute; 
-	top: 0; 
-	width: 140%; 
-	height: 100%; 
-	border-radius: var(--radius); 
-	background: var(--grad2); 
-	opacity: 0.3;  
-  }
-   
-  .stauser .topicslist__infos .topicslist_infos {display:none;}
-	
-	.stauser .container__topics {
-	  background: var(--baseClr2-20);
-	  border-radius: var(--radius);
-	  padding: 1rem;
-  }
-	
-  .stauser .topicslist_infos {width: 74%; display: flex; align-items: center; padding-left: 1rem; }
-  .stauser .topicslist-img{position:absolute;}  
-	/*------ SPA USERS (historique des messages) ------*/ 
-	
-	/* titre de la page (xx sujets trouvés) */
-	
-	.spauser .container__title h1.page-title {
-	  max-width: unset !important;
-	  white-space: nowrap;
-	  overflow: hidden;
-	  text-overflow: ellipsis;
-	  position: relative;
-	  margin-left: 0.5rem;
-	  letter-spacing: 0.1rem;
-  }
-  
-	/* conteneur du message */
-  .spauser .post_search {
-	  background: var(--baseClr2-20);
-	  border-radius: var(--radius);
-	  display: flex;
-	  flex-direction: column;
-	  margin:0.5rem 0;
-  }
-  
-	/* informations du message */
-  .spauser .postsearch_infos {
-	  display: flex;
-	  justify-content: space-between;
-	  font-size: var(--medium);
-	  text-transform: uppercase;
-	  align-items: center;
-	  width: 100%;
-	  padding: 0 3.5rem;
-  }
-  
-	/* posté par xx dans xx (xx) */
-  .spauser .spainfos{
-	  display: flex;
-	  gap: 0.25rem;
-  }
-  
-	/* xx vues xx réponses */
-  .spastats{
-	display:flex;
-	gap:0.5rem;
-	}
-	
-  .spastats span{
-	  background-image: var(--bg1);
-	  padding: 0.5rem;
-	  border-radius: var(--small-radius);
-	  filter: var(--drop-shadow);
-	  background-color: var(--baseClr-60);
-	  font-size: var(--small);
-	  letter-spacing: 0.05rem;
-  }
-	
-	
-	/* contenu du message */
-   .spauser .postsearch_content {
-	  background: var(--baseClr);
-	  border-radius: var(--radius);
-	  filter: var(--drop-shadow);
-	  margin: 0 2rem 2rem 2rem;
-	  padding: 2.5rem;
-	  font-size: var(--medium);
-  }
-	
-	/* footer */
-	
-  .spafooter {
-	  display: flex;
-	  background: var(--baseClr-90);
-	  justify-content: space-between;
-	  padding: 2rem 3.5rem 0 3.5rem;
-	  margin: 0.5rem 0;
-	  border-radius: var(--radius);
-	  filter: var(--drop-shadow);
-  }
-  
-	/* form sauter vers */
-  .stauser .right, .spafooter .right {
-	  display: flex;
-	  align-items: center;
-	  text-transform: uppercase;
-	  font-size: var(--medium);
-	  font-weight: var(--semibold-fw);
-	  letter-spacing: 0.1rem;
-	  gap: 0.5rem;
-  }
-  
-	/* voir la page x */
-  .spafooter .pagination {
-	  font-size: var(--medium);
-	  text-transform: uppercase;
-	  font-weight: var(--semibold-fw);
-	  letter-spacing: 0.1rem;
-	}
-	
-	/*-- fixes --*/
-	/*hr dans les infos*/
-  .spauser .postsearch_infos hr {display:none;}
-	/*titre répétitif*/
-  .spauser .postsearch_content h3{display:none;}
-	
-	  
-	/*------ WATCH SEARCH ------*/
-	
-   .watchsearch .table1{
-	  background: var(--baseClr2-20);
-	  border-radius: var(--radius);
-	  padding: 2rem;
-	}
-	
-	.watchsearch #cp-main {
-	  background-color: unset !important;
-	  padding: 0 !important;
-	  margin: 0 !important;
-  }
-  
-	.watchsearch .table1 tr th{display:none;}
-	
-	.watchsearch .row2, .watchsearch .row1{
-	  background: var(--baseClr-90);
-	  display: flex;
-	  padding: 2rem;
-	  border-radius: var(--radius);
-	  width: 100%;
-	  justify-content: space-between;
-	  filter: var(--drop-shadow);
-	  font-size: var(--medium);
-	  text-transform: uppercase;
-	  font-weight: var(--semibold-fw);
-	  text-align: right;
-  }
-	.watchsearch .row2 img, .watchsearch .row1 img{max-height:30px;}
-	
-	.watchsearch tbody{
-	  display: flex;
-	  flex-direction: column;
-	  gap: 1.5rem;
-  }
-	
-	.watchsearch .old-message {
-	display: none; 
-  }
-  
-  .watchsearch .new-message {
-	  display: flex;
-	  align-items: center;
-	  justify-content: center;
-	  position: relative;
-	  color: var(--accentClr);
-	  font-style: normal;
-	  text-transform: uppercase;
-	  font-size: var(--smaller);
-	  font-weight: var(--semibold-fw);
-  }
-	
-  .watchsearch .panel p, .favouritesearch .panel p {
-	  font-size: var(--medium2);
-	  display: flex;
-	  gap: 10px;
-	  align-items: center;
-  }
-	
-  .watchsearch .new-message::after {
-	content: ""; 
-	display: block; 
-	position: absolute; 
-	top: 0; 
-	width: 140%; 
-	height: 100%; 
-	border-radius: var(--radius); 
-	background: var(--grad2); 
-	opacity: 0.3;  
-  }
-	
-  .watchsearch .mobile-visible{display:none;}
-	.watchsearch .topictitle{
-	  width: 300px;
-	  white-space: nowrap;
-	  display: block;
-  }
-   .watchsearch .mobile-hidden{
-	width:115px;
-	}
-	
-	/*------ FAVOURITES ------*/
-  .favouritesearch #cp-main {
-	  background-color: unset !important;
-	  padding: 0 !important;
-	  margin: 0 !important;
-  }
-  .favouritesearch .panel.msgdie-panel .inner h1.page-title{display:none;}  
-  .favouritesearch .panel.msgdie-panel .inner {
-	  text-align: center;
-	  display: flex;
-	  justify-content: center;
-	  align-items: center;
-	  padding-top: 2rem;
-	}
-  .favouritesearch .favourites__tle {
-	  display: flex;
-	  flex-direction: column;
-	  width: 100%;
-	  align-items: flex-end;
-	  background: var(--baseClr-90);
-	  padding: 2rem;
-	  border-radius: var(--radius);
-	  margin: 1rem 0;
-  }
-	
-	.favouritesearch h1.page-title {
-	  white-space: nowrap;
-	  overflow: hidden;
-	  text-overflow: ellipsis;
-	  position: relative;
-	  margin: -0.5rem 1rem;
-  }
-  .favouritesearch h1.page-title::after {
-	content: " sujet(s) favori(s)";
-	}
-	
-  .favouritesearch .panel p {
-	  font-size: var(--small2);
-	  text-transform: uppercase;
-	  letter-spacing: 0.1rem;
-  }
-	
-  .favouritesearch .favourites__subtle{
-	  display: flex;
-	  align-items: center;
-	  gap: 10px;
-  }
-	.favouritesearch .button1{
-	  text-transform: uppercase;
-	  font-size: var(--small);
-	  font-weight: var(--semibold-fw);
-	  letter-spacing: 0.1rem;
-  }
-  .favouritesearch .post {
-	  display: flex;
-	  margin: 0.5rem 0;
-	  background-image: var(--bg1);
-	  padding: 2rem;
-	  border-radius: var(--radius);
-	  width: 49%;
-	  filter: var(--drop-shadow);
-	  background-color: var(--baseClr-70);
-  }
-  .favouritesearch .posts {
-	  width: 100%;
-	  background: var(--baseClr2-20);
-	  border-radius: var(--radius);
-	  padding: 2rem;
-	  display: flex;
-	  flex-wrap: wrap;
-	  justify-content: space-between;
-	  gap: 2rem;
-  }
-  .favouritesearch .postdetails {
-	  background: var(--baseClr-90);
-	  width: 100%;
-	  border-radius: var(--radius);
-	  padding: 2rem;
-	  filter: var(--drop-shadow);
-  }
-  .favourites__topictle{
-	  width: 100%;
-	  display: flex;
-	  justify-content: space-between;
-	  align-items: center;
-	  text-transform: uppercase;
-	}
-	.topicforum{
-	font-size:var(--small);
-	text-transform:uppercase;
-	}
-	.topicforum::before{
-	content: "dans ";
-	color:var(--textClr);
-	}
-	
-  .favouritesearch .old-message {
-	display: none; 
-  }
-  
-  .favouritesearch .new-message {
-	  display: flex;
-	  align-items: center;
-	  justify-content: center;
-	  position: relative;
-	  color: var(--accentClr);
-	  font-style: normal;
-	  text-transform: uppercase;
-	  font-size: var(--smaller);
-	  font-weight: var(--semibold-fw);
-  }
-	
-  .favouritesearch img{display:none;}
-  
-  .favouritesearch .new-message::after {
-	content: ""; 
-	display: block; 
-	position: absolute; 
-	top: 0; 
-	width: 140%; 
-	height: 100%; 
-	border-radius: var(--radius); 
-	background: var(--grad2); 
-	opacity: 0.3;  
-  }
-	
-   .favourites__topictle .topictitle { font-size: var(--big);font-family: var(--font2); }
-  .favourites__topicleg {
-	  display: flex;
-	  align-items: center;
-	  justify-content: space-between;
-	  text-transform: uppercase;
-	  font-size: var(--small2);
-	  font-weight: var(--semibold-fw);
-  }
-	
-	.favouritesearch .auteur::before{
-	content:"posté par ";
-	color:var(--textClr);
-	}
-	.favouritesearch .reponses::after{
-	content:" réponses";
-	}
-	.favouritesearch .vues::after{
-	content:" vues";
-	}
-	.favouritesearch .panel .inner hr {
-	  display: inherit;
-	  margin: 0.75rem 0px;
-	  opacity: 0.5;
-  }
-	
-	.favouritesearch .lastpost-infos{
-	  width: fit-content;
-	  display: flex;
-	  flex-direction: row-reverse;
-	  font-size: var(--small2);
-	  text-transform: uppercase;
-	  font-weight: var(--semibold-fw);
-	  align-items:center;
-  }
-	.favourites__foot{
-	  display: flex;
-	  justify-content: space-between;
-	  align-items: center;
-	  background: var(--bg2);
-	  padding: 0.5rem;
-	  border-radius: var(--small-radius);
-	  margin: 0.5rem -0.5rem;
-  }
-	.favouritesearch .favourites__foot .posts{
-	  width: fit-content;
-	  padding: 0.3rem;
-	  border-radius: var(--small-radius);
-	  background: none;
-  }
-	
-	.favouritesearch .favourites__foot .lastpost-infos a span strong::after{
-	  content: " le ";
-	  color: var(--textClr);
-	  margin: 0 0.4rem 0 0;
-  }
-	.favouritesearch .favourites__foot .lastpost-infos a span strong::before{
-	  content: "dernier message par ";
-	  color: var(--textClr);
-	  margin: 0 0.4rem 0 0;
-  }
-	
-	
-	/* A PRECISER (sinon ça enlève les avatars partout) */
-	/* .lastpost img{display:none;} */
-	
-   .favouritesearch input[type=checkbox]{width: 9px; height: 9px;} 
-   .favourites__foot img{
-	  display: block;
-	  margin-right: 0.4rem;
-	  width: 7px;
-	}
-	
-	/*------- MESSENGER ------*/  
-	
-	
-  .bi-plus-circle-fill::before {
-	  content: "\f442" !important;
-	  font-size: 22px !important;
-	  font-weight: var(--bold-fw) !important;
-	}
-	
-	
-	
-	
-	#FAM,
-  #FAM .FAM-inputbox,
-  #FAM-msg {
-	font-family: var(--font);
-  }
-  
-  .FAM-clear,
-  .FAM-msg-date,
-  .FAM-msg:after {
-	clear: both;
-  }
-  
-  #modernbb #FAM i.bi,
-  #modernbb #FAM-button i.bi,
-  #modernbb #FAM-send {
-	margin: initial;
-	vertical-align: initial;
-  }
-  
-  /* Fenetre du Messenger */
-  #FAM {
-	  display: grid;
-	  grid-template-rows: max-content max-content 1fr;
-	  font-size: var(--FAM-fontSize);
-	  background: linear-gradient(to bottom, var(--baseClr-90), var(--baseClr-80), var(--baseClr-70), var(--baseClr-60));
-	  position: fixed;
-	  height: 65%;
-	  width: 20%;
-	  max-width: 20%;
-	  right: 10px;
-	  z-index: 99;
-	  visibility: visible;
-	  opacity: 1;
-	  bottom: 4.5rem;
-	  transition-property: top, right, bottom, left, height, width, margin, opacity, visibility;
-	  transition-duration: 900ms;
-	  grid-template-columns: 100%;
-	  border-radius: var(--radius) var(--radius) 0px 0px;
-  }
-  
-  /* Fenetre fermÃ©e */
-  #FAM[data-hidden="true"] {
-	visibility: hidden;
-	opacity: 0;
-	bottom: calc(-100% + 65px);
-  }
-  
-  #FAM.FAM-embedded {
-	position: relative;
-	bottom: 0;
-	right: 0;
-	width: 100%;
-	height: 500px;
-	margin: 12px auto;
-	z-index: 1;
-  }
-  
-  /* Bouton pour ouvrir la fenetre */
-  #FAM-button-open {
-	  color: var(--accentClr);
-	  font-size: 16px;
-	  background: var(--baseClr2-20);
-	  border-radius: 10px;
-	  width: 30px;
-	  height: 30px;
-	  left: 2.5rem;
-	  bottom: 8px;
-	  cursor: pointer;
-	  transition-property: right;
-	  transition-duration: 500ms;
-	  display: grid;
-	  place-items: center;
-	  position: fixed;
-	  z-index: 999;
-	  transition: var(--base-transi);
-  }
-  
-  #FAM-button-open:hover {
-	background: var(--baseClr2-40);
-	color: var(--accentClr);
-	transition: var(--base-transi)
-  }
-  
-  #FAM[data-hidden="false"] ~ #FAM-button-open {
-	background: var(--FAM-accentClr);
-	color: var(--FAM-pluginBackground);
-  }
-  
-  /* EntÃªte de la fenetre */
-  #FAM-toolbar {
-	  position: relative;
-	  background: var(--bg1);
-	  height: 12rem;
-	  display: flex;
-	  flex-direction: column;
-	  align-items: center;
-	  justify-content: center;
-	  margin: 20px 0px;
-  }
-  
-  #FAM-toolbar-inner {
-	  display: flex;
-	  justify-content: space-between;
-	  align-items: center;
-	  width: 100%;
-	  padding: 0px 20px;
-  }
-  #FAM-toolbar-inner h1{
-	color:var(--accentClr) !important;
-	}
-	
-  
-  /* Bouton flÃ¨che de retour */
-  .FAM-toolbar-button {
-	color: var(--FAM-button);
-	font-size: 24px;
-	cursor: pointer;
-  }
-  
-  /* Titre de la fenetre */
-  .FAM-maintitle {
-	  text-align: left;
-	  white-space: nowrap;
-	  overflow: hidden;
-	  text-overflow: ellipsis;
-	  flex-grow: 99;
-	  margin: 0;
-	  font-size: var(--bigger);
-	  text-transform: uppercase;
-	  font-family: var(--font2);
-	  color: var(--accentClr);
-	  letter-spacing: 1px;
-  }
-  
-  
-  #FAM-idle,
-  .FAM-button {
-	color: var(--FAM-buttonsClr);
-	cursor: pointer;
-  }
-  
-  /* Conteneur discussion + boite de reponse */
-  .FAM-container-content {
-	  display: flex;
-	  flex-direction: column;
-	  overflow: hidden;
-	  height: 50vh;
-	  background: var(--baseClr);
-	  border-radius: var(--radius);
-	  margin: 10px;
-	  position: relative;
-	  top: -40px;
-	  box-shadow: var(--drop-shadow);
-  }
-  
-  /* Conteneur discussion */
-  #FAM-content {
-	  padding: 5px;
-	  position: relative;
-	  height: 100%;
-	  overflow-y: auto;
-  }
-  
-  .FAM-viewing-topic {
-	padding: 0 20px !important;
-  }
-  
-  #FAM-content .FAM-viewing-topic{ 
-	height:50%;
-	overflow:auto;
-	}
-	
-  .FAM-viewing-topic:before,
-  .FAM-viewing-topic:after {
-	content: "";
-	display: block;
-	position: sticky;
-	right: 0px;
-	left: 0;
-	height: 80px;
-	z-index: 8;
-	pointer-events: none;
-  }
-  
-  .FAM-viewing-topic:before {
-	top: 0px;
-	background: var(--FAM-gradientTop);
-  }
-  
-  .FAM-viewing-topic:after {
-	bottom: 0;
-	background: var(--FAM-gradientBot);
-  }
-  
-  /* Chargement */
-  .FAM-loading {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-  }
-  
-  .FAM-loading,
-  .FAM-loading p {
-	font-size: 18px;
-	font-weight: 700;
-  }
-  
-  .FAM-loading i {
-	display: block;
-	margin-bottom: 12px;
-	font-size: 32px;
-  }
-  
-  #FAM-no-tabs {
-	top: 69px;
-	cursor: pointer;
-  }
-  
-  #FAM-tab-container[style*="none"] + #FAM-content #FAM-no-tabs {
-	top: 39px;
-  }
-  
-  /* Mise en vieille */
-  #FAM-idle {
-	background: var(--FAM-sleepModeBackground);
-	z-index: 999;
-	transition: 300ms;
-  }
-  
-  /* Boutons */
-  .FAM-button {
-	background-color: var(--FAM-accentClr);
-	color: var(--FAM-pluginBackground);
-	border-radius: 8px;
-	padding: 5px 12px 6px;
-	border: none;
-	display: block;
-	margin: 3px auto;
-	outline: 0;
-	font-weight: bold;
-  }
-  
-  .FAM-button:hover {
-	color: var(--FAM-fontClr);
-  }
-  
-  .FAM-inline-buttons {
-	margin: 0 0 0 15px !important;
-	width: 6%;
-  }
-  
-  .FAM-inline-buttons .FAM-button {
-	display: inline-block;
-	margin: 3px;
-	background-color: transparent;
-	font-size: 18px;
-	color: var(--FAM-accentClr);
-  }
-  
-  .FAM-button-large {
-	  position: relative;
-	  font-family: var(--font1) !important;
-	  background-color: var(--baseClr2-20) !important;
-	  border-radius: 0.4rem !important;
-	  font-size: var(--medium);
-	  padding: 0.4rem 0.8rem !important;
-	  transition: var(--base-transi);
-	  border-style: none;
-	  color: var(--textClr) !important;
-	  font-weight: var(--base-fw) !important;
-  }
-  
-  .FAM-button-large:hover {
-	color:var(--accentClr) !important;
-	background:var(--baseClr2-10);
-  }
-  
-  #FAM .FAM-inputbox {
-	  color: var(--textClr) !important;
-	  font-size: var(--FAM-fontSize) !important;
-	  background-color: var(--baseClr2-20) !important;
-	  border: none;
-	  border-radius: 10px;
-	  padding: 10px;
-	  width: 100%;
-	  vertical-align: baseline;
-	  cursor: text;
-	  outline: 0;
-	  height: auto;
-	  line-height: normal;
-  }
-  
-  #FAM .FAM-inputbox[type="color"],
-  #FAM select.FAM-inputbox {
-	cursor: pointer;
-  }
-  
-  #FAM textarea.FAM-inputbox {
-	height: 150px;
-	resize: none;
-  }
-  
-  #FAM .FAM-button-input .FAM-inputbox {
-	width: calc(100% - 40px);
-	height: 20px;
-	margin: 0;
-  }
-  
-  #FAM .FAM-button-input .FAM-button {
-	font-size: 24px;
-	vertical-align: -4px;
-	width: 40px;
-	height: 40px;
-	display: inline-block;
-	margin: 0;
-	padding: 0;
-	border-radius: 0 4px 4px 0;
-  }
-  
-  #FAM .FAM-button-input-small .FAM-inputbox {
-	width: 50px;
-	height: 30px;
-	padding: 0 2px;
-	vertical-align: top;
-  }
-  
-  #FAM .FAM-button-input-small .FAM-button {
-	font-size: 18px;
-	width: 30px;
-	height: 30px;
-	padding: 0;
-  }
-  
-  
-  
-  .FAM-section-title {
-	color: #39f;
-	font-size: 18px;
-	font-weight: 700;
-	border-bottom: 2px solid #39f;
-	margin: 12px auto;
-	padding-bottom: 3px;
-  }
-  
-  hr.FAM-hr {
-	border: none;
-	border-top: 2px solid #ddd;
-	margin: 24px 0;
-  }
-  
-  #FAM .FAM-list li {
-	margin: 0;
-	padding: 3px 0;
-	position: relative;
-  }
-  
-  .FAM-init-tab-controls .FAM-icon-link {
-	font-size: 24px;
-  }
-  
-  .FAM-symmetrical-label .FAM-label,
-  .FAM-symmetrical-label .FAM-label-value {
-	width: 50%;
-  }
-  
-  .FAM-left,
-  .FAM-symmetrical-label .FAM-label-value {
-	text-align: left;
-  }
-  
-  .FAM-right {
-	text-align: right;
-  }
-  
-  .FAM-float-left {
-	float: left;
-  }
-  
-  .FAM-float-right {
-	float: right;
-  }
-  
-  .FAM-clear:after {
-	content: "";
-	display: table;
-	clear: both;
-  }
-  
-  #FAM p,
-  .FAM-row {
-	margin: 10px 0;
-  }
-  
-  #FAM .FAM-center-block {
-	width: 50%;
-	margin-left: auto;
-	margin-right: auto;
-  }
-  
-  .FAM-error {
-	color: #f66;
-	font-weight: 700;
-  }
-  
-  .FAM-noclick {
-	pointer-events: none;
-  }
-  
-  .FAM-clickable {
-	pointer-events: all;
-  }
-  
-  #FAM-content::-webkit-scrollbar {
-	display: none;
-  }
-  
-  #FAM ::-webkit-scrollbar-track {
-	background-color: transparent;
-  }
-  
-  #FAM ::-webkit-scrollbar-thumb {
-	background-color: rgba(0, 0, 0, 0.1);
-	border: none;
-  }
-  
-  #FAM ::-webkit-scrollbar-button:single-button {
-	height: 0;
-	width: 0;
-  }
-  
-  #FAM-actions {
-	background-color: var(--FAM-textareaBackground);
-	border-radius: 10px;
-	margin: 10px 15px;
-	align-items: end;
-	position: relative;
-  }
-  
-  .FAM-viewing-forum + #FAM-actions,
-  .FAM-viewing-topic + #FAM-actions {
-	display: block;
-  }
-  
-  .FAM-viewing-forum + #FAM-actions {
-	background: transparent;
-	margin: 10px 35px;
-	display: flex;
-	justify-content: flex-end;
-  }
-  
-  #FAM-actions:empty {
-	display: none;
-  }
-  
-  #FAM-new-topic {
-	  cursor: pointer;
-	  font-size: 25px;
-	  font-weight: var(--bold-fw);
-	  margin-bottom: 20px;
-	  background: var(--baseClr2-20);
-	  padding: 0.75rem;
-	  border-radius: var(--small-radius);
-	  transition:var(--base-transi);
-  }
-  
-  #FAM-new-topic:hover {
-	background:var(--baseClr2-40);
-	transition:var(--base-transi);
-  }
-  
-  .FAM-buttons-container {
-	position: absolute;
-	bottom: 15px;
-	right: 15px;
-  }
-  
-  .FAM-buttons-container > button {
-	color: var(--FAM-accentClr);
-	background-color: transparent;
-	font-size: 20px;
-	border: none;
-	cursor: pointer;
-	outline: 0;
-  }
-  
-  .FAM-buttons-container > button:hover {
-	color: var(--FAM-secondClr);
-  }
-  
-  .FAM-buttons-container > button[data-disabled="true"] {
-	pointer-events: none;
-  }
-  
-  .FAM-buttons-container > button[data-disabled="true"] > * {
-	opacity: 0.5;
-  }
-  
-  #FAM-msg-container {
-	display: inline-block;
-	vertical-align: top;
-	position: relative;
-	width: 100%;
-  }
-  
-  #FAM-timeout-bar {
-	background: #ccc;
-	position: absolute;
-	left: 0;
-	bottom: 0;
-	width: 5px;
-	z-index: -1;
-  }
-  
-  .FAM-chat {
-	position: relative;
-	cursor: pointer;
-	display: grid;
-	grid-template-columns: max-content 1fr;
-	color: var(--FAM-fontLightClr);
-  }
-  
-  .FAM-chat:hover,
-  .FAM-chat:hover a {
-	color: var(--FAM-titleClr);
-  }
-  
-  .FAM-chat:hover .FAM-chat-avatar,
-  .FAM-chat:hover .FAM-chat-content {
-	background-color: var(--baseClr2-40);
-	transition:var(--base-transi);
-  }
-	
-  .FAM-chat .FAM-chat-avatar, 
-  .FAM-chat .FAM-chat-content{
-	  background-color: var(--baseClr2-20);
-	  height: 40px;
-	  display: flex;
-	  align-items: center;
-	  flex-direction: column;
-	  justify-content: center;
-	  padding: 5px;
-	  margin: 0.15rem 0;
-  }
-  
-  .FAM-forum-name,
-  .FAM-topic-name {
-	  font-family: var(--font2);
-	  text-transform: uppercase;
-	  background: var(--grad2);
-	  background-size: 100%;
-	  -webkit-background-clip: text;
-	  -webkit-text-fill-color: transparent;
-	  font-size: 16px;
-	  grid-column: 1 / span 2;
-	  font-weight: 600;
-	  padding: 5px 40px;
-  }
-  
-  .FAM-forum-name i,
-  .FAM-topic-name i {
-	margin-right: 5px;
-  }
-  
-  .fam-topic-name{display:none}
-  .FAM-forum:nth-of-type(1) .FAM-forum-name,
-  .FAM-pagination + .FAM-forum:nth-child(2) .FAM-forum-name {
-	display: block;
-  }
-  
-  .FAM-toolbar-inner:not(:has(.FAM-tab-open)) > #FAM-tab-add {
-	  border-radius: var(--radius);
-  }
-  
-  
-	
-  .FAM-forum {
-	margin-bottom: 10px;
-  }
-  
-  .FAM-forum .FAM-chat-title {
-	text-transform: uppercase;
-  }
-  
-  .FAM-forum a.lastpost_link:before {
-	content: "\F132";
-	font-family: bootstrap-icons !important;
-	margin-right: 5px;
-	font-weight: 400;
-	top: 2px;
-	position: relative;
-  }
-  
-  .FAM-chat-date > a.lastpost_link:after {
-	content: ",";
-  }
-  
-  .FAM-forum .FAM-chat-avatar,
-  .FAM-forum .FAM-chat-content {
-	  background-color: var(--baseClr2-20);
-	  height: -webkit-fill-available;
-	  min-height: 70px;
-	  display: flex;
-	  align-items: center;
-	  flex-direction: column;
-	  justify-content: center;
-	  padding: 5px;
-  }
-  
-  .FAM-forum + .FAM-topic > .FAM-topic-name,
-  .FAM-pagination + .FAM-topic > .FAM-topic-name {
-	display: block;
-  }
-  
-  .FAM-chat-avatar {
-	grid-row: 2;
-	align-self: center;
-	border-radius: 10px 0 0 10px;
-  }
-  
-  .FAM-chat-avatar img {
-	  height: 30px;
-	  width: 30px;
-	  border-radius: var(--small-radius);
-	  object-fit: cover;
-	  object-position: center;
-  }
-  
-  .FAM-chat-content {
-	  height: 40px !important;
-	  display: flex;
-	  align-items: center;
-	  flex-direction: column;
-	  justify-content: center;
-	  padding: 5px;
-	  margin: 0.15rem 0;
-	  grid-column: 2;
-	  grid-row: 2;
-	  align-self: center;
-	  border-radius: 0 10px 10px 0;
-  }
-  
-  .FAM-chat-date,
-  .FAM-chat-title {
-	width: 100%;
-  }
-  
-  .FAM-chat-title {
-	font-weight: 600;
-  }
-  
-  .FAM-chat-date {
-	font-size: 12px;
-	margin-top: 4px;
-  }
-  
-  .FAM-chat-date > a.lastpost_link {
-	font-weight: 600;
-	color: var(--FAM-fontClr) !important;
-	margin-right: 5px;
-  }
-  
-  .FAM-chat-date > strong {
-	margin-left: 5px;
-	background-color: var(--FAM-msgBackground);
-	padding: 0px 4px 0px;
-	border-radius: 4px;
-  }
-  
-  .FAM-chat-date > strong a {
-	display: initial !important;
-  }
-  
-  .FAM-chat-date > strong:empty,
-  .FAM-topic .FAM-chat-date i,
-  .FAM-chat-date br,
-  .FAM-chat-date .last-post-icon,
-  .FAM-chat-date a:last-of-type {
-	display: none;
-  }
-  
-  .FAM-new-post,
-  .FAM-new-post a,
-  .FAM-new-post .FAM-chat-title {
-	color: var(--FAM-titleClr);
-	font-weight: bold !important;
-  }
-  
-  .FAM-new-post .FAM-chat-avatar {
-	opacity: 1;
-  }
-  
-  .FAM-new-post .FAM-chat-avatar img {
-	color: var(--FAM-newMsgAnimation);
-	transform: scale(1);
-	animation: FAMpulse 3s infinite;
-  }
-  
-  @keyframes FAMpulse {
-	0% {
-	  transform: scale(1);
-	  box-shadow: 0 0 0 0;
-	}
-  
-	70% {
-	  transform: scale(1);
-	  box-shadow: 0 0 0 8px transparent;
-	}
-  
-	100% {
-	  transform: scale(1);
-	  box-shadow: 0 0 0 0 transparent;
-	}
-  }
-  
-  .FAM-pagination:empty {
-	display: none;
-  }
-  
-  .FAM-pagination span {
-	display: flex;
-	gap: 5px;
-	justify-content: end;
-  }
-  
-  #FAM a.FAM-page-link,
-  .FAM-page-link {
-	color: #fff;
-	font-size: 12px;
-	text-decoration: none;
-	background: var(--FAM-accentClr);
-	color: var(--FAM-pluginBackground);
-	display: inline-block;
-	padding: 1px 6px 2px;
-	border-radius: 5px;
-  }
-  
-  #FAM a.FAM-page-link:hover {
-	background: var(--FAM-buttonsClr);
-  }
-  
-  #FAM a.FAM-page-link:active {
-	background: var(--FAM-buttonsClr);
-  }
-  
-  b.FAM-page-link,
-  strong.FAM-page-link {
-	background: var(--FAM-pluginBackground);
-	font-weight: 400;
-	color: var(--FAM-fontClr);
-  }
-  
-  #FAM-msg {
-	  color: var(--textClr);
-	  background: var(--baseClr2-20);
-	  border: none;
-	  width: 100%;
-	  margin: 0;
-	  padding: 7px;
-	  padding-right: 110px;
-	  outline: 0;
-	  resize: vertical;
-	  border-radius: var(--small-radius);
-	  font-size: var(--medium);
-  }
-  
-  .FAM-msg[data-compact="yes"] {
-	margin-bottom: 5px;
-  }
-  
-  .FAM-msg {
-	position: relative;
-	display: flex;
-	margin-bottom: 30px;
-	gap: 10px;
-  }
-  
-  .FAM-msg-avatar {
-	width: 35px;
-	height: 35px;
-	padding: 2px;
-	border-radius: 100%;
-	overflow: hidden;
-	position: relative;
-	top: 50%;
-	align-self: flex-end;
-  }
-  
-  .FAM-msg-online .FAM-msg-avatar {
-	border-color: #39f;
-  }
-  
-  .FAM-msg-avatar img {
-	height: 100%;
-	width: 100%;
-	border-radius: 100%;
-	object-fit: cover;
-	object-position: center;
-  }
-  
-  .FAM-msg.FAM-my-msg {
-	flex-direction: row-reverse;
-  }
-  
-  .FAM-msg-box {
-	float: right;
-	width: 80%;
-	width: calc(100% - 48px);
-	padding-left: 10px;
-  }
-  
-  .FAM-msg-content {
-	display: flex;
-	gap: 7px;
-	position: relative;
-  }
-  
-  .FAM-msg-editing .FAM-msg-text {
-	width: 100%;
-	display: flex;
-	align-items: flex-end;
-  }
-  
-  .FAM-my-msg .FAM-msg-text {
-	  border-radius: 17px 17px 6px 17px;
-	  background: var(--bg2);
-	  font-size: var(--medium);
-	  text-align: justify;
-	  padding: 0.5rem 1rem;
-	  filter: var(--drop-shadow);
-	  line-height: var(--small-lh);
-	  margin-top: auto;
-  }
-  
-  .FAM-msg-text {
-	  border-radius: 17px 17px 17px 6px;
-	  background: var(--bg2);
-	  font-size: var(--medium);
-	  text-align: justify;
-	  padding: 0.5rem 1rem;
-	  filter: var(--drop-shadow);
-	  line-height: var(--small-lh);
-	  margin-top: auto;
-  }
-  
-  .FAM-my-msg .FAM-msg-content {
-	flex-direction: row-reverse;
-  }
-  
-  .FAM-msg-text .fa-circle-o-notch {
-	font-size: 20px;
-  }
-  
-  #FAM .FAM-msg-text a {
-	color: inherit !important;
-	text-decoration: underline;
-	cursor: pointer;
-  }
-  
-  #FAM .FAM-msg-text a:hover {
-	text-decoration: none;
-  }
-  
-  .FAM-msg-text * {
-	max-width: 100%;
-  }
-  
-  .FAM-msg-text img {
-	max-height: 200px;
-  }
-  
-  .FAM-msg-info {
-	display: flex;
-	gap: 5px;
-	clear: both;
-  }
-  
-  .FAM-msg-date,
-  .FAM-msg-name {
-	font-size: 12px;
-	width: 100%;
-	height: 20px;
-	line-height: 24px;
-	white-space: nowrap;
-	text-overflow: ellipsis;
-	overflow: hidden;
-	flex-basis: fit-content;
-	color: var(--FAM-fontLightClr);
-  }
-  
-  .FAM-name-mention {
-	cursor: pointer;
-  }
-  
-  .FAM-my-msg .FAM-msg-info {
-	flex-direction: row-reverse;
-  }
-  
-  .FAM-msg-error .FAM-msg-content:before {
-	border-left-color: #f33;
-  }
-  
-  .FAM-msg-text .FAM-attachment,
-  .FAM-msg-text .FAM-attachment * {
-	display: block;
-  }
-  
-  .FAM-msg-text .FAM-attachment tbody {
-	line-height: 0;
-	column-count: 2;
-	column-gap: 5px;
-  }
-  
-  .FAM-msg-text .FAM-attachment tr {
-	width: 100%;
-	max-height: 200px;
-	overflow: hidden;
-	-webkit-column-break-inside: avoid;
-	page-break-inside: avoid;
-	break-inside: avoid;
-  }
-  
-  .FAM-msg-text .FAM-attachment tr:only-child {
-	column-span: all;
-	margin: 0;
-  }
-  
-  .FAM-msg-text .FAM-attachment td {
-	color: var(--FAM-fontClr);
-	font-size: 14px;
-	min-height: 20px;
-	line-height: 20px;
-	position: relative;
-	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
-  }
-  
-  .FAM-msg-text .FAM-attachment td * {
-	width: 100%;
-	object-fit: cover;
-  }
-  
-  .FAM-msg-text .FAM-attachment td,
-  .FAM-msg-text .FAM-attachment td * {
-	border-radius: 5px;
-	max-height: 200px;
-  }
-  
-  #FAM .FAM-msg-actions {
-	margin-top: -12px;
-	height: 25px;
-	white-space: nowrap;
-	visibility: hidden;
-	opacity: 0;
-	display: flex;
-	align-items: center;
-	gap: 5px;
-	transition: 300ms;
-  }
-  
-  #FAM .FAM-msg:hover .FAM-msg-actions {
-	visibility: visible;
-	margin-top: 5px;
-	opacity: 1;
-  }
-  
-  #FAM .FAM-my-msg .FAM-msg-actions {
-	display: flex;
-	align-items: center;
-	gap: 5px;
-  }
-  
-  [data-compact="yes"] {
-	padding: 0;
-  }
-  
-  .FAM-msg[data-compact="yes"] .FAM-msg-avatar {
-	visibility: hidden;
-  }
-  
-  .FAM-msg[data-compact="yes"] .FAM-msg-text {
-	border-radius: 20px;
-  }
-  
-  [data-compact="yes"] .FAM-msg-info {
-	visibility: hidden;
-	height: 0px;
-  }
-  
-  .FAM-msg-button {
-	font-size: 14px;
-	width: 20px;
-	cursor: pointer;
-  }
-  
-  .FAM-msg-button:hover {
-	color: var(--FAM-buttonHover);
-  }
-  
-  .FAM-edit-button {
-	font-size: 10px;
-  }
-  
-  .FAM-delete-button {
-	margin-left: -7px;
-	font-size: 18px;
-  }
-  
-  .FAM-msg-text .FAM-attachment td:after {
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	cursor: pointer;
-  }
-  
-  #FAM [onclick="FAM.modal.open(this);"] {
-	cursor: pointer;
-  }
-  
-  .FAM-msg-text .FAM-attachment td a {
-	overflow: hidden;
-	text-overflow: ellipsis;
-  }
-  
-  .FAM-msg-text ol,
-  .FAM-msg-text ul {
-	padding-left: 30px;
-	margin: 12px 0;
-  }
-  
-  .FAM-msg-text ol > br:first-child,
-  .FAM-msg-text ul > br:first-child {
-	display: none;
-  }
-  
-  .FAM-codebox,
-  .FAM-spoiler {
-	padding: 0;
-	margin: 0;
-	display: block;
-	font-size: 12px;
-  }
-  
-  .FAM-codebox cite a,
-  .FAM-codebox dt a {
-	color: var(--FAM-titleClr);
-  }
-  
-  .FAM-codebox cite,
-  .FAM-codebox dt,
-  .FAM-spoiler dt {
-	color: var(--FAM-titleClr);
-	font-weight: 600;
-	margin: 0;
-	cursor: auto !important;
-  }
-  
-  #FAM-tab-add,
-  .FAM-tab {
-	height: 30px;
-	cursor: pointer;
-  }
-  
-  .FAM-codebox dd,
-  .FAM-spoiler dd {
-	padding: 3px;
-	margin: 0;
-  }
-  
-  .FAM-codebox code {
-	display: block;
-	max-height: 150px;
-	max-width: none;
-	padding: 3px;
-	margin: -3px;
-	overflow: auto;
-  }
-  
-  #FAM-new-msg-divider,
-  #FAM-tabs {
-	white-space: nowrap;
-	overflow: hidden;
-  }
-	
-  #FAM-tabs div:first-child{border-radius: 5px 0px 0px 5px;}
-	
-  blockquote.FAM-codebox {
-	position: relative;
-	margin-bottom: 17px;
-  }
-  
-  blockquote.FAM-codebox:before {
-	display: block;
-	position: absolute;
-	z-index: 1;
-	content: "";
-	background: var(--FAM-quoteBackground);
-	inset: -8px -20px -10px -15px;
-	border-radius: 17px 17px 0 0;
-  }
-  
-  .FAM-my-msg blockquote.FAM-codebox:before {
-	inset: -8px -15px -10px -20px;
-  }
-  
-  blockquote.FAM-codebox > div {
-	margin: 0;
-	padding: 0;
-	z-index: 2;
-	position: relative;
-  }
-  
-  .FAM-spoiler_content {
-	position: relative;
-	display: inline-block;
-  }
-  
-  .FAM-spoiler_content:after {
-	content: "";
-	background: var(--FAM-chatBackground);
-	position: absolute;
-	inset: -3px;
-	visibility: visible;
-	border-radius: 5px;
-  }
-  
-  .FAM-spoiler_content:hover:after {
-	visibility: hidden;
-  }
-  
-  .FAM-msg-text .FAM-post-content,
-  .FAM-msg-text font[color] {
-	color: inherit;
-  }
-  
-  #fc-token.FAM-inputbox {
-	width: 308px;
-  }
-  
-  .FAM-captcha p:first-child b,
-  .FAM-captcha p:first-child strong {
-	font-size: 24px;
-	display: inline-block;
-	margin-bottom: 6px;
-  }
-  
-  #FAM-new-msg-notif {
-	color: #fff;
-	font-size: 14px;
-	font-weight: 700;
-	text-align: center;
-	background: #39f;
-	position: absolute;
-	height: 30px;
-	line-height: 30px;
-	left: 0;
-	right: 0;
-	z-index: 1;
-	opacity: 0.8;
-	cursor: pointer;
-  }
-  
-  #FAM-new-msg-notif:after {
-	content: "\\f00d";
-	font-size: 18px;
-	font-weight: 400;
-	font-family: FontAwesome;
-	position: absolute;
-	right: 6px;
-  }
-  
-  #FAM-new-msg-notif:hover {
-	opacity: 1;
-  }
-  
-  #FAM-new-msg-notif + #FAM-content {
-	padding-top: 30px;
-  }
-  
-  #FAM-new-msg-divider {
-	color: #39f;
-	font-size: 18px;
-	text-align: center;
-	margin: 12px;
-  }
-  
-  #FAM-new-msg-divider:after,
-  #FAM-new-msg-divider:before {
-	content: "";
-	background: #39f;
-	display: inline-block;
-	width: 25%;
-	height: 2px;
-	position: relative;
-	top: -4px;
-  }
-  
-  #FAM-new-msg-divider:before {
-	margin-right: 12px;
-  }
-  
-  #FAM-new-msg-divider:after {
-	margin-left: 12px;
-  }
-  
-  #FAM-tab-container {
-	  height: 30px;
-	  position: relative;
-	  display: flex;
-	  width: 100%;
-	  overflow: hidden;
-	  padding: 0px 10px;
-  }
-  
-  #FAM-tab-add {
-	  z-index: 99;
-	  font-size: 13px;
-	  text-align: center;
-	  right: 0;
-	  top: 0;
-	  display: flex;
-	  align-items: center;
-	  background: var(--baseClr);
-	  color: var(--accentClr);
-	  border-radius: 0px 5px 5px 0px;
-	  padding: 0 8px;
-	  margin-left: 1px;
-  }
-  
-  #FAM-tab-add:hover {
-	background: var(--baseClr-70);
-  }
-  
-  #FAM-tabs {
-	  display: flex;
-	  gap: 1px;
-	  position: relative;
-	  padding-bottom: 3px;
-  }
-  
-  #FAM-tabs:hover {
-	overflow-x: auto;
-	position: relative;
-	z-index: 2;
-  }
-  
-  #FAM-tab-container:after {
-	content: "";
-	display: block;
-	position: absolute;
-	right: 0px;
-	top: 0;
-	bottom: 0;
-	width: 20%;
-	background: var(--FAM-gradient);
-	z-index: 5;
-	pointer-events: none;
-  }
-  
-  #FAM-tabs::-webkit-scrollbar {
-	height: 4px;
-  }
-  
-  #FAM-tabs::-webkit-scrollbar-thumb {
-	background-color: var(--FAM-accentClr);
-	border-radius: 3px;
-  }
-  
-  #FAM-tabs::-webkit-scrollbar-track {
-	background: transparent;
-  }
-  
-  #FAM-menu-avatar,
-  #FAM-profile-avatar,
-  .FAM-tab-name {
-	display: inline-block;
-	overflow: hidden;
-  }
-  
-  .FAM-tab {
-	  background: var(--baseClr-90);
-	  position: relative;
-	  display: inline-block;
-	  align-items: center;
-	  justify-content: space-between;
-	  padding: 0 8px;
-	  display: flex;
-	  width: 130px;
-  }
-  
-  .FAM-tab i {
-	display: none;
-	width: 12px;
-	height: 16px;
-  }
-  
-  .FAM-tab:hover {
-	background:var(--baseClr-70);
-	color: var(--accentClr);
-  }
-  
-  .FAM-tab:hover i {
-	display: initial;
-  }
-  
-  .FAM-tab.FAM-tab-active {
-	  background: var(--baseClr);
-  }
-  
-  .FAM-tab-name {
-	  background: var(--grad1);
-	  background-size: 100%;
-	  -webkit-background-clip: text;
-	  -webkit-text-fill-color: transparent;
-	  text-align: center;
-	  padding: 1rem;
-	  line-height: 1;
-	  font-variant: small-caps;
-	  font-weight: bold;
-	  text-transform:uppercase;
-	  font-size: 10px;
-	  letter-spacing: 1px;
-  }
-	
-  .FAM-tab-name:hover{
-	background:var(--grad2);
-	background-size: 100%;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	}
-	
-	
-  .FAM-tab-close {
-	cursor: pointer;
-  }
-  
-  .FAM-tab-close:hover {
-	color: var(--accentClr2);
-  }
-  
-  #FAM-about {
-	text-align: center;
-  }
-  
-  .FAM-title {
-	font-size: 24px;
-	font-weight: 700;
-	margin-bottom: 12px;
-  }
-  
-  .FAM-title a {
-	text-decoration: none !important;
-  }
-  
-  .FAM-title i {
-	font-size: 36px;
-	vertical-align: -2px;
-	margin-right: 3px;
-  }
-  
-  #FAM #FAM-service-title a {
-	color: var(--FAM-fontClr);
-	font-weight: 400;
-  }
-  
-  #FAM-service-title b {
-	color: var(--FAM-accentClr);
-  }
-  
-  #FAM-service-title b:last-child {
-	color: var(--FAM-accentClr);
-  }
-  
-  #FAM-content:has(#FAM-about) + #FAM-actions {
-	display: none;
-  }
-  
-  #FAM-actions .FAM-dropdown {
-	background: var(--FAM-pluginBackground);
-	border: none;
-	position: absolute;
-	right: 0;
-	bottom: 30px;
-	width: 300px;
-	height: 270px;
-	padding: 10px;
-	z-index: 999;
-  }
-	
-  </style>
-  
-  <!-- BLANK THEME ---->
-  <!-- VERSION 3.3 - MAJ 11/03/24 ---->
-		  
-  <!DOCTYPE html>
-  <html xmlns="http://www.w3.org/1999/xhtml" dir="{S_CONTENT_DIRECTION}" id="min-width" lang="{L_LANG_HTML}" xml:lang="{L_LANG_HTML}" {NAMESPACE_FB_LIKE} {NAMESPACE_FB} {NAMESPACE_BBCODE}>
-  
-  <head>
-	  <!-- BOUTON ACCESSIBILITE -->
-	  <!-- <script src="https://cdn.userway.org/widget.js" data-account="hp04HKHmYI"></script> -->
-  
-	  <!--   INSTALLATION DE NOUVELLE POLICE D'ECRITURE -->
-	  <!-- sugar baby --> <link href="https://ao-nari.github.io/byeonhwa-rpg/custom-fonts.css" rel="stylesheet"/>
-		  <!-- google fonts -->
-		  <link rel="preconnect" href="https://fonts.googleapis.com">
-		  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
-		  <link href="https://fonts.googleapis.com/css2?family=Diphylleia&display=swap" rel="stylesheet">
-		  
-	  <!--   INSTALLATION DE FONT ICON -->
-	  <link href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet"/>
-	  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
-	  <!-- cappuccicons --> 
-	  <link rel="stylesheet" href="https://static.tumblr.com/svdghan/wUSr83npl/tempcf.css">
-	  <!-- font awesome -->
-	  <script src="https://kit.fontawesome.com/c38c8108d8.js" crossorigin="anonymous"></script>
-	  <!-- lord-icon --> 
-	  <script src="https://cdn.lordicon.com/lordicon.js"></script>
+<!-- BLANK THEME ---->
+<!-- VERSION 3.3 - MAJ 11/03/24 ---->
 		
-		  <!-- TEXTE DANS L'ONGLET DE NAVIGATEUR -->
-	  <title>{SITENAME_TITLE}{PAGE_TITLE}</title>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" dir="{S_CONTENT_DIRECTION}" id="min-width" lang="{L_LANG_HTML}" xml:lang="{L_LANG_HTML}" {NAMESPACE_FB_LIKE} {NAMESPACE_FB} {NAMESPACE_BBCODE}>
+
+<head>
+	<!-- BOUTON ACCESSIBILITE -->
+	<!-- <script src="https://cdn.userway.org/widget.js" data-account="hp04HKHmYI"></script> -->
+
+	<!--   INSTALLATION DE NOUVELLE POLICE D'ECRITURE -->
+	<!-- sugar baby --> <link href="https://ao-nari.github.io/byeonhwa-rpg/custom-fonts.css" rel="stylesheet"/>
+		<!-- google fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Diphylleia&display=swap" rel="stylesheet">
 		
-	  <meta http-equiv="content-type" content="text/html; charset={S_CONTENT_ENCODING}"/>
-	  <meta http-equiv="content-script-type" content="text/javascript"/>
-	  <meta http-equiv="content-style-type" content="text/css"/>
-	  <!-- BEGIN switch_compat_meta -->
-	  <meta http-equiv="X-UA-Compatible" content="IE={switch_compat_meta.VERSION}"/>
-	  <!-- END switch_compat_meta -->
-	  <!-- BEGIN switch_canonical_url -->
-	  <link rel="canonical" href="{switch_canonical_url.CANONICAL_URL}"/>
-	  <!-- END switch_canonical_url -->
-	  {META_FAVICO}
-	  {META}
-	  {META_FB_LIKE}
-	  <meta name="title" content="{SITENAME_TITLE}{PAGE_TITLE}"/>
-	  {T_HEAD_STYLESHEET}
-	  {CSS}
-	  <link rel="search" type="application/opensearchdescription+xml" href="/improvedsearch.xml" title="{SITENAME}"/>
-	  <link rel="search" type="application/opensearchdescription+xml" href="{URL_BOARD_DIRECTORY}/search/improvedsearch.xml" title="{SEARCH_FORUMS}"/>
-	  <script src="{JQUERY_PATH}" type="text/javascript"></script>
-	  <!-- BEGIN switch_recent_jquery -->
-	  <script src="{JS_DIR}jquery1.9/jquery-migrate-1.4.1.js" type="text/javascript"></script>
-	  <script src="{JQUERY_DIR}browser/v1.0/jquery.browser.min.js" type="text/javascript"></script>
-	  <script src="{JQUERY_DIR}support/jquery.support.js" type="text/javascript"></script>
-	  <!-- END switch_recent_jquery -->
-	  <script src="{JS_DIR}{L_LANG}.js" type="text/javascript"></script>
-	  {RICH_SNIPPET_GOOGLE}
-		
-	  <!-- BEGIN switch_ticker -->
-	  <link type="text/css" rel="stylesheet" href="{JQUERY_DIR}ticker/ticker.css"/>
-	  <script src="{JQUERY_DIR}ticker/ticker.js" type="text/javascript"></script>
-	  <!-- END switch_ticker -->
-  
-	  <!-- BEGIN switch_ticker_new -->
-	  <script src="{JQUERY_DIR}jcarousel/jquery.jcarousel.js" type="text/javascript"></script>
-	  <script type="text/javascript">
-		  //<![CDATA[
-		  /* Definir le sens de direction en fonction du panneau admin */
-		  var tickerDirParam = "{switch_ticker.DIRECTION}";
-		  var slid_vert = false;
-		  var auto_dir = 'next';
-		  var h_perso = parseInt({switch_ticker.HEIGHT});
-  
-		  switch (tickerDirParam) {
-			  case 'top' :
-				  slid_vert = true;
-				  break;
-  
-			  case 'left':
-				  break;
-  
-			  case 'bottom':
-				  slid_vert = true;
-				  auto_dir = 'prev';
-				  break;
-  
-			  case 'right':
-				  auto_dir = 'prev';
-				  break;
-  
-			  default:
-				  slid_vert = true;
-		  }
-  
-		  $(document).ready(function () {
-  
-			  $('#fa_ticker_content').css('display', 'block');
-  
-			  var width_max = $('ul#fa_ticker_content').width();
-			  var width_item = Math.floor(width_max / {switch_ticker.SIZE});
-  
-			  if (width_max > 0) {
-				  $('ul#fa_ticker_content li').css('float', 'left').css('list-style', 'none').width(width_item).find('img').each(function () {
-					  if ($(this).width() > width_item) {
-						  var ratio = $(this).width() / width_item;
-						  var new_height = Math.round($(this).height() / ratio);
-						  $(this).height(new_height).width(width_item);
-					  }
-				  });
-  
-				  if (slid_vert) {
-					  var height_max = h_perso;
-  
-					  $('ul#fa_ticker_content li').each(function () {
-						  if ($(this).height() > height_max) {
-							  height_max = $(this).height();
-						  }
-					  });
-  
-					  $('ul#fa_ticker_content').width(width_item).height(height_max).css('marginLeft', 'auto').css('marginRight', 'auto');
-					  $('ul#fa_ticker_content li').height(height_max);
-				  }
-  
-  
-				  $('#fa_ticker_content').jcarousel({
-					  vertical: slid_vert,
-					  wrap: 'circular',
-					  auto: {switch_ticker.STOP_TIME},
-					  auto_direction: auto_dir,
-					  scroll: 1,
-					  size: {switch_ticker.SIZE},
-					  height_max: height_max,
-					  animation: {switch_ticker.SPEED}
-				  });
-			  } else {
-				  $('ul#fa_ticker_content li:not(:first)').css('display', 'none');
-				  $('ul#fa_ticker_content li:first').css('list-style', 'none').css('text-align', 'center');
-			  }
-		  });
-		  //]]>
-	  </script>
-	  <!-- END switch_ticker_new -->
-  
-	  <script type="text/javascript">//<![CDATA[
-		  $(document).ready(function () {
-			  <!-- BEGIN switch_enable_pm_popup -->
-			  pm = window.open('{U_PRIVATEMSGS_POPUP}', '_faprivmsg', 'HEIGHT=225,resizable=yes,WIDTH=400');
-			  if (pm != null) {
-				  pm.focus();
-			  }
-			  <!-- END switch_enable_pm_popup -->
-			  <!-- BEGIN switch_report_popup -->
-			  report = window.open('{switch_report_popup.U_REPORT_POPUP}', '_phpbbreport', 'HEIGHT={switch_report_popup.S_HEIGHT},resizable=yes,scrollbars=no,WIDTH={switch_report_popup.S_WIDTH}');
-			  if (report != null) {
-				  report.focus();
-			  }
-			  <!-- END switch_report_popup -->
-			  <!-- BEGIN switch_ticker -->
-			  $(document).ready(function () {
-				  Ticker.start({
-					  height: {switch_ticker.HEIGHT},
-					  spacing: {switch_ticker.SPACING},
-					  speed: {switch_ticker.SPEED},
-					  direction: '{switch_ticker.DIRECTION}',
-					  pause: {switch_ticker.STOP_TIME}
-				  });
-			  });
-			  <!-- END switch_ticker -->
-		  });
-  
-		  <!-- BEGIN switch_login_popup -->
-		  var logInPopUpLeft, logInPopUpTop, logInPopUpWidth = {LOGIN_POPUP_WIDTH},
-			  logInPopUpHeight = {LOGIN_POPUP_HEIGHT}, logInBackgroundResize = true, logInBackgroundClass = false;
-  
-		  $(document).ready(function () {
-			  $(window).resize(function () {
-				  var windowWidth = document.documentElement.clientWidth;
-				  var popupWidth = $("#login_popup").width();
-				  var mypopup = $("#login_popup");
-  
-				  $("#login_popup").css({
-					  "left": windowWidth / 2 - popupWidth / 2
-				  });
-			  });
-		  });
-		  <!-- END switch_login_popup -->
-		  //]]>
-	  </script>
-  
-	  {GREETING_POPUP}
-  
-  <!----------------->
-  <!-- CSS EXTERNE -->
-			
-  <!-- basiques (identité visuelle) --> <link href="https://ao-nari.github.io/byeonhwa-rpg/basics.css" rel="stylesheet"/>
-  <!-- administration --> <link href="https://ao-nari.github.io/byeonhwa-rpg/bh_admin.css" rel="stylesheet"/>
-  <!-- SIDEBAR --> <link href="https://ao-nari.github.io/byeonhwa-rpg/front-page-elements/sidebar.css" rel="stylesheet"/>
-  <!-- PA --> <link href="https://ao-nari.github.io/byeonhwa-rpg/front-page-elements/pa.css" rel="stylesheet"/>
-  <!-- QEEL --> <link href="https://ao-nari.github.io/byeonhwa-rpg/front-page-elements/qeel.css" rel="stylesheet"/> 
-  <!-- switcheroo (par Monomer) --> <link href="https://ao-nari.github.io/byeonhwa-rpg/front-page-elements/switcheroo.css" rel="stylesheet"/>
-  <!-- MESSENGER (par AngeTuteur) --> 
-  <!-- page PROFIL --> <link href="https://ao-nari.github.io/byeonhwa-rpg/profile_page.css" rel="stylesheet"/>
-			
-  <!-- FICHES RP (CSS SHEETS) -->
-  <!-- FRP1 --> <link rel="stylesheet" href="https://www.aht.li/3853027/frp1.css">
-  <!-- FRP2 --> <link rel="stylesheet" href="https://www.aht.li/3865117/frp2.css">
-  <!-- FRP3 --> <link rel="stylesheet" href="https://www.aht.li/3831880/frp3.css">
-  <!-- FRP4 --> <link rel="stylesheet" href="https://www.aht.li/3860257/frp4.css">
-  <!-- FRP5 --> <link rel="stylesheet" href="#">
-			
-			
-  <!----------------->      
-  <!-- DIVERS CODES MESSAGES -->
-			
-  <!-- PRÉSENTATION --> <link href="https://ao-nari.github.io/byeonhwa-rpg/codes-messages/fdp.css" rel="stylesheet"/>       
-  
-  <style type="text/css">
-  <!-- BEGIN switch_ticker_new -->
-	  .jcarousel-skin-tango .jcarousel-item {text-align: center;width: 10px;}
-	  .jcarousel-skin-tango .jcarousel-item-horizontal {margin-right: {switch_ticker.SPACING}px;}
-	  .jcarousel-skin-tango .jcarousel-item-vertical {margin-bottom: {switch_ticker.SPACING}px;}
-  <!-- END switch_ticker_new -->
-			
-  /****** ----------------------------------------------------------
-   ****** STRUCTURE DE FORUMACTIF ---------------------------------- 
-   ****** Elements de base qui servent à construire la page --------
-   ****** Il y a peu de chances que vous deviez toucher cette partie du CSS ******/
-   
-  /*** ------------------------------- ***/
-  /* BALISES GENERALES --------------- ***/
-  
-  ul {list-style-type: none;padding: 0;margin: 0;}
-  fieldset {border: none;padding: 0;margin: 0;}
-  dl {display: grid;grid-template-columns: 220px auto;grid-gap: 15px}
-  dd {margin: 0;}
-  dt {margin: 0}
-  dt label {font-weight: bold}
-  button, input {border: none}
-  button, select, input{font-family: var(--font);cursor: pointer;}
-  input:is([type="text"], [type="passeword"]){cursor: text;}
-  
-  /*** ----------------------------- ***/
-  /*** STRUCTURE DE LA TOOLBAR ----- ***/ 
-   *** Il est conseillé de ne rien modifier pour un bon fonctionnement de la toolbar ***/
-  #fa_right #fa_menu ul,
-  #fa_right.notification #fa_menu ul,
-  #fa_right #fa_notifications #notif_unread {display: none}
-  #notif_list hr {display: none}
-  #fa_toolbar #live_notif .fa_notification .content {display: inline-block;}
-  #fa_right.welcome #fa_menulist {display: block;}
-  #fa_right.notification #notif_list {display: flex;}
-  #fa_toolbar #fa_right #fa_notifications.unread #notif_unread {display: inline;}
-  #fa_usermenu table {width: 100%;}
-  #fa_usermenu table tr {display: flex;justify-content: center;}
-  .fa_fix {position: fixed !important; z-index: 999;;top: 0; right: 0;}
-  
-  /*** --------------------------------- ***/
-  /*** STRUCTURE DE LA PAGE DE CONNEXION ***/
-  .fld_connexion dl {display: grid;rid-row-gap: 15px; grid-template-columns: 150px auto;}
-  .fld_connexion dl:nth-of-type(2) dd:last-of-type {grid-column: 1 / span 2;}
-  .fld_connexion dl:nth-of-type(3) {margin: 0;}
-  .fld_connexion dl:nth-of-type(n+3) {display: block;}
-  .invisible {display: none;visibility: hidden;} .visible {display: block;visibility: visible;}
-  
-  /* Indicateur complexité du mot de passe */
-  #cont_pwd {display: flex;align-items: center;height: 100%;margin-left: 5px;}
-  .pwd_img { padding: 2px 6px;display: none;border-radius: 3px;}
-  #pwd_good {background-color: #4CAF50;color: #FFF;}
-  #pwd_middle {background-color: #FFCC00;color: #000;}
-  #pwd_bad {background-color: #F04040;color: #FFF;}
-  
-  /*** ------------------------------- ***/
-  /*** POUBELLE DE FORUMACTIF -------- ***/
-  #p0 {display: none}
-  #find_username br,#users_here br, #main-content > p, .adminlink br, .corners-top, .corners-bottom { display: none;}
-  #find_username .panel {border: none;margin: 0}
-  .adminlink { clear: both}
-  #cp-main#cp-main#cp-main, table, .quickreply div#textarea_content {width: 100% !important;}
-  .panel .panel { background: transparent;border: none; padding: 0;margin: 0; border-radius: 0;}
-  .social_btn {display: none;}
-  </style>
-  
-	  {HOSTING_JS}
-  
-	  <!-- BEGIN google_analytics_code -->
-	  <script async src="https://www.googletagmanager.com/gtag/js?id={G_ANALYTICS_ID}"></script>
-	  <script>
-		  window.dataLayer = window.dataLayer || [];
-		  function gtag(){dataLayer.push(arguments);}
-		  gtag('js', new Date());
-		  gtag('config', '{G_ANALYTICS_ID}', {'anonymize_ip': true, 'store_gac': false, 'cookie_expires': 13 * 30 * 24 * 60 * 60});
-		  <!-- BEGIN google_analytics_code_bis -->
-		  gtag('config', '{G_ANALYTICS_ID_BIS}', {'anonymize_ip': true, 'store_gac': false, 'cookie_expires': 13 * 30 * 24 * 60 * 60});
-		  <!-- END google_analytics_code_bis -->
-	  </script>
-	  <!-- END google_analytics_code -->
-  
-	  <!------------------------------------->
-	  <!-- INITIALISATION DU PLUGIN EDISON -->    
-	  <script>
-		  (function () {
-			const html = document.documentElement;
-			const userThemePreference = window.matchMedia("(prefers-color-scheme: dark)").matches;
-			const colorScheme = localStorage.getItem('color-scheme');
-		  
-			if (!colorScheme && userThemePreference) {
-	  html.setAttribute('data-color-scheme', 'dark');
+	<!--   INSTALLATION DE FONT ICON -->
+	<link href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet"/>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+	<!-- cappuccicons --> 
+	<link rel="stylesheet" href="https://static.tumblr.com/svdghan/wUSr83npl/tempcf.css">
+	<!-- font awesome -->
+	<script src="https://kit.fontawesome.com/c38c8108d8.js" crossorigin="anonymous"></script>
+	<!-- lord-icon --> 
+	<script src="https://cdn.lordicon.com/lordicon.js"></script>
+	
+		<!-- TEXTE DANS L'ONGLET DE NAVIGATEUR -->
+	<title>{SITENAME_TITLE}{PAGE_TITLE}</title>
+	
+	<meta http-equiv="content-type" content="text/html; charset={S_CONTENT_ENCODING}"/>
+	<meta http-equiv="content-script-type" content="text/javascript"/>
+	<meta http-equiv="content-style-type" content="text/css"/>
+	<!-- BEGIN switch_compat_meta -->
+	<meta http-equiv="X-UA-Compatible" content="IE={switch_compat_meta.VERSION}"/>
+	<!-- END switch_compat_meta -->
+	<!-- BEGIN switch_canonical_url -->
+	<link rel="canonical" href="{switch_canonical_url.CANONICAL_URL}"/>
+	<!-- END switch_canonical_url -->
+	{META_FAVICO}
+	{META}
+	{META_FB_LIKE}
+	<meta name="title" content="{SITENAME_TITLE}{PAGE_TITLE}"/>
+	{T_HEAD_STYLESHEET}
+	{CSS}
+	<link rel="search" type="application/opensearchdescription+xml" href="/improvedsearch.xml" title="{SITENAME}"/>
+	<link rel="search" type="application/opensearchdescription+xml" href="{URL_BOARD_DIRECTORY}/search/improvedsearch.xml" title="{SEARCH_FORUMS}"/>
+	<script src="{JQUERY_PATH}" type="text/javascript"></script>
+	<!-- BEGIN switch_recent_jquery -->
+	<script src="{JS_DIR}jquery1.9/jquery-migrate-1.4.1.js" type="text/javascript"></script>
+	<script src="{JQUERY_DIR}browser/v1.0/jquery.browser.min.js" type="text/javascript"></script>
+	<script src="{JQUERY_DIR}support/jquery.support.js" type="text/javascript"></script>
+	<!-- END switch_recent_jquery -->
+	<script src="{JS_DIR}{L_LANG}.js" type="text/javascript"></script>
+	{RICH_SNIPPET_GOOGLE}
+	
+	<!-- BEGIN switch_ticker -->
+	<link type="text/css" rel="stylesheet" href="{JQUERY_DIR}ticker/ticker.css"/>
+	<script src="{JQUERY_DIR}ticker/ticker.js" type="text/javascript"></script>
+	<!-- END switch_ticker -->
+
+	<!-- BEGIN switch_ticker_new -->
+	<script src="{JQUERY_DIR}jcarousel/jquery.jcarousel.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		//<![CDATA[
+		/* Definir le sens de direction en fonction du panneau admin */
+		var tickerDirParam = "{switch_ticker.DIRECTION}";
+		var slid_vert = false;
+		var auto_dir = 'next';
+		var h_perso = parseInt({switch_ticker.HEIGHT});
+
+		switch (tickerDirParam) {
+			case 'top' :
+				slid_vert = true;
+				break;
+
+			case 'left':
+				break;
+
+			case 'bottom':
+				slid_vert = true;
+				auto_dir = 'prev';
+				break;
+
+			case 'right':
+				auto_dir = 'prev';
+				break;
+
+			default:
+				slid_vert = true;
+		}
+
+		$(document).ready(function () {
+
+			$('#fa_ticker_content').css('display', 'block');
+
+			var width_max = $('ul#fa_ticker_content').width();
+			var width_item = Math.floor(width_max / {switch_ticker.SIZE});
+
+			if (width_max > 0) {
+				$('ul#fa_ticker_content li').css('float', 'left').css('list-style', 'none').width(width_item).find('img').each(function () {
+					if ($(this).width() > width_item) {
+						var ratio = $(this).width() / width_item;
+						var new_height = Math.round($(this).height() / ratio);
+						$(this).height(new_height).width(width_item);
+					}
+				});
+
+				if (slid_vert) {
+					var height_max = h_perso;
+
+					$('ul#fa_ticker_content li').each(function () {
+						if ($(this).height() > height_max) {
+							height_max = $(this).height();
+						}
+					});
+
+					$('ul#fa_ticker_content').width(width_item).height(height_max).css('marginLeft', 'auto').css('marginRight', 'auto');
+					$('ul#fa_ticker_content li').height(height_max);
+				}
+
+
+				$('#fa_ticker_content').jcarousel({
+					vertical: slid_vert,
+					wrap: 'circular',
+					auto: {switch_ticker.STOP_TIME},
+					auto_direction: auto_dir,
+					scroll: 1,
+					size: {switch_ticker.SIZE},
+					height_max: height_max,
+					animation: {switch_ticker.SPEED}
+				});
+			} else {
+				$('ul#fa_ticker_content li:not(:first)').css('display', 'none');
+				$('ul#fa_ticker_content li:first').css('list-style', 'none').css('text-align', 'center');
 			}
-	  
-			colorScheme && html.setAttribute('data-color-scheme', colorScheme);
-		  })();
-  </script>
-  </head>
-  
-  <body id="phpbb">
-  
-	  <!-- Structure du forum -->
-	  <div class="main_forum">
-  
-		  <!-- Ascenseur : renvoi vers le haut de la page -->
-		  <a id="top" name="top" accesskey="t"></a>
-		  {JAVASCRIPT}
+		});
+		//]]>
+	</script>
+	<!-- END switch_ticker_new -->
+
+	<script type="text/javascript">//<![CDATA[
+		$(document).ready(function () {
+			<!-- BEGIN switch_enable_pm_popup -->
+			pm = window.open('{U_PRIVATEMSGS_POPUP}', '_faprivmsg', 'HEIGHT=225,resizable=yes,WIDTH=400');
+			if (pm != null) {
+				pm.focus();
+			}
+			<!-- END switch_enable_pm_popup -->
+			<!-- BEGIN switch_report_popup -->
+			report = window.open('{switch_report_popup.U_REPORT_POPUP}', '_phpbbreport', 'HEIGHT={switch_report_popup.S_HEIGHT},resizable=yes,scrollbars=no,WIDTH={switch_report_popup.S_WIDTH}');
+			if (report != null) {
+				report.focus();
+			}
+			<!-- END switch_report_popup -->
+			<!-- BEGIN switch_ticker -->
+			$(document).ready(function () {
+				Ticker.start({
+					height: {switch_ticker.HEIGHT},
+					spacing: {switch_ticker.SPACING},
+					speed: {switch_ticker.SPEED},
+					direction: '{switch_ticker.DIRECTION}',
+					pause: {switch_ticker.STOP_TIME}
+				});
+			});
+			<!-- END switch_ticker -->
+		});
+
+		<!-- BEGIN switch_login_popup -->
+		var logInPopUpLeft, logInPopUpTop, logInPopUpWidth = {LOGIN_POPUP_WIDTH},
+			logInPopUpHeight = {LOGIN_POPUP_HEIGHT}, logInBackgroundResize = true, logInBackgroundClass = false;
+
+		$(document).ready(function () {
+			$(window).resize(function () {
+				var windowWidth = document.documentElement.clientWidth;
+				var popupWidth = $("#login_popup").width();
+				var mypopup = $("#login_popup");
+
+				$("#login_popup").css({
+					"left": windowWidth / 2 - popupWidth / 2
+				});
+			});
+		});
+		<!-- END switch_login_popup -->
+		//]]>
+	</script>
+
+	{GREETING_POPUP}
+
+<!----------------->
+<!-- CSS EXTERNE -->
 		
-		 <!----------------------------------------------->
-		 <!-- ENTETE DU FORUM (au-dessus de la pub) -------------->
-  
-		  <div id="page-header">
-			
-			 <!-- animation bannière -->
-			<div class="header__progressbar"></div>
-			
-			 <!-- Bannière -->
-			  <a href="{U_INDEX}">
-				  <div id="header"><img loading="lazy" /></div>
-			  </a>
-  
-			  <!---------------------------------------->
-			  <!-- DEBUT navbar -->
-			  <div id="navbar" class="navbar">
-					  <button id="sidebar__btn" class="sidebar__btn">
-							  <div class="menu__icon"><span><i></i><i></i><i></i></span></div>
-					  </button>
-					  <ul class="navbar__mainmenu"><li>{GENERATED_NAV_BAR}</li></ul>
-					  <div class="navbar__rightmenu">
-							  <button id="switcheroo__btn" class="switcheroo__btn">
-									  <div class="switcheroo__icon"><span></span></div>
-							  </button>
-					  </div>
-			  </div>
-			  <!-- FIN navbar -->
-			  <!---------------------------------------->
-			
-			  <!-- bouton MESSENGER -->
-		  <a id="FAM-button-open" title="Forumactif Messenger"><i class="bi bi-chat-fill"></i></a>
-						  
-			  <!---------------------------------------->
-			  <!-- DEBUT switcheroo -->
-			  <div id="switcheroo" class="switcheroo">
-					  <!-- code -->
-			  </div>
-			  <!-- FIN switcheroo -->
-			  <!---------------------------------------->
-  
-			  <!-- Annonces défilantes -->
-			  <!-- BEGIN switch_ticker_new -->
-			  <div id="fa_ticker_blockD">
-				  <div class="module">
-					  <div id="fa_ticker_container">
-						  <ul id="fa_ticker_content" class="jcarousel-skin-tango" style="display:none">
-							  <!-- BEGIN ticker_row -->
-							  <li>{switch_ticker.ticker_row.ELEMENT}</li>
-							  <!-- END ticker_row -->
-						  </ul>
-					  </div>
-				  </div>
-			  </div>
-			  <!-- END switch_ticker_new -->
-			  
-			  <!-- BEGIN switch_ticker -->
-			  <div id="fa_ticker_block" style="margin-top:4px;">
-				  <div class="module">
-					  <div id="fa_ticker_container">
-						  <div id="fa_ticker" style="height:{switch_ticker.HEIGHT}px;">
-							  <div class="fa_ticker_content">
-								  <!-- BEGIN ticker_row -->
-								  <div>{switch_ticker.ticker_row.ELEMENT}</div>
-								  <!-- END ticker_row -->
-							  </div>
-						  </div>
-					  </div>
-				  </div>
-			  </div>
-			  <!-- END switch_ticker -->
-			  <!-- Fin des annonces défilantes -->
-		  </div>
-		  <!-- Fin de l'entête -->
+<!-- basiques (identité visuelle) --> <link href="https://ao-nari.github.io/byeonhwa-rpg/basics.css" rel="stylesheet"/>
+<!-- administration --> <link href="https://ao-nari.github.io/byeonhwa-rpg/bh_admin.css" rel="stylesheet"/>
+<!-- SIDEBAR --> <link href="https://ao-nari.github.io/byeonhwa-rpg/front-page-elements/sidebar.css" rel="stylesheet"/>
+<!-- PA --> <link href="https://ao-nari.github.io/byeonhwa-rpg/front-page-elements/pa.css" rel="stylesheet"/>
+<!-- QEEL --> <link href="https://ao-nari.github.io/byeonhwa-rpg/front-page-elements/qeel.css" rel="stylesheet"/> 
+<!-- switcheroo (par Monomer) --> <link href="https://ao-nari.github.io/byeonhwa-rpg/front-page-elements/switcheroo.css" rel="stylesheet"/>
+<!-- MESSENGER (par AngeTuteur) --> <link href="https://ao-nari.github.io/byeonhwa-rpg/front-page-elements/messenger.css" rel="stylesheet"/>
+<!-- page PROFIL --> <link href="https://ao-nari.github.io/byeonhwa-rpg/profile_page.css" rel="stylesheet"/>
+<!-- SUJETS SURVEILLES ET FAVORIS --> <link href="https://ao-nari.github.io/byeonhwa-rpg/watchlist_faves.css" rel="stylesheet"/>
+<!-- SUJETS ET MESSAGES MEMBRE --> <link href="https://ao-nari.github.io/byeonhwa-rpg/spa_sta.css" rel="stylesheet"/>
+<!-- LISTE DES MEMBRES --> <link href="https://ao-nari.github.io/byeonhwa-rpg/memberlist.css" rel="stylesheet"/>
 		
-		 <!----------------------------------------------->
-		 <!-- CONTENU DU FORUM -------------->
-		 
-		  <div id="page-body">
-  
-			  <div id="{ID_CONTENT_CONTAINER}" {CLASS_CONTENT_CONTAINER}>
-				  <div id="outer-wrapper">
-					  <div id="wrapper">
-						  <div id="container">
-							  <div id="content">
-  
-								  <div id="main">
-									  <div id="main-content">   
+<!-- DIVERS CODES MESSAGES -->
+<!-- PRÉSENTATION --> <link href="https://ao-nari.github.io/byeonhwa-rpg/codes-messages/fdp.css" rel="stylesheet"/>   
+
+<!-- FICHES RP (CSS SHEETS) -->
+<!-- FRP1 --> <link rel="stylesheet" href="https://www.aht.li/3853027/frp1.css">
+<!-- FRP2 --> <link rel="stylesheet" href="https://www.aht.li/3865117/frp2.css">
+<!-- FRP3 --> <link rel="stylesheet" href="https://www.aht.li/3831880/frp3.css">
+<!-- FRP4 --> <link rel="stylesheet" href="https://www.aht.li/3860257/frp4.css">    
+
+<style type="text/css">
+<!-- BEGIN switch_ticker_new -->
+	.jcarousel-skin-tango .jcarousel-item {text-align: center;width: 10px;}
+	.jcarousel-skin-tango .jcarousel-item-horizontal {margin-right: {switch_ticker.SPACING}px;}
+	.jcarousel-skin-tango .jcarousel-item-vertical {margin-bottom: {switch_ticker.SPACING}px;}
+<!-- END switch_ticker_new -->
+		
+/****** ----------------------------------------------------------
+****** STRUCTURE DE FORUMACTIF ---------------------------------- 
+****** Elements de base qui servent à construire la page --------
+****** Il y a peu de chances que vous deviez toucher cette partie du CSS ******/
+
+/*** ------------------------------- ***/
+/* BALISES GENERALES --------------- ***/
+
+ul {list-style-type: none;padding: 0;margin: 0;}
+fieldset {border: none;padding: 0;margin: 0;}
+dl {display: grid;grid-template-columns: 220px auto;grid-gap: 15px}
+dd {margin: 0;}
+dt {margin: 0}
+dt label {font-weight: bold}
+button, input {border: none}
+button, select, input{font-family: var(--font);cursor: pointer;}
+input:is([type="text"], [type="passeword"]){cursor: text;}
+
+/*** ----------------------------- ***/
+/*** STRUCTURE DE LA TOOLBAR ----- ***/ 
+*** Il est conseillé de ne rien modifier pour un bon fonctionnement de la toolbar ***/
+#fa_right #fa_menu ul,
+#fa_right.notification #fa_menu ul,
+#fa_right #fa_notifications #notif_unread {display: none}
+#notif_list hr {display: none}
+#fa_toolbar #live_notif .fa_notification .content {display: inline-block;}
+#fa_right.welcome #fa_menulist {display: block;}
+#fa_right.notification #notif_list {display: flex;}
+#fa_toolbar #fa_right #fa_notifications.unread #notif_unread {display: inline;}
+#fa_usermenu table {width: 100%;}
+#fa_usermenu table tr {display: flex;justify-content: center;}
+.fa_fix {position: fixed !important; z-index: 999;;top: 0; right: 0;}
+
+/*** --------------------------------- ***/
+/*** STRUCTURE DE LA PAGE DE CONNEXION ***/
+.fld_connexion dl {display: grid;rid-row-gap: 15px; grid-template-columns: 150px auto;}
+.fld_connexion dl:nth-of-type(2) dd:last-of-type {grid-column: 1 / span 2;}
+.fld_connexion dl:nth-of-type(3) {margin: 0;}
+.fld_connexion dl:nth-of-type(n+3) {display: block;}
+.invisible {display: none;visibility: hidden;} .visible {display: block;visibility: visible;}
+
+/* Indicateur complexité du mot de passe */
+#cont_pwd {display: flex;align-items: center;height: 100%;margin-left: 5px;}
+.pwd_img { padding: 2px 6px;display: none;border-radius: 3px;}
+#pwd_good {background-color: #4CAF50;color: #FFF;}
+#pwd_middle {background-color: #FFCC00;color: #000;}
+#pwd_bad {background-color: #F04040;color: #FFF;}
+
+/*** ------------------------------- ***/
+/*** POUBELLE DE FORUMACTIF -------- ***/
+#p0 {display: none}
+#find_username br,#users_here br, #main-content > p, .adminlink br, .corners-top, .corners-bottom { display: none;}
+#find_username .panel {border: none;margin: 0}
+.adminlink { clear: both}
+#cp-main#cp-main#cp-main, table, .quickreply div#textarea_content {width: 100% !important;}
+.panel .panel { background: transparent;border: none; padding: 0;margin: 0; border-radius: 0;}
+.social_btn {display: none;}
+</style>
+
+	{HOSTING_JS}
+
+	<!-- BEGIN google_analytics_code -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id={G_ANALYTICS_ID}"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', '{G_ANALYTICS_ID}', {'anonymize_ip': true, 'store_gac': false, 'cookie_expires': 13 * 30 * 24 * 60 * 60});
+		<!-- BEGIN google_analytics_code_bis -->
+		gtag('config', '{G_ANALYTICS_ID_BIS}', {'anonymize_ip': true, 'store_gac': false, 'cookie_expires': 13 * 30 * 24 * 60 * 60});
+		<!-- END google_analytics_code_bis -->
+	</script>
+	<!-- END google_analytics_code -->
+
+	<!------------------------------------->
+	<!-- INITIALISATION DU PLUGIN EDISON -->    
+	<script>
+		(function () {
+		const html = document.documentElement;
+		const userThemePreference = window.matchMedia("(prefers-color-scheme: dark)").matches;
+		const colorScheme = localStorage.getItem('color-scheme');
+		
+		if (!colorScheme && userThemePreference) {
+	html.setAttribute('data-color-scheme', 'dark');
+		}
+	
+		colorScheme && html.setAttribute('data-color-scheme', colorScheme);
+		})();
+</script>
+</head>
+
+<body id="phpbb">
+
+	<!-- Structure du forum -->
+	<div class="main_forum">
+
+		<!-- Ascenseur : renvoi vers le haut de la page -->
+		<a id="top" name="top" accesskey="t"></a>
+		{JAVASCRIPT}
+	
+		<!----------------------------------------------->
+		<!-- ENTETE DU FORUM (au-dessus de la pub) -------------->
+
+		<div id="page-header">
+		
+			<!-- animation bannière -->
+		<div class="header__progressbar"></div>
+		
+			<!-- Bannière -->
+			<a href="{U_INDEX}">
+				<div id="header"><img loading="lazy" /></div>
+			</a>
+
+			<!---------------------------------------->
+			<!-- DEBUT navbar -->
+			<div id="navbar" class="navbar">
+					<button id="sidebar__btn" class="sidebar__btn">
+							<div class="menu__icon"><span><i></i><i></i><i></i></span></div>
+					</button>
+					<ul class="navbar__mainmenu"><li>{GENERATED_NAV_BAR}</li></ul>
+					<div class="navbar__rightmenu">
+							<button id="switcheroo__btn" class="switcheroo__btn">
+									<div class="switcheroo__icon"><span></span></div>
+							</button>
+					</div>
+			</div>
+			<!-- FIN navbar -->
+			<!---------------------------------------->
+		
+			<!-- bouton MESSENGER -->
+		<a id="FAM-button-open" title="Forumactif Messenger"><i class="bi bi-chat-fill"></i></a>
+						
+			<!---------------------------------------->
+			<!-- DEBUT switcheroo -->
+			<div id="switcheroo" class="switcheroo">
+					<!-- code -->
+			</div>
+			<!-- FIN switcheroo -->
+			<!---------------------------------------->
+
+			<!-- Annonces défilantes -->
+			<!-- BEGIN switch_ticker_new -->
+			<div id="fa_ticker_blockD">
+				<div class="module">
+					<div id="fa_ticker_container">
+						<ul id="fa_ticker_content" class="jcarousel-skin-tango" style="display:none">
+							<!-- BEGIN ticker_row -->
+							<li>{switch_ticker.ticker_row.ELEMENT}</li>
+							<!-- END ticker_row -->
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- END switch_ticker_new -->
+			
+			<!-- BEGIN switch_ticker -->
+			<div id="fa_ticker_block" style="margin-top:4px;">
+				<div class="module">
+					<div id="fa_ticker_container">
+						<div id="fa_ticker" style="height:{switch_ticker.HEIGHT}px;">
+							<div class="fa_ticker_content">
+								<!-- BEGIN ticker_row -->
+								<div>{switch_ticker.ticker_row.ELEMENT}</div>
+								<!-- END ticker_row -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- END switch_ticker -->
+			<!-- Fin des annonces défilantes -->
+		</div>
+		<!-- Fin de l'entête -->
+	
+		<!----------------------------------------------->
+		<!-- CONTENU DU FORUM -------------->
+		
+		<div id="page-body">
+
+			<div id="{ID_CONTENT_CONTAINER}" {CLASS_CONTENT_CONTAINER}>
+				<div id="outer-wrapper">
+					<div id="wrapper">
+						<div id="container">
+							<div id="content">
+
+								<div id="main">
+									<div id="main-content">   
