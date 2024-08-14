@@ -315,7 +315,6 @@
 /* --- tableau valeurs groupes --- */
 .vc-grid {
   width: 90%; 
-  background: linear-gradient(to top, var(--bomOp), var(--baseClr3-10)); 
   display: grid; 
   grid-template-columns: 1fr 1fr;  
   gap: 0.5rem; 
@@ -369,7 +368,6 @@
 .group-family .family-card {
   display: grid;  
   grid-template-rows: 25% 1fr;
-  background: linear-gradient(to top, var(--bomOp), var(--baseClr3-10)); 
   padding: 0.5rem; 
   border-radius: var(--small-radius); 
 }

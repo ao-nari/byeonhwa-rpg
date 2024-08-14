@@ -1955,7 +1955,10 @@ button.rep-button .rep-nb {
 }
 
 .profile_header {
-  height: 5.6rem; 
+  height: 5.6rem;
+  display: flex;
+  flex-direction: column;
+  text-align: right;
 }
 
 .post_avatar {
@@ -1974,18 +1977,20 @@ button.rep-button .rep-nb {
 
 /* --- played by (champ faceclaim) --- */
 .playedby {
-  font-size: var(--small2); 
-  letter-spacing: -0.3px; 
-  white-space: nowrap; 
-  display: inline-block; 
-  width: 100%; 
-  text-align: right; 
-  padding-right: 1rem; 
-  margin-top: -8px; 
+  font-size: var(--small2);
+  letter-spacing: -0.3px;
+  white-space: nowrap;
+  display: inline-block;
+  width: 100%;
+  text-align: right;
+  padding-right: 1rem;
+  margin-top: -8px;
+  /* line-height: 0; */
+  padding-bottom: 1rem;
 }
 
 .playedby .field_label, .playedby .field_separator {
-  display: none; 
+  display: none;
 }
 
 .playedby .field_content::before {
@@ -2008,7 +2013,7 @@ button.rep-button .rep-nb {
   min-height: 36rem !important; 
   max-width: 22.5rem !important; 
   max-height: 36rem !important; 
-  top: -36rem; 
+  top: -36.7rem; 
   background: var(--baseClr-90);  
   border-radius: 1.5rem; 
   /* overflow: hidden; */
@@ -2238,6 +2243,7 @@ button.rep-button .rep-nb {
   border-radius: var(--small-radius); 
   padding: 0.5rem;  
   text-align: justify !important;
+  line-height: var(--small-lh); 
 }
 
 .post_userinfo .post_userinfoin {
