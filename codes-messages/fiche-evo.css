@@ -1,48 +1,50 @@
 /* --- GENERAL FICHE EVO --- */
-/* .bh_fevo {
+.bh_fevo {
     display: flex; 
-} */
-
-/* --- FICHE DE BASE --- */
-.fevo_base {
-    display: flex; 
-    height: 40rem;
-    display: flex;
+    width: 95%; 
+    margin: auto; 
+  }
+  
+  /* --- FICHE DE BASE --- */
+  .fevo_base {
+      display: flex; 
+      height: 40rem;
+      display: flex;
+      width: 100%;
+      gap: 0.6rem;
+  }
+  
+  /* -- avatar -- */
+  .fevo-avatar {
+    background: linear-gradient(to bottom, var(--baseClr3-10), var(--baseClr3-20));
+    padding: 0.6rem; 
+    border-radius: var(--radius);
+  }
+  
+  .fevo-avatar img {
+    border-radius: var(--radius);
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .fevo-container {
     width: 100%;
-    gap: 0.6rem;
-}
-
-/* -- avatar -- */
-.fevo-avatar {
-  background: linear-gradient(to bottom, var(--baseClr3-10), var(--baseClr3-20));
-  padding: 0.6rem; 
-  border-radius: var(--radius);
-}
-
-.fevo-avatar img {
-  border-radius: var(--radius);
-  height: 100%;
-  object-fit: cover;
-}
-
-.fevo-container {
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to bottom, var(--baseClr3-10), var(--baseClr3-20));
-  padding: 0.6rem;
-  border-radius: var(--radius);
-  display: flex;
-  flex-direction: column;
-}
-
-.fevo-header {
-    height: 30%;
-}
-
-.fevo-content {
-  text-align: justify;
-  height: 100%; 
-  background: var(--baseClr);
-  border-radius: var(--radius);
-  padding: 1.5rem;
-}
+    height: 100%;
+    background: linear-gradient(to bottom, var(--baseClr3-10), var(--baseClr3-20));
+    padding: 0.6rem;
+    border-radius: var(--radius);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .fevo-header {
+      height: 30%;
+  }
+  
+  .fevo-content {
+    text-align: justify;
+    height: 100%; 
+    background: var(--baseClr);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+  }
