@@ -389,3 +389,10 @@ bh_scen {
   background: var(--munOp); 
   color: var(--mun); 
 }
+
+/* ---------- COULEURS ---------- */
+baseClr, .baseClr {color: var(--baseClr);}
+baseClr2, .baseClr2 {color: var(--baseClr2)}
+baseClr3, .baseClr3 {color: var(--baseClr3);}
+accentClr, .accentClr {color: var(--accentClr);}
+accentClr2, .accentClr2 {color: var(--accentClr2);}
