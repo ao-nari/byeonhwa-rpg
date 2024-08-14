@@ -13,10 +13,10 @@ bigger2, .bigger2 {font-size: var(--bigger2);}
 biggest, .biggest {font-size: var(--biggest);}
 
 /* --- POLICES --- */
-montserrat, .montserrat {font-family: var(--font1);}
-sugarbaby, .sugarbaby {font-family: var(--font2)}
-playfair, .playfair {font-family: var(--font3)}
-krfont, .krfont {font-family: var(--krfont)}
+montserrat, .montserrat {font-family: 'Montserrat', 'Arial', sans-serif;}
+sugarbaby, .sugarbaby {font-family: 'sugar_babyregular', 'Times new roman', serif;}
+playfair, .playfair {font-family: 'Playfair display', 'Palatino', serif;}
+krfont, .krfont {font-family: 'Diphylleia', serif;}
 
 /* --- variables diverses --- */
 :root {
