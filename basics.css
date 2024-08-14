@@ -327,7 +327,7 @@ right, .right {float: right !important;}
 
 
 /* --- TW/CW --- */
-tw, .tw, cw, .vw {
+tw, .tw, cw, .cw {
   font-weight: var(--bold-fw);
 }
 
