@@ -1,290 +1,83 @@
-<style>
-    .userlist{
-        display: flex;
-        background: var(--baseClr2-20);
-        border-radius: var(--radius);
-        justify-content: space-between;
-        align-items: center;
-        padding: 15px;
-        flex-wrap: wrap;
-        gap: 10px;
-    }
-     
-    .userlist_profil{
-        width: 250px;
-        background: var(--baseClr-60);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 10px;
-        border-radius: var(--radius);
-        gap: 3px;
-    }
+<!----------------------------------------------->
+<!-- LISTE DES MEMBRES -------------->
+
+<section class="ul"><div class="container">
+<div class="container__title">
+  
+    <!-- Titre de la liste des membres -->
+  <div class="annexe_links"><div><span>LISTE DES MEMBRES</span></div></div>
+  
       
-    .userlist_avatar {
-        position: relative;
-        width: 240px !important;
-        display: flex;
-        justify-content: center;
-        overflow: hidden;
-    }
-    
-    .userlist_avatar img {
-        width: 240px;
-        height: 170px;
-        object-fit: cover;
-        border-radius: 0px 0px var(--radius) var(--radius);
-        display: block;
-        opacity: 0.8;
-    }
-    
-    .userlist_avatar .userlist_hover {
-        position: absolute;
-        background: linear-gradient(to bottom, transparent, var(--baseClr-80));
-        background-color: var(--baseClr-70);
-        color: var(--textClr);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        opacity: 0;
-        transition: transform 900ms ease, opacity 900ms ease;
-        transform: translateY(100%);
-        width: 225px;
-        height: 170px;
-        border-radius: 0px 0px var(--radius) var(--radius);
-        padding: 5px;
-        font-family: var(--font1);
-        font-size: 12px;
-    }
-    
-    .userlist_avatar:hover .userlist_hover {
-        transform: translateY(0);
-        opacity: 1;
-    }
-    
-    
+    <div class="userlist_searchbar">
       
-    .userlist_details {
-        display: flex;
-        flex-direction: column;
-        width: 225px;
-        align-items: flex-start;
-        border-radius: var(--radius) var(--radius) 0px 0px;
-        background-color: var(--baseClr);
-        line-height: 10pt;
-        text-align: right;
-        padding:10px;
-    }
-    
-    .userlist_details b{
-        color: var(--accentClr);
-        font-weight: 600;
-        font-style: normal !important;
-        font-size: 11px;
-      }
-      
-    .userlist_infos{
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        height: 100%;
-        justify-content: center;
-        align-items: center;
-        gap: 4px;
-    }
-    .userlist_pseudo {
-        font-family: var(--font2);
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        width: -webkit-fill-available;
-        border-radius: var(--small-radius) 0px 0px var(--small-radius);
-    }
-    .userlist_joindate {
-        font-size: 12px;
-        opacity: 0.8;
-        font-style: italic;
-        width: 100%;
-    }
-    .userlist_lastvisit, .userlist_messages, .userlist_contact{
-        background: var(--baseClr-80);
-        width: 100%;
-        padding: 5px;
-        border-radius: var(--small-radius);
-        display: flex;
-        justify-content: space-between;
-    }
-    .userlist_lastvisit span, .userlist_messages span, .userlist_contact span {
-        background: var(--grad2);
-        background-size: 100%;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
-      
-      
-    .userlist_title{
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        position: relative;
-        margin-left: 0.5rem;
-        letter-spacing: 0.1rem;
-        font-size: var(--bigger2);
-        font-family: var(--font2);
-        text-transform: uppercase;
-        background: var(--grad2);
-        background-size: 100%;
-        -webkit-background-clip: text !important;
-        -webkit-text-fill-color: transparent;
-        font-weight: 600;
-        top:5px;
-    }
-    #main-content .links_bar{
-        margin: 3rem 0 1rem 0;
-        font-size: var(--small2);
-        text-transform: uppercase;
-        font-weight: var(--semibold-fw);
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    
-    .ul .container__title{
-    justify-content:space-evenly !important;
-    }
-    .ul .annexe_links{width:100%;}
-    
-    .ul .annexe_links a{
-        font-size: var(--small2);
-        text-transform: lowercase;
-    }
-      
-    .ul .annexe_links div span{
-        background: var(--grad2);
-        background-size: 100%;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        font-size: var(--bigger2);
-     }
-    .userlist_searchbar{
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        margin-left: 2rem;
-        text-transform: uppercase;
-        font-weight: 600;
-        font-size: var(--small);
-    }
-    
-    .userlist_searchbar .annexe_links{width:fit-content !important;}
-    
-    .ul_form{
-        display: flex;
-        position: relative;
-        top: -5px;
-    }
-    
-    .button2, input.inputbox.tiny{padding:0.5rem;margin:1px 0px 0px 0px;}
-    
-    .button2{
-      position: relative; 
-      background:transparent;
-      text-transform:uppercase;
-      background:var(--baseClr2-20);
-    }
-    
-    .button2:hover {
-      background: var(--baseClr2-40);
-    }</style>
-    
-    
-    <!----------------------------------------------->
-    <!-- LISTE DES MEMBRES -------------->
-    
-    <section class="ul"><div class="container">
-    <div class="container__title">
-      
-      
-       <!-- Titre de la liste des membres -->
-      <div class="annexe_links"><div><span>LISTE DES MEMBRES</span></div></div>
-      
-          
-        <div class="userlist_searchbar">
-          
-          <div>
-          <form action="{S_MODE_ACTION}" method="get" class="ul_form">
-            <span>
-                chercher un membre &nbsp; <input type="text" class="inputbox tiny" name="username" maxlength="25" size="20" value="{L_USER_SELECT_VALUE}" />
-                &nbsp; trier &nbsp; {S_MODE_SELECT}
-                &nbsp; {S_ORDER_SELECT} &nbsp; 
-                &nbsp; <input class="button2" type="submit" name="submit" value="{L_SUBMIT}" />
-             </span>
-            </form>
-          </div>
-        
-        <div class="annexe_links">
-        <a href="/">bottin</a>
-        <a href="/">groupes</a>
-        <a href="/">recensement</a>
-        </div>
+      <div>
+      <form action="{S_MODE_ACTION}" method="get" class="ul_form">
+        <span>
+            chercher un membre &nbsp; <input type="text" class="inputbox tiny" name="username" maxlength="25" size="20" value="{L_USER_SELECT_VALUE}" />
+            &nbsp; trier &nbsp; {S_MODE_SELECT}
+            &nbsp; {S_ORDER_SELECT} &nbsp; 
+            &nbsp; <input class="button2" type="submit" name="submit" value="{L_SUBMIT}" />
+          </span>
+        </form>
       </div>
-      </div>
-      
-      <br>
-      
-        <!-- Liste des membres -->
-        <div class="userlist">
-          
     
-            <!-- Affichage d'un profil -->
-            <!-- BEGIN memberrow -->
-            <div class="userlist_profil">
-    
-                <!-- Avatar -->
-                            <!-- Conteneurs des informations de membre -->
-                <div class="userlist_details">
-    
-                    <!-- Pseudo -->
-                    <span class="userlist_pseudo">
-                        <a href="{memberrow.U_VIEWPROFILE}">{memberrow.USERNAME}</a>
-                    </span>
-                  <span class="userlist_joindate">
-                    membre depuis le <b>{memberrow.JOINED}</b>
-                  </span>
-    
-                </div>
-              
-              
-              
-              <div class="userlist_avatar">
-                    {memberrow.AVATAR_IMG}
-                  <div class="userlist_hover">
-                  
-                  <!-- Champs de profil -->
-                    <div class="userlist_infos">
-                      <div class="userlist_lastvisit"> <span>dernière visite</span> <div class="ul_visit">{memberrow.LASTVISIT}</div> </div>
-                      <div class="userlist_messages"> <span>messages</span> {memberrow.POSTS} </div>
-                      <div class="userlist_contact"> <span>envoyer un message</span> {memberrow.PM_IMG}  </div>
-                    </div>
-                    
-                  </div>
-                </div>
-    
-    
-            </div>
-            <!-- END memberrow -->
-            <!-- Fin d'un profil -->
-    
-        </div>
-        <!-- Fin liste des membres -->
-      
-        <!-- Pagination -->
-        <center>
-            <!-- BEGIN switch_pagination -->
-            <span class="pagination">
-                {PAGINATION}
-            </span>
-            <!-- END switch_pagination -->
-        </center>
-      
+    <div class="annexe_links">
+    <a href="/">bottin</a>
+    <a href="/">groupes</a>
+    <a href="/">recensement</a>
     </div>
-    </section>
+  </div>
+  </div>
+  
+  <br>
+  
+    <!-- Liste des membres -->
+    <div class="userlist">
+
+        <!-- Affichage d'un profil -->
+        <!-- BEGIN memberrow -->
+        <div class="userlist_profil">
+
+            <!-- Avatar -->
+                        <!-- Conteneurs des informations de membre -->
+            <div class="userlist_details">
+
+                <!-- Pseudo -->
+                <span class="userlist_pseudo">
+                    <a href="{memberrow.U_VIEWPROFILE}">{memberrow.USERNAME}</a>
+                </span>
+              <span class="userlist_joindate">
+                membre depuis le <b>{memberrow.JOINED}</b>
+              </span>
+
+            </div>
+
+          <div class="userlist_avatar">
+                {memberrow.AVATAR_IMG}
+              <div class="userlist_hover">
+              
+                <!-- Champs de profil -->
+                <div class="userlist_infos">
+                  <div class="userlist_lastvisit"> <span>dernière visite</span> <div class="ul_visit">{memberrow.LASTVISIT}</div> </div>
+                  <div class="userlist_messages"> <span>messages</span> {memberrow.POSTS} </div>
+                  <div class="userlist_contact"> <span>envoyer un message</span> {memberrow.PM_IMG}  </div>
+                </div>
+              </div>
+            </div>
+
+
+        </div>
+        <!-- END memberrow -->
+        <!-- Fin d'un profil -->
+
+        <!-- Pagination -->
+        <!-- BEGIN switch_pagination -->
+        <span class="pagination">
+            {PAGINATION}
+        </span>
+        <!-- END switch_pagination --> 
+    </div>
+
+    <!-- Fin liste des membres --> 
+</div>
+</section>

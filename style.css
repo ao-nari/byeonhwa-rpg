@@ -1353,8 +1353,7 @@ a.mainmenu[href^="/"]::before {
 }
 
 /* ------------------------------------ */
-
-/* --- QEEL | QUI EST EN LIGNE (index_body) --- */
+/* --- QEEL | QUI EST EN LIGNE (index_body) (css externe, voir overall_header) --- */
 /* ------------------------------------ */
 
 /* --- PAGE LISTE DES SUJETS --- */
@@ -1596,9 +1595,6 @@ a.mainmenu[href^="/"]::before {
   font-size: var(--medium); 
 }
 
-/* ------------------------------------ */
-
-/* --- PAGE SUJETS SURVEILLES --- */
 /* ------------------------------------ */
 
 /* --- PAGE MESSAGES --- */
@@ -2641,7 +2637,7 @@ div.panel .postbody > span:first-of-type {
   font-weight: var(--semibold-fw);
 }
 
-/* cases Ã Â  cocher */
+/* cases à cocher */
 .postingbox__options input[type='checkbox'] {
   margin: 0 0.5rem 0 0; 
 }
@@ -2749,6 +2745,7 @@ form[action="/profile"] .export__profile {
 /* ------------------------------------ */
 
 /* --- PAGE LISTE DES MEMBRES --- */
+
 /* ------------------------------------ */
 
 /* --- PAGE DES GROUPES --- */
