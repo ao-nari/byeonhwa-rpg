@@ -397,7 +397,7 @@ baseClr3, .baseClr3 {color: var(--baseClr3);}
 accentClr, .accentClr {color: var(--accentClr);}
 accentClr2, .accentClr2 {color: var(--accentClr2);}
 
-/* -- titres -- */
+/* -- TITRES ET DIVERS -- */
 atitle1, .atitle1, 
 atitle2, .atitle2 {
   font-weight: var(--semibold-fw);
@@ -422,3 +422,6 @@ atitle2::after, .atitle2::after {
   margin-left: 1rem;
   opacity: 0.5;
 }
+
+lowercase, .lowercase {text-transform: lowercase;}
+uppercase, .uppercase {text-transform: uppercase;}
