@@ -327,7 +327,7 @@ right, .right {float: right !important;}
 
 
 /* --- TW/CW --- */
-tw, .tw, cw, .cw {
+tw, .tw, cw, .vw {
   font-weight: var(--bold-fw);
 }
 
@@ -396,3 +396,29 @@ baseClr2, .baseClr2 {color: var(--baseClr2)}
 baseClr3, .baseClr3 {color: var(--baseClr3);}
 accentClr, .accentClr {color: var(--accentClr);}
 accentClr2, .accentClr2 {color: var(--accentClr2);}
+
+/* -- titres -- */
+atitle1, .atitle1, 
+atitle2, .atitle2 {
+  font-weight: var(--semibold-fw);
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  justify-content: space-between;
+  color: var(--accentClr);
+}
+
+atitle2, .atitle2 {
+  text-transform: uppercase; 
+}
+
+atitle1::after, .atitle1::after,
+atitle2::after, .atitle2::after {
+  display: inline-block;
+  content: "";
+  height: 1px;
+  width: 100%;
+  background: var(--accentClr);
+  margin-left: 1rem;
+  opacity: 0.5;
+}
