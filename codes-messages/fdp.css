@@ -456,3 +456,6 @@ text-align: justify;
   overflow: auto;
   padding-right: 1rem;
 }
+
+/* fix scenario */
+.fdp-statscont p br{display:unset !important;} 
