@@ -264,7 +264,7 @@
       line-height: var(--base-lh);
       padding: 2.5rem;
       min-height: unset !important;
-      display: flex;
+      display: block !important;
       flex-direction: column;
       justify-content: space-between;
       flex: 100%;
@@ -298,11 +298,10 @@
   /* --- REVUE DU SUJET --- */
   .mpreview .panel {
     display: flex;
-    padding: 1rem 0.5rem;
-    margin: 1rem 0;
 }
+
 .mpreview__from {
-    margin: 0 4rem -10 0 !important;
+    margin: 0 1.5rem 1rem 0 !important;
     text-transform: uppercase;
     font-size: var(--medium);
     font-weight: var(--semibold-fw);
@@ -317,11 +316,8 @@
     line-height: var(--base-lh);
     padding: 2.5rem;
     min-height: unset !important;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     flex: 100%;
-    margin: 0 2rem;
+    margin: 0 1rem !important; 
 }
 
 .mpreview .mini_img img{
