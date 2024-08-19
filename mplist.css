@@ -293,3 +293,42 @@
       display: flex;
       margin: 1rem 0;
   }
+
+
+  /* --- REVUE DU SUJET --- */
+  .mpreview .panel {
+    display: flex;
+    padding: 1rem 0.5rem;
+    margin: 1rem 0;
+}
+.mpreview__from {
+    margin: 0 4rem -10 0 !important;
+    text-transform: uppercase;
+    font-size: var(--medium);
+    font-weight: var(--semibold-fw);
+    display: flex;
+    justify-content: flex-end;
+}
+
+.mpreview .wrapped__messages .content {
+    background: var(--baseClr);
+    filter: var(--drop-shadow);
+    font-size: var(--medium);
+    line-height: var(--base-lh);
+    padding: 2.5rem;
+    min-height: unset !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 100%;
+    margin: 0 2rem;
+}
+
+.mpreview .mini_img img{
+  border-radius:var(--radius);
+  margin: 0 0 0 1rem;
+}
+
+.mpreview .postbody{
+width:100%;
+}
