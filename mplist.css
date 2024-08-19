@@ -350,3 +350,36 @@ width:100%;
 #postingbox:has(select[name="usergroup"]) select[name="usergroup"] {
     width: 19.2rem; 
 }
+
+/* RECHERCHE PERSONNAGE */
+#find_username {
+    display: fixed !important; 
+    position: absolute; 
+    top: 156%; 
+    right: 5rem; 
+    background: var(--baseClr-90); 
+    width: 35rem;  
+    border-radius: var(--radius); 
+}
+
+#find_username h1 {
+    font-size: var(--bigger); 
+    text-align: center; 
+    margin-left: 0 !important; 
+}
+
+#find_username .inner .inputbox.tiny {
+    width: 100%; 
+}
+
+#find_username .panel {
+    padding-bottom: 0 !important; 
+}
+
+#find_username .inner {
+    gap: 1rem; 
+}
+
+#find_username .right-box {
+    align-self: flex-end; 
+}
