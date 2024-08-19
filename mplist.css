@@ -126,3 +126,19 @@
       align-items: center;
       color:var(--accentClr);
   }
+
+.mpbox .topicslist-lastpost {
+    align-items: center; 
+    justify-content: center; 
+}
+
+.mpbox .topicslist-lastpost .lastpost-in {
+    margin: 0; 
+    width: unset; 
+    height: unset; 
+}
+
+.mpbox .lastpost a[href^="/u"] {
+    font-size: var(--medium2); 
+    font-weight: var(--semibold-fw); 
+}
