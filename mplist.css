@@ -353,12 +353,12 @@ width:100%;
 
 /* RECHERCHE PERSONNAGE */
 #find_username { 
-    position: absolute; 
-    top: 50vh; 
-    right: 5rem; 
+    position: fixed;   
     background: var(--baseClr-90); 
     width: 35rem;  
     border-radius: var(--radius); 
+    right: 3%;
+    top: 30%; 
 }
 
 #find_username h1 {
