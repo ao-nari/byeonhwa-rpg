@@ -330,23 +330,23 @@ width:100%;
 }
 
 /* POSTING BOX */
-.mp_postingbody #postingbox .fields1 {
+#postingbox:has(select[name="usergroup"]) .fields1 {
     max-width: 108rem !important; 
 }
 
-.mp_postingbody #postingbox .fields1 dl:first-of-type {
+#postingbox:has(select[name="usergroup"]) .fields1 dl:first-of-type {
     display: flex !important; 
     align-items: center !important; 
 }
 
-.mp_postingbody #postingbox .fields1 dl:first-of-type dt label {
+#postingbox:has(select[name="usergroup"]) .fields1 dl:first-of-type dt label {
     padding-right: 4rem; 
 }
 
-.mp_postingbody #postingbox .fields1 dl:first-of-type dd input {
+#postingbox:has(select[name="usergroup"]) .fields1 dl:first-of-type dd input {
     width: 55rem !important; 
 }
 
-.mp_postingbody #postingbox select[name="usergroup"] {
+#postingbox:has(select[name="usergroup"]) select[name="usergroup"] {
     width: 19.2rem; 
 }
