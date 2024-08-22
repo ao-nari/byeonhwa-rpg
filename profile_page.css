@@ -89,7 +89,20 @@ HEADER
 .profile__header .fieldsin #field_id5, 
 .profile__header .fieldsin #field_id-12, 
 .profile__header .fieldsin #field_id-5 {
-    display: flex; 
+    display: flex;  
+}
+
+.profile__header .fieldsin #field_id5, 
+.profile__header .fieldsin #field_id-12, 
+.profile__header .fieldsin #field_id-5 {
+    white-space: nowrap;  
+}
+
+.profile__header .fieldsin #field_id5 .field_content .field_uneditable {
+    max-width: 18rem; 
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
 }
 
 .profile__header .fieldsin #field_id5::before, 

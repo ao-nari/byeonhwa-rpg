@@ -1981,12 +1981,19 @@ button.rep-button .rep-nb {
   letter-spacing: -0.3px;
   white-space: nowrap;
   display: inline-block;
-  width: 100%;
-  text-align: right;
-  padding-right: 1rem;
+  max-width: 24.5rem;
+  text-align: right !important;
   margin-top: -8px;
-  /* line-height: 0; */
   padding-bottom: 1rem;
+  margin-left: 1rem;
+}
+
+.playedby .field-faceclaim .field_content {
+	display: block; 
+	width: 100%; 
+	white-space: nowrap; 
+	overflow: hidden; 
+	text-overflow: ellipsis; 
 }
 
 .playedby .field_label, .playedby .field_separator {
@@ -2007,19 +2014,19 @@ button.rep-button .rep-nb {
 
 /* --- HOVER AVATAR PROFILS MESSAGES --- */
 .hover_profile {
-  position: relative; 
+  position: relative;
   opacity: 0;
-  min-width: 22.5rem !important; 
-  min-height: 36rem !important; 
-  max-width: 22.5rem !important; 
-  max-height: 36rem !important; 
-  top: -36.7rem; 
-  background: var(--baseClr-90);  
-  border-radius: 1.5rem; 
+  min-width: 22.5rem !important;
+  min-height: 36rem !important;
+  max-width: 22.5rem !important;
+  max-height: 36rem !important;
+  top: -36rem;
+  background: var(--baseClr-90);
+  border-radius: 1.5rem;
   /* overflow: hidden; */
-  display: flex; 
-  flex-direction: column; 
-  justify-content: space-between; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .hover_profile:hover {
@@ -2750,8 +2757,8 @@ form[action="/profile"] .export__profile {
 	display: block; 
 }
 
-.profil_editavatar fieldset dl:nth-of-type(2), 
-.profil_editavatar fieldset dl:nth-of-type(3), 
+.profil_editavatar fieldset dl:nth-of-type(2),  
+.profil_editavatar fieldset dl:nth-of-type(3),
 .profil_editavatar fieldset dl:nth-of-type(5) {
 	display: none !important; 
 }
@@ -2885,3 +2892,31 @@ form[action="/profile"] .export__profile {
   font-weight:var(--bold-fw);
   letter-spacing:0.5px;
 }
+
+/* messenger */
+
+blockquote.FAM-codebox {
+    position: relative;
+    margin-bottom: 1rem !important;
+    padding: 0.5rem;
+    background:var(--baseClr-60);
+    filter:var(--drop-shadow);
+}
+
+blockquote.FAM-codebox > div {
+    margin: 0;
+    padding: 0;
+    z-index: 2;
+    position: relative;
+    font-size: var(--small2);
+    font-style: italic;
+}
+
+.FAM-codebox cite, .FAM-codebox dt, .FAM-spoiler dt {
+    font-family: var(--font1);
+    font-size: var(--small);
+    text-transform: uppercase;
+    padding: 0.5rem 0;
+    color: var(--accentClr) !important;
+}
+.FAM-msg-text{padding:1rem !important;}

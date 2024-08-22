@@ -161,7 +161,8 @@ justify-content:space-evenly !important;
   opacity: 0.9;
 }
 
-.userlist .ul .annexe_links{width:100%;}
+
+
 
 .userlist .ul .annexe_links a{
   font-size: var(--small2);
