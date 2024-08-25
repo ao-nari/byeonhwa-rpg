@@ -56,10 +56,15 @@
   padding: 1rem; 
 }
 
-.fevo-name {
+.fevo-name, .fevo-group {
   font-size: var(--bigger2); 
   font-family: var(--font2); 
-  
+  color: var(--fevoclr); 
+  line-height: 1; 
+}
+
+.fevo-group {
+  text-align: right; 
 }
 
 /* --- icône/gif --- */
