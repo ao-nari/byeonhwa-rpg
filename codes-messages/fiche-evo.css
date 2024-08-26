@@ -18,7 +18,7 @@
 }
 
 .fevo-story {
-  height: 20rem !important;
+  height: 22rem !important;
 }
 
 /* -- avatar -- */
@@ -120,18 +120,20 @@
 
 /* ------- MODULE TIMELINE ------- */
 .fevo-timeline {
-  height: 100%; 
-  width: 90rem; 
-  overflow-y: hidden; 
-  overflow-x: auto; 
-  display: flex; 
-  gap: 1rem; 
-  align-items: center; 
+  height: 100%;
+  width: 90rem;
+  overflow-y: hidden;
+  overflow-x: auto;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  padding-bottom: 1rem; 
 }
 
 .fevo-timeline .time-event {
   background: var(--baseClr3-10); 
   height: 100%; 
+  min-width: 20rem; 
   width: 20rem; 
   border-radius: var(--radius); 
   padding: 1rem; 
