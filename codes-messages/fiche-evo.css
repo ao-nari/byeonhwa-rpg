@@ -150,5 +150,5 @@
 .fevo-timeline .time-event-text {
   height: 9rem; 
   overflow: auto; 
-  padding-right: 0.6rem; 
+  padding: 0.5rem 0.5rem 0 0;  
 }
