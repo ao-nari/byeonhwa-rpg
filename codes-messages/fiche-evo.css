@@ -58,7 +58,7 @@
 .fevo-header .fevo-id-left, 
 .fevo-header .fevo-id-right {
   width: 50%;  
-  padding: 0 1.5rem; 
+  padding: 0 2.5rem; 
 }
 
 .fevo-header .fevo-id-right {
@@ -78,10 +78,35 @@
   margin: 0.5rem; 
 }
 
+/* --- contenu --- */
 .fevo-content {
   text-align: justify;
   height: 100%;
   background: var(--baseClr);
   border-radius: var(--radius);
   padding: 1.5rem;
+}
+
+.fevo-content {
+  display: flex; 
+  flex-direction: column; 
+  justify-content: space-between; 
+}
+
+.fevo-content p {
+  overflow: auto; 
+  max-height: 18rem;  
+  padding: 0 1rem; 
+}
+
+/* --- style --- */
+.bh_fevo atitle1 {
+  font-family: var(--font2); 
+  font-size: var(--big); 
+  padding: 0 1.5rem; 
+  color: var(--fevoclr); 
+}
+
+.bh_fevo atitle1::after {
+  background: var(--fevoclr); 
 }
