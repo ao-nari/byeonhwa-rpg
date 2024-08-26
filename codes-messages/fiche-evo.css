@@ -93,7 +93,7 @@
   justify-content: space-between; 
 }
 
-.fevo-content p {
+.fevo-content .content-text {
   overflow: auto; 
   max-height: 18rem;  
   padding: 0 1rem; 
