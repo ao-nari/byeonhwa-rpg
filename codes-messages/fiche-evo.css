@@ -49,6 +49,10 @@
   border-radius: var(--radius); 
 }
 
+.fevo-header b {
+  color: var(--fevoclr); 
+}
+
 /* --- partie gauche et droite --- */
 .fevo-header .fevo-id-left, 
 .fevo-header .fevo-id-right {
@@ -56,15 +60,15 @@
   padding: 1rem; 
 }
 
+.fevo-header .fevo-id-right {
+  text-align: right; 
+}
+
 .fevo-name, .fevo-group {
   font-size: var(--bigger2); 
   font-family: var(--font2); 
   color: var(--fevoclr); 
   line-height: 1; 
-}
-
-.fevo-group {
-  text-align: right; 
 }
 
 /* --- icône/gif --- */
