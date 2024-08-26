@@ -8,17 +8,18 @@
 }
 
 /* --- FICHE DE BASE --- */
-.fevo_base, 
-.fevo-story {
+.fevo_base {
+  height: 40rem !important; 
+} 
+
+.fevo_base,
+.fevo_story,
+.fevo_free {
   display: flex; 
-  height: 40rem;
+  height: 100%;
   display: flex;
   width: 100%;
   gap: 0.6rem;
-}
-
-.fevo-story {
-  height: 100%;
 }
 
 /* -- avatar -- */
