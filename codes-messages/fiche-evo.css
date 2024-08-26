@@ -47,6 +47,7 @@
   justify-content: space-between; 
   background: var(--baseClr); 
   border-radius: var(--radius); 
+  align-items: center; 
 }
 
 .fevo-header b {
@@ -56,8 +57,8 @@
 /* --- partie gauche et droite --- */
 .fevo-header .fevo-id-left, 
 .fevo-header .fevo-id-right {
-  width: 50%; 
-  padding: 1rem; 
+  width: 50%;  
+  padding: 0 1.5rem; 
 }
 
 .fevo-header .fevo-id-right {
@@ -82,5 +83,5 @@
   height: 100%;
   background: var(--baseClr);
   border-radius: var(--radius);
-  padding: 1rem;
+  padding: 1.5rem;
 }
