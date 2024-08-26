@@ -3,6 +3,8 @@
   display: flex;
   width: 95%;
   margin: auto;
+  flex-wrap: wrap; 
+  gap: 1rem; 
 }
 
 /* --- FICHE DE BASE --- */
