@@ -16,7 +16,7 @@
 }
 
 .fevo-story {
-  height: 25rem !important; 
+  height: 16rem !important;
 }
 
 /* -- avatar -- */
@@ -114,4 +114,24 @@
 
 .bh_fevo atitle1::after {
   background: var(--fevoclr); 
+}
+
+/* ------- MODULE TIMELINE ------- */
+.fevo-timeline {
+  height: 100%; 
+  overflow-y: hidden; 
+  overflow-x: auto; 
+}
+
+.fevo-timeline .time-event {
+  background: var(--baseClr3-10); 
+  height: 100%; 
+  width: 20rem; 
+  border-radius: var(--radius); 
+  padding: 1rem; 
+}
+
+.fevo-timeline .time-date {
+  font-weight: var(--semibold-fw); 
+  text-transform: uppercase; 
 }
