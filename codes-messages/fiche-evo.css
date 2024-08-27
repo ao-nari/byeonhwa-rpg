@@ -95,7 +95,7 @@
   padding: 1.5rem;
 }
 
-.fevo-content {
+.fevo_base .fevo-content {
   display: flex; 
   flex-direction: column; 
   justify-content: space-between; 
