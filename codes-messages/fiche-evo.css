@@ -14,7 +14,8 @@
 
 .fevo_base,
 .fevo_story,
-.fevo_free {
+.fevo_free,
+.fevo_links {
   display: flex; 
   height: 100%;
   display: flex;
@@ -152,4 +153,16 @@
   height: 9rem; 
   overflow: auto; 
   padding: 0.5rem 0.5rem 0 0;  
+}
+
+/* ---- FICHE LIENS ---- */
+.link-container {
+  background: var(--baseClr3-10); 
+  border-radius: var(--radius); 
+  display: flex; 
+  flex-wrap: wrap; 
+}
+
+.link-desc {
+  width: 100%; 
 }
