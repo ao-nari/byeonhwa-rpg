@@ -82,7 +82,7 @@
 }
 
 .link-name {
-  color: var(--fevo-linkclr) !important; 
+  color: unset; 
 }
 
 /* --- icône/gif --- */
@@ -160,6 +160,12 @@
 }
 
 /* ---- FICHE LIENS ---- */
+.fevo_links .fevo-content {
+  display: flex; 
+  flex-direction: column; 
+  gap: 1rem; 
+} 
+
 .link-container {
   border-radius: var(--radius);
   display: flex;
@@ -174,8 +180,7 @@
   top: 0; 
   bottom: 0; 
   right: 0; 
-  left: 0; 
-  background: linear-gradient(to top, var(--fevo-linkclr), var(--baseClr2-20));  
+  left: 0;   
   border-radius: var(--radius); 
   opacity: 0.2; 
   z-index: 1; 
@@ -210,10 +215,11 @@
 }
 
 /* --- tags --- */
-.bh_fevo tag1 {
-  background: var(--fevo-linkclr); 
-}
-
 .bh_fevo tag2 {
   color: var(--textClr); 
+}
+
+/* --- LIEN ALIGNES A DROITE --- */
+.reversed {
+  flex-direction: row-reverse; 
 }
