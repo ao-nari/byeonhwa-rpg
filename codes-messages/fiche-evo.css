@@ -67,7 +67,11 @@
 .fevo-header .fevo-id-left, 
 .fevo-header .fevo-id-right {
   width: 50%;  
-  padding: 0 2.5rem; 
+  padding-left: 2.5rem; 
+}
+
+.fevo-header .fevo-id-right {
+  padding-right: 2.5rem;  
 }
 
 .fevo-header .fevo-id-right {
