@@ -90,6 +90,8 @@
   border-radius: var(--radius);  
   margin: 0.5rem; 
   object-fit: cover; 
+  height: 10rem; 
+  width: 10rem; 
 }
 
 /* --- contenu --- */
