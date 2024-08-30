@@ -214,6 +214,10 @@
   overflow: auto; 
 }
 
+.reversed .link-desc, .reversed .link-desc p {
+  transform: scaleX(-1);
+}
+
 /* --- tags --- */
 .bh_fevo tag2 {
   color: var(--textClr); 
