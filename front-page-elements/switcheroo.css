@@ -7,15 +7,15 @@
 /* emplacement et fonctionnement de la barre latérale */
 .switcheroo {
   transform: translateX(200%);
-  position: fixed;  
-  top: 6rem;
+  position: fixed;
+  top: 6rem; 
   right: 0;
   width: 7rem;
-  height: 40rem;
+  max-height: 87%; 
   transition: all 0.4s ease-in-out;
   background: var(--baseClr-90);
-  border-radius: var(--big-radius); 
-  z-index: 999; 
+  border-radius: var(--big-radius);
+  z-index: 999;
 }
 
 .switcheroo--open {

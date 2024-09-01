@@ -40,14 +40,26 @@ document.addEventListener('DOMContentLoaded', function() {
             // Déplacer <p class="right-box"> et <fieldset class="submit-buttons"> dans le div container__title
             var rightBox = document.querySelector('p.right-box');
             var submitButtons = document.querySelector('fieldset.submit-buttons');
+            // Déplacer container__title dans le form
+            var watchsearchForm = document.querySelector('form[action="/search?search_id=watchsearch"]'); 
+            // Déplacer le <p> dans container__title
+            var textConfirm = watchsearchForm.querySelector('p'); 
             
             if (rightBox) {
                 containerDiv.appendChild(rightBox);
+            }
+          
+            if (textConfirm) {
+                containerDiv.appendChild(textConfirm);
             }
             
             if (submitButtons) {
                 containerDiv.appendChild(submitButtons);
             }
+          
+            if (containerDiv) {
+                watchsearchForm.prepend(containerDiv);
+            } 
         }
     }
 });
