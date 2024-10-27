@@ -21,11 +21,11 @@ krfont, .krfont {font-family: 'Diphylleia', serif;}
 /* --- variables diverses --- */
 :root {
   /* variables de couleurs */
-  --bh: #B4B34F; 
-  --byeonhwa: #B4B34F;
-  --bhc: #c3c272; 
-  --bhf: #908f3f; 
-  --bhOp: rgba(180, 179, 79, 0.3); 
+  --bh: #D2944A; 
+  --byeonhwa: #D2944A;
+  --bhc: #dba96e; 
+  --bhf: #a8763b; 
+  --bhOp: rgba(210, 148, 74, 0.3);
 
   --bom: #BC6A8C; 
   --bomc: #c987a3; 

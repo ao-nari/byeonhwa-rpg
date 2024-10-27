@@ -227,6 +227,10 @@ img {
   max-width: 22.5rem !important; 
 }
 
+.post_message.postbody.content img {
+	max-width: unset !important; 
+}
+
 /* captcha google */
 .grecaptcha-badge {
   margin-bottom: 4rem; 
@@ -1139,7 +1143,7 @@ a.mainmenu[href^="/"]::before {
 /* titres (texte) */
 .forumtitle {
   height: 3rem;
-  width: 75%;
+  width: 70%;
   font-family: var(--font2);
   font-size: var(--biggest);
   letter-spacing: 0.1rem;
@@ -1154,7 +1158,7 @@ a.mainmenu[href^="/"]::before {
 .forum_stats, .topicslist-stats {
   margin-top: 0.6rem; 
   height: 2rem; 
-  width: 25%; 
+  width: 30%; 
   text-align: right; 
   font-size: var(--small); 
   font-weight: var(--semibold-fw);  
@@ -1914,6 +1918,10 @@ time::before {
   border: none;
   font-size: var(--small2);  
   transition: var(--base-transi); 
+}
+
+.like_button {
+  display: flex; 
 }
 
 .rep-button:hover {

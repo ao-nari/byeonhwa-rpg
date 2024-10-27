@@ -1,0 +1,13 @@
+/* --- ANNEXES --- */
+/* code général des sujets d'annexe ainsi que styles des sujets administratifs et demandes */
+
+/* --- séparation des posts d'annexe et des posts classiques --- */
+.post:has(.bh_annexe) {
+  /* code ici */
+  /* le sélecteur :has permet de modifier un post UNIQUEMENT s'il contient "bh_annexe" */
+}
+
+.post:has(.bh_annexe) .post_profile {
+  /* par exemple, on peut supprimer l'affichage du profil d'un post contenant une annexe */
+  display: none; 
+}

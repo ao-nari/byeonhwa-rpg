@@ -1,13 +1,13 @@
-// fonction de tri du bottin
-
-// chargement du DOM 
 document.addEventListener('DOMContentLoaded', function() {
   const sortingRow = document.querySelector('.sorting-row'); // container ligne de tri 
+  let sortOrder = 'asc'; // Track current sort order ('asc' for ascending, 'desc' for descending)
 
   sortingRow.addEventListener('click', function(event) {
     if (event.target.classList.contains('sort-by')) {
       const columnIndex = event.target.getAttribute('data-column-index'); 
-      sortItems(columnIndex); 
+      sortItems(columnIndex);
+      // Toggle sort order for the next click
+      sortOrder = sortOrder === 'asc' ? 'desc' : 'asc';
     }
   });
 
@@ -20,7 +20,11 @@ document.addEventListener('DOMContentLoaded', function() {
     itemRowsArray.sort((a, b) => {
       const aValue = a.querySelector(`span.${columnIndex}`).textContent.toLowerCase();
       const bValue = b.querySelector(`span.${columnIndex}`).textContent.toLowerCase();
-      return aValue.localeCompare(bValue);
+      if (sortOrder === 'asc') {
+        return aValue.localeCompare(bValue);
+      } else {
+        return bValue.localeCompare(aValue);
+      }
     });
  
     itemsCont.innerHTML = ''; 
