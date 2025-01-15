@@ -4,60 +4,60 @@
 /* --- MODE CLAIR --- */
 :root {
   font-size: 62.5%; /* default = 10px = 1rem */
-  --body: url('https://i.imgur.com/3AW0kt1.png'); /* fond */
-  --pnoteimg: url('https://i.imgur.com/WELyyeO.png'); /* fond patch note pa */
-  --header: url('https://i.imgur.com/8qD0shL.png'); /* bannière */
+  --body: url('https://i.imgur.com/ecoe0h0.png'); /* fond */
+  --pnoteimg: url('https://i.imgur.com/kNfM61C.png'); /* fond patch note pa */
+  --header: url('https://i.imgur.com/aOMSvVm.png'); /* bannière */
   --bhavatar: url('https://i.imgur.com/YV00Hh3.png'); /* avatar byeonhwa */
 
   /* --- palette --- */
-  --baseClr: #F5FCF1; /* couleur 1 */
-  --baseClr-90: rgba(245, 252, 241, 0.9); /* 90% opacité */
-  --baseClr-80: rgba(245, 252, 241, 0.8); /* 80% opacité */
-  --baseClr-70: rgba(245, 252, 241, 0.7); /* 70% opacité */
-  --baseClr-60: rgba(245, 252, 241, 0.6); /* 60% opacité */
-  --baseClr-50: rgba(245, 252, 241, 0.5); /* 50% opacité */
-  --baseClr-40: rgba(245, 252, 241, 0.4); /* 40% opacité */
-  --baseClr-30: rgba(245, 252, 241, 0.3); /* 30% opacité */
-  --baseClr-20: rgba(245, 252, 241, 0.2); /* 20% opacité */
-  --baseClr-10: rgba(245, 252, 241, 0.1); /* 10% opacité */
+  --baseClr: #f0f8ff; /* couleur 1 */
+  --baseClr-90: rgba(240, 248, 255, 0.9); /* 90% opacité */
+  --baseClr-80: rgba(240, 248, 255, 0.8); /* 80% opacité */
+  --baseClr-70: rgba(240, 248, 255, 0.7); /* 70% opacité */
+  --baseClr-60: rgba(240, 248, 255, 0.6); /* 60% opacité */
+  --baseClr-50: rgba(240, 248, 255, 0.5); /* 50% opacité */
+  --baseClr-40: rgba(240, 248, 255, 0.4); /* 40% opacité */
+  --baseClr-30: rgba(240, 248, 255, 0.3); /* 30% opacité */
+  --baseClr-20: rgba(240, 248, 255, 0.2); /* 20% opacité */
+  --baseClr-10: rgba(240, 248, 255, 0.1); /* 10% opacité */
 
-  --baseClr2: #64A970; /* couleur 2 */
-  --baseClr2-60:rgba(100, 169, 112, 0.6); /* 60% opacité */
-  --baseClr2-40:rgba(100, 169, 112, 0.4); /* 40% opacité */
-  --baseClr2-20:rgba(100, 169, 112, 0.2); /* 20% opacité */
+  --baseClr2: #bdabf5; /* couleur 2 */
+  --baseClr2-60: rgba(189, 171, 245, 0.6); /* 60% opacité */
+  --baseClr2-40: rgba(189, 171, 245, 0.4); /* 40% opacité */
+  --baseClr2-20: rgba(189, 171, 245, 0.2); /* 20% opacité */
 
-  --baseClr3: #769E71; /* couleur 3 */
-  --baseClr3-80: rgba(118, 158, 113, 0.8); /* 80% opacité */
-  --baseClr3-60: rgba(118, 158, 113, 0.6); /* 60% opacité */
-  --baseClr3-40: rgba(118, 158, 113, 0.4); /* 40% opacité */
-  --baseClr3-20: rgba(118, 158, 113, 0.2); /* 20% opacité */ 
-  --baseClr3-10: rgba(118, 158, 113, 0.1); /* 10% opacité */ 
+  --baseClr3: #8ec7eb; /* couleur 3 */
+  --baseClr3-80: rgba(142, 199, 235, 0.8); /* 80% opacité */
+  --baseClr3-60: rgba(142, 199, 235, 0.6); /* 60% opacité */
+  --baseClr3-40: rgba(142, 199, 235, 0.4); /* 40% opacité */
+  --baseClr3-20: rgba(142, 199, 235, 0.2); /* 20% opacité */ 
+  --baseClr3-10: rgba(142, 199, 235, 0.1); /* 10% opacité */ 
 
-  --accentClr: #85692E; /* accent 1 */
-  --accentClr2: #862631; /* accent 2 */
+  --accentClr: #79b3c3; /* accent 1 */
+  --accentClr2: #c087cd; /* accent 2 */
 
-  --textClr: #4F6F47; /* texte */
+  --textClr: #807dbf; /* texte */
 
-  --scrollbar1: #e7f4e4; /* fond scrollbar */
-  --scrollbar2: #cde5cc; /* thumb scrollbar */
+  --scrollbar1: #f0f8ff; /* fond scrollbar */
+  --scrollbar2: #79b3c3; /* thumb scrollbar */
 
   /* --- couleurs pour gradients --- */
-  --gradClr1: #C7B97B;  
+  --gradClr1: #b2d0e3;  
 
-  --gradClr2: #507446; 
-  --gradClr3: #769E71; 
+  --gradClr2: #E9BFF2; 
+  --gradClr3: #C6D8EB; 
 
-  /* icÃ Â´nes animées (lord-icon) */
-  --lord-icon-primary: #85692E; 
-  --lord-icon-secondary: #C7B97B; 
+  /* icônes animées (lord-icon) */
+  --lord-icon-primary: #E9BFF2; 
+  --lord-icon-secondary: #C6D8EB; 
 
   /* --- gradients --- */
-  --bg1: linear-gradient(to bottom, rgba(100, 169, 112, 0.3), transparent); /* baseClr2 30% opacité > transparent (fond) */
-  --bg2: linear-gradient(to bottom, rgba(100, 169, 112, 0.3), rgba(118, 158, 113, 0.1)); /* baseClr2 30% opacité > baseClr3 10% opacité (fond) */
+  --bg1: linear-gradient(to bottom, rgba(189, 171, 245, 0.3), transparent); /* baseClr2 30% opacité > transparent (fond) */
+  --bg2: linear-gradient(to bottom, rgba(189, 171, 245, 0.3), rgba(142, 199, 235, 0.1)); /* baseClr2 30% opacité > baseClr3 10% opacité (fond) */
 
   --grad1: linear-gradient(to right, var(--gradClr2), var(--gradClr3)); /* gradient 2 couleurs */
   --grad2: linear-gradient(to right, var(--accentClr), var(--gradClr1), var(--accentClr)); /* gradient métallisé */
-  --grad2Op: linear-gradient(to right, rgba(133, 105, 46, 0.3), rgba(199, 185, 123, 0.3), rgba(133, 105, 46, 0.3)); /* gradient métallisé 30% opacité */
+  --grad2Op: linear-gradient(to right, rgba(121, 179, 195, 0.3), rgba(178, 208, 227, 0.3), rgba(121, 179, 195, 0.3)); /* gradient métallisé 30% opacité */
 
   /* --- autres --- */
   --small-radius: 0.8rem; /* 8px */
@@ -137,57 +137,57 @@
 /* --- MODE SOMBRE --- */ 
 [data-color-scheme="dark"] {
   font-size: 62.5%; /* default = 10px = 1rem */
-  --body: url('https://i.imgur.com/BsFKZgm.png'); /* fond */
-  --pnoteimg: url('https://i.imgur.com/aEoAdZs.png'); /* fond patch note pa */
-  --header: url('https://i.imgur.com/jUQE2la.png'); /* bannière */
+  --body: url('https://i.imgur.com/kMnODLv.png'); /* fond */
+  --pnoteimg: url('https://i.imgur.com/ytRFdAn.png'); /* fond patch note pa */
+  --header: url('https://i.imgur.com/UbCKh5A.png'); /* bannière */
   --bhavatar: url('https://i.imgur.com/yok8Omn.png'); /* avatar byeonhwa */
 
   /* --- palette --- */
-  --baseClr: #060813; /* couleur 1 */
-  --baseClr-90: rgba(6, 8, 19, 0.9); /* 90% opacité */
-  --baseClr-80: rgba(6, 8, 19, 0.8); /* 80% opacité */
-  --baseClr-70: rgba(6, 8, 19, 0.7); /* 70% opacité */
-  --baseClr-60: rgba(6, 8, 19, 0.6); /* 60% opacité */
-  --baseClr-50: rgba(6, 8, 19, 0.5); /* 50% opacité */
-  --baseClr-40: rgba(6, 8, 19, 0.4); /* 40% opacité */
-  --baseClr-30: rgba(6, 8, 19, 0.3); /* 30% opacité */
-  --baseClr-20: rgba(6, 8, 19, 0.2); /* 20% opacité */
-  --baseClr-10: rgba(6, 8, 19, 0.1); /* 10% opacité */
+  --baseClr: #0d0522; /* couleur 1 */
+  --baseClr-90: rgba(13, 5, 34, 0.9); /* 90% opacité */
+  --baseClr-80: rgba(13, 5, 34, 0.8); /* 80% opacité */
+  --baseClr-70: rgba(13, 5, 34, 0.7); /* 70% opacité */
+  --baseClr-60: rgba(13, 5, 34, 0.6); /* 60% opacité */
+  --baseClr-50: rgba(13, 5, 34, 0.5); /* 50% opacité */
+  --baseClr-40: rgba(13, 5, 34, 0.4); /* 40% opacité */
+  --baseClr-30: rgba(13, 5, 34, 0.3); /* 30% opacité */
+  --baseClr-20: rgba(13, 5, 34, 0.2); /* 20% opacité */
+  --baseClr-10: rgba(13, 5, 34, 0.1); /* 10% opacité */
 
-  --baseClr2: #4B59A5; /* couleur 2 */
-  --baseClr2-60: rgba(75, 89, 165, 0.6); /* 60% opacité */
-  --baseClr2-40: rgba(75, 89, 165, 0.4); /* 40% opacité */
-  --baseClr2-20: rgba(75, 89, 165, 0.2); /* 20% opacité */
+  --baseClr2: #582EFA; /* couleur 2 */
+  --baseClr2-60: rgba(88, 46, 250, 0.6); /* 60% opacité */
+  --baseClr2-40: rgba(88, 46, 250, 0.4); /* 40% opacité */
+  --baseClr2-20: rgba(88, 46, 250, 0.2); /* 20% opacité */
 
-  --baseClr3: #465399; /* couleur 3 */
-  --baseClr3-80: rgba(70, 83, 153, 0.8); /* 80% opacité */
-  --baseClr3-60: rgba(70, 83, 153, 0.6); /* 60% opacité */
-  --baseClr3-40: rgba(70, 83, 153, 0.4); /* 40% opacité */
-  --baseClr3-20: rgba(70, 83, 153, 0.2); /* 20% opacité */
-  --baseClr3-10: rgba(70, 83, 153, 0.1); /* 10% opacité */
+  --baseClr3: #8149eb; /* couleur 3 */
+  --baseClr3-80: rgba(129, 73, 235, 0.8); /* 80% opacité */
+  --baseClr3-60: rgba(129, 73, 235, 0.6); /* 60% opacité */
+  --baseClr3-40: rgba(129, 73, 235, 0.4); /* 40% opacité */
+  --baseClr3-20: rgba(129, 73, 235, 0.2); /* 20% opacité */
+  --baseClr3-10: rgba(129, 73, 235, 0.1); /* 10% opacité */
 
-  --accentClr: #B4B34F; /* accent 1 */
-  --accentClr2: #318388; /* accent 2 */
+  --accentClr: #b44bdd; /* accent 1 */
+  --accentClr2: #51DAA6; /* accent 2 */
 
-  --textClr: #8897E9; /* texte */
+  --textClr: #968BFF; /* texte */
 
-  --scrollbar1: #0c0f1e; /* fond scrollbar */
-  --scrollbar2: #191e39; /* thumb scrollbar */
+  --scrollbar1: #0d0522; /* fond scrollbar */
+  --scrollbar2: #2E1680; /* thumb scrollbar */
 
   /* --- couleurs pour gradients --- */
-  --gradClr1: #5E5B32;  
+  --gradClr1: #8645ef;  
 
-  /* icÃ Â´nes animées (lord-icon) */
-  --lord-icon-primary: #5E5B32; 
-  --lord-icon-secondary: #B4B34F;
+  /* icônes animées (lord-icon) */
+  --lord-icon-primary: #c04cdd; 
+  --lord-icon-secondary: #5A24B4;
 
   /* --- gradients --- */
-  --bg1: linear-gradient(to bottom, rgba(75, 89, 165, 0.3), transparent); /* baseClr2 30% > transparent (fond) */
-  --bg2: linear-gradient(to bottom, rgba(117, 134, 227, 0.3), rgba(70, 83, 153, 0.1)); /* textClr 30% opacité > baseClr3 10% opacité (fond) */
+  --bg1: linear-gradient(to bottom, rgba(129, 73, 235, 0.3), transparent); /* baseClr3 30% > transparent (fond) */
+  --bg2: linear-gradient(to bottom, rgba(88, 46, 250, 0.3), rgba(129, 73, 235, 0.1)); /* baseClr2 30% opacité > baseClr3 10% opacité (fond) */
 
   --grad1: linear-gradient(to right, var(--baseClr2), var(--textClr), var(--baseClr2)); /* gradient métallisé */
   --grad2: linear-gradient(to right, var(--gradClr1), var(--accentClr)); /* gradient 2 couleurs */
-  --grad2Op: linear-gradient(to right, rgba(94, 91, 50, 0.3), rgba(180, 179, 79, 0.3)); /* gradient 2 couleurs 30% opacité */
+  --grad2Op: linear-gradient(to right, rgba(90, 36, 180, 0.3), rgba(180, 75, 221, 0.3)); /* gradient 2 couleurs 30% opacité */
 }
 
 /* ---------------------------- */
@@ -254,7 +254,7 @@ body {
   font-family: var(--font1);
   margin: 0 !important;
   overflow-x: hidden;
-  background: var(--body) fixed center top;
+  background: var(--body) fixed center bottom;
   background-size: cover;
   background-repeat: no-repeat;
   color: var(--textClr);
@@ -725,8 +725,8 @@ form[action="/profile?mode=editprofile&page_profil=friendsfoes"] input {
   background-position: center;
   background-repeat: no-repeat;
   background-size: auto;
-  margin: 12rem 0 5rem 0; 
-  height: 60rem; 
+  margin: 2rem 0 8rem 0; 
+  height: 80rem; 
 }
 
 /* --- NAVIGATION --- */
@@ -931,7 +931,7 @@ a.mainmenu[href^="/"]::before {
 
 /* "panneau d'administration" */
 .adminlink {
-  color: var(--baseClr3); 
+  color: var(--baseClr2); 
 }
 
 .adminlink::after {
