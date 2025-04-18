@@ -20,13 +20,12 @@
   font-style: normal;
 }
 
-/* --- BECKAN (V9) --- */
+/* --- ENOWAY (V9) --- */
 @font-face {
-  font-family: 'beckan_personal_useregular';
-  src: url('beckan-personal_use-webfont.woff2') format('woff2'),
-       url('beckan-personal_use-webfont.woff') format('woff'),
-       url('beckan-personal_use-webfont') format('opentype'); 
+  font-family: 'enoway_personal_useregular';
+  src: url('enoway-personal_use-webfont.woff2') format('woff2'),
+       url('enoway-personal_use-webfont.woff') format('woff'), 
+       url('enoway-personal_use-webfont.woff') format('opentype');
   font-weight: normal;
   font-style: normal;
-
 }
