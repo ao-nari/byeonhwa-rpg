@@ -18,48 +18,48 @@ sugarbaby, .sugarbaby {font-family: 'sugar_babyregular', 'Times new roman', seri
 playfair, .playfair {font-family: 'Playfair display', 'Palatino', serif;}
 krfont, .krfont {font-family: 'Diphylleia', serif;}
 aesthetic, .aesthetic {font-family: 'Aesthetic Regular', 'Times new roman', serif;}
-beckan, .beckan {font-family: 'Beckan', 'Arial', sans-serif;}
+enoway, .enoway {font-family: 'enoway_personal_useregular', 'Arial', sans-serif;}
 
 /* --- variables diverses --- */
 :root {
   /* variables de couleurs */
-  --bh: #B36FEF; 
-  --byeonhwa: #B36FEF;
-  --bhc: #c28bf2; 
-  --bhf: #8f58bf; 
-  --bhOp: rgba(179, 111, 239, 0.3);
+  --bh: #F0BE74; 
+  --byeonhwa: #F0BE74;
+  --bhc: #fcd9a6; 
+  --bhf: #ca9340; 
+  --bhOp: rgba(240, 190, 116, 0.3);
 
-  --bom: #ed5f8d; 
-  --bomc: #f07ea3; 
-  --bomf: #bd4c70; 
-  --bomOp: rgba(237, 95, 141, 0.3); 
+  --bom: #E26499; 
+  --bomc: #ec9ab4; 
+  --bomf: #b44669; 
+  --bomOp: rgba(226, 100, 153, 0.3); 
 
   --yeo: #66A465; 
   --yeoreum: #66A465;
-  --yeoc: #84b683; 
-  --yeof: #518350; 
+  --yeoc: #98d197; 
+  --yeof: #427241; 
   --yeoOp: rgba(102, 164, 101, 0.3); 
 
   --gaeul: #D36E43; 
-  --gaeulc: #db8b68; 
-  --gaeulf: #a85835; 
+  --gaeulc: #f0a98b; 
+  --gaeulf: #af522b; 
   --gaeulOp: rgba(211, 110, 67, 0.3); 
 
-  --gyeoul: #539D9F; 
-  --gyeoc: #75b0b2; 
-  --gyeof: #427d7f; 
-  --gyeoOp: rgba(83, 157, 159, 0.3); 
+  --gyeoul: #5AC0C2; 
+  --gyeoc: #8edcdf; 
+  --gyeof: #469b9e; 
+  --gyeoOp: rgba(90, 192, 194, 0.3); 
 
-  --akma: #B7223D; 
-  --akmac: #c54e64;
-  --akmaf: #921b31;
-  --akmaOp: rgba(183, 34, 61, 0.3); 
+  --akma: #C43852; 
+  --akmac: #ce5b70;
+  --akmaf: #8f182e;
+  --akmaOp: rgba(196, 56, 82, 0.3); 
 
-  --mun: #706BD0; 
-  --munoehan: #706BD0;
-  --munc: #8c88d9;
-  --munf: #5955a6;
-  --munOp: rgba(112, 107, 208, 0.3); 
+  --mun: #726CE2; 
+  --munoehan: #726CE2;
+  --munc: #9793f3;
+  --munf: #726CE2;
+  --munOp: rgba(114, 108, 226, 0.3); 
 
   /* variables de gradients */
   --bhtransp: linear-gradient(to left, transparent, var(--bh)); 
