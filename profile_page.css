@@ -81,7 +81,6 @@ HEADER
     display: flex;
     justify-content: space-between;
     font-size: var(--small2);
-    color: var(--baseClr2);
     margin-bottom: 1rem;
 }
 
