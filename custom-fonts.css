@@ -1,6 +1,6 @@
 /* --- installation polices NON google fonts --- */
 
-/* --- SUGAR BABY --- */
+/* --- SUGAR BABY (V6 et V7) --- */
 @font-face {
   font-family: 'sugar_babyregular';
   src: url('sugar-baby-personal-use-webfont.woff2') format('woff2'),
@@ -10,7 +10,7 @@
   font-style: normal;
 }
 
-/* --- AESTHETIC --- */
+/* --- AESTHETIC (V8) --- */
 @font-face {
   font-family: 'Aesthetic Regular';
   src: url('AestheticRegular.woff2') format('woff2'),
@@ -18,4 +18,15 @@
        url('AestheticRegular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
+}
+
+/* --- BECKAN (V9) --- */
+@font-face {
+  font-family: 'beckan_personal_useregular';
+  src: url('beckan-personal_use-webfont.woff2') format('woff2'),
+       url('beckan-personal_use-webfont.woff') format('woff'),
+       url('beckan-personal_use-webfont') format('opentype'); 
+  font-weight: normal;
+  font-style: normal;
+
 }

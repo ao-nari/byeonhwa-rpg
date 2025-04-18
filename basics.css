@@ -18,6 +18,7 @@ sugarbaby, .sugarbaby {font-family: 'sugar_babyregular', 'Times new roman', seri
 playfair, .playfair {font-family: 'Playfair display', 'Palatino', serif;}
 krfont, .krfont {font-family: 'Diphylleia', serif;}
 aesthetic, .aesthetic {font-family: 'Aesthetic Regular', 'Times new roman', serif;}
+beckan, .beckan {font-family: 'Beckan', 'Arial', sans-serif;}
 
 /* --- variables diverses --- */
 :root {
@@ -28,10 +29,10 @@ aesthetic, .aesthetic {font-family: 'Aesthetic Regular', 'Times new roman', seri
   --bhf: #8f58bf; 
   --bhOp: rgba(179, 111, 239, 0.3);
 
-  --bom: #BC6A8C; 
-  --bomc: #c987a3; 
-  --bomf: #965470; 
-  --bomOp: rgba(188, 106, 140, 0.3); 
+  --bom: #ed5f8d; 
+  --bomc: #f07ea3; 
+  --bomf: #bd4c70; 
+  --bomOp: rgba(237, 95, 141, 0.3); 
 
   --yeo: #66A465; 
   --yeoreum: #66A465;
@@ -39,7 +40,7 @@ aesthetic, .aesthetic {font-family: 'Aesthetic Regular', 'Times new roman', seri
   --yeof: #518350; 
   --yeoOp: rgba(102, 164, 101, 0.3); 
 
-  --gaeul: #D36E43; 
+  --gaeul:                                   ; 
   --gaeulc: #db8b68; 
   --gaeulf: #a85835; 
   --gaeulOp: rgba(211, 110, 67, 0.3); 
@@ -49,10 +50,10 @@ aesthetic, .aesthetic {font-family: 'Aesthetic Regular', 'Times new roman', seri
   --gyeof: #427d7f; 
   --gyeoOp: rgba(83, 157, 159, 0.3); 
 
-  --akma: #B84654; 
-  --akmac: #c66a76;
-  --akmaf: #933843;
-  --akmaOp: rgba(184, 70, 84, 0.3); 
+  --akma: #B7223D; 
+  --akmac: #c54e64;
+  --akmaf: #921b31;
+  --akmaOp: rgba(183, 34, 61, 0.3); 
 
   --mun: #706BD0; 
   --munoehan: #706BD0;

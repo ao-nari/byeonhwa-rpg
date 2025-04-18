@@ -4,60 +4,66 @@
 /* --- MODE CLAIR --- */
 :root {
   font-size: 62.5%; /* default = 10px = 1rem */
-  --body: url('https://i.imgur.com/ecoe0h0.png'); /* fond */
-  --pnoteimg: url('https://i.imgur.com/kNfM61C.png'); /* fond patch note pa */
-  --header: url('https://i.imgur.com/aOMSvVm.png'); /* bannière */
-  --bhavatar: url('https://i.imgur.com/YV00Hh3.png'); /* avatar byeonhwa */
+  --body: url('https://i.imgur.com/TF1UH6b.png'); /* fond */
+  --pnoteimg: url('https://i.imgur.com/iUcl51Q.png'); /* fond patch note pa */
+  --header: url('https://i.imgur.com/zSD8FUv.png'); /* bannière */
+  --bhavatar: url('https://i.imgur.com/ftxaz40.png'); /* avatar byeonhwa */
 
   /* --- palette --- */
-  --baseClr: #f0f8ff; /* couleur 1 */
-  --baseClr-90: rgba(240, 248, 255, 0.9); /* 90% opacité */
-  --baseClr-80: rgba(240, 248, 255, 0.8); /* 80% opacité */
-  --baseClr-70: rgba(240, 248, 255, 0.7); /* 70% opacité */
-  --baseClr-60: rgba(240, 248, 255, 0.6); /* 60% opacité */
-  --baseClr-50: rgba(240, 248, 255, 0.5); /* 50% opacité */
-  --baseClr-40: rgba(240, 248, 255, 0.4); /* 40% opacité */
-  --baseClr-30: rgba(240, 248, 255, 0.3); /* 30% opacité */
-  --baseClr-20: rgba(240, 248, 255, 0.2); /* 20% opacité */
-  --baseClr-10: rgba(240, 248, 255, 0.1); /* 10% opacité */
+  --baseClr: #ffeaf0; /* couleur 1 */
+  --baseClr-90: rgba(255, 236, 234, 0.9); /* 90% opacité */
+  --baseClr-80: rgba(255, 236, 234, 0.8); /* 80% opacité */
+  --baseClr-70: rgba(255, 236, 234, 0.7); /* 70% opacité */
+  --baseClr-60: rgba(255, 236, 234, 0.6); /* 60% opacité */
+  --baseClr-50: rgba(255, 236, 234, 0.5); /* 50% opacité */
+  --baseClr-40: rgba(255, 236, 234, 0.4); /* 40% opacité */
+  --baseClr-30: rgba(255, 236, 234, 0.3); /* 30% opacité */
+  --baseClr-20: rgba(255, 236, 234, 0.2); /* 20% opacité */
+  --baseClr-10: rgba(255, 236, 234, 0.1); /* 10% opacité */
 
-  --baseClr2: #bdabf5; /* couleur 2 */
-  --baseClr2-60: rgba(189, 171, 245, 0.6); /* 60% opacité */
-  --baseClr2-40: rgba(189, 171, 245, 0.4); /* 40% opacité */
-  --baseClr2-20: rgba(189, 171, 245, 0.2); /* 20% opacité */
+  --baseClr2: #a2db90; /* couleur 2 */
+  --baseClr2-60: rgba(162, 219, 144, 0.6); /* 60% opacité */
+  --baseClr2-40: rgba(162, 219, 144, 0.4); /* 40% opacité */
+  --baseClr2-20: rgba(162, 219, 144, 0.2); /* 20% opacité */
 
-  --baseClr3: #8ec7eb; /* couleur 3 */
-  --baseClr3-80: rgba(142, 199, 235, 0.8); /* 80% opacité */
-  --baseClr3-60: rgba(142, 199, 235, 0.6); /* 60% opacité */
-  --baseClr3-40: rgba(142, 199, 235, 0.4); /* 40% opacité */
-  --baseClr3-20: rgba(142, 199, 235, 0.2); /* 20% opacité */ 
-  --baseClr3-10: rgba(142, 199, 235, 0.1); /* 10% opacité */ 
+  --baseClr3: #f09fa8; /* couleur 3 */
+  --baseClr3-80: rgba(239, 167, 176, 0.8); /* 80% opacité */
+  --baseClr3-60: rgba(239, 167, 176, 0.6); /* 60% opacité */
+  --baseClr3-40: rgba(239, 167, 176, 0.4); /* 40% opacité */
+  --baseClr3-20: rgba(239, 167, 176, 0.2); /* 20% opacité */ 
+  --baseClr3-10: rgba(239, 167, 176, 0.1); /* 10% opacité */ 
 
-  --accentClr: #79b3c3; /* accent 1 */
-  --accentClr2: #c087cd; /* accent 2 */
+  --accentClr: #7ab861; /* accent 1 */
+  --accentClrOp: rgba(122, 184, 97, 0.2); 
+    
+  --accentClr2: #ed9d4b; /* accent 2 */
+  --accentClr2Op: rgba(237, 157, 75, 0.2); 
 
-  --textClr: #807dbf; /* texte */
+  --textClr: #d95768; /* texte */
 
-  --scrollbar1: #f0f8ff; /* fond scrollbar */
-  --scrollbar2: #79b3c3; /* thumb scrollbar */
+  --scrollbar1: #fcdce5; /* fond scrollbar */
+  --scrollbar2: #ffbac2; /* thumb scrollbar */
 
   /* --- couleurs pour gradients --- */
-  --gradClr1: #b2d0e3;  
+  --gradClr1: #a1cc85;  
 
-  --gradClr2: #E9BFF2; 
-  --gradClr3: #C6D8EB; 
+  --gradClr2: #ec8d98; 
+  --gradClr3: #f3b9a7; 
+  --gradClr4: #b9d47b; 
 
   /* icônes animées (lord-icon) */
-  --lord-icon-primary: #E9BFF2; 
-  --lord-icon-secondary: #C6D8EB; 
+  --lord-icon-primary: #ec8d98; 
+  --lord-icon-secondary: #a1cc85; 
 
   /* --- gradients --- */
-  --bg1: linear-gradient(to bottom, rgba(189, 171, 245, 0.3), transparent); /* baseClr2 30% opacité > transparent (fond) */
-  --bg2: linear-gradient(to bottom, rgba(189, 171, 245, 0.3), rgba(142, 199, 235, 0.1)); /* baseClr2 30% opacité > baseClr3 10% opacité (fond) */
+  --bg1: linear-gradient(to bottom, rgba(162, 219, 144, 0.3), transparent); /* baseClr2 30% opacité > transparent (fond) */
+  --bg2: linear-gradient(to bottom, rgba(162, 219, 144, 0.3), rgba(239, 167, 176, 0.1)); /* baseClr2 30% opacité > baseClr3 10% opacité (fond) */
 
-  --grad1: linear-gradient(to right, var(--gradClr2), var(--gradClr3)); /* gradient 2 couleurs */
+  --grad1: linear-gradient(to right, var(--gradClr2), var(--gradClr3), var(--gradClr4)); /* gradient 3 couleurs */
   --grad2: linear-gradient(to right, var(--accentClr), var(--gradClr1), var(--accentClr)); /* gradient métallisé */
-  --grad2Op: linear-gradient(to right, rgba(121, 179, 195, 0.3), rgba(178, 208, 227, 0.3), rgba(121, 179, 195, 0.3)); /* gradient métallisé 30% opacité */
+  
+  --grad1Op: linear-gradient(to right, rgba(236, 141, 152, 0.3), rgba(243, 185, 167, 0.3), rgba(185, 212, 123, 0.3)); /* gradient 3 couleurs 30% opacité */
+  --grad2Op: linear-gradient(to right, rgba(122, 184, 97, 0.3), rgba(161, 204, 133, 0.3), rgba(122, 184, 97, 0.3)); /* gradient métallisé 30% opacité */
 
   /* --- autres --- */
   --small-radius: 0.8rem; /* 8px */
@@ -71,7 +77,7 @@
 
   /* --- polices --- */
   --font1: 'Montserrat', 'Arial', sans-serif; 
-  --font2: 'sugar_babyregular', 'Times new roman', serif; 
+  --font2: 'beckan_personal_useregular', 'Times new roman', serif; 
   --font3: 'Playfair display', 'Palatino', serif; 
 
   --krfont: 'Diphylleia', serif; 
@@ -101,93 +107,71 @@
   /* --- VARIABLES MESSENGER --- */
   --FAM-windowSize: 88rem; /* 880px */
 
-  --FAM-light: #FFF; 
-  --FAM-dark: #000; 
-
-  /* --- palette --- */
-  --FAM-pluginBackground: var(); /* fond du messenger */
-  --FAM-chatBackground: var(); /* fond de la fenÃªtre de chat */ 
-  --FAM-textAreaBackground: var(); /* fond de la boÃ®te de texte */
-  --FAM-msgBackground: var(); /* fond des messages reÃ§us */
-  --FAM-myMsgBackground: var(); /* fond des messages envoyés */
-  --FAM-quoteBackground: var(); /* fond des citations */
-  --FAM-sleepModeBackground: rgba(0, 0, 0, 0.5); /* fond du mode veille */ 
-
-  --FAM-contrast: var(); 
-  --FAM-accentClr: var(); 
-  --FAM-textClr: var(); 
-  --FAM-linkClr: var(); 
-  --FAM-titleClr: var(); 
-  --FAM-button: var(); 
-  --FAM-buttonClr: var(); 
-
-  /* --- gradients --- */
-
   /* polices et tailles */
   --FAM-fontSize: 1.2rem;  
   --FAM-titleSize: 2.4rem; 
   --FAM-titleFont: 'Montserrat', 'Arial', sans-serif; 
-
-  /* --- borders et utilitaires --- */
-  --FAM-border: /* code */; 
-  --FAM-radius: /* code */; 
-  --FAM-shadow: /* code */;  
 }
 
 /* --- MODE SOMBRE --- */ 
 [data-color-scheme="dark"] {
   font-size: 62.5%; /* default = 10px = 1rem */
-  --body: url('https://i.imgur.com/kMnODLv.png'); /* fond */
-  --pnoteimg: url('https://i.imgur.com/ytRFdAn.png'); /* fond patch note pa */
-  --header: url('https://i.imgur.com/UbCKh5A.png'); /* bannière */
-  --bhavatar: url('https://i.imgur.com/yok8Omn.png'); /* avatar byeonhwa */
+  --body: url('https://i.imgur.com/Ogq91y6.png'); /* fond */
+  --pnoteimg: url('https://i.imgur.com/pELc33W.png'); /* fond patch note pa */
+  --header: url('https://i.imgur.com/VCxCxwf.png'); /* bannière */
+  --bhavatar: url('https://i.imgur.com/jGqTFCj.png'); /* avatar byeonhwa */
 
   /* --- palette --- */
-  --baseClr: #0d0522; /* couleur 1 */
-  --baseClr-90: rgba(13, 5, 34, 0.9); /* 90% opacité */
-  --baseClr-80: rgba(13, 5, 34, 0.8); /* 80% opacité */
-  --baseClr-70: rgba(13, 5, 34, 0.7); /* 70% opacité */
-  --baseClr-60: rgba(13, 5, 34, 0.6); /* 60% opacité */
-  --baseClr-50: rgba(13, 5, 34, 0.5); /* 50% opacité */
-  --baseClr-40: rgba(13, 5, 34, 0.4); /* 40% opacité */
-  --baseClr-30: rgba(13, 5, 34, 0.3); /* 30% opacité */
-  --baseClr-20: rgba(13, 5, 34, 0.2); /* 20% opacité */
-  --baseClr-10: rgba(13, 5, 34, 0.1); /* 10% opacité */
+  --baseClr: #100310; /* couleur 1 */
+  --baseClr-90: rgba(16, 3, 16, 0.9); /* 90% opacité */
+  --baseClr-80: rgba(16, 3, 16, 0.8); /* 80% opacité */
+  --baseClr-70: rgba(16, 3, 16, 0.7); /* 70% opacité */
+  --baseClr-60: rgba(16, 3, 16, 0.6); /* 60% opacité */
+  --baseClr-50: rgba(16, 3, 16, 0.5); /* 50% opacité */
+  --baseClr-40: rgba(16, 3, 16, 0.4); /* 40% opacité */
+  --baseClr-30: rgba(16, 3, 16, 0.3); /* 30% opacité */
+  --baseClr-20: rgba(16, 3, 16, 0.2); /* 20% opacité */
+  --baseClr-10: rgba(16, 3, 16, 0.1); /* 10% opacité */
 
-  --baseClr2: #582EFA; /* couleur 2 */
-  --baseClr2-60: rgba(88, 46, 250, 0.6); /* 60% opacité */
-  --baseClr2-40: rgba(88, 46, 250, 0.4); /* 40% opacité */
-  --baseClr2-20: rgba(88, 46, 250, 0.2); /* 20% opacité */
+  --baseClr2: #6a041f; /* couleur 2 */
+  --baseClr2-60: rgba(106, 4, 31, 0.6); /* 60% opacité */
+  --baseClr2-40: rgba(106, 4, 31, 0.4); /* 40% opacité */
+  --baseClr2-20: rgba(106, 4, 31, 0.2); /* 20% opacité */
 
-  --baseClr3: #8149eb; /* couleur 3 */
-  --baseClr3-80: rgba(129, 73, 235, 0.8); /* 80% opacité */
-  --baseClr3-60: rgba(129, 73, 235, 0.6); /* 60% opacité */
-  --baseClr3-40: rgba(129, 73, 235, 0.4); /* 40% opacité */
-  --baseClr3-20: rgba(129, 73, 235, 0.2); /* 20% opacité */
-  --baseClr3-10: rgba(129, 73, 235, 0.1); /* 10% opacité */
+  --baseClr3: #47051E; /* couleur 3 */
+  --baseClr3-80: rgba(71, 5, 30, 0.8); /* 80% opacité */
+  --baseClr3-60: rgba(71, 5, 30, 0.6); /* 60% opacité */
+  --baseClr3-40: rgba(71, 5, 30, 0.4); /* 40% opacité */
+  --baseClr3-20: rgba(71, 5, 30, 0.2); /* 20% opacité */
+  --baseClr3-10: rgba(71, 5, 30, 0.1); /* 10% opacité */
 
-  --accentClr: #b44bdd; /* accent 1 */
-  --accentClr2: #51DAA6; /* accent 2 */
+  --accentClr: #d41b4f; /* accent 1 */
+  --accentClrOp: rgba(212, 27, 79, 0.2);  
+  
+  --accentClr2: #7aa1a3; /* accent 2 */
+  --accentClr2Op: rgba(122, 161, 163, 0.2); 
 
-  --textClr: #968BFF; /* texte */
+  --textClr: #d16290; /* texte */
 
-  --scrollbar1: #0d0522; /* fond scrollbar */
-  --scrollbar2: #2E1680; /* thumb scrollbar */
+  --scrollbar1: #1a041a; /* fond scrollbar */
+  --scrollbar2: #6e082f; /* thumb scrollbar */
 
   /* --- couleurs pour gradients --- */
-  --gradClr1: #8645ef;  
+  --gradClr1: #6a041f;  
 
   /* icônes animées (lord-icon) */
-  --lord-icon-primary: #c04cdd; 
-  --lord-icon-secondary: #5A24B4;
+  --lord-icon-primary: #6a041f; 
+  --lord-icon-secondary: #d16290;
 
   /* --- gradients --- */
-  --bg1: linear-gradient(to bottom, rgba(129, 73, 235, 0.3), transparent); /* baseClr3 30% > transparent (fond) */
-  --bg2: linear-gradient(to bottom, rgba(88, 46, 250, 0.3), rgba(129, 73, 235, 0.1)); /* baseClr2 30% opacité > baseClr3 10% opacité (fond) */
+  --bg1: linear-gradient(to bottom, rgba(71, 5, 30, 0.3), transparent); /* baseClr3 30% > transparent (fond) */
+  --bg2: linear-gradient(to bottom, rgba(106, 4, 31, 0.3), rgba(71, 5, 30, 0.1)); /* baseClr2 30% opacité > baseClr3 10% opacité (fond) */
 
   --grad1: linear-gradient(to right, var(--baseClr2), var(--textClr), var(--baseClr2)); /* gradient métallisé */
   --grad2: linear-gradient(to right, var(--gradClr1), var(--accentClr)); /* gradient 2 couleurs */
-  --grad2Op: linear-gradient(to right, rgba(90, 36, 180, 0.3), rgba(180, 75, 221, 0.3)); /* gradient 2 couleurs 30% opacité */
+  
+  --grad1Op: linear-gradient(to right, rgba(106, 4, 31, 0.3), rgba(190, 84, 112, 0.3), rgba(106, 4, 31, 0.3)); /* gradient métallisé 30% opacité */
+  --grad2Op: linear-gradient(to right, rgba(71, 5, 30, 0.3), rgba(212, 27, 79, 0.3)); /* gradient 2 couleurs 30% opacité */
 }
 
 /* ---------------------------- */
@@ -253,7 +237,6 @@ body {
   font-size: 1.6rem;
   font-family: var(--font1);
   margin: 0 !important;
-  overflow-x: hidden;
   background: var(--body) fixed center bottom;
   background-size: cover;
   background-repeat: no-repeat;
@@ -725,8 +708,39 @@ form[action="/profile?mode=editprofile&page_profil=friendsfoes"] input {
   background-position: center;
   background-repeat: no-repeat;
   background-size: auto;
-  margin: 2rem 0 8rem 0; 
-  height: 80rem; 
+}
+
+/* --- animation header (un jour) --- */
+
+/* --- HEADER TAGS --- */
+.htag-cont {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.htag-top, .htag-bottom {
+  display: flex; 
+  gap: 0.3rem; 
+  margin: 0 15rem; 
+}
+
+.htag-top, .htag-bottom {
+  margin-top: 16.5rem; 
+}
+
+htag1 {background: var(--grad2Op);}
+htag2 {background: var(--grad1Op);}
+
+htag1, htag2 {
+  padding: 0.3rem 0.6rem 0.3rem 0.6rem;
+  border-radius: var(--radius);
+  color: var(--accentClr);
+  font-weight: var(--semibold-fw); 
+  font-size: var(--small); 
+  text-transform: uppercase; 
 }
 
 /* --- NAVIGATION --- */
@@ -2928,3 +2942,5 @@ blockquote.FAM-codebox > div {
     color: var(--accentClr) !important;
 }
 .FAM-msg-text{padding:1rem !important;}
+
+/* gras pseudo */ .post_pseudo a {font-weight: var(--fw-bold);}
