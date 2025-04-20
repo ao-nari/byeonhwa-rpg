@@ -25,40 +25,40 @@ enoway, .enoway {font-family: 'enoway_personal_useregular', 'Arial', sans-serif;
   /* variables de couleurs */
   --bh: #F0BE74; 
   --byeonhwa: #F0BE74;
-  --bhc: #fcd9a6; 
-  --bhf: #ca9340; 
+  --bhc: #f4d19d; 
+  --bhf: #a88551; 
   --bhOp: rgba(240, 190, 116, 0.3);
 
   --bom: #DF5C93; 
-  --bomc: #ec9ab4; 
-  --bomf: #b44669; 
+  --bomc: #e88cb3; 
+  --bomf: #9c4066; 
   --bomOp: rgba(223, 92, 147, 0.3); 
 
   --yeo: #66A465; 
   --yeoreum: #66A465;
-  --yeoc: #98d197; 
-  --yeof: #427241; 
+  --yeoc: #93bf93; 
+  --yeof: #477246; 
   --yeoOp: rgba(102, 164, 101, 0.3); 
 
   --gaeul: #E97747; 
-  --gaeulc: #f0a98b; 
-  --gaeulf: #af522b; 
+  --gaeulc: #ef9f7e; 
+  --gaeulf: #a35331; 
   --gaeulOp: rgba(233, 119, 71, 0.3); 
 
   --gyeoul: #50B6B8; 
-  --gyeoc: #8edcdf; 
-  --gyeof: #469b9e; 
+  --gyeoc: #84cbcd; 
+  --gyeof: #387f80; 
   --gyeoOp: rgba(80, 182, 184, 0.3); 
 
   --akma: #C43852; 
-  --akmac: #ce5b70;
-  --akmaf: #8f182e;
+  --akmac: #d57385;
+  --akmaf: #892739;
   --akmaOp: rgba(196, 56, 82, 0.3); 
 
   --mun: #726CE2; 
   --munoehan: #726CE2;
-  --munc: #9793f3;
-  --munf: #726CE2;
+  --munc: #9c98ea;
+  --munf: #4f4b9e;
   --munOp: rgba(114, 108, 226, 0.3); 
 
   /* variables de gradients */
