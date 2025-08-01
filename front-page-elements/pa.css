@@ -145,7 +145,7 @@
 .pa-pnotetxt {
     font-family: var(--font2); 
     text-transform: uppercase; 
-    font-size: var(--bigger);  
+    font-size: var(--bigger2);  
     text-align: center;  
     font-weight: var(--bold-fw); 
     background: var(--grad1); 

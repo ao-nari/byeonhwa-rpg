@@ -6,7 +6,7 @@
   font-size: 62.5%; /* default = 10px = 1rem */
   --body: url('https://i.goopics.net/wfnq0k.png'); /* fond */
   --pnoteimg: url('https://i.imgur.com/n4uiAf6.png'); /* fond patch note pa */
-  --header: url('https://i.imgur.com/Ba80ASt.png'); /* bannière */ 
+  /* --header: url('https://i.imgur.com/Ba80ASt.png'); bannière */ 
   --bhavatar: url('https://i.imgur.com/ftxaz40.png'); /* avatar byeonhwa */
 
   /* --- palette --- */
@@ -42,7 +42,7 @@
   --textClr: #343cbd; /* texte */
 
   --scrollbar1: #edf2ff; /* fond scrollbar */
-  --scrollbar2: #f09fa8; /* thumb scrollbar */
+  --scrollbar2: #ff9edd; /* thumb scrollbar */
 
   /* --- couleurs pour gradients --- */
   --gradClr1: #d0baef;  
@@ -77,7 +77,7 @@
 
   /* --- polices --- */
   --font1: 'Montserrat', 'Arial', sans-serif; 
-  --font2: 'Boldonse', system-ui, sans-serif; 
+  --font2: 'Voltaire', sans-serif;
   --font3: 'Playfair display', 'Palatino', serif; 
 
   --krfont: 'Noto Sans KR', sans-serif; 
@@ -118,7 +118,7 @@
   font-size: 62.5%; /* default = 10px = 1rem */
   --body: url('https://i.goopics.net/nr7xhi.png'); /* fond */
   --pnoteimg: url('https://i.imgur.com/Zau5NWe.png'); /* fond patch note pa */
-  --header: url('https://i.imgur.com/4QiSpms.png'); /* bannière */ 
+  /* --header: url('https://i.imgur.com/4QiSpms.png'); bannière */ 
   --bhavatar: url('https://i.imgur.com/jGqTFCj.png'); /* avatar byeonhwa */
 
   /* --- palette --- */
@@ -724,23 +724,27 @@ form[action="/profile?mode=editprofile&page_profil=friendsfoes"] input {
 .htag-top, .htag-bottom {
   display: flex; 
   gap: 0.3rem; 
-  margin: 0 15rem; 
+  margin: 0 14rem; 
+}
+
+.htag-top {
+  margin-right: 18rem !important; 
 }
 
 .htag-top, .htag-bottom {
-  margin-top: 16.5rem; 
+  margin-top: 22rem; 
 }
 
 htag1 {background: var(--grad2Op);}
-htag2 {background: var(--grad1Op);}
+htag2 {background: var(--bg2);}
 
 htag1, htag2 {
-  padding: 0.3rem 0.6rem 0.3rem 0.6rem;
+  padding: 0.3rem 1rem;
   border-radius: var(--radius);
-  color: var(--accentClr);
-  font-weight: var(--semibold-fw); 
+  font-weight: var(--bold-fw); 
   font-size: var(--small); 
   text-transform: uppercase; 
+  color: var(--accentClr); 
 }
 
 /* --- NAVIGATION --- */
