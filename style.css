@@ -4,66 +4,66 @@
 /* --- MODE CLAIR --- */
 :root {
   font-size: 62.5%; /* default = 10px = 1rem */
-  --body: url('https://i.goopics.net/wfnq0k.png'); /* fond */
-  --pnoteimg: url('https://i.imgur.com/n4uiAf6.png'); /* fond patch note pa */
-  /* --header: url('https://i.imgur.com/Ba80ASt.png'); bannière */ 
-  --bhavatar: url('https://i.imgur.com/ftxaz40.png'); /* avatar byeonhwa */
+  --body: url('https://2img.net/i.imgur.com/KMjFvsV.png'); /* fond */
+  --pnoteimg: url('https://i.imgur.com/djYq58P.png'); /* fond patch note pa */
+  --header: url('https://i.imgur.com/aQ8dcvG.png'); /* bannière */ 
+  --bhavatar: url('https://2img.net/i.imgur.com/ftxaz40.png'); /* avatar byeonhwa */
 
   /* --- palette --- */
-  --baseClr: #edf2ff; /* couleur 1 */
-  --baseClr-90: rgba(237, 242, 255, 0.9); /* 90% opacité */
-  --baseClr-80: rgba(237, 242, 255, 0.8); /* 80% opacité */
-  --baseClr-70: rgba(237, 242, 255, 0.7); /* 70% opacité */
-  --baseClr-60: rgba(237, 242, 255, 0.6); /* 60% opacité */
-  --baseClr-50: rgba(237, 242, 255, 0.5); /* 50% opacité */
-  --baseClr-40: rgba(237, 242, 255, 0.4); /* 40% opacité */
-  --baseClr-30: rgba(237, 242, 255, 0.3); /* 30% opacité */
-  --baseClr-20: rgba(237, 242, 255, 0.2); /* 20% opacité */
-  --baseClr-10: rgba(237, 242, 255, 0.1); /* 10% opacité */
+  --baseClr: #f3f3f3; /* couleur 1 */
+  --baseClr-90: rgba(243, 243, 243, 0.9); /* 90% opacité */
+  --baseClr-80: rgba(243, 243, 243, 0.8); /* 80% opacité */
+  --baseClr-70: rgba(243, 243, 243, 0.7); /* 70% opacité */
+  --baseClr-60: rgba(243, 243, 243, 0.6); /* 60% opacité */
+  --baseClr-50: rgba(243, 243, 243, 0.5); /* 50% opacité */
+  --baseClr-40: rgba(243, 243, 243, 0.4); /* 40% opacité */
+  --baseClr-30: rgba(243, 243, 243, 0.3); /* 30% opacité */
+  --baseClr-20: rgba(243, 243, 243, 0.2); /* 20% opacité */
+  --baseClr-10: rgba(243, 243, 243, 0.1); /* 10% opacité */
 
-  --baseClr2: #87d2ff; /* couleur 2 */
-  --baseClr2-60: rgba(135, 210, 255, 0.6); /* 60% opacité */
-  --baseClr2-40: rgba(135, 210, 255, 0.4); /* 40% opacité */
-  --baseClr2-20: rgba(135, 210, 255, 0.2); /* 20% opacité */
+  --baseClr2: #cad5d5; /* couleur 2 */
+  --baseClr2-60: rgba(202, 213, 213, 0.6); /* 60% opacité */
+  --baseClr2-40: rgba(202, 213, 213, 0.4); /* 40% opacité */
+  --baseClr2-20: rgba(202, 213, 213, 0.2); /* 20% opacité */
 
-  --baseClr3: #d0baef; /* couleur 3 */
-  --baseClr3-80: rgba(208, 186, 239, 0.8); /* 80% opacité */
-  --baseClr3-60: rgba(208, 186, 239, 0.6); /* 60% opacité */
-  --baseClr3-40: rgba(208, 186, 239, 0.4); /* 40% opacité */
-  --baseClr3-20: rgba(208, 186, 239, 0.2); /* 20% opacité */ 
-  --baseClr3-10: rgba(208, 186, 239, 0.1); /* 10% opacité */ 
+  --baseClr3: #7acccc; /* couleur 3 */
+  --baseClr3-80: rgba(122, 204, 204, 0.8); /* 80% opacité */
+  --baseClr3-60: rgba(122, 204, 204, 0.6); /* 60% opacité */
+  --baseClr3-40: rgba(122, 204, 204, 0.4); /* 40% opacité */
+  --baseClr3-20: rgba(122, 204, 204, 0.2); /* 20% opacité */ 
+  --baseClr3-10: rgba(122, 204, 204, 0.1); /* 10% opacité */ 
 
-  --accentClr: #bf7cea; /* accent 1 */
-  --accentClrOp: rgba(191, 124, 234, 0.2); 
+  --accentClr: #00acac; /* accent 1 */
+  --accentClrOp: rgba(0, 172, 172, 0.2); 
     
-  --accentClr2: #ec6e78; /* accent 2 */
-  --accentClr2Op: rgba(236, 110, 120, 0.2); 
+  --accentClr2: #acac00; /* accent 2 */
+  --accentClr2Op: rgba(172, 172, 0, 0.2); 
 
-  --textClr: #343cbd; /* texte */
+  --textClr: #657272; /* texte */
 
-  --scrollbar1: #edf2ff; /* fond scrollbar */
-  --scrollbar2: #ff9edd; /* thumb scrollbar */
+  --scrollbar1: #f3f3f3; /* fond scrollbar */
+  --scrollbar2: #cad5d5; /* thumb scrollbar */
 
   /* --- couleurs pour gradients --- */
-  --gradClr1: #d0baef;  
+  --gradClr1: #ff66ff;  
 
-  --gradClr2: #f084c7; 
-  --gradClr3: #f57196; 
-  --gradClr4: #ec6e78; 
+  --gradClr2: #66ffff; 
+  --gradClr3: #ffff66; 
+  --gradClr4: #ff66ff;
 
   /* icônes animées (lord-icon) */
-  --lord-icon-primary: #f084c7; 
-  --lord-icon-secondary: #ec6e78; 
+  --lord-icon-primary: #ff66ff; 
+  --lord-icon-secondary: #66ffff; 
 
   /* --- gradients --- */
-  --bg1: linear-gradient(to bottom, rgba(166, 212, 240, 0.3), transparent); /* baseClr2 30% opacité > transparent (fond) */
-  --bg2: linear-gradient(to bottom, rgba(166, 212, 240, 0.3), rgba(239, 167, 176, 0.1)); /* baseClr2 30% opacité > baseClr3 10% opacité (fond) */
+  --bg1: linear-gradient(to bottom, rgba(202, 213, 213, 0.3), transparent); /* baseClr2 30% opacité > transparent (fond) */
+  --bg2: linear-gradient(to bottom, rgba(202, 213, 213, 0.3), rgba(122, 204, 204, 0.1)); /* baseClr2 30% opacité > baseClr3 10% opacité (fond) */
 
-  --grad1: linear-gradient(to right, var(--gradClr2), var(--gradClr3), var(--gradClr4)); /* gradient 3 couleurs */
-  --grad2: linear-gradient(to right, var(--accentClr), var(--gradClr1), var(--accentClr)); /* gradient métallisé */
+  --grad1: linear-gradient(to right, var(--textClr), var(--baseClr2), var(--textClr)); /* gradient métallisé */
+  --grad2: linear-gradient(to right, var(--gradClr1), var(--gradClr2)); /* gradient 2 couleurs */ 
   
-  --grad1Op: linear-gradient(to right, rgba(240, 132, 199, 0.3), rgba(245, 113, 150, 0.3), rgba(236, 110, 120, 0.3)); /* gradient 3 couleurs 30% opacité */
-  --grad2Op: linear-gradient(to right, rgba(191, 124, 234, 0.3), rgba(208, 186, 239, 0.3), rgba(191, 124, 234, 0.3)); /* gradient métallisé 30% opacité */
+  --grad1Op: linear-gradient(to right, rgba(101, 114, 114, 0.3), rgba(202, 213, 213, 0.3), rgba(101, 114, 114, 0.3)); /* gradient métallisé 30% opacité */
+  --grad2Op: linear-gradient(to right, rgba(255, 102, 255, 0.3), rgba(102, 255, 255, 0.3)); /* gradient 2 couleurs 30% opacité */
 
   /* --- autres --- */
   --small-radius: 0.8rem; /* 8px */
@@ -116,62 +116,62 @@
 /* --- MODE SOMBRE --- */ 
 [data-color-scheme="dark"] {
   font-size: 62.5%; /* default = 10px = 1rem */
-  --body: url('https://i.goopics.net/nr7xhi.png'); /* fond */
-  --pnoteimg: url('https://i.imgur.com/Zau5NWe.png'); /* fond patch note pa */
-  /* --header: url('https://i.imgur.com/4QiSpms.png'); bannière */ 
-  --bhavatar: url('https://i.imgur.com/jGqTFCj.png'); /* avatar byeonhwa */
+  --body: url('https://2img.net/i.imgur.com/uoPRLzA.png'); /* fond */
+  --pnoteimg: url('https://2img.net/i.imgur.com/e9jFV7x.png'); /* fond patch note pa */
+  --header: url('https://2img.net/i.imgur.com/ZFlnYKe.png'); /* bannière */ 
+  --bhavatar: url('https://2img.net/i.imgur.com/jGqTFCj.png'); /* avatar byeonhwa */
 
   /* --- palette --- */
-  --baseClr: #0a0d2b; /* couleur 1 */
-  --baseClr-90: rgba(10, 13, 43, 0.9); /* 90% opacité */
-  --baseClr-80: rgba(10, 13, 43, 0.8); /* 80% opacité */
-  --baseClr-70: rgba(10, 13, 43, 0.7); /* 70% opacité */
-  --baseClr-60: rgba(10, 13, 43, 0.6); /* 60% opacité */
-  --baseClr-50: rgba(10, 13, 43, 0.5); /* 50% opacité */
-  --baseClr-40: rgba(10, 13, 43, 0.4); /* 40% opacité */
-  --baseClr-30: rgba(10, 13, 43, 0.3); /* 30% opacité */
-  --baseClr-20: rgba(10, 13, 43, 0.2); /* 20% opacité */
-  --baseClr-10: rgba(10, 13, 43, 0.1); /* 10% opacité */
+  --baseClr: #0C0C0C; /* couleur 1 */
+  --baseClr-90: rgba(12, 12, 12, 0.9); /* 90% opacité */
+  --baseClr-80: rgba(12, 12, 12, 0.8); /* 80% opacité */
+  --baseClr-70: rgba(12, 12, 12, 0.7); /* 70% opacité */
+  --baseClr-60: rgba(12, 12, 12, 0.6); /* 60% opacité */
+  --baseClr-50: rgba(12, 12, 12, 0.5); /* 50% opacité */
+  --baseClr-40: rgba(12, 12, 12, 0.4); /* 40% opacité */
+  --baseClr-30: rgba(12, 12, 12, 0.3); /* 30% opacité */
+  --baseClr-20: rgba(12, 12, 12, 0.2); /* 20% opacité */
+  --baseClr-10: rgba(12, 12, 12, 0.1); /* 10% opacité */
 
-  --baseClr2: #2a24dd; /* couleur 2 */
-  --baseClr2-60: rgba(42, 36, 221, 0.6); /* 60% opacité */
-  --baseClr2-40: rgba(42, 36, 221, 0.4); /* 40% opacité */
-  --baseClr2-20: rgba(42, 36, 221, 0.2); /* 20% opacité */
+  --baseClr2: #657272; /* couleur 2 */
+  --baseClr2-60: rgba(101, 114, 114, 0.6); /* 60% opacité */
+  --baseClr2-40: rgba(101, 114, 114, 0.4); /* 40% opacité */
+  --baseClr2-20: rgba(101, 114, 114, 0.2); /* 20% opacité */
 
-  --baseClr3: #3e18bd; /* couleur 3 */
-  --baseClr3-80: rgba(62, 24, 189, 0.8); /* 80% opacité */
-  --baseClr3-60: rgba(62, 24, 189, 0.6); /* 60% opacité */
-  --baseClr3-40: rgba(62, 24, 189, 0.4); /* 40% opacité */
-  --baseClr3-20: rgba(62, 24, 189, 0.2); /* 20% opacité */
-  --baseClr3-10: rgba(62, 24, 189, 0.1); /* 10% opacité */
+  --baseClr3: #0F4747; /* couleur 3 */
+  --baseClr3-80: rgba(15, 71, 71, 0.8); /* 80% opacité */
+  --baseClr3-60: rgba(15, 71, 71, 0.6); /* 60% opacité */
+  --baseClr3-40: rgba(15, 71, 71, 0.4); /* 40% opacité */
+  --baseClr3-20: rgba(15, 71, 71, 0.2); /* 20% opacité */
+  --baseClr3-10: rgba(15, 71, 71, 0.1); /* 10% opacité */
 
-  --accentClr: #ffad36; /* accent 1 */
-  --accentClrOp: rgba(255, 173, 54, 0.2);  
+  --accentClr: #00acac; /* accent 1 */
+  --accentClrOp: rgba(0, 172, 172, 0.2);  
   
-  --accentClr2: #e22799; /* accent 2 */
-  --accentClr2Op: rgba(226, 39, 153, 0.2); 
+  --accentClr2: #ac00ac; /* accent 2 */
+  --accentClr2Op: rgba(172, 0, 172, 0.2); 
 
-  --textClr: #728fff; /* texte */
+  --textClr: #cad5d5; /* texte */
 
-  --scrollbar1: #0a0d2b; /* fond scrollbar */
-  --scrollbar2: #2e14a9; /* thumb scrollbar */
+  --scrollbar1: #0C0C0C; /* fond scrollbar */
+  --scrollbar2: #657272; /* thumb scrollbar */
 
   /* --- couleurs pour gradients --- */
-  --gradClr1: #e22799;  
+  --gradClr1: #acac00;  
 
   /* icônes animées (lord-icon) */
-  --lord-icon-primary: #ffad36; 
-  --lord-icon-secondary: #e22799;
+  --lord-icon-primary: #acac00; 
+  --lord-icon-secondary: #00acac;
 
   /* --- gradients --- */
-  --bg1: linear-gradient(to bottom, rgba(62, 24, 189, 0.3), transparent); /* baseClr3 30% > transparent (fond) */
-  --bg2: linear-gradient(to bottom, rgba(42, 36, 221, 0.3), rgba(62, 24, 189, 0.1)); /* baseClr2 30% opacité > baseClr3 10% opacité (fond) */
+  --bg1: linear-gradient(to bottom, rgba(15, 71, 71, 0.3), transparent); /* baseClr3 30% > transparent (fond) */
+  --bg2: linear-gradient(to bottom, rgba(101, 114, 114, 0.3), rgba(15, 71, 71, 0.1)); /* baseClr2 30% opacité > baseClr3 10% opacité (fond) */
 
-  --grad1: linear-gradient(to right, var(--gradClr1), var(--accentClr)); /* gradient 2 couleurs */
-  --grad2: linear-gradient(to right, var(--baseClr2), var(--textClr), var(--baseClr2)); /* gradient métallisé */
+  --grad1: linear-gradient(to right, var(--baseClr2), var(--textClr), var(--baseClr2)); /* gradient métallisé */
+  --grad2: linear-gradient(to right, var(--gradClr1), var(--accentClr)); /* gradient 2 couleurs */ 
   
-  --grad1Op: linear-gradient(to right, rgba(226, 39, 153, 0.3), rgba(255, 173, 54, 0.3)); /* gradient 2 couleurs 30% opacité */
-  --grad2Op: linear-gradient(to right, rgba(42, 36, 221, 0.3), rgba(114, 143, 255, 0.3), rgba(42, 36, 221, 0.3)); /* gradient métallisé 30% opacité */
+  --grad1Op: linear-gradient(to right, rgba(172, 172, 0, 0.3), rgba(0, 172, 172, 0.3)); /* gradient 2 couleurs 30% opacité */
+  --grad2Op: linear-gradient(to right, rgba(15, 71, 71, 0.3), rgba(202, 213, 213, 0.3), rgba(15, 71, 71, 0.3)); /* gradient métallisé 30% opacité */
 }
 
 /* ---------------------------- */

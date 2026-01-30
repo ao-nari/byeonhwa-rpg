@@ -25,11 +25,11 @@ voltaire, .voltaire {font-family: 'Voltaire', 'Arial', sans-serif;}
 /* --- variables diverses --- */
 :root {
   /* variables de couleurs */
-  --bh: #F0BE74; 
-  --byeonhwa: #F0BE74;
-  --bhc: #f4d19d; 
-  --bhf: #a88551; 
-  --bhOp: rgba(240, 190, 116, 0.3);
+  --bh: #AC00AC; 
+  --byeonhwa: #AC00AC;
+  --bhc: #cd66cd; 
+  --bhf: #890089; 
+  --bhOp: rgba(172, 0, 172, 0.3);
 
   --bom: #DF5C93; 
   --bomc: #e88cb3; 
