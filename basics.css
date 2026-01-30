@@ -21,6 +21,8 @@ krfont2, .krfont2 {font-family: 'Noto Sans KR', sans-serif;}
 aesthetic, .aesthetic {font-family: 'Aesthetic Regular', 'Times new roman', serif;}
 enoway, .enoway {font-family: 'enoway_personal_useregular', 'Arial', sans-serif;}
 voltaire, .voltaire {font-family: 'Voltaire', 'Arial', sans-serif;}
+cinzel, .cinzel{font-family: 'Cinzel', 'Times new roman', serif;}
+cinzeld, .cinzeld{font-family: 'Cinzel Decorative', 'Times new roman', serif;}
 
 /* --- variables diverses --- */
 :root {
